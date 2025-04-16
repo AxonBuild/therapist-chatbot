@@ -1,0 +1,218 @@
+{
+  "title": "Eating Disorders Decision Tree",
+  "rootNode": "NODE_A",
+  "nodes": {
+    "NODE_A": {
+      "id": "NODE_A",
+      "question": "Presence of disordered eating behaviors?",
+      "children": ["NODE_A1", "NODE_A2", "NODE_A3", "NODE_A4", "NODE_A5"]
+    },
+    "NODE_A1": {
+      "id": "NODE_A1",
+      "question": "Restrictive eating patterns, control over intake?",
+      "children": ["NODE_A1A", "NODE_A1B"]
+    },
+    "NODE_A1A": {
+      "id": "NODE_A1A",
+      "description": "Rigid control, avoidance of carbs, intense fear of weight gain",
+      "recommendation": {
+        "script": "SCRIPT_A: Giving My Body a Voice",
+        "level": 3
+      },
+      "tags": ["anorexia", "control", "bodyimage"],
+      "children": ["LEAF_A1A1"]
+    },
+    "LEAF_A1A1": {
+      "id": "LEAF_A1A1",
+      "description": "Case: 22-year-old woman, anorexic patterns, emotional overcontrol, family trauma.",
+      "isLeaf": true
+    },
+    "NODE_A1B": {
+      "id": "NODE_A1B",
+      "question": "No restrictive behavior?",
+      "children": ["LEAF_A1B1"]
+    },
+    "LEAF_A1B1": {
+      "id": "LEAF_A1B1",
+      "description": "Check for impulsive or emotional eating → see NODE_A2",
+      "isLeaf": true,
+      "redirectTo": "NODE_A2"
+    },
+    "NODE_A2": {
+      "id": "NODE_A2",
+      "question": "Presence of compulsive eating or binge patterns?",
+      "children": ["NODE_A2A", "NODE_A2B"]
+    },
+    "NODE_A2A": {
+      "id": "NODE_A2A",
+      "description": "Evening snacking, emotional compensation, guilt",
+      "recommendation": {
+        "script": "SCRIPT_B: Soothing Difficult Evenings",
+        "level": 2
+      },
+      "tags": ["binge", "eveningcravings", "emotionalregulation"],
+      "children": ["LEAF_A2A1"]
+    },
+    "LEAF_A2A1": {
+      "id": "LEAF_A2A1",
+      "description": "Case: 55-year-old man, emotional eating, perfectionism, lack of recognition.",
+      "recommendation": {
+        "script": "SCRIPT_B: Soothing Difficult Evenings",
+        "level": 2
+      },
+      "isLeaf": true
+    },
+    "NODE_A2B": {
+      "id": "NODE_A2B",
+      "question": "No binge or emotional eating?",
+      "children": ["LEAF_A2B1"]
+    },
+    "LEAF_A2B1": {
+      "id": "LEAF_A2B1",
+      "description": "Evaluate for body disconnection or somatic symptoms → see NODE_A3",
+      "isLeaf": true,
+      "redirectTo": "NODE_A3"
+    },
+    "NODE_A3": {
+      "id": "NODE_A3",
+      "question": "Disconnection from body or digestive symptoms?",
+      "children": ["NODE_A3A", "NODE_A3B"]
+    },
+    "NODE_A3A": {
+      "id": "NODE_A3A",
+      "description": "Digestive tension, blocked throat, inability to swallow",
+      "recommendation": {
+        "script": "SCRIPT_C: Let the Body Digest What the Mind Holds On To",
+        "level": 3
+      },
+      "tags": ["digestiveblock", "emotionaloverload", "control"],
+      "children": ["LEAF_A3A1"]
+    },
+    "LEAF_A3A1": {
+      "id": "LEAF_A3A1",
+      "description": "Case: 19-year-old woman, somatic anger, sensory hypersensitivity, phobia, control/fatigue loop.",
+      "isLeaf": true
+    },
+    "NODE_A3B": {
+      "id": "NODE_A3B",
+      "question": "No digestive or somatic blocks?",
+      "children": ["LEAF_A3B1"]
+    },
+    "LEAF_A3B1": {
+      "id": "LEAF_A3B1",
+      "description": "Evaluate emotional relationship with food and self → see NODE_A4",
+      "isLeaf": true,
+      "redirectTo": "NODE_A4"
+    },
+    "NODE_A4": {
+      "id": "NODE_A4",
+      "question": "Food associated with shame, guilt or moral conflict?",
+      "children": ["NODE_A4A", "NODE_A4B"]
+    },
+    "NODE_A4A": {
+      "id": "NODE_A4A",
+      "description": "Labeling foods as good/bad, shame after meals, early guilt",
+      "recommendation": {
+        "script": "SCRIPT_D: Freeing the Body from Hypervigilance",
+        "level": 2
+      },
+      "tags": ["shame", "guilt", "hypervigilance", "student"],
+      "children": ["LEAF_A4A1"]
+    },
+    "LEAF_A4A1": {
+      "id": "LEAF_A4A1",
+      "description": "Case: 18-year-old student, body hatred, trio friendship instability, moralized food.",
+      "isLeaf": true
+    },
+    "NODE_A4B": {
+      "id": "NODE_A4B",
+      "question": "No moral conflict around food?",
+      "children": ["LEAF_A4B1"]
+    },
+    "LEAF_A4B1": {
+      "id": "LEAF_A4B1",
+      "description": "Consider stress-induced loss of appetite → see NODE_A5",
+      "isLeaf": true,
+      "redirectTo": "NODE_A5"
+    },
+    "NODE_A5": {
+      "id": "NODE_A5",
+      "question": "Loss of appetite due to stress, work or exhaustion?",
+      "children": ["NODE_A5A", "NODE_A5B"]
+    },
+    "NODE_A5A": {
+      "id": "NODE_A5A",
+      "description": "Professional hypervigilance, fear of eating, toxic context",
+      "recommendation": {
+        "script": "SCRIPT_E: Freeing the Body from Hypervigilance",
+        "level": 3
+      },
+      "tags": ["stress", "anxiety", "professionalburnout"],
+      "children": ["LEAF_A5A1"]
+    },
+    "LEAF_A5A1": {
+      "id": "LEAF_A5A1",
+      "description": "Case: 38-year-old banker, digestive block, stress, social shame.",
+      "isLeaf": true
+    },
+    "NODE_A5B": {
+      "id": "NODE_A5B",
+      "question": "No stress-related appetite loss?",
+      "children": ["LEAF_A5B1"]
+    },
+    "LEAF_A5B1": {
+      "id": "LEAF_A5B1",
+      "description": "Further exploration needed (non-pathological variant or emerging pattern)",
+      "recommendation": {
+        "script": "SCRIPT_F: Giving My Body a Voice",
+        "level": 1
+      },
+      "tags": ["reconnection", "prevention"],
+      "isLeaf": true
+    }
+  },
+  "summary": [
+    {
+      "node": "LEAF_A1A1",
+      "symptomSummary": "Anorexic control, family trauma",
+      "script": "Giving My Body a Voice",
+      "level": 3,
+      "tags": ["anorexia", "control", "bodyimage"]
+    },
+    {
+      "node": "LEAF_A2A1",
+      "symptomSummary": "Evening binge, emotional exhaustion",
+      "script": "Soothing Difficult Evenings",
+      "level": 2,
+      "tags": ["binge", "eveningcravings", "emotionalregulation"]
+    },
+    {
+      "node": "LEAF_A3A1",
+      "symptomSummary": "Digestive block, sensory tension",
+      "script": "Let the Body Digest What the Mind Holds On To",
+      "level": 3,
+      "tags": ["digestiveblock", "emotionaloverload", "control"]
+    },
+    {
+      "node": "LEAF_A4A1",
+      "symptomSummary": "Food guilt, moralization, peer conflict",
+      "script": "Freeing the Body from Hypervigilance",
+      "level": 2,
+      "tags": ["shame", "guilt", "hypervigilance", "student"]
+    },
+    {
+      "node": "LEAF_A5A1",
+      "symptomSummary": "Stress-related appetite loss, professional burnout",
+      "script": "Freeing the Body from Hypervigilance",
+      "level": 3,
+      "tags": ["stress", "anxiety", "professionalburnout"]
+    },
+    {
+      "node": "LEAF_A5B1",
+      "symptomSummary": "Mild disconnection or emerging issue",
+      "script": "Giving My Body a Voice",
+      "level": 1,
+      "tags": ["reconnection", "prevention"]
+    }
+  ]
+}

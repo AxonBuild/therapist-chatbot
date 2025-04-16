@@ -1,0 +1,143 @@
+{
+  "title": "Sleep Disorders Decision Tree",
+  "rootNode": "NODE_A",
+  "nodes": {
+    "NODE_A": {
+      "id": "NODE_A",
+      "question": "Is the main complaint related to difficulties falling asleep or staying asleep?",
+      "children": ["NODE_A1", "NODE_A2", "NODE_A3", "NODE_A4", "NODE_A5", "NODE_B"]
+    },
+    "NODE_A1": {
+      "id": "NODE_A1",
+      "question": "Difficulty falling asleep (Sleep-onset insomnia)?",
+      "children": ["NODE_A1A"]
+    },
+    "NODE_A1A": {
+      "id": "NODE_A1A",
+      "question": "Cognitive hyperactivation at bedtime (ruminations, control, etc.)?",
+      "children": ["LEAF_A1A1"]
+    },
+    "LEAF_A1A1": {
+      "id": "LEAF_A1A1",
+      "description": "Mental spirals, intrusive thoughts, somatic tension before sleep",
+      "recommendation": {
+        "script": "SCRIPT_A: Taming Sleep and Reconnecting with Inner Safety",
+        "level": 2
+      },
+      "tags": ["sleep_onset", "rumination", "control"],
+      "isLeaf": true
+    },
+    "NODE_A2": {
+      "id": "NODE_A2",
+      "question": "Difficulty staying asleep (frequent awakenings)?",
+      "children": ["NODE_A2A"]
+    },
+    "NODE_A2A": {
+      "id": "NODE_A2A",
+      "question": "Nocturnal hypervigilance (small noises, scanning)?",
+      "children": ["LEAF_A2A1"]
+    },
+    "LEAF_A2A1": {
+      "id": "LEAF_A2A1",
+      "description": "Repeated awakenings with mental scanning and pressure to sleep",
+      "recommendation": {
+        "script": "SCRIPT_B: Let the Night Watch Over Me",
+        "level": 2
+      },
+      "tags": ["nocturnal_awakenings", "hypervigilance", "anticipatory_anxiety"],
+      "isLeaf": true
+    },
+    "NODE_A3": {
+      "id": "NODE_A3",
+      "question": "Insomnia linked to trauma or emotional hyperactivation?",
+      "children": ["NODE_A3A"]
+    },
+    "NODE_A3A": {
+      "id": "NODE_A3A",
+      "question": "History of relational trauma or abuse?",
+      "children": ["LEAF_A3A1"]
+    },
+    "LEAF_A3A1": {
+      "id": "LEAF_A3A1",
+      "description": "Severe chronic insomnia, post-traumatic hypervigilance",
+      "recommendation": {
+        "script": "SCRIPT_C: Return to the Night",
+        "level": 3
+      },
+      "tags": ["chronic_insomnia", "trauma", "night_fear"],
+      "isLeaf": true
+    },
+    "NODE_A4": {
+      "id": "NODE_A4",
+      "question": "Loneliness, parental overload or emotional exhaustion?",
+      "children": ["LEAF_A4A1"]
+    },
+    "LEAF_A4A1": {
+      "id": "LEAF_A4A1",
+      "description": "Fatigue, self-pressure, emotional isolation",
+      "recommendation": {
+        "script": "SCRIPT_D: Soothing Loneliness and Finding an Inner Resting Space",
+        "level": 3
+      },
+      "tags": ["emotional_fatigue", "overload", "isolation"],
+      "isLeaf": true
+    },
+    "NODE_A5": {
+      "id": "NODE_A5",
+      "question": "Young adult with relational hypervigilance and insomnia?",
+      "children": ["LEAF_A5A1"]
+    },
+    "LEAF_A5A1": {
+      "id": "LEAF_A5A1",
+      "description": "Family conflict, vigilance, mental overactivation",
+      "recommendation": {
+        "script": "SCRIPT_E: Let the Body Digest What the Mind Holds On To",
+        "level": 3
+      },
+      "tags": ["adolescent_sleep", "hypervigilance", "family_conflict"],
+      "isLeaf": true
+    },
+    "NODE_B": {
+      "id": "NODE_B",
+      "description": "No primary sleep complaint → Explore adjacent issues (e.g., anxiety, food regulation, emotional dissociation)",
+      "isLeaf": true
+    }
+  },
+  "summary": [
+    {
+      "node": "LEAF_A1A1",
+      "symptomSummary": "Mental spirals, intrusive thoughts",
+      "script": "Taming Sleep and Reconnecting with Inner Safety",
+      "level": 2,
+      "tags": ["sleep_onset", "rumination", "control"]
+    },
+    {
+      "node": "LEAF_A2A1",
+      "symptomSummary": "Night awakenings with hypervigilance",
+      "script": "Let the Night Watch Over Me",
+      "level": 2,
+      "tags": ["nocturnal_awakenings", "hypervigilance", "anticipatory_anxiety"]
+    },
+    {
+      "node": "LEAF_A3A1",
+      "symptomSummary": "Severe insomnia with trauma background",
+      "script": "Return to the Night",
+      "level": 3,
+      "tags": ["chronic_insomnia", "trauma", "night_fear"]
+    },
+    {
+      "node": "LEAF_A4A1",
+      "symptomSummary": "Fatigue, overload, isolation",
+      "script": "Soothing Loneliness and Finding an Inner Resting Space",
+      "level": 3,
+      "tags": ["emotional_fatigue", "overload", "isolation"]
+    },
+    {
+      "node": "LEAF_A5A1",
+      "symptomSummary": "Adolescent insomnia with family stress",
+      "script": "Let the Body Digest What the Mind Holds On To",
+      "level": 3,
+      "tags": ["adolescent_sleep", "hypervigilance", "family_conflict"]
+    }
+  ]
+}
