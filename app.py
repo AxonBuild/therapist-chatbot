@@ -219,28 +219,28 @@ if user_input := st.chat_input("Share what's on your mind..."):
         # Save the script to session state
         st.session_state.therapeutic_script = st.session_state.chatbot.session.therapeutic_script
         
-        # Display regular response in a chat message
-        with st.chat_message("assistant"):
-            st.markdown(response)
+        # # Display regular response in a chat message
+        # with st.chat_message("assistant"):
+        #     st.markdown(response)
         
-        # Add the regular response to the chat history
-        st.session_state.messages.append({
-            "role": "assistant",
-            "content": response,
-            "debug_info": {
-                "phase": st.session_state.current_phase,
-                "disorder": st.session_state.chatbot.session.identified_disorder,
-                "confidence": st.session_state.chatbot.session.disorder_confidence,
-                "current_node": st.session_state.chatbot.session.current_node_id
-            } if st.session_state.debug_mode else None
-        })
+        # # Add the regular response to the chat history
+        # st.session_state.messages.append({
+        #     "role": "assistant",
+        #     "content": response,
+        #     "debug_info": {
+        #         "phase": st.session_state.current_phase,
+        #         "disorder": st.session_state.chatbot.session.identified_disorder,
+        #         "confidence": st.session_state.chatbot.session.disorder_confidence,
+        #         "current_node": st.session_state.chatbot.session.current_node_id
+        #     } if st.session_state.debug_mode else None
+        # })
         
         # Add a brief pause for effect
         time.sleep(1)
         
         # Display script in a separate chat message
         with st.chat_message("assistant"):
-            st.markdown(f"<div class='therapy-script'>{st.session_state.therapeutic_script}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='therapy-script background-color:#000000 color: #FFFFFF border-left: 5px solid #5E3B50 padding: 1rem border-radius: 0.5rem margin: 1rem 0'>{st.session_state.therapeutic_script}</div>", unsafe_allow_html=True)
         
         # Add the script to chat history
         st.session_state.messages.append({

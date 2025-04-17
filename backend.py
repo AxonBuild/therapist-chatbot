@@ -357,6 +357,7 @@ Provide ONLY the JSON object with your assessment, nothing else.
         
         # Determine if current node is a leaf
         is_leaf = current_node.get("isLeaf", False)
+        print(f"Current node ID: {session.current_node_id}, is leaf: {is_leaf}")
         
         # Get node question or description
         node_prompt = current_node.get("question", current_node.get("description", "No description available"))
@@ -374,6 +375,19 @@ Provide ONLY the JSON object with your assessment, nothing else.
         
         options_text = "\n".join(options) if options else "This is a leaf node with no further options."
         
+        # Get parent node information for potential backtracking
+        parent_node_id = None
+        for node_id, node in session.decision_tree["nodes"].items():
+            if "children" in node and session.current_node_id in node["children"]:
+                parent_node_id = node_id
+                break
+        
+        backtrack_text = ""
+        if parent_node_id:
+            parent_node = session.decision_tree["nodes"].get(parent_node_id)
+            if parent_node:
+                backtrack_text = f"\n## Parent Node (For Backtracking)\nID: {parent_node_id}\nDescription: {parent_node.get('question', parent_node.get('description', 'No description'))}"
+        
         # Format RAG results
         clinical_context = ""
         for i, result in enumerate(rag_results):
@@ -381,16 +395,43 @@ Provide ONLY the JSON object with your assessment, nothing else.
         
         # Format recommendations if this is a leaf node
         recommendation_text = ""
+        script_info = ""
         if is_leaf or "recommendation" in current_node:
             recommendation = current_node.get("recommendation", {})
             script = recommendation.get("script", "No script available")
             level = recommendation.get("level", 1)
             recommendation_text = f"\n## Recommendation\nScript: {script}\nLevel: {level}"
+            script_info = script
             
             # Get tags if available
             if "tags" in current_node:
                 tags = current_node.get("tags", [])
                 recommendation_text += f"\nTags: {', '.join(tags)}"
+        
+        # Script introduction instructions
+        script_intro_text = ""
+        if is_leaf:
+            # Extract script name for introduction
+            script_name = "this exercise"
+            if ":" in script_info:
+                script_name = f'"{script_info.split(":")[1].strip().strip("\"")}"'
+            
+            # Get tag information
+            tags_text = ""
+            if "tags" in current_node:
+                tags = current_node.get("tags", [])
+                if tags:
+                    tags_text = f" focusing on {', '.join(tags[:3])}"
+            
+            script_intro_text = f"""
+    ## Script Introduction Guidelines
+    If confirmed as an appropriate leaf node, provide a thoughtful introduction to the therapeutic script.
+    - Mention that you're going to share {script_name}{tags_text}
+    - Explain how this exercise relates to the user's specific experiences
+    - Create a gentle transition that prepares them for the script
+    - Make it clear that this is designed to help with their particular situation
+    - Keep the introduction warm, conversational, and encouraging
+    """
         
         prompt = f"""# Therapeutic Conversation Guide
 
@@ -400,12 +441,14 @@ Provide ONLY the JSON object with your assessment, nothing else.
 
     ## Possible Directions
     {options_text}
+    {backtrack_text}
 
     ## Conversation History
     {conversation_history}
 
-    ## Clinical Context (Not to be directly referenced)
+    ## Clinical Context 
     {clinical_context}
+    {script_intro_text}
 
     ## Therapeutic Approach
     1. Use person-centered therapeutic techniques that emphasize empathy, unconditional positive regard, and authenticity
@@ -421,7 +464,9 @@ Provide ONLY the JSON object with your assessment, nothing else.
     1. Based on the conversation, determine the appropriate path forward
     2. For non-leaf nodes, include [NODE: selected_node_id] at the end of your response
     3. For appropriate leaf nodes, include [LEAF_CONFIRMED] at the end of your response
-    4. Keep all technical details and reasoning hidden from the user
+    4. If the user's response suggests the current path isn't appropriate, use [BACKTRACK: parent_node_id] to return to the parent node
+    5. Keep all technical details and reasoning hidden from the user
+    6. Always prioritize what the user is actually saying over the decision tree path
 
     ## Response Guidelines
     - Respond with genuine warmth and care
@@ -431,6 +476,9 @@ Provide ONLY the JSON object with your assessment, nothing else.
     - Frame suggestions as collaborative explorations
     - Use language that conveys hope and possibility
     - Keep your response conversational and natural
+    - If at a leaf node, provide a meaningful introduction to the therapeutic script
+    - IMPORTANT: Do NOT end your response with generic questions like "How does that feel?" or "Does that make sense?"
+    - IMPORTANT: Do NOT add any follow-up questions beyond what's strictly needed for navigation
     - Include the appropriate technical marker at the very end
     """
         
@@ -444,7 +492,9 @@ Provide ONLY the JSON object with your assessment, nothing else.
             "confidence": 0.0,
             "confidence_scores": {},
             "node_id": None,
-            "leaf_confirmed": False
+            "leaf_confirmed": False,
+            "backtrack": False,
+            "backtrack_node_id": None
         }
         
         # Clean up response text by removing any markers
@@ -484,12 +534,41 @@ Provide ONLY the JSON object with your assessment, nothing else.
                 print(f"Failed to parse node identification JSON: {response_text}")
         
         elif prompt_type == "navigation":
-            # Check for leaf confirmation
+            # Check for leaf confirmation - now check for both formats
             if "[LEAF_CONFIRMED]" in response_text:
                 result["leaf_confirmed"] = True
                 cleaned_response = response_text.replace("[LEAF_CONFIRMED]", "").strip()
             
-            # Check for node selection
+            # Check for backtracking instruction
+            backtrack_match = re.search(r'\[BACKTRACK:\s*([^\]]+)\]', response_text)
+            if backtrack_match:
+                result["backtrack"] = True
+                result["backtrack_node_id"] = backtrack_match.group(1).strip()
+                cleaned_response = re.sub(r'\[BACKTRACK:\s*([^\]]+)\]', '', response_text).strip()
+            
+            # Look for leaf node IDs in brackets, which might be included directly
+            leaf_match = re.search(r'\[LEAF_([^\]]+)\]', response_text)
+            if leaf_match:
+                result["leaf_confirmed"] = True
+                # The full match with brackets
+                full_match = f"[LEAF_{leaf_match.group(1)}]"
+                cleaned_response = response_text.replace(full_match, "").strip()
+                
+                # If we have a leaf ID but no node_id set yet, use the leaf ID
+                if not result["node_id"]:
+                    result["node_id"] = f"LEAF_{leaf_match.group(1)}"
+            
+            # Check for regular node IDs in brackets (like [NODE_A2A])
+            node_id_match = re.search(r'\[(NODE_[^\]]+)\]', response_text)
+            if node_id_match:
+                # The full match with brackets
+                full_match = f"[{node_id_match.group(1)}]"
+                cleaned_response = response_text.replace(full_match, "").strip()
+                
+                # Set the node_id
+                result["node_id"] = node_id_match.group(1)
+            
+            # Check for node selection with the [NODE: xyz] format
             node_match = re.search(r'\[NODE:\s*([^\]]+)\]', response_text)
             if node_match:
                 result["node_id"] = node_match.group(1).strip()
@@ -497,7 +576,6 @@ Provide ONLY the JSON object with your assessment, nothing else.
         
         result["response_text"] = cleaned_response
         return result
-
     def send_prompt(self, prompt: str, model: str = "gpt-4.1-mini") -> str:
         """Send a prompt to the OpenAI API and get the response."""
         try:
@@ -643,8 +721,14 @@ class MedicalChatbot:
         processed = self.prompt_handler.process_response(raw_response, prompt_type="navigation")
         print(f"Navigation response processed: {processed}")
         
+        # Handle backtracking if needed
+        if processed.get("backtrack") and processed.get("backtrack_node_id"):
+            backtrack_node_id = processed["backtrack_node_id"]
+            print(f"Backtracking from {self.session.current_node_id} to {backtrack_node_id}")
+            self.session.current_node_id = backtrack_node_id
+            self.session.at_leaf_node = False
         # Update session based on response
-        if processed["node_id"]:
+        elif processed["node_id"]:
             # User is being directed to a different node
             self.session.current_node_id = processed["node_id"]
             new_node = self.session.get_current_node()
@@ -665,8 +749,12 @@ class MedicalChatbot:
             )
             
             if script:
+                # Save script to session
                 self.session.therapeutic_script = script
-                return f"{processed['response_text']}\n\nBased on what you've shared, I think this might be helpful:\n\n{script}"
+                
+                # Return response as is - the model will have already created a 
+                # suitable introduction to the script based on our prompt
+                return f"{processed['response_text']}\n\n{script}"
         
         # Handle redirection nodes
         current_node = self.session.get_current_node()
@@ -676,7 +764,6 @@ class MedicalChatbot:
             self.session.current_node_id = redirect_node_id
         
         return processed["response_text"]
-    
     def reset_session(self) -> None:
         """Reset the chatbot session."""
         self.session.reset()
