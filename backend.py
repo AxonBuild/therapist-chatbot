@@ -15,6 +15,7 @@ load_dotenv()
 # Configuration
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 QDRANT_URL = os.environ.get("QDRANT_URL")
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
 QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY")
 COLLECTION_NAME = "EkoMindAI"
 CONFIDENCE_THRESHOLD = 0.7
@@ -22,6 +23,7 @@ MAX_RAG_RESULTS = 3
 
 # Initialize clients
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
+openrouter_client=OpenAI(base_url="https://openrouter.ai/api/v1",api_key=OPENROUTER_API_KEY)
 qdrant_client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
 
 # Available disorders
@@ -178,6 +180,7 @@ class VectorDBHandler:
         """Initialize the vector database handler."""
         self.qdrant_client = qdrant_client
         self.openai_client = openai_client
+        self.openrouter_client = openrouter_client
     
     def generate_embedding(self, text: str) -> List[float]:
         """Generate embedding for text using OpenAI API."""
@@ -254,6 +257,7 @@ class PromptHandler:
     def __init__(self):
         """Initialize the prompt handler."""
         self.openai_client = openai_client
+        self.openrouter_client = openrouter_client
     
     def generate_first_prompt(self, session: ChatbotSession) -> str:
         """Generate the first prompt for disorder identification with enhanced therapeutic approach."""
@@ -298,53 +302,54 @@ class PromptHandler:
         return prompt
 
     
-    def generate_node_identification_prompt(self, session: ChatbotSession) -> str:
-        """Generate a prompt to identify the appropriate starting node in the decision tree."""
-        conversation_history = session.get_conversation_history_formatted()
-        tree_data = session.decision_tree
+#     def generate_node_identification_prompt(self, session: ChatbotSession) -> str:
+#         """Generate a prompt to identify the appropriate starting node in the decision tree."""
+#         conversation_history = session.get_conversation_history_formatted()
+#         tree_data = session.decision_tree
         
-        # Get root node and first-level nodes
-        root_node_id = tree_data.get("rootNode")
-        root_node = tree_data["nodes"].get(root_node_id, {})
-        root_children = root_node.get("children", [])
+#         # Get root node and first-level nodes
+#         root_node_id = tree_data.get("rootNode")
+#         root_node = tree_data["nodes"].get(root_node_id, {})
+#         root_children = root_node.get("children", [])
         
-        # Format the nodes as options
-        options = []
-        for node_id in root_children:
-            node = tree_data["nodes"].get(node_id, {})
-            if "question" in node:
-                options.append(f"{node_id}: {node['question']}")
-            elif "description" in node:
-                options.append(f"{node_id}: {node['description']}")
+#         # Format the nodes as options
+#         options = []
+#         for node_id in root_children:
+#             node = tree_data["nodes"].get(node_id, {})
+#             if "question" in node:
+#                 options.append(f"{node_id}: {node['question']}")
+#             elif "description" in node:
+#                 options.append(f"{node_id}: {node['description']}")
                 
-        options_text = "\n".join(options)
+#         options_text = "\n".join(options)
         
-        prompt = f"""# Decision Tree Node Identification Task
+#         prompt = f"""# Decision Tree Node Identification Task
 
-## Context
-The user has been identified as having concerns related to {session.identified_disorder.upper()}.
-I need you to identify the most appropriate starting node in the decision tree based on their conversation history.
+# ## Context
+# The user has been identified as having concerns related to {session.identified_disorder.upper()}.
+# I need you to identify the most appropriate starting node in the decision tree based on their conversation history.
 
-## Decision Tree Title
-{tree_data.get("title", f"{session.identified_disorder.capitalize()} Decision Tree")}
+# ## Decision Tree Title
+# {tree_data.get("title", f"{session.identified_disorder.capitalize()} Decision Tree")}
 
-## Available First-Level Nodes
-{options_text}
+# ## Available First-Level Nodes
+# {options_text}
 
-## Chat History
-{conversation_history}
+# ## Chat History
+# {conversation_history}
 
-## Instructions
-1. Analyze the user's messages to understand their specific symptoms and concerns
-2. Review the available first-level nodes and select the most appropriate one
-3. Return your assessment as a JSON object with the node ID and your confidence:
-   {{"node": "NODE_XYZ", "confidence": 0.0-1.0}}
+# ## Instructions
+# 1. Analyze the user's messages to understand their specific symptoms and concerns
+# 2. Review the available first-level nodes and select the most appropriate one
+# 3. Return your assessment as a JSON object with the node ID and your confidence:
+#    {{"node": "NODE_XYZ", "confidence": 0.0-1.0}}
 
-## Response
-Provide ONLY the JSON object with your assessment, nothing else.
-"""
+
+# ## Response
+# Provide ONLY the JSON object with your assessment, nothing else.
+# """
         
-        return prompt
+#         return prompt
     
     
     def generate_navigation_prompt(self, session: ChatbotSession, rag_results: List[Dict[str, Any]]) -> str:
@@ -375,19 +380,6 @@ Provide ONLY the JSON object with your assessment, nothing else.
         
         options_text = "\n".join(options) if options else "This is a leaf node with no further options."
         
-        # Get parent node information for potential backtracking
-        parent_node_id = None
-        for node_id, node in session.decision_tree["nodes"].items():
-            if "children" in node and session.current_node_id in node["children"]:
-                parent_node_id = node_id
-                break
-        
-        backtrack_text = ""
-        if parent_node_id:
-            parent_node = session.decision_tree["nodes"].get(parent_node_id)
-            if parent_node:
-                backtrack_text = f"\n## Parent Node (For Backtracking)\nID: {parent_node_id}\nDescription: {parent_node.get('question', parent_node.get('description', 'No description'))}"
-        
         # Format RAG results
         clinical_context = ""
         for i, result in enumerate(rag_results):
@@ -399,8 +391,7 @@ Provide ONLY the JSON object with your assessment, nothing else.
         if is_leaf or "recommendation" in current_node:
             recommendation = current_node.get("recommendation", {})
             script = recommendation.get("script", "No script available")
-            level = recommendation.get("level", 1)
-            recommendation_text = f"\n## Recommendation\nScript: {script}\nLevel: {level}"
+            recommendation_text = f"\n## Recommendation\nScript: {script}"
             script_info = script
             
             # Get tags if available
@@ -432,58 +423,115 @@ Provide ONLY the JSON object with your assessment, nothing else.
     - Make it clear that this is designed to help with their particular situation
     - Keep the introduction warm, conversational, and encouraging
     """
-        
-        prompt = f"""# Therapeutic Conversation Guide
+        exploration_guidance = """
+## Path Exploration Instructions
+1. Consider ALL possible paths that might match the user's symptoms, not just the most obvious one
+2. Carefully weigh the evidence for different paths before selecting one
+3. Look for symptoms the user mentions that might indicate alternative paths
+4. Be willing to suggest a node that isn't the first obvious choice if it better matches their overall description
+5. Pay special attention to recent messages for new information that might suggest a different direction
+6. Don't commit too early to a path before gathering sufficient information
+"""
+        # Add varied therapeutic response patterns
+        therapeutic_phrases = """
+    ## Therapeutic Response Variety
+    Use a variety of therapeutic phrasing to avoid repetition. Below are examples to vary your tone and approach:
 
-    ## Current Focus Area
-    {node_prompt}
-    {recommendation_text}
+    ### Warm Welcome & Emotional Validation (examples)
+    - "I'm really sorry you're feeling this way. You don't have to go through it alone."
+    - "What you're going through matters. I'm with you, and you're allowed to feel exactly how you feel."
+    - "It's okay to feel overwhelmed — we all do sometimes. Let's take a moment together."
+    - "You're not alone in this. I'm here, and I care."
+    - "I can see this is difficult, and I appreciate your willingness to explore it."
 
-    ## Possible Directions
-    {options_text}
-    {backtrack_text}
+    ### Gentle Opening to Dialogue (examples)
+    - "Would you like to share a bit about what's on your mind?"
+    - "If you want, we can gently talk about what's going on."
+    - "Is there anything you'd like to explore right now about these feelings?"
+    - "No need to dive in unless you want to — we can start wherever you feel safe."
+    - "Let's explore this together at a pace that feels comfortable for you."
 
-    ## Conversation History
-    {conversation_history}
+    ### Safe Proposals & Transitions (examples)
+    - "We could look at what's coming up for you — thoughts, sensations, emotions."
+    - "If you'd like, we can explore what's beneath the surface."
+    - "Whether it's your thoughts racing or your body feeling tense, we can find a gentle path forward."
+    - "Let's go at your pace. We can unpack a little, or just move toward something calming."
+    - "I'm wondering if it might be helpful to explore this exercise that focuses specifically on what you're describing."
 
-    ## Clinical Context 
-    {clinical_context}
-    {script_intro_text}
-
-    ## Therapeutic Approach
-    1. Use person-centered therapeutic techniques that emphasize empathy, unconditional positive regard, and authenticity
-    2. Practice validation by acknowledging the person's feelings and experiences as understandable
-    3. Employ reflective listening by paraphrasing and summarizing to show understanding
-    4. Use therapeutic silence by giving space for the person to process their thoughts
-    5. Follow the person's lead while gently guiding toward beneficial areas of exploration
-    6. Focus on strengths and resilience, not just challenges
-    7. Use collaborative language ("we", "let's explore", "together we might")
-    8. Balance emotional support with practical guidance
-
-    ## Technical Navigation Requirements (Hidden from User)
-    1. Based on the conversation, determine the appropriate path forward
-    2. For non-leaf nodes, include [NODE: selected_node_id] at the end of your response
-    3. For appropriate leaf nodes, include [LEAF_CONFIRMED] at the end of your response
-    4. If the user's response suggests the current path isn't appropriate, use [BACKTRACK: parent_node_id] to return to the parent node
-    5. Keep all technical details and reasoning hidden from the user
-    6. Always prioritize what the user is actually saying over the decision tree path
-
-    ## Response Guidelines
-    - Respond with genuine warmth and care
-    - Validate the person's feelings and experiences
-    - Use therapeutic reflection to demonstrate understanding
-    - Offer gentle guidance while respecting autonomy
-    - Frame suggestions as collaborative explorations
-    - Use language that conveys hope and possibility
-    - Keep your response conversational and natural
-    - If at a leaf node, provide a meaningful introduction to the therapeutic script
-    - IMPORTANT: Do NOT end your response with generic questions like "How does that feel?" or "Does that make sense?"
-    - IMPORTANT: Do NOT add any follow-up questions beyond what's strictly needed for navigation
-    - Include the appropriate technical marker at the very end
+    ### Script Introductions (examples)
+    - "Based on what you've shared, I'd like to introduce an exercise that might bring some relief."
+    - "I think there's an approach that could be particularly helpful for what you're experiencing."
+    - "I'd like to share a practice that was designed specifically for situations like the one you're describing."
+    - "Given what you've told me, I believe this exercise might offer some meaningful support."
+    - "Would it be alright if I shared a therapeutic exercise that addresses exactly these kinds of feelings?"
     """
         
+        prompt = f"""# Therapeutic Conversation Guide
+        ## Current Focus Area
+        {node_prompt}
+        {recommendation_text}
+
+        ## Possible Directions
+        {options_text}
+
+        ## Conversation History
+        {conversation_history}
+
+        ## Clinical Context 
+        {clinical_context}
+        {therapeutic_phrases}
+        {exploration_guidance}
+
+        ## Therapeutic Approach
+        1. Use person-centered therapeutic techniques that emphasize empathy, unconditional positive regard, and authenticity
+        2. Practice validation by acknowledging the person's feelings and experiences as understandable
+        3. Employ reflective listening by paraphrasing and summarizing to show understanding
+        4. Use therapeutic silence by giving space for the person to process their thoughts
+        5. Follow the person's lead while gently guiding toward beneficial areas of exploration
+        6. Focus on strengths and resilience, not just challenges
+        7. Use collaborative language ("we", "let's explore", "together we might")
+        8. Balance emotional support with practical guidance
+        9. Vary your therapeutic language patterns to avoid repetition and create a more natural conversation
+
+        ## Technical Navigation Requirements (Hidden from User)
+        1. Prioritize a thorough and accurate understanding of the user's situation
+        2. At the end of your response, include your confidence level and your assessment of the most appropriate node in this format: [CONF:XX%;NODE_ID]
+        For example: [CONF:75%;NODE_A2A] or [CONF:90%;LEAF_A2A1]
+        3. Rate your confidence percentage (0-100%) based on:
+        - How well you understand the patient's situation
+        - How clearly their symptoms match a particular path
+        - How much information you've gathered so far
+        4. Select the node that best matches the user's symptoms and concerns based on all available information
+        5. Keep all technical details and reasoning hidden from the user
+
+        ## Effective Questioning Guidelines
+        1. Ask ONE clear, specific question in each response that directly relates to understanding the user's experience
+        2. Frame questions to elicit specific symptoms or experiences rather than general feelings
+        3. Avoid vague questions like "How does that feel?" or "Does that make sense?"
+        4. Instead ask targeted questions like "Do you notice this happens more in the evening or morning?" or "When you experience X, do you also notice Y happening?"
+        5. Make questions concrete and behaviorally focused rather than abstract
+        6. Your question should help clarify aspects of the user's experience that are still unclear
+        7. Ensure your question feels natural within the conversation, not clinical or interrogative
+        8. Make the question the clear focus of your response - don't bury it in other text
+
+        ## Response Guidelines
+        - Respond with genuine warmth and care
+        - Validate the person's feelings and experiences
+        - Use therapeutic reflection to demonstrate understanding
+        - Offer gentle guidance while respecting autonomy
+        - Frame suggestions as collaborative explorations
+        - Use language that conveys hope and possibility
+        - Keep your response conversational and natural
+        - If exploring a potential leaf node, provide a meaningful introduction to the possible therapeutic approach
+        - Vary your phrasing to sound more human and less repetitive
+        - IMPORTANT: Do NOT end your response with generic questions like "How does that feel?" or "Does that make sense?"
+        - Include ONLY the confidence percentage and node ID in the specified format at the very end
+
+        {script_intro_text}
+
+        """
+
         return prompt
-    
     def process_response(self, response_text: str, prompt_type: str) -> Dict[str, Any]:
         """Process the model's response to extract structured information."""
         result = {
@@ -492,10 +540,8 @@ Provide ONLY the JSON object with your assessment, nothing else.
             "confidence": 0.0,
             "confidence_scores": {},
             "node_id": None,
-            "leaf_confirmed": False,
-            "backtrack": False,
-            "backtrack_node_id": None
-        }
+             "navigation_confidence": 0.0  # New field for navigation confidence       
+             }
         
         # Clean up response text by removing any markers
         cleaned_response = response_text
@@ -534,52 +580,29 @@ Provide ONLY the JSON object with your assessment, nothing else.
                 print(f"Failed to parse node identification JSON: {response_text}")
         
         elif prompt_type == "navigation":
-            # Check for leaf confirmation - now check for both formats
-            if "[LEAF_CONFIRMED]" in response_text:
-                result["leaf_confirmed"] = True
-                cleaned_response = response_text.replace("[LEAF_CONFIRMED]", "").strip()
-            
-            # Check for backtracking instruction
-            backtrack_match = re.search(r'\[BACKTRACK:\s*([^\]]+)\]', response_text)
-            if backtrack_match:
-                result["backtrack"] = True
-                result["backtrack_node_id"] = backtrack_match.group(1).strip()
-                cleaned_response = re.sub(r'\[BACKTRACK:\s*([^\]]+)\]', '', response_text).strip()
-            
-            # Look for leaf node IDs in brackets, which might be included directly
-            leaf_match = re.search(r'\[LEAF_([^\]]+)\]', response_text)
-            if leaf_match:
-                result["leaf_confirmed"] = True
-                # The full match with brackets
-                full_match = f"[LEAF_{leaf_match.group(1)}]"
-                cleaned_response = response_text.replace(full_match, "").strip()
+            # Extract confidence and node ID from the format [CONF:XX%;NODE_ID]
+            conf_node_match = re.search(r'\[CONF:(\d+)%;([^\]]+)\]', response_text)
+            if conf_node_match:
+                confidence_str = conf_node_match.group(1)
+                node_id = conf_node_match.group(2)
                 
-                # If we have a leaf ID but no node_id set yet, use the leaf ID
-                if not result["node_id"]:
-                    result["node_id"] = f"LEAF_{leaf_match.group(1)}"
-            
-            # Check for regular node IDs in brackets (like [NODE_A2A])
-            node_id_match = re.search(r'\[(NODE_[^\]]+)\]', response_text)
-            if node_id_match:
-                # The full match with brackets
-                full_match = f"[{node_id_match.group(1)}]"
-                cleaned_response = response_text.replace(full_match, "").strip()
-                
-                # Set the node_id
-                result["node_id"] = node_id_match.group(1)
-            
-            # Check for node selection with the [NODE: xyz] format
-            node_match = re.search(r'\[NODE:\s*([^\]]+)\]', response_text)
-            if node_match:
-                result["node_id"] = node_match.group(1).strip()
-                cleaned_response = re.sub(r'\[NODE:\s*([^\]]+)\]', '', response_text).strip()
+                try:
+                    # Convert confidence percentage to decimal
+                    result["navigation_confidence"] = float(confidence_str) / 100.0
+                    result["node_id"] = node_id
+                    
+                    # Remove the marker from the response
+                    full_match = f"[CONF:{confidence_str}%;{node_id}]"
+                    cleaned_response = response_text.replace(full_match, "").strip()
+                except ValueError:
+                    print(f"Failed to parse confidence value: {confidence_str}")
         
         result["response_text"] = cleaned_response
         return result
-    def send_prompt(self, prompt: str, model: str = "gpt-4.1-mini") -> str:
+    def send_prompt(self, prompt: str, model: str = "openai/gpt-4.1-mini") -> str:
         """Send a prompt to the OpenAI API and get the response."""
         try:
-            response = self.openai_client.chat.completions.create(
+            response = self.openrouter_client.chat.completions.create(
                 model=model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.7,
@@ -612,6 +635,7 @@ class MedicalChatbot:
             if self.session.identified_disorder and not self.session.current_node_id:
                 node_id = self._identify_starting_node()
                 print(f"Identified starting node: {node_id}")
+                self.session.current_node_id = node_id
                 
                 # After identifying node, we should return to the user but not navigate yet
                 self.session.add_message("assistant", response)
@@ -660,22 +684,23 @@ class MedicalChatbot:
     def _identify_starting_node(self) -> str:
         """Identify the appropriate starting node in the decision tree."""
         # Generate and send node identification prompt
-        prompt = self.prompt_handler.generate_node_identification_prompt(self.session)
-        raw_response = self.prompt_handler.send_prompt(prompt)
-        print(f"Node identification response: {raw_response}")
+         #prompt = self.prompt_handler.generate_node_identification_prompt(self.session)
+        # raw_response = self.prompt_handler.send_prompt(prompt)
+        # print(f"Node identification response: {raw_response}")
         
-        # Process the response
-        processed = self.prompt_handler.process_response(raw_response, prompt_type="node_identification")
+        # # Process the response
+        # processed = self.prompt_handler.process_response(raw_response, prompt_type="node_identification")
         
-        if processed["node_id"] and processed["confidence"] >= 0.6:
-            self.session.current_node_id = processed["node_id"]
-            return processed["node_id"]
+        # if processed["node_id"] and processed["confidence"] >= 0.6:
+        #     self.session.current_node_id = processed["node_id"]
+        #     processed["node_id"]="NODE_A"  # Placeholder for node ID
+        #     return processed["node_id"]
         
         # Default to root node if identification fails
-        root_node_id = self.session.decision_tree.get("rootNode")
-        if root_node_id:
-            self.session.current_node_id = root_node_id
-            return root_node_id
+        # root_node_id = self.session.decision_tree.get("rootNode")
+        # if root_node_id:
+        #     self.session.current_node_id = root_node_id
+        #     return root_node_id
         
         # Last resort fallback
         return "NODE_A"
@@ -702,7 +727,7 @@ class MedicalChatbot:
                 # Just return the script without wrapping it in a chat message
                 return script
         
-        # Case 3: Still navigating the tree - use RAG and LLM
+          # Case 3: Still navigating the tree - use RAG and LLM
         # Get relevant RAG results
         rag_results = self.vector_db.search(
             query=user_message,
@@ -721,40 +746,42 @@ class MedicalChatbot:
         processed = self.prompt_handler.process_response(raw_response, prompt_type="navigation")
         print(f"Navigation response processed: {processed}")
         
-        # Handle backtracking if needed
-        if processed.get("backtrack") and processed.get("backtrack_node_id"):
-            backtrack_node_id = processed["backtrack_node_id"]
-            print(f"Backtracking from {self.session.current_node_id} to {backtrack_node_id}")
-            self.session.current_node_id = backtrack_node_id
-            self.session.at_leaf_node = False
-        # Update session based on response
-        elif processed["node_id"]:
-            # User is being directed to a different node
-            self.session.current_node_id = processed["node_id"]
-            new_node = self.session.get_current_node()
-            
-            # Check if the new node is a leaf
-            if new_node and new_node.get("isLeaf", False):
-                self.session.at_leaf_node = True
+        # Use confidence threshold to determine whether to navigate
+        CONFIDENCE_THRESHOLD = 0.85  
         
-        # If we've confirmed we're at a leaf node
-        elif processed["leaf_confirmed"]:
-            self.session.at_leaf_node = True
-            
-            # Check for therapeutic script
-            script = self.decision_tree.get_therapeutic_script(
-                self.session.current_node_id,
-                self.session.identified_disorder,
-                self.session.decision_tree
-            )
-            
-            if script:
-                # Save script to session
-                self.session.therapeutic_script = script
+        if processed["node_id"]:
+            # Only change nodes if confidence is above threshold or it's the same node
+            if processed["navigation_confidence"] >= CONFIDENCE_THRESHOLD or processed["node_id"] == self.session.current_node_id:
+                # If confidence is high enough or we're staying at the same node, update the node ID
+                old_node_id = self.session.current_node_id
+                self.session.current_node_id = processed["node_id"]
                 
-                # Return response as is - the model will have already created a 
-                # suitable introduction to the script based on our prompt
-                return f"{processed['response_text']}\n\n{script}"
+                if old_node_id != processed["node_id"]:
+                    print(f"Moving from {old_node_id} to {processed['node_id']} with confidence {processed['navigation_confidence']}")
+                
+                # Check if this is a leaf node
+                new_node = self.session.get_current_node()
+                is_leaf_by_name = processed["node_id"].startswith("LEAF_")
+                is_leaf_by_data = new_node and new_node.get("isLeaf", False)
+                
+                if is_leaf_by_name or is_leaf_by_data:
+                    self.session.at_leaf_node = True
+                    
+                    # If it's a leaf node, check for a therapeutic script
+                    script = self.decision_tree.get_therapeutic_script(
+                        self.session.current_node_id,
+                        self.session.identified_disorder,
+                        self.session.decision_tree
+                    )
+                    
+                    if script:
+                        # Save script to session
+                        self.session.therapeutic_script = script
+                        # Return the processed response (the model will have created a suitable introduction)
+                        return processed["response_text"]
+            else:
+                # If confidence is too low, don't change nodes but log this
+                print(f"Staying at {self.session.current_node_id} because confidence {processed['navigation_confidence']} is below threshold {CONFIDENCE_THRESHOLD}")
         
         # Handle redirection nodes
         current_node = self.session.get_current_node()

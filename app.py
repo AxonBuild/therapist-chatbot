@@ -2,14 +2,72 @@ import os
 import streamlit as st
 import json
 import time
+import base64
+import tempfile
 from dotenv import load_dotenv
 from typing import List, Dict, Any, Optional
+from openai import OpenAI
 
 # Import your chatbot backend
-#from streaming  import StreamingMedicalChatbot as MedicalChatbot
 from backend import MedicalChatbot
+
 # Load environment variables
 load_dotenv()
+
+# Create OpenAI client for TTS
+openai_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+
+# Function to convert text to speech using OpenAI
+def text_to_speech(text, voice="alloy"):
+    """Convert text to speech using OpenAI's TTS API."""
+    try:
+        # Create a temporary file to store the audio
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as temp_audio_file:
+            # Call OpenAI TTS API with the correct streaming method
+            with openai_client.audio.speech.with_streaming_response.create(
+                model="gpt-4o-mini-tts",
+                voice=voice,
+                input=text
+            ) as audio_response:
+                audio_response.stream_to_file(temp_audio_file.name)
+            print(f"Audio saved to {temp_audio_file.name}")
+            
+            # Return the path to the temporary file
+            return temp_audio_file.name
+    except Exception as e:
+        print(f"Error generating speech: {e}")
+        return None
+
+# Function to create an HTML audio player
+def get_audio_player(audio_file_path, autoplay=True):
+    """Create an HTML audio player for the given audio file."""
+    if audio_file_path:
+        with open(audio_file_path, "rb") as audio_file:
+            audio_bytes = audio_file.read()
+        
+        # Encode the audio bytes as base64
+        audio_base64 = base64.b64encode(audio_bytes).decode("utf-8")
+        
+        # Create an HTML audio element with autoplay
+        autoplay_attr = "autoplay" if autoplay else ""
+        audio_html = f"""
+        <audio {autoplay_attr} controls style="width: 100%; display: none;">
+            <source src="data:audio/mp3;base64,{audio_base64}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <script>
+            // This ensures the audio plays even if the controls are hidden
+            document.addEventListener('DOMContentLoaded', (event) => {{
+                const audioElements = document.getElementsByTagName('audio');
+                const latestAudio = audioElements[audioElements.length-1];
+                if({str(autoplay).lower()}) {{
+                    latestAudio.play();
+                }}
+            }});
+        </script>
+        """
+        return audio_html
+    return ""
 
 # Page configuration
 st.set_page_config(
@@ -142,6 +200,9 @@ if "chatbot" not in st.session_state:
 if "debug_mode" not in st.session_state:
     st.session_state.debug_mode = False
 
+if "speech_enabled" not in st.session_state:
+    st.session_state.speech_enabled = True
+
 if "current_phase" not in st.session_state:
     st.session_state.current_phase = "Identifying your concerns"
 
@@ -162,14 +223,40 @@ def clear_chat_history():
     st.session_state.therapeutic_script = None
     st.rerun()
 
-# Debug mode toggle in sidebar
+# Settings in sidebar
 with st.sidebar:
     st.title("Settings")
+    
+    # Debug mode toggle
     debug_toggle = st.toggle("Debug Mode", value=st.session_state.debug_mode)
     if debug_toggle != st.session_state.debug_mode:
         st.session_state.debug_mode = debug_toggle
         st.rerun()
     
+    # Text-to-speech toggle
+    speech_toggle = st.toggle("Text-to-Speech", value=st.session_state.speech_enabled)
+    if speech_toggle != st.session_state.speech_enabled:
+        st.session_state.speech_enabled = speech_toggle
+        st.rerun()
+    
+    # Voice selection for OpenAI TTS
+    if st.session_state.speech_enabled:
+        voice_options = ["alloy", "echo", "fable", "onyx", "nova", "shimmer"]
+        
+        if "selected_voice" not in st.session_state:
+            st.session_state.selected_voice = "nova"  # Default to nova as it's good for therapeutic content
+            
+        selected_voice = st.selectbox(
+            "Voice", 
+            options=voice_options,
+            index=voice_options.index(st.session_state.selected_voice)
+        )
+        
+        if selected_voice != st.session_state.selected_voice:
+            st.session_state.selected_voice = selected_voice
+            st.rerun()
+    
+    # Reset button
     if st.button("Reset Conversation", use_container_width=True):
         clear_chat_history()
 
@@ -219,28 +306,24 @@ if user_input := st.chat_input("Share what's on your mind..."):
         # Save the script to session state
         st.session_state.therapeutic_script = st.session_state.chatbot.session.therapeutic_script
         
-        # # Display regular response in a chat message
-        # with st.chat_message("assistant"):
-        #     st.markdown(response)
-        
-        # # Add the regular response to the chat history
-        # st.session_state.messages.append({
-        #     "role": "assistant",
-        #     "content": response,
-        #     "debug_info": {
-        #         "phase": st.session_state.current_phase,
-        #         "disorder": st.session_state.chatbot.session.identified_disorder,
-        #         "confidence": st.session_state.chatbot.session.disorder_confidence,
-        #         "current_node": st.session_state.chatbot.session.current_node_id
-        #     } if st.session_state.debug_mode else None
-        # })
-        
         # Add a brief pause for effect
         time.sleep(1)
         
+        # Generate speech for the script (use a calmer voice for scripts)
+        audio_path = None
+        if st.session_state.speech_enabled:
+            # Using 'nova' voice for therapeutic scripts as it has a calming quality
+            script_voice = "nova" if st.session_state.selected_voice != "nova" else "shimmer"
+            audio_path = text_to_speech(st.session_state.therapeutic_script, voice=script_voice)
+        
         # Display script in a separate chat message
         with st.chat_message("assistant"):
-            st.markdown(f"<div class='therapy-script background-color:#000000 color: #FFFFFF border-left: 5px solid #5E3B50 padding: 1rem border-radius: 0.5rem margin: 1rem 0'>{st.session_state.therapeutic_script}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='therapy-script'>{st.session_state.therapeutic_script}</div>", unsafe_allow_html=True)
+            if audio_path:
+                with open(audio_path, "rb") as f:
+                    audio_bytes = f.read()
+                st.audio(audio_bytes, format="audio/mp3", autoplay=True)
+
         
         # Add the script to chat history
         st.session_state.messages.append({
@@ -249,10 +332,18 @@ if user_input := st.chat_input("Share what's on your mind..."):
             "is_script": True
         })
     else:
-        # Normal response - display in chat message
-        with st.chat_message("assistant"):
-            st.markdown(response)
+        # Normal response - generate speech if enabled
+        audio_path = None
+        if st.session_state.speech_enabled:
+            audio_path = text_to_speech(response, voice=st.session_state.selected_voice)
         
+        # Display in chat message
+        with st.chat_message("assistant"):
+            st.markdown(f"<div class='assistant-audio-message'>{response}</div>", unsafe_allow_html=True)
+            if audio_path:
+                with open(audio_path, "rb") as f:
+                    audio_bytes = f.read()
+                st.audio(audio_bytes, format="audio/mp3", autoplay=True)  
         # Add to chat history
         st.session_state.messages.append({
             "role": "assistant", 
@@ -264,14 +355,9 @@ if user_input := st.chat_input("Share what's on your mind..."):
                 "current_node": st.session_state.chatbot.session.current_node_id
             } if st.session_state.debug_mode else None
         })
-                
-            
-            
+        
         # Force a rerun to update the interface with any state changes
-        st.rerun()
-    
-            
-
+        #st.rerun()
 
 # Disclaimer
 st.markdown("""
