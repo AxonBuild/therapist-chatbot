@@ -1,0 +1,7 @@
+streamlit
+python-dotenv
+tqdm
+requests
+openai
+qdrant-client
+python-docx
