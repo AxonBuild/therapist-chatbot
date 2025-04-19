@@ -301,63 +301,49 @@ if user_input := st.chat_input("Share what's on your mind..."):
     if st.session_state.chatbot.session.identified_disorder and st.session_state.current_phase == "Identifying your concerns":
         st.session_state.current_phase = f"Exploring your {st.session_state.chatbot.session.identified_disorder} concerns"
     
-    # Check if we have a therapeutic script
-    if st.session_state.chatbot.session.therapeutic_script and not st.session_state.therapeutic_script:
-        # Save the script to session state
-        st.session_state.therapeutic_script = st.session_state.chatbot.session.therapeutic_script
-        
-        # Add a brief pause for effect
-        time.sleep(1)
-        
-        # Generate speech for the script (use a calmer voice for scripts)
-        audio_path = None
-        if st.session_state.speech_enabled:
-            # Using 'nova' voice for therapeutic scripts as it has a calming quality
-            script_voice = "nova" if st.session_state.selected_voice != "nova" else "shimmer"
-            audio_path = text_to_speech(st.session_state.therapeutic_script, voice=script_voice)
-        
-        # Display script in a separate chat message
-        with st.chat_message("assistant"):
-            st.markdown(f"<div class='therapy-script'>{st.session_state.therapeutic_script}</div>", unsafe_allow_html=True)
-            if audio_path:
-                with open(audio_path, "rb") as f:
-                    audio_bytes = f.read()
-                st.audio(audio_bytes, format="audio/mp3", autoplay=True)
-
-        
-        # Add the script to chat history
-        st.session_state.messages.append({
-            "role": "assistant",
-            "content": st.session_state.therapeutic_script,
-            "is_script": True
-        })
+    # Determine if the response is a script
+    is_script = response.startswith("SCRIPT:::")
+    if is_script:
+        # Strip the marker
+        display_content = response[len("SCRIPT:::"):]
+        # Use a calmer voice for scripts
+        script_voice = "nova" if st.session_state.selected_voice != "nova" else "shimmer"
+        tts_voice = script_voice
     else:
-        # Normal response - generate speech if enabled
-        audio_path = None
-        if st.session_state.speech_enabled:
-            audio_path = text_to_speech(response, voice=st.session_state.selected_voice)
-        
-        # Display in chat message
-        with st.chat_message("assistant"):
-            st.markdown(f"<div class='assistant-audio-message'>{response}</div>", unsafe_allow_html=True)
-            if audio_path:
-                with open(audio_path, "rb") as f:
-                    audio_bytes = f.read()
-                st.audio(audio_bytes, format="audio/mp3", autoplay=True)  
-        # Add to chat history
-        st.session_state.messages.append({
-            "role": "assistant", 
-            "content": response,
-            "debug_info": {
-                "phase": st.session_state.current_phase,
-                "disorder": st.session_state.chatbot.session.identified_disorder,
-                "confidence": st.session_state.chatbot.session.disorder_confidence if st.session_state.chatbot.session.identified_disorder else 0.0,
-                "current_node": st.session_state.chatbot.session.current_node_id
-            } if st.session_state.debug_mode else None
-        })
-        
-        # Force a rerun to update the interface with any state changes
-        #st.rerun()
+        display_content = response
+        tts_voice = st.session_state.selected_voice
+
+    # Generate speech if enabled
+    audio_path = None
+    if st.session_state.speech_enabled and display_content: # Check if content exists
+        audio_path = text_to_speech(display_content, voice=tts_voice)
+    
+    # Display the response (either script or normal message)
+    with st.chat_message("assistant"):
+        if is_script:
+            st.markdown(f"<div class='therapy-script'>{display_content}</div>", unsafe_allow_html=True)
+        else:
+            # Use a different class maybe for non-script audio messages if needed
+            st.markdown(f"<div class='assistant-audio-message'>{display_content}</div>", unsafe_allow_html=True)
+            
+        # Play audio if available
+        if audio_path:
+            with open(audio_path, "rb") as f:
+                audio_bytes = f.read()
+            st.audio(audio_bytes, format="audio/mp3", autoplay=True)
+
+    # Add the message to chat history
+    st.session_state.messages.append({
+        "role": "assistant", 
+        "content": display_content, # Use the processed content
+        "is_script": is_script, # Mark if it was a script
+        "debug_info": { # Keep debug info consistent
+            "phase": st.session_state.current_phase,
+            "disorder": st.session_state.chatbot.session.identified_disorder,
+            "confidence": st.session_state.chatbot.session.disorder_confidence if st.session_state.chatbot.session.identified_disorder else 0.0,
+            "current_node": st.session_state.chatbot.session.current_node_id
+        } if st.session_state.debug_mode else None
+    })
 
 # Disclaimer
 st.markdown("""
