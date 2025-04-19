@@ -262,176 +262,134 @@ class PromptHandler:
     def generate_first_prompt(self, session: ChatbotSession) -> str:
         """Generate the first prompt for disorder identification with enhanced therapeutic approach."""
         conversation_history = session.get_conversation_history_formatted()
-        
+
         prompt = f"""# Therapeutic Assessment Task
 
     ## Context
-    You are a skilled and compassionate therapist having a conversation with someone who may be experiencing difficulties with their mental health. Your goal is to understand their experience and create a safe, supportive space.
+    You are a skilled and compassionate therapist beginning a conversation with someone seeking support. Your primary goal is to build rapport, understand their experience deeply, and create a safe, supportive space for them to share. The conversation should feel natural and unhurried.
 
-    ## Available Areas of Focus
+    ## Available Areas of Focus (Internal Guide - Do Not Mention to User)
     {', '.join(AVAILABLE_DISORDERS)}
 
     ## Conversation History
     {conversation_history}
 
     ## Therapeutic Approach
-    1. Create a safe emotional space by using warm, accepting language
-    2. Practice active listening through reflection and validation
-    3. Focus on the person's experience rather than diagnostic labels
-    4. Use open-ended questions that invite deeper sharing
-    5. Demonstrate genuine empathy by acknowledging emotions
-    6. Avoid clinical terminology, judgments, or premature advice
-    7. Respond to the emotional content as well as the factual content
-    8. Use person-centered language that respects autonomy and agency
+    1.  **Build Trust:** Create a safe emotional space using warm, accepting, and validating language.
+    2.  **Listen Actively:** Practice active listening through reflection ("It sounds like...", "I hear you saying...") and validation ("That sounds really tough.", "It makes sense you'd feel that way.").
+    3.  **Focus on Experience:** Center the conversation on the person's subjective experience, feelings, and perspective, rather than diagnostic labels or solutions.
+    4.  **Use Open-Ended Questions:** Ask questions that invite deeper sharing and exploration (e.g., "How has that been for you?", "Can you tell me more about...?").
+    5.  **Show Genuine Empathy:** Acknowledge emotions directly and convey understanding.
+    6.  **Use Natural Language:** Avoid clinical terminology, judgments, or premature advice. Speak like a caring human.
+    7.  **Respond Holistically:** Address the emotional content as well as the factual content of what the user shares.
+    8.  **Respect Agency:** Use person-centered language that respects their autonomy.
 
-    ## Technical Requirements (Hidden from User)
-    1. Based on the conversation, assess the likelihood each area needs attention:
+    ## Technical Requirements (Hidden from User - Append to Response)
+    1. Based *only* on the conversation history provided, assess the likelihood each area needs attention:
     {{"confidence_scores": {{"sleep": 0.0-1.0, "eating": 0.0-1.0}}}}
-    2. Include this assessment in JSON format at the end of EVERY response
-    3. Never mention JSON or assessments to the user
+    2. Include this assessment in JSON format at the VERY END of your response, after all conversational text.
+    3. Never mention JSON, confidence scores, or these internal assessments to the user. Your conversational response should flow naturally without any hint of this technical requirement.
 
     ## Response Guidelines
-    - Begin with validation of the person's experience or feelings
-    - Use reflection to show you understand ("It sounds like...", "I'm hearing that...")
-    - Ask therapeutic questions that help explore their experience
-    - Use a warm, conversational tone that conveys genuine care
-    - Focus on building trust before problem-solving
-    - Always include the hidden technical assessment
+    - Begin with validation of the person's experience or feelings expressed in their last message.
+    - Use reflection to show you understand.
+    - Ask a gentle, open-ended therapeutic question to encourage them to share more.
+    - Use a warm, conversational tone that conveys genuine care and patience.
+    - Focus on building trust and understanding in this initial phase.
+    - Remember to append the hidden technical assessment JSON at the end.
     """
-        
+
         return prompt
 
-    
-#     def generate_node_identification_prompt(self, session: ChatbotSession) -> str:
-#         """Generate a prompt to identify the appropriate starting node in the decision tree."""
-#         conversation_history = session.get_conversation_history_formatted()
-#         tree_data = session.decision_tree
-        
-#         # Get root node and first-level nodes
-#         root_node_id = tree_data.get("rootNode")
-#         root_node = tree_data["nodes"].get(root_node_id, {})
-#         root_children = root_node.get("children", [])
-        
-#         # Format the nodes as options
-#         options = []
-#         for node_id in root_children:
-#             node = tree_data["nodes"].get(node_id, {})
-#             if "question" in node:
-#                 options.append(f"{node_id}: {node['question']}")
-#             elif "description" in node:
-#                 options.append(f"{node_id}: {node['description']}")
-                
-#         options_text = "\n".join(options)
-        
-#         prompt = f"""# Decision Tree Node Identification Task
-
-# ## Context
-# The user has been identified as having concerns related to {session.identified_disorder.upper()}.
-# I need you to identify the most appropriate starting node in the decision tree based on their conversation history.
-
-# ## Decision Tree Title
-# {tree_data.get("title", f"{session.identified_disorder.capitalize()} Decision Tree")}
-
-# ## Available First-Level Nodes
-# {options_text}
-
-# ## Chat History
-# {conversation_history}
-
-# ## Instructions
-# 1. Analyze the user's messages to understand their specific symptoms and concerns
-# 2. Review the available first-level nodes and select the most appropriate one
-# 3. Return your assessment as a JSON object with the node ID and your confidence:
-#    {{"node": "NODE_XYZ", "confidence": 0.0-1.0}}
-
-
-# ## Response
-# Provide ONLY the JSON object with your assessment, nothing else.
-# """
-        
-#         return prompt
-    
-    
     def generate_navigation_prompt(self, session: ChatbotSession, rag_results: List[Dict[str, Any]]) -> str:
-        """Generate a prompt for decision tree navigation focused on decision-making."""
+        """Generate a prompt for therapeutic exploration that implicitly guides navigation."""
         conversation_history = session.get_conversation_history_formatted()
         current_node = session.get_current_node()
-        
+
         if not current_node:
-            return f"Error: No current node found in decision tree."
-        
-        # Determine if current node is a leaf
-        is_leaf = current_node.get("isLeaf", False)
-        print(f"Current node ID: {session.current_node_id}, is leaf: {is_leaf}")
-        
-        # Get node question or description
-        node_prompt = current_node.get("question", current_node.get("description", "No description available"))
-        
-        # Get children or options
-        options = []
-        if not is_leaf:
+            # Fallback if node is missing
+            return f"Error: No current node found. Raw response: I seem to have lost my place. Could you remind me what we were discussing? [CONF:0%;ROOT]" # Provide a default marker
+
+        # Get node question or description - This is now the *current theme*
+        current_theme = current_node.get("question", current_node.get("description", "our current discussion"))
+
+        # Get potential next themes/topics from children
+        potential_next_themes = []
+        child_ids_for_marker = [] # Keep track of valid child node IDs for the marker
+        if not current_node.get("isLeaf", False):
             child_ids = current_node.get("children", [])
             for child_id in child_ids:
                 child_node = session.decision_tree["nodes"].get(child_id, {})
-                if "question" in child_node:
-                    options.append(f"{child_id}: {child_node['question']}")
-                elif "description" in child_node:
-                    options.append(f"{child_id}: {child_node['description']}")
-        
-        options_text = "\n".join(options) if options else "This is a leaf node with no further options."
-        
-        # Format RAG results
+                theme = child_node.get("question", child_node.get("description"))
+                if theme:
+                    potential_next_themes.append(f"- {theme}")
+                    child_ids_for_marker.append(child_id) # Add valid child ID
+
+        themes_text = "\n".join(potential_next_themes) if potential_next_themes else "We might continue exploring this topic or summarize."
+        # Include the current node ID in the list for the marker if it's not a leaf
+        valid_node_ids_for_marker = child_ids_for_marker
+        if not current_node.get("isLeaf", False):
+             valid_node_ids_for_marker.append(session.current_node_id) # Allow staying
+        # If it IS a leaf, the only valid ID is the leaf itself
+        elif current_node.get("isLeaf", False):
+             valid_node_ids_for_marker = [session.current_node_id]
+
+
+        # Format RAG results as supplementary context
         clinical_context = ""
-        for i, result in enumerate(rag_results):
-            clinical_context += f"CLINICAL CONTEXT {i+1} (Section: {result['section']}):\n{result['content']}\n\n"
-        
-        # Format recommendations if this is a leaf node
-        recommendation_text = ""
-        if is_leaf or "recommendation" in current_node:
+        if rag_results:
+             clinical_context = "## Supplementary Clinical Context (Internal Use Only)\n"
+             for i, result in enumerate(rag_results):
+                 clinical_context += f"Context {i+1} (Section: {result['section']}): {result['content']}\n\n"
+
+        # Format recommendation info if leaf node (for internal context)
+        recommendation_context = ""
+        if current_node.get("isLeaf", False) or "recommendation" in current_node:
             recommendation = current_node.get("recommendation", {})
-            # Store the script info but don't put it directly in the main recommendation text
-            script_info = recommendation.get("script", "No script available")
-            # Change this line to be less direct about the script itself
-            recommendation_text = "\\n## Recommendation\\nA therapeutic exercise or technique is recommended based on this path."
+            script_info = recommendation.get("script", "No specific script.")
+            tags = recommendation.get("tags", [])
+            recommendation_context = f"\n## Potential Recommendation Context (Internal Use Only)\nThis path might lead towards a recommendation related to: {script_info}"
+            if tags:
+                recommendation_context += f"\nRelevant concepts: {', '.join(tags)}"
 
-            # Get tags if available (can still be useful context)
-            if "tags" in current_node:
-                tags = current_node.get("tags", [])
-                if tags: # Add check if tags list is not empty
-                    recommendation_text += f"\\nTags: {', '.join(tags)}"
-        
-        # Simplified navigation prompt focused on decision making
-        prompt = f"""# Decision Tree Navigation Task
 
-## Current Focus Node
-{node_prompt}
-{recommendation_text}
+        prompt = f"""# Therapeutic Exploration Task
 
-## Possible Paths
-{options_text}
+## Current Conversational Theme
+{current_theme}
+{recommendation_context} # Internal context about potential outcome
 
-## Conversation History
+## Potential Directions for Exploration (Internal Guide - Do Not Mention Explicitly)
+{themes_text}
+
+## Recent Conversation History
 {conversation_history}
 
-## Clinical Context 
-{clinical_context}
+{clinical_context} # Internal context from knowledge base
 
-## Task: Navigation Decision
-1. Analyze the user's messages to determine which path in the decision tree best matches their situation
-2. Infer answers to questions even when not directly stated by looking for implicit information
-3. Consider the full context of the conversation history
-4. If the user's message is vague or unclear, assign a lower confidence score
-5. Do not commit to high confidence navigation unless the evidence is clear
-6. Consider which child node (or current node) best matches the user's situation
+## Your Role & Goal
+You are a compassionate therapist focused on building rapport and understanding the user's experience. Your goal is to have a natural, empathetic conversation that helps the user explore their feelings related to the 'Current Conversational Theme'. While talking, subtly assess which 'Potential Direction' seems most relevant based on the user's sharing, or if continuing with the current theme is best.
 
-## Response Format Instructions
-1. Generate a clear, concise response that represents your navigation decision
-2. Your response should identify which path to take but DOES NOT need to sound therapeutic yet
-3. Clearly indicate with [CONF:XX%;NODE_ID] your confidence level and the node ID
-4. For example: [CONF:75%;NODE_A2A] or [CONF:90%;LEAF_A2A1] 
-5. For vague/unclear messages, use a low confidence score: [CONF:40%;NODE_A1]
-6. Include a brief question to gather more information if needed
-7. Keep your response straightforward and focused on the decision
+## Response Instructions (Generate BOTH parts):
+
+### Part 1: Therapeutic Response (Visible to User)
+1.  **Acknowledge & Validate:** Start by acknowledging specific feelings or details from the user's *last* message. Use their words. Validate their experience ("That sounds really difficult," "It makes sense that...").
+2.  **Connect to Theme:** Gently link their sharing back to the 'Current Conversational Theme' if appropriate, or simply continue exploring what they brought up.
+3.  **Explore Deeper:** Ask ONE gentle, open-ended question to encourage them to elaborate further on their feelings, experiences, or thoughts related to the ongoing discussion. Avoid direct questions from the 'Potential Directions'.
+4.  **Maintain Tone:** Keep the response warm, empathetic, conversational, and unhurried. Use generous whitespace. Aim for 2-4 short paragraphs.
+5.  **No Directives:** Do not suggest solutions or next steps unless the current theme *is* about planning (which is unlikely based on node structure). Focus on listening and understanding.
+
+### Part 2: Internal Navigation Assessment (Hidden - Append AFTER Therapeutic Response)
+1.  **Analyze:** Based on the *entire* interaction (especially the user's latest message) and the 'Potential Directions', determine which node ID best represents the most relevant focus for the *next* turn. This could be one of the child nodes or staying at the current node.
+2.  **Assess Confidence:** Estimate your confidence (0-100%) that this chosen node ID is the most appropriate next step. Be conservative if the user was vague or didn't clearly lean towards a specific direction.
+3.  **Format:** Append your assessment to the very end of your response in the format `[CONF:XX%;NODE_ID]`. Replace XX with the confidence percentage and NODE_ID with the chosen ID from the valid list: {', '.join(valid_node_ids_for_marker)}.
+4.  **Example Marker:** `[CONF:75%;NODE_B2]` or `[CONF:55%;NODE_A]`
+5.  **CRITICAL:** This marker MUST be present and correctly formatted at the absolute end. The user will NOT see it.
+
+## Example Response Structure (User sees only Part 1):
+*(Part 1: Empathetic text acknowledging user, reflecting, asking open question)*
+
+*(Part 2: Hidden marker appended)* `[CONF:XX%;NODE_ID]`
 
 """
         return prompt
@@ -470,50 +428,50 @@ Your goal is to generate ONLY the introductory message for this exercise. Your r
         return prompt
 
     def generate_therapeutic_styling_prompt(self, raw_message: str, conversation_history: str, disorder: str = None, latest_user_msg: str = "") -> str:
-        """Generate a prompt to style a response in a therapeutic manner."""
-        
+        """Generate a prompt to style a response in a therapeutic manner, emphasizing empathy and conversation."""
+
         # Sample therapist conversations showing ideal therapeutic responses
         sample_conversations = """
 EXAMPLE 1:
-User: I can't sleep at night. My mind keeps racing with worries about work and my upcoming performance review next week.
-Raw Response: You appear to have difficulty with sleep onset insomnia related to work stress. Would meditation before bed help?
-Therapeutic Response: 
-Those racing thoughts about work and your upcoming performance review must make it really hard to settle in at night.
+User: I just lie there for hours, my mind racing about work stuff, like that presentation next week. I feel so unprepared.
+Raw Response (from Nav Prompt): Acknowledge racing thoughts. Ask more about the feeling of being unprepared. [CONF:70%;NODE_SLEEP_ANXIETY]
+Therapeutic Response:
+It sounds incredibly frustrating lying there for hours while your mind races, especially with worries about work and that upcoming presentation. Feeling unprepared on top of that must be really draining.
 
-When our minds fixate on something important like a review next week, it can feel impossible to quiet down.
+That feeling of your mind just not switching off can be exhausting.
 
-Would you like to explore some ways to ease that work-related worry before bedtime, or would you prefer we take a different approach?
+Could you tell me a bit more about what that feeling of being unprepared is like for you when you're trying to rest?
 
 EXAMPLE 2:
-User: I don't know what's wrong with me. I just feel sad all the time since my mother's visit last month.
-Raw Response: Persistent sadness could indicate depression. Can you identify specific triggers for your sad feelings?
-Therapeutic Response: 
-That persistent sadness you've been carrying since your mother's visit last month sounds really heavy.
+User: I don't know, I just haven't felt like eating much since that argument with my partner last weekend. Food just doesn't appeal.
+Raw Response (from Nav Prompt): Validate lack of appetite post-argument. Explore connection between mood and eating. [CONF:80%;NODE_EATING_MOOD_LINK]
+Therapeutic Response:
+It sounds like that argument with your partner last weekend has really impacted you, to the point where even food doesn't feel appealing right now. That loss of appetite must feel quite unsettling.
 
-Sometimes our relationships with family can stir up complex feelings that linger with us.
+It's common for our emotional state, especially after conflict, to affect us physically like that.
 
-Would it help to talk a bit about what happened during that visit, or would you rather focus on finding ways to care for yourself right now?
+How have you been feeling emotionally since the argument, aside from the lack of appetite?
 
 EXAMPLE 3:
-User: Sometimes I just don't feel hungry for days, especially when my workload increases at the office.
-Raw Response: Loss of appetite lasting several days could indicate depression or an eating disorder. When did this pattern start?
+User: I managed to sleep okay last night but I still feel so tired today, like I haven't rested at all.
+Raw Response (from Nav Prompt): Acknowledge sleep quality vs feeling rested. Ask about daytime fatigue. [CONF:65%;NODE_SLEEP_QUALITY]
 Therapeutic Response:
-Those periods without hunger, particularly when your workload gets heavy at the office, sound challenging.
+I hear you – it's confusing and frustrating when you technically sleep, but still wake up feeling tired, like the rest didn't quite 'take'. That daytime fatigue can really weigh on you.
 
-Our bodies often respond to stress in ways that affect our basic needs like appetite.
+Sometimes the *quality* of sleep matters just as much as the hours.
 
-What feels most important to you right now—understanding how your work stress might be affecting your eating patterns, or finding ways to nourish yourself during these busy times?
+What is that tiredness like for you during the day? Does it feel more physical or mental?
 """
 
         prompt = f"""# Therapeutic Communication Styling
 
 ## Context
-You are a skilled, empathetic therapist crafting warm responses to someone experiencing difficulties related to {disorder if disorder else "mental wellbeing"}.
+You are refining a response drafted by another part of the system. Your goal is to ensure it sounds like a genuinely skilled, empathetic therapist crafting a warm, supportive message for someone experiencing difficulties related to {disorder if disorder else "mental wellbeing"}. The aim is to build rapport, encourage continued sharing, and make the user feel heard.
 
-## User's Latest Message (IMPORTANT - ACKNOWLEDGE THESE DETAILS)
+## User's Latest Message (CRITICAL - Ensure Response Acknowledges This)
 "{latest_user_msg}"
 
-## Raw Message to Restyle
+## Raw Message to Restyle (This was generated based on the user's message and internal logic)
 ```
 {raw_message}
 ```
@@ -521,35 +479,31 @@ You are a skilled, empathetic therapist crafting warm responses to someone exper
 ## Recent Conversation History
 {conversation_history}
 
-## Sample Therapeutic Styling
+## Sample Therapeutic Styling (Demonstrating Tone, Empathy, Open Questions)
 {sample_conversations}
 
 ## Style Requirements
-1. Keep responses brief and concise (3-5 short paragraphs maximum)
-2. Use generous white space between paragraphs for readability
-3. Maintain a warm, conversational tone that feels human, not clinical
-4. Offer options rather than pushing in one direction
-5. Use simple, everyday language instead of psychological terminology
-6. Convey gentle support without pressure
-7. Focus on being present with their experience rather than rushing to solutions
-8. When asking questions, offer them as gentle invitations, not requirements
+1.  **Empathy & Validation First:** Start by directly acknowledging and validating specific feelings, experiences, or words from the *user's latest message*. Show you've truly heard them.
+2.  **Conversational & Warm:** Use a natural, human, and caring tone. Avoid jargon, clinical language, or sounding robotic.
+3.  **Concise & Readable:** Keep responses relatively brief (2-4 short paragraphs). Use generous white space between paragraphs.
+4.  **Open-Ended Exploration:** If the raw message includes a question, ensure it's gentle, open-ended, and invites sharing rather than demanding specific answers. Frame it as an invitation (e.g., "Would you be open to sharing more about...?", "I wonder if you could tell me about..."). If no question is present, consider adding one if it feels natural to encourage dialogue.
+5.  **Focus on User's Pace:** Convey patience and that there's no pressure to talk about anything they're not ready for.
+6.  **Subtle Guidance:** While the raw message might hint at a direction, the styled response should feel like a natural continuation of the user's train of thought, not a forced turn.
 
 ## Key Elements to Include (CRITICAL)
-1. SPECIFIC acknowledgment of details the user mentioned (job, experiences, feelings, timeline)
-2. Direct references to at least 2-3 specific words/phrases the user used
-3. Some indication of choice or agency for the person
-4. A gentle invitation to explore further if appropriate
-5. Reassurance that there's no pressure or rush
+1.  **Specific Acknowledgment:** Explicitly reference 1-2 key details, feelings, or phrases the user mentioned in their *latest* message.
+2.  **Validation:** Communicate that their feelings/experiences are understandable.
+3.  **Empathy:** Convey genuine care and understanding of their struggle.
+4.  **Gentle Invitation:** Include a soft, open-ended question to encourage them to share more if they wish.
+5.  **Appropriate Pacing:** Don't rush towards solutions; focus on understanding the current experience.
 
 ## Task
-Restyle the raw message into a therapeutic response that:
-1. MUST explicitly reference specific details from the user's latest message
-2. Delivers content in an empathetic, conversational way with appropriate spacing between thoughts
-3. Acknowledges the user's actual experience before moving to questions or suggestions
+Restyle the 'Raw Message to Restyle' into a therapeutic response that:
+1.  **PRIORITIZES** acknowledging the user's specific situation and feelings from their *latest message*.
+2.  Delivers the core intent of the raw message (e.g., exploring a certain feeling) in an empathetic, conversational way.
+3.  Encourages continued conversation and makes the user feel safe and heard.
 
-DO NOT add new content, change the fundamental direction, or introduce new therapeutic suggestions not present in the raw message. Your task is ONLY to improve the delivery style WHILE ensuring specific user details are acknowledged.
-
-Keep your response appropriately brief (similar length to the examples).
+**DO NOT** add new therapeutic techniques or change the fundamental topic hinted at in the raw message. Your task is **ONLY** to improve the delivery, warmth, empathy, and conversational flow, ensuring it directly connects with the user's last statement. Keep it concise.
 """
         return prompt
 
@@ -620,7 +574,7 @@ Keep your response appropriately brief (similar length to the examples).
         
         result["response_text"] = cleaned_response
         return result
-    def send_prompt(self, prompt: str, model: str = "openai/gpt-4.1-mini") -> str:
+    def send_prompt(self, prompt: str, model: str = "google/gemini-2.5-flash-preview") -> str:
         """Send a prompt to the OpenAI API and get the response."""
         try:
             # Set temperature based on prompt type
@@ -655,241 +609,231 @@ class MedicalChatbot:
     
     def process_message(self, user_message: str) -> str:
         """Process a user message and generate a response."""
-        # Add user message to conversation history
         self.session.add_message("user", user_message)
-        
-        # Determine which phase we're in
+
+        response = "" # Initialize response
+
+        # Phase 1: Disorder identification (if needed)
         if not self.session.identified_disorder or self.session.disorder_confidence < CONFIDENCE_THRESHOLD:
-            # Phase 1: Disorder identification
+            print("Phase: Disorder Identification")
             response = self._handle_disorder_identification()
-            
-            # If we just identified a disorder, identify starting node
+
+            # If disorder identified, find starting node (silently) and return initial response
             if self.session.identified_disorder and not self.session.current_node_id:
-                node_id = self._identify_starting_node()
-                print(f"Identified starting node: {node_id}")
+                node_id = self._identify_starting_node() # This is internal setup
+                print(f"Internal: Identified starting node: {node_id}")
                 self.session.current_node_id = node_id
-                
-                # After identifying node, we should return to the user but not navigate yet
+                # The response from _handle_disorder_identification is already therapeutic
                 self.session.add_message("assistant", response)
                 return response
-        
-        # If we have a disorder and node, navigate the tree
+            # If disorder still not identified, return the exploratory response
+            elif not self.session.identified_disorder:
+                 self.session.add_message("assistant", response)
+                 return response
+
+        # Phase 2: Therapeutic Exploration / Tree Navigation (Implicit)
         if self.session.identified_disorder and self.session.current_node_id:
+            print(f"Phase: Therapeutic Exploration (Current Node: {self.session.current_node_id})")
             response = self._handle_tree_navigation(user_message)
-        else:
-            # This should only happen if something went wrong with identification
-            response = "I'm sorry, I'm having trouble understanding your situation. Could you provide more details about what you're experiencing?"
-        
-        # Add assistant response to conversation history
+        # Fallback if state is inconsistent
+        elif not response:
+            print("Warning: Inconsistent state, generating fallback response.")
+            response = "I'm sorry, I seem to have gotten a bit lost in our conversation. Could you perhaps share again what's been on your mind?"
+            # Reset state partially? Or just rely on next user message. For now, just respond.
+
+        # Add assistant response to history
         self.session.add_message("assistant", response)
         return response
-    
+
     def _handle_disorder_identification(self) -> str:
-        """Handle the disorder identification phase."""
-        # Generate and send first prompt
+        """Handle the disorder identification phase using therapeutic conversation."""
+        # Generate and send first prompt (already designed to be therapeutic)
         prompt = self.prompt_handler.generate_first_prompt(self.session)
         raw_response = self.prompt_handler.send_prompt(prompt)
         print(f"Raw disorder identification response: {raw_response}")
-        
-        # Process the response
+
+        # Process the response to extract hidden JSON and get clean text
         processed = self.prompt_handler.process_response(raw_response, prompt_type="first")
-        
-        # Check all confidence scores
+        therapeutic_text = processed["response_text"] # This is the user-facing text
+
+        # Check confidence scores internally
         if processed["confidence_scores"]:
-            print(f"Confidence scores: {json.dumps(processed['confidence_scores'])}")
-            
-            # Check if any disorder has confidence above threshold
+            print(f"Internal: Confidence scores: {json.dumps(processed['confidence_scores'])}")
             for disorder, confidence in processed["confidence_scores"].items():
                 if confidence >= CONFIDENCE_THRESHOLD:
-                    self.session.identified_disorder = disorder
-                    self.session.disorder_confidence = confidence
-                    
-                    # Load decision tree for the identified disorder
-                    self.session.decision_tree = self.decision_tree.load_tree(disorder)
-                    if not self.session.decision_tree:
-                        return f"I've identified that you may be experiencing issues related to {disorder}, but I'm having trouble accessing the specific guidance for this area. Could you try describing your situation again, or perhaps focus on a different aspect of your concerns?"
-                    
-                    return processed["response_text"]
-        
-        return processed["response_text"]
-    
+                    if not self.session.identified_disorder: # Only update if not already set
+                         print(f"Internal: Identified disorder {disorder} with confidence {confidence}")
+                         self.session.identified_disorder = disorder
+                         self.session.disorder_confidence = confidence
+                         # Load tree internally
+                         self.session.decision_tree = self.decision_tree.load_tree(disorder)
+                         if not self.session.decision_tree:
+                              print(f"Error: Failed to load decision tree for {disorder}")
+                              # Modify response slightly to indicate internal issue without breaking character
+                              therapeutic_text = f"Thank you for sharing that. I'm understanding more about the challenges you're facing, particularly concerning {disorder}. I need a moment to gather my thoughts on how best to continue our conversation. Could you perhaps tell me a little more about how this has been affecting your day-to-day?"
+                    break # Stop after finding the first one above threshold
+
+        # Return the therapeutic text generated by the first prompt
+        return therapeutic_text
+
     def _identify_starting_node(self) -> str:
-        """Identify the appropriate starting node in the decision tree."""
-        # Generate and send node identification prompt
-         #prompt = self.prompt_handler.generate_node_identification_prompt(self.session)
-        # raw_response = self.prompt_handler.send_prompt(prompt)
-        # print(f"Node identification response: {raw_response}")
-        
-        # # Process the response
-        # processed = self.prompt_handler.process_response(raw_response, prompt_type="node_identification")
-        
-        # if processed["node_id"] and processed["confidence"] >= 0.6:
-        #     self.session.current_node_id = processed["node_id"]
-        #     processed["node_id"]="NODE_A"  # Placeholder for node ID
-        #     return processed["node_id"]
-        
-        # Default to root node if identification fails
-        # root_node_id = self.session.decision_tree.get("rootNode")
-        # if root_node_id:
-        #     self.session.current_node_id = root_node_id
-        #     return root_node_id
-        
-        # Current implementation: Default to a fixed starting node.
-        # If dynamic start node identification is needed later, the above commented code can be revisited.
+        """Identify the appropriate starting node in the decision tree. (Now purely internal)."""
+        # For now, we'll keep the simple approach of starting at NODE_A
+        # A more complex approach could involve a separate LLM call analyzing
+        # the initial conversation history against node descriptions, but let's keep it simple.
+        print("Internal: Defaulting start node to NODE_A")
+        # Ensure rootNode exists if we were to use it:
+        # root_node_id = self.session.decision_tree.get("rootNode", "NODE_A") # Default to NODE_A if no root
+        # return root_node_id
         return "NODE_A"
-    
+
     def _handle_tree_navigation(self, user_message: str) -> str:
-        """Handle the decision tree navigation phase."""
+        """Handle the therapeutic exploration and implicit navigation phase."""
         # Check if we are ready to deliver the script from the previous turn
         if self.session.at_leaf_node and self.session.therapeutic_script:
             script_content = self.session.therapeutic_script
-            # Reset flags after delivering script
-            self.session.therapeutic_script = None 
-            self.session.at_leaf_node = False 
+            self.session.therapeutic_script = None
+            self.session.at_leaf_node = False
             print("Delivering prepared therapeutic script.")
-            # Add prefix marker when returning the script
+            # The script introduction should have happened last turn. Now just deliver.
+            # Maybe add a small lead-in?
+            # return f"Okay, here is the '{script_name_placeholder}' exercise we discussed:\n\nSCRIPT:::{script_content}"
+            # For now, keep the simple marker for the frontend:
             return f"SCRIPT:::{script_content}"
 
-        # Navigation logic starts now.
         current_node = self.session.get_current_node()
-        # If somehow we lost the current node, handle gracefully
         if not current_node:
             print("Error: Current node is None during navigation.")
             return "I seem to have lost my place in our conversation. Could you remind me what we were discussing?"
-            
-        # Get relevant RAG results
+
+        # Get relevant RAG results (internal context)
         rag_results = self.vector_db.search(
             query=user_message,
             disorder=self.session.identified_disorder,
             limit=MAX_RAG_RESULTS
         )
-        
-        # STEP 1: PURE NAVIGATION DECISION
-        # Generate and send navigation prompt
+
+        # STEP 1: Generate Therapeutic Exploration & Internal Navigation Assessment
         nav_prompt = self.prompt_handler.generate_navigation_prompt(
             session=self.session,
             rag_results=rag_results
         )
-        nav_response = self.prompt_handler.send_prompt(nav_prompt)
-        print(f"DEBUG: Raw navigation response: {nav_response}")
+        raw_nav_response = self.prompt_handler.send_prompt(nav_prompt)
+        print(f"DEBUG: Raw exploration/navigation response: {raw_nav_response}")
 
-        # Process the navigation response
-        processed = self.prompt_handler.process_response(nav_response, prompt_type="navigation")
-        print(f"Navigation processed: {processed}")
-        
-        # Define confidence thresholds for different navigation decisions
-        HIGH_CONFIDENCE = 0.85  # Strong confidence to navigate or confirm leaf
-        MEDIUM_CONFIDENCE = 0.60  # Reasonable but not certain
-        LOW_CONFIDENCE = 0.50  # Very uncertain, likely needs clarification
-        
-        # Flag to check if we identified a leaf node in this turn
+        # Process the response to separate therapeutic text and navigation marker
+        processed = self.prompt_handler.process_response(raw_nav_response, prompt_type="navigation")
+        exploratory_text = processed["response_text"] # This is the text part generated by the nav prompt
+        nav_confidence = processed["navigation_confidence"]
+        next_node_id = processed["node_id"]
+        print(f"Internal: Navigation assessment - Node: {next_node_id}, Conf: {nav_confidence}")
+
+        # Define confidence thresholds (can be adjusted)
+        HIGH_CONFIDENCE = 0.80  # Confident move or leaf confirmation
+        MEDIUM_CONFIDENCE = 0.55 # Tentative move
+        # LOW_CONFIDENCE = implicit below MEDIUM
+
         identified_leaf_this_turn = False
-        leaf_introduction = None
-        
-        # Process navigation decision
-        if processed["node_id"]:
-            nav_confidence = processed["navigation_confidence"]
-            print(f"Navigation confidence: {nav_confidence}")
-            
-            # HIGH CONFIDENCE: Change nodes or confirm current path
-            if nav_confidence >= HIGH_CONFIDENCE:
-                # Update the node ID
+        leaf_introduction_response = None # Store the intro message if generated
+
+        # Update state based on navigation assessment (internal)
+        if next_node_id:
+            # Check if the proposed node is valid according to the prompt's list
+            # (This is a safety check, the prompt already restricted the LLM)
+            # Note: We might need to regenerate the valid list here if complex logic depends on it.
+            # For now, assume the LLM followed instructions.
+
+            if nav_confidence >= MEDIUM_CONFIDENCE:
                 old_node_id = self.session.current_node_id
-                self.session.current_node_id = processed["node_id"]
-                
-                if old_node_id != processed["node_id"]:
-                    print(f"HIGH CONFIDENCE: Moving from {old_node_id} to {processed['node_id']} with confidence {nav_confidence}")
+                if old_node_id != next_node_id:
+                     print(f"Internal: Confidence {nav_confidence} >= {MEDIUM_CONFIDENCE}. Moving from {old_node_id} to {next_node_id}")
+                     self.session.current_node_id = next_node_id
                 else:
-                    print(f"HIGH CONFIDENCE: Staying at {self.session.current_node_id} with confidence {nav_confidence}")
-                
-                # Check if this is a leaf node
-                new_node = self.session.get_current_node()
-                is_leaf_by_name = processed["node_id"].startswith("LEAF_")
-                is_leaf_by_data = new_node and new_node.get("isLeaf", False)
-                
-                if is_leaf_by_name or is_leaf_by_data:
-                    # Handle leaf node identification
-                    identified_leaf_this_turn = True
-                    print(f"Identified leaf node {processed['node_id']} with confidence {nav_confidence}")
-                    
-                    # Get script content for next turn
-                    script_content = self.decision_tree.get_therapeutic_script(
-                        self.session.current_node_id,
-                        self.session.identified_disorder,
-                        self.session.decision_tree
-                    )
-                    
-                    if script_content:
-                        # Save script content for next turn
-                        self.session.therapeutic_script = script_content
-                        self.session.at_leaf_node = True 
-                        print(f"Prepared script for node {self.session.current_node_id}.")
+                     print(f"Internal: Confidence {nav_confidence}. Staying at {old_node_id}")
+                     # No state change needed if staying
 
-                        # Generate script introduction
-                        script_name_for_prompt = "this exercise" # Default
-                        script_tags_for_prompt = new_node.get("tags", []) or []
-                        # Extract better name if available
-                        script_info = new_node.get("recommendation", {}).get("script", "")
-                        if ":" in script_info:
-                            script_name_for_prompt = script_info.split(":")[1].strip().strip('"')
-                        elif "SCRIPT_" in script_info:
-                            script_name_for_prompt = script_info.replace("SCRIPT_","").replace("_", " ")
+                # Check if the *new* current node is a leaf, ONLY if confidence is HIGH
+                if nav_confidence >= HIGH_CONFIDENCE:
+                    new_node = self.session.get_current_node() # Get the potentially updated node
+                    is_leaf_by_name = next_node_id.startswith("LEAF_")
+                    is_leaf_by_data = new_node and new_node.get("isLeaf", False)
 
-                        intro_prompt = self.prompt_handler.generate_script_introduction_prompt(
-                            session=self.session,
-                            script_name=script_name_for_prompt,
-                            script_tags=script_tags_for_prompt
+                    if is_leaf_by_name or is_leaf_by_data:
+                        identified_leaf_this_turn = True
+                        print(f"Internal: High confidence leaf node {next_node_id} reached.")
+
+                        script_content = self.decision_tree.get_therapeutic_script(
+                            self.session.current_node_id,
+                            self.session.identified_disorder,
+                            self.session.decision_tree
                         )
-                        leaf_introduction = self.prompt_handler.send_prompt(intro_prompt)
-                        print(f"DEBUG: Generated script introduction: {leaf_introduction}")
-                    else:
-                        print(f"Warning: Leaf node {self.session.current_node_id} identified, but no script found.")
-                        self.session.at_leaf_node = False
-            
-            # MEDIUM CONFIDENCE: Still navigate but note uncertainty            
-            elif nav_confidence >= MEDIUM_CONFIDENCE:
-                old_node_id = self.session.current_node_id
-                self.session.current_node_id = processed["node_id"]
-                print(f"MEDIUM CONFIDENCE: Moving from {old_node_id} to {processed['node_id']} with confidence {nav_confidence}")
-            
-            # LOW CONFIDENCE: Stay at current node, ask clarifying question
+
+                        if script_content:
+                            self.session.therapeutic_script = script_content
+                            self.session.at_leaf_node = True # Flag for next turn
+                            print(f"Internal: Prepared script for node {self.session.current_node_id}.")
+
+                            # Generate the script introduction message NOW
+                            script_name_for_prompt = "this exercise"
+                            script_tags_for_prompt = new_node.get("tags", [])
+                            script_info = new_node.get("recommendation", {}).get("script", "")
+                            if ":" in script_info:
+                                script_name_for_prompt = script_info.split(":")[1].strip().strip('"')
+                            elif "SCRIPT_" in script_info:
+                                script_name_for_prompt = script_info.replace("SCRIPT_","").replace("_", " ")
+
+                            intro_prompt = self.prompt_handler.generate_script_introduction_prompt(
+                                session=self.session,
+                                script_name=script_name_for_prompt,
+                                script_tags=script_tags_for_prompt
+                            )
+                            # This intro is the final response for *this* turn
+                            leaf_introduction_response = self.prompt_handler.send_prompt(intro_prompt)
+                            print(f"DEBUG: Generated script introduction response: {leaf_introduction_response}")
+                        else:
+                            print(f"Warning: Leaf node {self.session.current_node_id} reached, but no script found.")
+                            self.session.at_leaf_node = False # Ensure flag is off
             else:
-                print(f"LOW CONFIDENCE: Staying at {self.session.current_node_id}, confidence {nav_confidence} is too low")
+                 # Low confidence - stay at the current node
+                 print(f"Internal: Confidence {nav_confidence} < {MEDIUM_CONFIDENCE}. Staying at {self.session.current_node_id}")
+                 # No state change needed
+
         else:
-            print("No node ID provided. Staying at current node.")
-            
-        # Handle redirection nodes if needed
+            # No node ID provided by LLM (shouldn't happen with the prompt)
+            print("Warning: No node ID provided in navigation assessment. Staying at current node.")
+            # No state change needed
+
+        # Handle redirection nodes if we haven't just identified a leaf
         if not identified_leaf_this_turn:
-            current_node = self.session.get_current_node()
+            current_node = self.session.get_current_node() # Re-get node in case it changed
             if current_node and "redirectTo" in current_node:
                 redirect_node_id = current_node["redirectTo"]
-                print(f"Redirecting from {self.session.current_node_id} to {redirect_node_id}")
+                print(f"Internal: Redirecting from {self.session.current_node_id} to {redirect_node_id}")
                 self.session.current_node_id = redirect_node_id
+                # Note: We might want to immediately generate a new response based on the redirected node,
+                # but for now, let's allow the next user message to trigger that.
 
-        # STEP 2: THERAPEUTIC STYLING
-        # If we have a leaf node introduction, use that directly
-        if leaf_introduction:
-            final_response = leaf_introduction
+        # STEP 2: Generate Final Therapeutic Response for the User
+
+        # If we generated a specific script introduction, use that
+        if leaf_introduction_response:
+            final_response = leaf_introduction_response
         else:
-            # For normal navigation, apply therapeutic styling to the raw response
-            raw_response = processed["response_text"]
-            
-            # Generate therapeutic styling prompt
+            # Otherwise, style the exploratory text generated in Step 1
+            # Use the therapeutic styling prompt for refinement
             style_prompt = self.prompt_handler.generate_therapeutic_styling_prompt(
-                raw_message=raw_response,
-                conversation_history=self.session.get_conversation_history_formatted(max_messages=3),
+                raw_message=exploratory_text, # Use the text part from the nav response
+                conversation_history=self.session.get_conversation_history_formatted(max_messages=4), # Slightly more history
                 disorder=self.session.identified_disorder,
                 latest_user_msg=user_message
             )
-            
-            # Send styling prompt to LLM
+
             therapeutic_response = self.prompt_handler.send_prompt(style_prompt)
             print(f"DEBUG: Therapeutically styled response: {therapeutic_response}")
-            
             final_response = therapeutic_response
-            
-        # Return the final therapeutic response
+
         return final_response
+
     def reset_session(self) -> None:
         """Reset the chatbot session."""
         self.session.reset()
