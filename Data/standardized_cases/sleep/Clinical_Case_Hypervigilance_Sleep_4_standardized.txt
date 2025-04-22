@@ -1,16 +1,20 @@
-```
-1. Demographics
-- Female, 19 years old
+# Demographics
+Female, 19 years old
 
-2. Summary of Issues
-- Unstable and conflictual family relationships, including chronic conflict with the mother and repeated disappointments and betrayal by the father.
-- High level of emotional vigilance and mistrust, leading to emotional withdrawal.
-- Intense mental load due to physical exhaustion from internship and commuting, compounded by family stress.
-- Sleep disorder marked by hyperactivation, difficulty falling asleep, persistent mental activity, and probable bodily tension.
-- Need for validation, listening, and recognition, particularly from the grandmother figure.
-- Underlying beliefs include: “I have to defend myself alone,” “You can’t trust anyone, even those you love,” “If I let my guard down, I’ll get hurt,” and “I’m seen as a problem, not as a person.”
+# Summary of Issues
+- Unstable and conflictual family relationships: chronic conflict with the mother, repeated disappointments and betrayal by the father, climate of mistrust and double discourse (e.g., what the father says about her to the mother).
+- Repeatedly broken hopes for reconciliation, especially with the father: oscillation between relational illusion and brutal return to reality.
+- High level of emotional vigilance and mistrust: constant need to protect herself, disillusioned discourse, emotional withdrawal as a defense mechanism (“I don’t care,” “It doesn’t matter”).
+- Intense mental load due to physical exhaustion (internship + commuting) and family stress.
+- Sleep disorder marked by hyperactivation: difficulty falling asleep despite going to bed early, persistent mental activity, probable bodily tension.
+- Need for validation, listening, and recognition, particularly embodied by the grandmother figure (containing function, “like my therapist”).
+- Underlying beliefs:
+   - “I have to defend myself alone.”
+   - “You can’t trust anyone, even those you love.”
+   - “If I let my guard down, I’ll get hurt.”
+   - “I’m seen as a problem, not as a person.”
 
-3. Dominant Emotions
+# Dominant Emotions
 - Disappointment
 - Sadness
 - Hurt pride
@@ -20,28 +24,47 @@
 - Latent anxiety
 - Psychological exhaustion
 
-4. Triggers and Mechanisms
-- Indirect and malicious communication from parents.
-- Lack of recognition for personal investment.
-- Inconsistency in relationships with mother and father.
-- Suspicions of being used by parental figures.
-- Implicit comparisons between siblings.
-- Psychological mechanisms include relational hypervigilance, exhausting over-adaptation, need for sincere connection, refusal to show vulnerability, and partial emotional dissociation.
+# Triggers and Mechanisms
+- Indirect and malicious communication from parents (behind her back)
+- Lack of recognition for personal investment (internship, fatigue)
+- Inconsistency in relationships (mother, father)
+- Suspicions of being used by parental figures
+- Implicit comparisons (dirty vs. clean, good vs. bad daughter)
 
-5. Limiting Beliefs
+# Limiting Beliefs
 - “I have to defend myself alone.”
 - “You can’t trust anyone, even those you love.”
 - “If I let my guard down, I’ll get hurt.”
 - “I’m seen as a problem, not as a person.”
 
-6. Proposed Solutions
-- Immediate Solutions: Reverse body scan, emotional separation ritual, silent breathing with mindful awareness, self-anchoring.
-- Intermediate Solutions: Family dialogue rewriting session, emotional remediation exercise focused on the father figure, creation of an imaginary personal space, audio therapy.
-- Long-Term Solutions: Immersive therapeutic hypnosis with the theme “Let the body digest what the mind holds on to.”
+# Proposed Solutions
+1. Immediate Solutions
+   - “Reverse body scan” each night before sleep: from top to bottom, then bottom to top to regain bodily control in a safe mode.
+   - Emotional separation ritual before bedtime: write down what made her angry in a notebook and close it ritually each evening.
+   - “Silent” breathing with mindful awareness: inhale for 4 counts, hold for 2, exhale for 6, hand placed on chest.
+   - Self-anchoring: visualize a place where she feels “non-judged,” associated with a comforting sensory texture (e.g., grandma’s blanket, armchair, a summer bed).
+   
+2. Intermediate Solutions
+   - Family dialogue rewriting session (with AI or therapist) to transform the emotional charge of hurtful words.
+   - Emotional remediation exercise focused on the father figure: imagine what she wished he had said instead.
+   - Creation of an imaginary “personal space”: symbolic bedroom or mental refuge to activate at bedtime.
+   - Audio therapy: use of a gentle, repetitive voice (hypnosis or guided meditation) to deactivate ruminative thinking before sleep.
+   
+3. Long-Term Solutions
+   - Immersive therapeutic hypnosis on the theme: “Let the body digest what the mind holds on to”
+     - Goals:
+       - Release tension linked to parental expectations.
+       - Re-establish an inner protective boundary.
+       - Soothe the mind through bodily reconnection.
+       - Separate sleep from the toxic family sphere.
+   - Personalized Hypnosis Session to Be Programmed
+     - Title: “Let the body digest what the mind holds on to”
+     - Ambiance: soft silence or soothing sounds (rain, light wind)
+     - Dominant sensory approach: kinesthetic (bodily sensations)
+     - Guidance level: intermediate (suggestions + visualizations)
 
-7. Progress Indicators
-- Rate mental tension level each night before sleep.
-- Evaluate physical relaxation after each audio session.
+# Progress Indicators
+- Each night before sleep: rate mental tension level (1 to 5).
+- After each audio session: evaluate physical relaxation.
 - Weekly sleep curve: number of hours, perceived quality, sleep onset.
 - Self-observation of nighttime intrusive thoughts: frequency, intensity.
-```

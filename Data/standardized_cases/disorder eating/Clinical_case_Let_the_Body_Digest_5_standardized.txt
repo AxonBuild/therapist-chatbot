@@ -1,50 +1,48 @@
-# Reformatted Clinical Case Document
-
-## Demographics
+# Demographics
 Female, 19 years old
 
-## Summary of Issues
+# Summary of Issues
 - Chronic underlying stress perceived as permanent, with a normalization of emotional discomfort.
 - Constant physical and mental fatigue, with no real recovery.
-- Episodes of explosive, uncontrollable anger ("color crises") without apparent rational triggers, often due to overload, injustice, or neglect of self.
+- Episodes of explosive, uncontrollable anger ("color crises") without apparent rational triggers → sudden emotional outbursts often triggered by overload, injustice, or neglect of self.
 - Over-responsibility in the romantic relationship, with the impression of having to “do everything alone” and low perceived reciprocity.
 - Conflict avoidance: emotional inhibition strategy (“I shut my mouth”) which increases internal pressure and the risk of explosion.
-- Conflicted relationship with food, particularly difficulties chewing or swallowing certain textures (e.g., tough meat), indicating mild food-related OCD, without a full-blown eating disorder but with a disrupted body connection.
+- Conflicted relationship with food, particularly difficulties chewing or swallowing certain textures (e.g., tough meat) → mild food-related OCD, without a full-blown eating disorder but with a disrupted body connection.
 - Sensory hypersensitivity (taste, texture, bodily sensations).
 - Anticipatory anxiety about pregnancy: fear of taking a test, bodily pregnancy-like sensations (pseudocyesis).
-- Phobic avoidance of highways, especially when someone else is driving, linked to a past traumatic event (accident).
+- Phobic avoidance of highways, especially when someone else is driving → anxious need for control linked to a past traumatic event (accident).
 - Ambivalent attitude toward control: desire to manage everything (belongings, meals, road safety), but mental exhaustion from hypervigilance.
 - Possible traits of anxious-obsessive personality or mild OCD, particularly around safety, orderliness, and food.
 - Need for emotional relief and a space to exist without managing everything.
 
-## Dominant Emotions
+# Dominant Emotions
 - Stress, fatigue, repressed then explosive anger, sense of injustice, fear (control/loss of control), food disgust, diffuse anxiety, emotional hypersensitivity.
 
-## Triggers and Mechanisms
+# Triggers and Mechanisms
 - Silent accumulation of micro-annoyances, regular emotional inhibition, lack of assertive expression, leading to brutal outbursts.
-- Anxious overcontrol of the body and environment as a defensive strategy against a world perceived as unpredictable.
-- Active avoidance of anxiety-inducing situations (highway, pregnancy test, verbal confrontation), maintaining the anxiety loop.
+- Anxious overcontrol of the body and environment → defensive strategy against a world perceived as unpredictable.
+- Active avoidance of anxiety-inducing situations (highway, pregnancy test, verbal confrontation) → maintains the anxiety loop.
 - Sensory discomfort experienced as aggression (e.g., tough meat), reflecting a dissociated relationship with the body.
 
-## Limiting Beliefs
+# Limiting Beliefs
 - “If I don’t manage things, no one will.”
 - “I must stay silent to avoid conflict.”
 - “I’m not allowed to explode, but sometimes I can’t take it anymore.”
 - “I don’t trust my body (for digestion, driving, or handling pregnancy).”
 - “I carry the mental load alone.”
 
-## Proposed Solutions
+# Proposed Solutions
 1. Immediate Solutions
    - Anti-stress breathing exercise (3-4-5 or cardiac coherence) twice daily to reduce reactivity threshold.
    - Emotional self-observation journal: “When do I start boiling?”, “What drains me the most each day?”
    - Quick post-anger grounding protocol: walk alone for 10 min / apply a cold wet cloth / visually step away from mess.
    - Body scan focused on throat and jaw (key blockage areas related to food).
-
+   
 2. Intermediate Solutions
-   - Gentle assertiveness training: learning to say “I need help” without fear of conflict through role-play and symbolic dramatization.
+   - Gentle assertiveness training: learning to say “I need help” without fear of conflict → role-play / symbolic dramatization.
    - Sensory reconditioning with food: introduce meats in softer forms (minced, blended) to bypass texture aversion without confrontation.
-   - Gradual, safe exposure to highway: daytime driving, 15 minutes, on a familiar and predictable route, accompanied by a trusted person.
-
+   - Gradual, safe exposure to highway: daytime driving, 15 minutes, on familiar and predictable route, accompanied by a trusted person.
+   
 3. Long-Term Solutions
    - Emotion/scheme-oriented therapy to dismantle core overcontrol and self-inhibition patterns.
    - Regular hypnosis sessions to:
@@ -52,11 +50,8 @@ Female, 19 years old
      - Reconnect with bodily sensations (food, driving, fatigue).
      - Let go of control-based automatisms.
 
-## Progress Indicators
+# Progress Indicators
 - Weekly emotional load scale (0 to 10).
 - Self-observation journal of emotional outbursts (frequency, duration, intensity).
 - Behavioral flexibility indicator: “Did I allow myself not to control everything today?”
 - Post-session feedback: muscular tension before/after, appetite, sleep quality.
-
-## Final Motivational Phrase
-“You don’t have to carry the world on your shoulders. Your body already knows how to relax, your heart how to find peace… You just have to give them back their voice.”

@@ -1,0 +1,101 @@
+{
+  "title": "Emotional Dysregulation in Adolescents and Adults Decision Tree",
+  "rootNode": "NODE_A",
+  "nodes": {
+    "NODE_A": {
+      "id": "NODE_A",
+      "question": "Is the emotional dysregulation related to a recent traumatic experience or unresolved past shock?",
+      "children": ["NODE_A1", "NODE_A2"]
+    },
+    "NODE_A1": {
+      "id": "NODE_A1",
+      "description": "Yes -- Shock, loss or acute destabilization context",
+      "children": ["NODE_A1A", "NODE_A1B"]
+    },
+    "NODE_A1A": {
+      "id": "NODE_A1A",
+      "question": "Emotional state marked by stunned reaction, confusion, and anticipatory fear?",
+      "children": ["LEAF_A1A1"]
+    },
+    "LEAF_A1A1": {
+      "id": "LEAF_A1A1",
+      "description": "Recent emotional shock (e.g., traumatic phone call, fear of motherhood)",
+      "recommendation": {
+        "script": "SCRIPT_A: Healing from Shock and Preparing for Inner Peace",
+        "level": 2
+      },
+      "tags": ["shock", "motherhood", "emotionalvulnerability"],
+      "isLeaf": true
+    },
+    "NODE_A1B": {
+      "id": "NODE_A1B",
+      "question": "Physiological anxiety with traumatic origin (e.g., pregnancy trauma, medical sentence)?",
+      "children": ["LEAF_A1B1"]
+    },
+    "LEAF_A1B1": {
+      "id": "LEAF_A1B1",
+      "description": "PTSD + somatic panic response (e.g., fear of dying, tingling)",
+      "recommendation": {
+        "script": "SCRIPT_B: My Body, the Survivor",
+        "level": 3
+      },
+      "tags": ["ptsd", "somaticanxiety", "bodilytrust"],
+      "isLeaf": true
+    },
+    "NODE_A2": {
+      "id": "NODE_A2",
+      "description": "No -- The dysregulation is more linked to daily stressors or family interactions",
+      "children": ["NODE_A2A", "NODE_A2B", "NODE_A2C", "NODE_A2D"]
+    },
+    "NODE_A2A": {
+      "id": "NODE_A2A",
+      "question": "Is the person an adolescent with frustration and anger issues?",
+      "children": ["LEAF_A2A1"]
+    },
+    "LEAF_A2A1": {
+      "id": "LEAF_A2A1",
+      "description": "Adolescent reacting strongly to interruption or sibling rivalry",
+      "recommendation": {
+        "script": "SCRIPT_C: When the world cuts me off, I remain whole",
+        "level": 2
+      },
+      "tags": ["frustration", "anger", "adolescence"],
+      "isLeaf": true
+    },
+    "NODE_A2B": {
+      "id": "NODE_A2B",
+      "question": "Adult with unresolved conflict between desire and duty, blocked choices?",
+      "children": ["LEAF_A2B1"]
+    },
+    "LEAF_A2B1": {
+      "id": "LEAF_A2B1",
+      "description": "Hyperadaptation, fear of judgment, self-censorship",
+      "recommendation": {
+        "script": "SCRIPT_D: I Become the Author of My Choices Again",
+        "level": 3
+      },
+      "tags": ["selfexpression", "guilt", "innerconflict"],
+      "isLeaf": true
+    },
+    "NODE_A2C": {
+      "id": "NODE_A2C",
+      "question": "Adult with emotional somatization and health anxiety?",
+      "children": ["LEAF_A2C1"]
+    },
+    "LEAF_A2C1": {
+      "id": "LEAF_A2C1",
+      "description": "Somatic hypervigilance, transgenerational anxiety",
+      "recommendation": {
+        "script": "SCRIPT_E: Trusting My Body Again",
+        "level": 3
+      },
+      "tags": ["somaticanxiety", "healthfear", "emotionalcontrol"],
+      "isLeaf": true
+    },
+    "NODE_A2D": {
+      "id": "NODE_A2D",
+      "description": "No -- Symptoms not covered above (refer to complementary themes: #burnout, #grief, #dissociation)",
+      "isLeaf": true
+    }
+  }
+}

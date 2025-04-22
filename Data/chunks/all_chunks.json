@@ -1,10 +1,178 @@
 [
   {
+    "id": "b0923fdc2149a50b05b530c073ca35a6",
+    "document_id": "Clinical_Case_1",
+    "disorder": "anxiety",
+    "section": "Demographics",
+    "content": "# Demographics\n\n- Age: 24 years old\n- Gender: Transgender man\n\n\n## Summary of Issu",
+    "metadata": {}
+  },
+  {
+    "id": "a368bcbd38ecaa1eb1954d4bcb0f9b63",
+    "document_id": "Clinical_Case_1",
+    "disorder": "anxiety",
+    "section": "Summary of Issues",
+    "content": "# Summary of Issues\n\nThe patient is experiencing severe anxiety symptoms, including a recent acute panic attack characterized by a fear of re-experiencing it, bodily hypervigilance, and a constant fear of dying or losing control. Additional issues include attention difficulties suggestive of possible ADHD, a dysfunctional family background, an insecure living environment, and a relationship under acute stress with a depressive and suicidal partner. The patient also reports feelings of depersonalization/derealization and is undergoing an existential crisis with a loss of direction.\n\n\n## Dominant Emotio",
+    "metadata": {}
+  },
+  {
+    "id": "44072b5f16af0342bcb9f3c982404ec7",
+    "document_id": "Clinical_Case_1",
+    "disorder": "anxiety",
+    "section": "Dominant Emotions",
+    "content": "# Dominant Emotions\n\n- Fear (of dying, losing control, not making it through)\n- Sadness (loss of vital energy, isolation, helplessness)\n- Shame (sense of failure, negative social comparison)\n- Guilt (not being able to help the partner, not being “productive”)\n- Repressed anger (toward parents, self, or life?)\n\n\n## Triggers and Mechanis",
+    "metadata": {}
+  },
+  {
+    "id": "7271ede68e086dd43f426046ffea7f18",
+    "document_id": "Clinical_Case_1",
+    "disorder": "anxiety",
+    "section": "Triggers and Mechanisms",
+    "content": "# Triggers and Mechanisms\n\nImmediate trigger: Panic episode linked to physical and emotional exhaustion (smoking, stress, emotional overload).\nRecent aggravating event: Partner’s suicidal crisis, leading to feelings of helplessness and direct exposure to trauma.\nChronic factors include uncompensated attention issues, long-standing feelings of worthlessness since childhood, and low social support in an unstable environment. The psychological mechanism involves emotional overload in the amygdala, interpreting sensations as danger signals, and a vicious cycle of hypervigilance, anxiety, physical symptoms, fear of dying, panic, and trauma reinforcement.\n\n\n## Limiting Belie",
+    "metadata": {}
+  },
+  {
+    "id": "67645010045f279a41380dfa37babf99",
+    "document_id": "Clinical_Case_1",
+    "disorder": "anxiety",
+    "section": "Limiting Beliefs",
+    "content": "# Limiting Beliefs\n\n- “I can’t move forward.”\n- “I don’t deserve better.”\n- “I’m a burden to others.”\n- “I’m different, unfit, out of sync.”\n- “If I feel this, it means I’m going to die or go crazy.”\n\n\n## Proposed Solutio",
+    "metadata": {}
+  },
+  {
+    "id": "16208f67f2e6180ccab90eea6ab09401",
+    "document_id": "Clinical_Case_1",
+    "disorder": "anxiety",
+    "section": "Proposed Solutions",
+    "content": "# Proposed Solutions\n\nImmediate solutions include grounding body scan exercises, cardiac coherence practices three times a day, stopping compulsive online searches, and maintaining a daily journal. Intermediate solutions involve a neuropsychological assessment for possible ADHD, targeted EMDR therapy, psychoeducational support, and life-path coaching. Long-term solutions consist of regular hypnosis to deactivate automatic fear responses, therapeutic work on parental figures, and establishing a structured daily rhythm.\n\n\n## Progress Indicato",
+    "metadata": {}
+  },
+  {
+    "id": "a573f13238eaaf476e7cf3f7b81b8bd9",
+    "document_id": "Clinical_Case_1",
+    "disorder": "anxiety",
+    "section": "Progress Indicators",
+    "content": "# Progress Indicators\n\nProgress will be monitored using a subjective scale from 0 to 10 on daily anxiety, frequency of alarming bodily sensations, ability to be present, feeling of being an “actor” in one’s life, self-esteem, and through an emotional journal (2 min/day). Goals include stabilizing sleep and reducing fear of panic within one month, restarting a realistic personal project within two months, and regaining pleasure in an emotional bond within three months.",
+    "metadata": {}
+  },
+  {
+    "id": "89eb57128187400a130f2d8e313c1049",
+    "document_id": "Clinical_Case_PostDeuil_4",
+    "disorder": "anxiety",
+    "section": "Demographics",
+    "content": "# Demographics\n\n- Age: 57 years old  \n- Gender: Female  \n\n\n\n## Summary of Issu",
+    "metadata": {}
+  },
+  {
+    "id": "a58e89c6909c6e689c8361fa9664238b",
+    "document_id": "Clinical_Case_PostDeuil_4",
+    "disorder": "anxiety",
+    "section": "Summary of Issues",
+    "content": "# Summary of Issues\n\n- Post-bereavement guilt: She blames herself for not acting soon enough or appropriately to save her mother, despite her constant involvement.  \n- Hyper-responsibility: 'Pillar' attitude, often seen in parentified children or dysfunctional family systems.  \n- Institutional anger: Deep sense of injustice towards the healthcare system, experienced as systemic abuse.  \n- Distrust towards medical system: Perceived abandonment, inhumanity, and disconnection from healthcare professionals.  \n- Past relationship marked by domestic violence: Previous trauma, likely affecting self-esteem and perception of human relationships.  \n- Mental fatigue and emotional overload: Burnout from having carried a critical situation alone to exhaustion.  \n- This case appears to be related to anxiety.  \n\n\n\n## Dominant Emotio",
+    "metadata": {}
+  },
+  {
+    "id": "e5d9252c8e854084f4214e00368d8c34",
+    "document_id": "Clinical_Case_PostDeuil_4",
+    "disorder": "anxiety",
+    "section": "Dominant Emotions",
+    "content": "# Dominant Emotions\n\n- Guilt  \n- Anger  \n- Powerlessness  \n- Sadness  \n- Disgust  \n- Distrust  \n- Weariness  \n\n\n\n## Triggers and Mechanis",
+    "metadata": {}
+  },
+  {
+    "id": "adf87ca575087c31af7c4b043051ac8f",
+    "document_id": "Clinical_Case_PostDeuil_4",
+    "disorder": "anxiety",
+    "section": "Triggers and Mechanisms",
+    "content": "# Triggers and Mechanisms\n\n- Central trigger: Deterioration of the mother’s health in an environment perceived as hostile and incompetent.  \n- Recurrent mechanism: Emotional fusion with the mother → perceived vital duty of protection → failure of this mission → self-destructive guilt.  \n- Reactivation of old patterns: Systemic abuse reactivates control and domination experiences from a past violent relationship.  \n\n\n\n## Limiting Belie",
+    "metadata": {}
+  },
+  {
+    "id": "d6f91d51a61f6c5964f486ddd0436c32",
+    "document_id": "Clinical_Case_PostDeuil_4",
+    "disorder": "anxiety",
+    "section": "Limiting Beliefs",
+    "content": "# Limiting Beliefs\n\n- 'If I don't do everything, others fail or disappear.'  \n- 'Others are negligent; I'm the only one who can truly care.'  \n- 'Love is proven through total sacrifice.'  \n- 'Structures meant to protect become places of danger.'  \n\n\n\n## Proposed Solutio",
+    "metadata": {}
+  },
+  {
+    "id": "6831a3ca1f150a375495876be6ffeb9c",
+    "document_id": "Clinical_Case_PostDeuil_4",
+    "disorder": "anxiety",
+    "section": "Proposed Solutions",
+    "content": "# Proposed Solutions\n\n1. Immediate Solutions  \n   - Post-trauma self-soothing exercise: guided breathing with visualization of the mother peaceful in a safe place.  \n   - Directed cathartic writing: a letter to her mother expressing everything that couldn’t be said or acknowledged.  \n   - 'I am not guilty of…' exercise → Recognizing objective facts and placing them within a systemic, non-personal context.  \n2. Intermediate Solutions  \n   - Progressive work on dismantling sacrificial beliefs.  \n   - 'Acts of presence' journal to document everything she did.  \n   - Recontextualizing guilt-related emotions (e.g., inner child work).  \n   - Body scan practice to detect emotional overload signals.  \n3. Long-term Solutions  \n   - Symbolic hypnotherapy: reintegrate the mother figure into a peaceful memory.  \n   - Healing of the wounded feminine: restore self-esteem degraded by the abusive relationship and fusion with a dominant or idealized mother.  \n   - Rituals of passage: personal ceremony to close this chapter (burning a letter, planting a tree, etc.).  \n\n\n\n## Progress Indicato",
+    "metadata": {}
+  },
+  {
+    "id": "f44cf5b3fc87cbdb1de91ec912132586",
+    "document_id": "Clinical_Case_PostDeuil_4",
+    "disorder": "anxiety",
+    "section": "Progress Indicators",
+    "content": "# Progress Indicators\n\n- Recommended Hypnosis/Meditation Sessions  \n   1. Hypnosis to release the invisible burden: Allow the body to release the symbolic weight (mother, anger, responsibility).  \n   2. Immersive reparative grief session: Recreate a peaceful final exchange with the mother.  \n   3. Guided meditation 'You did what you could': Gentle, deep repetition of a non-blaming message.  \n   4. Inner reconciliation hypnosis: Work on the split between the woman who wants to move forward and the one stuck in pain.  \n\nNo information provided",
+    "metadata": {}
+  },
+  {
+    "id": "04ac5050e7ad4c0df3fbdd3ef8436525",
+    "document_id": "Clinical_Case_Widow_Anxiety_Dying_Alone_2",
+    "disorder": "anxiety",
+    "section": "Demographics",
+    "content": "# Demographics\n\nAge: 80 years old  \nGender: Female  \nMarital Status: Widow  \nOccupation: Retired antique dealer  \n\n\n## Summary of Issu",
+    "metadata": {}
+  },
+  {
+    "id": "ab104033e9e5fe54e90d63914735c56a",
+    "document_id": "Clinical_Case_Widow_Anxiety_Dying_Alone_2",
+    "disorder": "anxiety",
+    "section": "Summary of Issues",
+    "content": "# Summary of Issues\n\nThe patient presents with acute anxiety linked to the fear of dying alone. This anxiety is exacerbated by sudden weight loss, which triggers memories of her husband's illness and death from cancer. Associated behaviors include getting dressed quickly to avoid being found naked, indicating a ritualization tied to her death phobia. She experiences a recurring fear of being found dead, alone, and without dignity. Additionally, the patient exhibits hyper-mentalization and difficulty accessing bodily sensations, remaining highly verbal but disconnected from her emotional experiences. There is an unresolved emotional imprint of grief following the loss of her husband during Covid, compounded by a lack of traditional mourning support. The patient also experiences projective identification with her children, feeling powerless in the face of their suffering, which reactivates her own emotional lack of support.\n\n\n## Dominant Emotio",
+    "metadata": {}
+  },
+  {
+    "id": "f1e265d87509aed4b5bf56d89dfe4021",
+    "document_id": "Clinical_Case_Widow_Anxiety_Dying_Alone_2",
+    "disorder": "anxiety",
+    "section": "Dominant Emotions",
+    "content": "# Dominant Emotions\n\n- Existential anxiety  \n- Emotional loneliness  \n- Masked diffuse sadness  \n- Latent guilt (towards her children, her health, her past choices)  \n\n\n## Triggers and Mechanis",
+    "metadata": {}
+  },
+  {
+    "id": "1a2eb6ac02924a2593bff64300b8c372",
+    "document_id": "Clinical_Case_Widow_Anxiety_Dying_Alone_2",
+    "disorder": "anxiety",
+    "section": "Triggers and Mechanisms",
+    "content": "# Triggers and Mechanisms\n\n1. Scale/weight → memory of husband’s illness.  \n2. Isolation → waking without support → morning anxiety peak.  \n3. Children’s suffering → painful echo of her own wounds.  \n4. Inability to travel → experience of lost vitality, frustration.  \n\n\n## Limiting Belie",
+    "metadata": {}
+  },
+  {
+    "id": "d82a55b7f867ecf90c2df36fe0a78775",
+    "document_id": "Clinical_Case_Widow_Anxiety_Dying_Alone_2",
+    "disorder": "anxiety",
+    "section": "Limiting Beliefs",
+    "content": "# Limiting Beliefs\n\n- 'If I lose weight, it's the beginning of the end.'  \n- 'I must be ready to die, but properly.'  \n- 'I am alone with my anxieties.'  \n- 'Analysis is not enough, but I don’t know how to feel.'  \n\n\n## Proposed Solutio",
+    "metadata": {}
+  },
+  {
+    "id": "201fb20710a7ba25174cc29356b2c3e4",
+    "document_id": "Clinical_Case_Widow_Anxiety_Dying_Alone_2",
+    "disorder": "anxiety",
+    "section": "Proposed Solutions",
+    "content": "# Proposed Solutions\n\n**Immediate Solutions**  \n- Emergency grounding: sternum self-massage + “4-4-8” breathing as soon as anxiety arises.  \n- Verbal self-grounding: repeat aloud “I am here, I am alive, it’s not now.”  \n- Symbolic preparation for end-of-life staging: conscious ritualization to deactivate the fear of dying alone.  \n\n**Intermediate Solutions**  \n- Continue EMDR sessions (3 to 6) to address:  \n  - The trauma of the SMS announcement  \n  - The inability to accompany her husband early on  \n  - Current solitude in facing anxiety  \n  - The triggering episode of weight loss  \n- Daily feeling journal (even if vague at first) to reconcile thought and sensation.  \n\n**Long-Term Solutions**  \n- Guided hypnosis on reconciliation with solitude: transform solitude seen as void into a space of inner connection (script to be created).  \n- Immersive meditation on transmission: highlight her emotional role in the family as a keeper of memories and stories (echoing her passion for antiques).  \n- Symbolic grief integration therapy: letter to husband + voice expression + symbolic burial.  \n\n**Tailored Hypnosis/Meditation Session (to be created)**  \nTitle: Taming the Shadow and Walking with the Light  \nThemes:  \n- Deactivation of morning anxiety  \n- Bodily reprogramming in response to fear of death  \n- Reconciliation with the past, connection with husband, release of frozen solitude  \n- Visualization of a golden thread linking the living and the dead, offering comfort.  \n\n\n## Progress Indicato",
+    "metadata": {}
+  },
+  {
+    "id": "b1e577fed26012b36770e55ba64a5214",
+    "document_id": "Clinical_Case_Widow_Anxiety_Dying_Alone_2",
+    "disorder": "anxiety",
+    "section": "Progress Indicators",
+    "content": "# Progress Indicators\n\n**Crisis Prevention Mode**  \n- Quick body-based grounding technique for nocturnal or morning anxiety.  \n- Fast emotional check-in using a printed visual scale (green/orange/red) near the bed.  \n\nFinal Motivational Phrase:  \nYou have faced the grief journey with immense dignity. Today, it’s not the end you need to prepare for, but the rest of your journey. You are not alone. Your heart still beats for precious things, and your memories are not chains: they are bridges to peace.",
+    "metadata": {}
+  },
+  {
     "id": "bcc3c770c1cc8de02d80d73e8bb86f76",
     "document_id": "Clinical_Case_ study_2",
     "disorder": "disorder eating",
     "section": "Demographics",
-    "content": "# Demographics\n\n- Age: 55\n- Gender: Male\n- Status: Business Owner\n\n\n## Summary of Issu",
+    "content": "# Demographics\n\nAge & Gender: Male, 55  \nStatus: Business Owner  \n\n\n## Summary of Issu",
     "metadata": {}
   },
   {
@@ -12,7 +180,7 @@
     "document_id": "Clinical_Case_ study_2",
     "disorder": "disorder eating",
     "section": "Summary of Issues",
-    "content": "# Summary of Issues\n\n- Main reported issue: Evening eating disorders before sleep\n- Eating disorders at the end of the day (snacking or emotional eating episodes)\n- Mental exhaustion caused by overload of responsibilities and lack of recognition\n- Harsh self-demand, with a constant pursuit of perfection and excellence\n- Rationalized emotional hypersensitivity, hidden under layers of control\n- Diffuse guilt, often used as a driver but ultimately draining\n- Sense of mismatch between effort invested and perceived results\n- Resistance to delegation despite fatigue, linked to high performance standards\n- Feeling of loneliness and intellectual disconnection\n- Disorder type: Disordered eating\n\n\n## Dominant Emotio",
+    "content": "# Summary of Issues\n\nMain problems include evening eating disorders characterized by snacking or emotional eating episodes. The patient experiences mental exhaustion due to an overload of responsibilities and a lack of recognition. Other issues identified are harsh self-demand with a constant pursuit of perfection, emotional hypersensitivity masked by control, diffuse guilt, a sense of mismatch between effort and results, resistance to delegation, and feelings of loneliness and intellectual disconnection. This case appears to be related to disordered eating.\n\n\n## Dominant Emotio",
     "metadata": {}
   },
   {
@@ -28,7 +196,7 @@
     "document_id": "Clinical_Case_ study_2",
     "disorder": "disorder eating",
     "section": "Triggers and Mechanisms",
-    "content": "# Triggers and Mechanisms\n\n- Accumulated fatigue and cognitive overload\n- Perceived lack of recognition and inefficiency of others\n- Activation of a control/duty schema: “I’ll do it myself”\n- Repressed emotional exhaustion leading to self-comfort through food\n- Post-behavior guilt reinforcing the cycle\n- Psychological and past origins include a demanding parental model, childhood need to excel to feel seen, and retreat into rationalization to protect from emotion\n\n\n## Limiting Belie",
+    "content": "# Triggers and Mechanisms\n\nChain reaction breakdown:\n1. Accumulated fatigue + cognitive overload\n2. Perceived lack of recognition / inefficiency of others\n3. Activation of a control/duty schema → “I’ll do it myself”\n4. Repressed emotional exhaustion → self-comfort through food\n5. Post-behavior guilt → reinforcement of the cycle\n\nPsychological and past origins include an inherited demanding parental model, a childhood marked by the need to excel to feel seen, and a retreat into rationalization to protect from emotion.\n\n\n## Limiting Belie",
     "metadata": {}
   },
   {
@@ -44,7 +212,7 @@
     "document_id": "Clinical_Case_ study_2",
     "disorder": "disorder eating",
     "section": "Proposed Solutions",
-    "content": "# Proposed Solutions\n\n- **Immediate solutions**: Set up an emotional transition ritual between work and evening, keep a journal of emotional saturations, and create an emotional rescue box.\n- **Intermediate solutions**: Recondition the link between worth and merit, work on control schemas through cognitive coaching or ACT therapy, and restructure the day to include emotional rewards.\n- **Long-term solutions**: Hypnosis to defuse the loop, rebuilding a more fluid identity, and meditation for accepting lack of control and vulnerability.\n\n\n## Progress Indicato",
+    "content": "# Proposed Solutions\n\nImmediate solutions:\n- Set up an emotional transition ritual between work and evening (e.g., hot shower + 3 minutes of cardiac coherence + anchoring phrase: “I’ve done enough for today.”)\n- Keep a journal of emotional “saturations” at the end of the day to note what drained energy and why.\n- Create an emotional rescue box with sensory alternatives instead of food (e.g., comforting warm drink, positive voice recording, weighted blanket).\n\nIntermediate solutions:\n- Recondition the link between worth and merit by honoring small daily wins (keep a list of “3 things I did well today”).\n- Work on control schemas through cognitive coaching or ACT therapy.\n- Restructure the day to include “emotional rewards” before the evening (exercise, chosen solitude, moments of pleasure without purpose).\n\nLong-term solutions:\n- Hypnosis to defuse the loop: fatigue → compensation → guilt → fatigue.\n- Rebuilding a more fluid identity based on authenticity rather than performance.\n- Meditation for accepting lack of control and vulnerability.\n\n\n## Progress Indicato",
     "metadata": {}
   },
   {
@@ -52,119 +220,7 @@
     "document_id": "Clinical_Case_ study_2",
     "disorder": "disorder eating",
     "section": "Progress Indicators",
-    "content": "# Progress Indicators\n\n- Frequency of emotional snacking\n- Perceived fatigue level (morning and evening)\n- Self-assessed emotional state (before and after hypnosis sessions)\n- Achievement rate of “healthy reward” micro-goals\n- Reduction in self-critical inner dialogue\n\n## Final Motivational Phrase\n“What if excellence no longer meant achieving everything, but daring sometimes to do nothing at all? To dare being human—even when no box is checked. Your value is not measured in results, but in presence. And you are here.”",
-    "metadata": {}
-  },
-  {
-    "id": "b0923fdc2149a50b05b530c073ca35a6",
-    "document_id": "Clinical_Case_1",
-    "disorder": "disorder eating",
-    "section": "Demographics",
-    "content": "# Demographics\n\n- Age: 38 years old\n   - Gender: Female\n   - Occupation: Banker\n\n\n\n## Summary of Issu",
-    "metadata": {}
-  },
-  {
-    "id": "a368bcbd38ecaa1eb1954d4bcb0f9b63",
-    "document_id": "Clinical_Case_1",
-    "disorder": "disorder eating",
-    "section": "Summary of Issues",
-    "content": "# Summary of Issues\n\n- Chronic hypervigilance: entrenched in a constant state of professional tension, with marked somatic effects such as digestive disorders and eating blocks.\n   - Generalized anxiety disorder: constant sense of being “on edge,” persistent mental rumination, loss of pleasure and appetite.\n   - Restrictive and anxiety-driven eating disorder (ED): food blockage before meals, fear of eating, loss of physiological hunger, shame during social meals.\n   - Toxic work environment: feelings of being manipulated, betrayed, devalued; loss of trust in management; constant psychological struggle.\n   - Feelings of illegitimacy, blockage, and helplessness: “I don’t belong there,” yet a sense of being trapped in a context where the body is already on high alert.\n   - Loss of self-confidence, gradual disengagement: difficulty setting boundaries, guilt over not “doing things right,” internal resistance.\n   - Emotional and physical exhaustion: awareness of a possible physical breakdown if the situation doesn’t change soon.\n\n\n\n## Dominant Emotio",
-    "metadata": {}
-  },
-  {
-    "id": "44072b5f16af0342bcb9f3c982404ec7",
-    "document_id": "Clinical_Case_1",
-    "disorder": "disorder eating",
-    "section": "Dominant Emotions",
-    "content": "# Dominant Emotions\n\n- Intense anxiety\n   - Disgust (toward self, others, food)\n   - Shame (in social eating contexts)\n   - Frustration and helplessness\n   - Repressed anger\n   - Sadness from no longer feeling pleasure\n\n\n\n## Triggers and Mechanis",
-    "metadata": {}
-  },
-  {
-    "id": "7271ede68e086dd43f426046ffea7f18",
-    "document_id": "Clinical_Case_1",
-    "disorder": "disorder eating",
-    "section": "Triggers and Mechanisms",
-    "content": "# Triggers and Mechanisms\n\n- Identified anxiety cycle:\n     1. Anticipating work → hypervigilance\n     2. Loss of appetite → physical digestive tension\n     3. Intrusive thoughts: “I won’t make it / I’ll freeze again”\n     4. Attempt at control (fragmented eating, body scanning)\n     5. Self-blame: “I’m annoying / complicated”\n     6. Stress reinforcement → eating disorder\n\n\n\n## Limiting Belie",
-    "metadata": {}
-  },
-  {
-    "id": "67645010045f279a41380dfa37babf99",
-    "document_id": "Clinical_Case_1",
-    "disorder": "disorder eating",
-    "section": "Limiting Beliefs",
-    "content": "# Limiting Beliefs\n\n- “If I don’t anticipate everything, I lose control.”\n   - “I have to hold on, even if it destroys me.”\n   - “It’s not up to me to fall apart.”\n   - “I’m a burden when I express my needs.”\n   - “If I show my weaknesses, I lose legitimacy.”\n\n\n\n## Proposed Solutio",
-    "metadata": {}
-  },
-  {
-    "id": "16208f67f2e6180ccab90eea6ab09401",
-    "document_id": "Clinical_Case_1",
-    "disorder": "disorder eating",
-    "section": "Proposed Solutions",
-    "content": "# Proposed Solutions\n\n- Immediate (soothing / reassurance effects)\n     • Guided breathing before each meal (3 minutes of cardiac coherence → parasympathetic grounding)\n     • “Food permission” exercise: telling yourself, “It’s okay if I don’t finish everything. What matters is feeling at peace with myself.”\n     • One-minute grounding: visualize a safe place, a comforting moment before each meal to associate safety with eating.\n   - Intermediate (progressive restructuring)\n     • Food experience journal: noting emotions and sensations before / during / after meals → helps detach food from anxiety.\n     • Compassionate self-dialogue: transform “I’m annoying” into “I’m in an inner struggle, doing my best to protect myself.”\n     • Work on fear of losing control: through micro-exposure to unpredictability (e.g., not knowing what’s for lunch once a week).\n   - Long-term solutions\n     • Targeted hypnosis on toxic vigilance and inner insecurity.\n     • Immersive meditation: “Rediscovering the joy of eating in safety.”\n     • Symbolic work on professional change: visualization of a door opening toward a space where one can breathe, be respected, and find peace.\n\n\n\n## Progress Indicato",
-    "metadata": {}
-  },
-  {
-    "id": "a573f13238eaaf476e7cf3f7b81b8bd9",
-    "document_id": "Clinical_Case_1",
-    "disorder": "disorder eating",
-    "section": "Progress Indicators",
-    "content": "# Progress Indicators\n\n- Daily self-assessment (anxiety level before meals: scale 0–10)\n   - Food pleasure indicator: once a day, note one pleasant thing about eating (even a small detail)\n   - Weekly evolution of the feeling of blockage vs. freedom at work\n```",
-    "metadata": {}
-  },
-  {
-    "id": "85bbcb13e9a73ce6a37cb6f34df4a0d5",
-    "document_id": "Clinical_Case_Anorexia_3",
-    "disorder": "disorder eating",
-    "section": "Demographics",
-    "content": "# Demographics\n\nFemale, 22 years old\n\n\n## Summary of Issu",
-    "metadata": {}
-  },
-  {
-    "id": "c064e4d3035c0ddd4556ff8eb8e3c7f3",
-    "document_id": "Clinical_Case_Anorexia_3",
-    "disorder": "disorder eating",
-    "section": "Summary of Issues",
-    "content": "# Summary of Issues\n\n1. Eating disorder with anorexic predominance:\n   - Marked food restriction (skipping lunch, mainly liquid or very low-calorie diet).\n   - Avoidance of carbohydrates and rigid eating habits.\n   - Intense body preoccupation, frustration linked to weight regain.\n   - Unrealistic body goals (thigh gap).\n   - Onset of disorder related to an old bereavement.\n\n2. Emotional and cognitive overcontrol:\n   - Excessive emotional control (“it’s about control, that’s all”), mental rigidity.\n   - Difficulty recognizing emotions (“I’m often annoyed”), undifferentiated anger.\n   - Mental overload, rumination, perceived synaptic overactivation.\n\n3. Transgenerational emotional burden and internalized guilt:\n   - Internal conflict around parental injunctions (“finish your plate”) and unprocessed family traumas.\n   - Identification with the role of the “trash generation” → feeling of inheriting “psychological garbage” + eco-anxiety.\n\n4. Ambivalence towards care:\n   - Several previous therapeutic attempts (dieticians), little success.\n   - Desire to understand, but significant mental fatigue.\n   - Attitude oscillating between lucidity and defensive detachment.\n\n\n## Dominant Emotio",
-    "metadata": {}
-  },
-  {
-    "id": "f794f354e60214e701de454605f4dc3a",
-    "document_id": "Clinical_Case_Anorexia_3",
-    "disorder": "disorder eating",
-    "section": "Dominant Emotions",
-    "content": "# Dominant Emotions\n\n- Intense frustration\n- Silent anger / diffuse irritation\n- Unexpressed sadness in the background\n- Bodily and existential guilt\n- Diffuse fear of losing bodily/physiological control\n- Ambivalence about change\n\n\n## Triggers and Mechanis",
-    "metadata": {}
-  },
-  {
-    "id": "8e4dd3b263d159dafd774818f3549549",
-    "document_id": "Clinical_Case_Anorexia_3",
-    "disorder": "disorder eating",
-    "section": "Triggers and Mechanisms",
-    "content": "# Triggers and Mechanisms\n\nMajor trigger: Initial bereavement that destabilized her mental balance and catalyzed the use of food control as a survival strategy.\n\nMechanism:\n- Emotional hypervigilance → cognitive rigidity → restrictive strategies → temporary control reinforcement → increased frustration → internalized anger → maintenance loop of the disorder.\n\n\n## Limiting Belie",
-    "metadata": {}
-  },
-  {
-    "id": "c81360a51a55bf24b7cb075f80d2c8bc",
-    "document_id": "Clinical_Case_Anorexia_3",
-    "disorder": "disorder eating",
-    "section": "Limiting Beliefs",
-    "content": "# Limiting Beliefs\n\n- “I must control everything to exist.”\n- “If I gain weight, I lose control.”\n- “My body betrays me.”\n- “Emotions are dangerous or unmanageable.”\n- “I carry my parents’ mistakes.”\n\n\n## Proposed Solutio",
-    "metadata": {}
-  },
-  {
-    "id": "88b156869d40966e6522e586f1512af4",
-    "document_id": "Clinical_Case_Anorexia_3",
-    "disorder": "disorder eating",
-    "section": "Proposed Solutions",
-    "content": "# Proposed Solutions\n\n1. Immediate Solutions\n   - Daily emotional self-observation: Anger/frustration/energy scale (0 to 10), morning and evening.\n   - Mini body anchor: breathe 4x/day, place a hand on your belly, say inwardly “I am here, my body is alive.”\n   - Conscious nutrition: note one pleasure food per week (even a small one) without self-judgment.\n\n2. Intermediate Solutions\n   - Strengthen therapeutic alliance with a dietician specialized in EDs, focused on dialogue, not weight.\n   - Create an “emotion-food” journal to identify links between emotional state and eating behavior.\n   - Cognitive deactivation exercise: “What if I allowed 5% of letting go?” (daily ritual question).\n\n3. Long-Term Solutions\n   - Deconstruct control patterns through regular hypnosis.\n   - Explore transgenerational traumas and unprocessed grief (therapy, EMDR if open).\n   - Guided sessions to restore the body as a place to live rather than to control.\n\n\n## Progress Indicato",
-    "metadata": {}
-  },
-  {
-    "id": "28cb7d602e9b553ef0631f0615bb270d",
-    "document_id": "Clinical_Case_Anorexia_3",
-    "disorder": "disorder eating",
-    "section": "Progress Indicators",
-    "content": "# Progress Indicators\n\n- Week 1: Number of full meals/day - Stabilization at 2 meals, then 3\n- Week 2: Anger/frustration scale - Reduction by at least 2 points\n- Week 3: Inclusion of a pleasure food - Once/week\n- Week 4: Perceived bodily sensations - Gradual return of hunger, pleasure, satiety\n- Week 6: Emotional openness - Ability to name 3 emotions during the week",
+    "content": "# Progress Indicators\n\nIndicators to monitor:\n- Frequency of emotional snacking\n- Perceived fatigue level (morning and evening)\n- Self-assessed emotional state (before and after hypnosis sessions)\n- Achievement rate of “healthy reward” micro-goals\n- Reduction in self-critical inner dialogue",
     "metadata": {}
   },
   {
@@ -172,7 +228,7 @@
     "document_id": "Clinical_Case_Eating_Disorder_4",
     "disorder": "disorder eating",
     "section": "Demographics",
-    "content": "# Demographics\n\nFemale, 18 years old, student\n\n\n## Summary of Issu",
+    "content": "# Demographics\n\nFemale, 18 years old, student  \n\n\n\n## Summary of Issu",
     "metadata": {}
   },
   {
@@ -180,7 +236,7 @@
     "document_id": "Clinical_Case_Eating_Disorder_4",
     "disorder": "disorder eating",
     "section": "Summary of Issues",
-    "content": "# Summary of Issues\n\n- **Eating Disorders**: Alternating between strict control and binge eating episodes, eating habits loaded with moral judgments ('good' vs 'bad' food'), strong guilt after meals, feeling powerless when comforting eating routines are disrupted.\n- **Difficult Relationship with the Body**: Body hatred dating back to childhood, constant comparison (especially with a very thin friend), early labeling ('the greedy one') shaping body identity.\n- **Emotional Imbalance**: Academic stress, sleep issues, emotional hypersensitivity, feeling of family injustice (needs around food not acknowledged), need to be seen, acknowledged, and respected in her choices.\n- **Unstable Friendship Dynamics**: Friendship triangle with implicit tensions (exclusion, jealousy, unspoken conflicts), seeking emotional balance in a trio perceived as 'perfect' but experienced as unstable.\n\nThis case appears to be related to disordered eating.\n\n\n## Dominant Emotio",
+    "content": "# Summary of Issues\n\nThe patient is experiencing disorder eating characterized by alternating between strict control and binge eating episodes. She exhibits moral judgments regarding food ('good' vs 'bad'), experiences strong guilt after meals, and feels powerless when her comforting eating routines are disrupted. Additionally, she has a difficult relationship with her body, stemming from childhood body hatred and constant comparison to a very thin friend. Emotional imbalances are present, including academic stress, sleep issues, and emotional hypersensitivity, alongside feelings of family injustice regarding her needs around food. Unstable friendship dynamics further complicate her emotional state, as she navigates a friendship triangle marked by exclusion, jealousy, and unspoken conflicts.  \n\n\n\n## Dominant Emotio",
     "metadata": {}
   },
   {
@@ -188,7 +244,7 @@
     "document_id": "Clinical_Case_Eating_Disorder_4",
     "disorder": "disorder eating",
     "section": "Dominant Emotions",
-    "content": "# Dominant Emotions\n\nGuilt  \nBody shame  \nSilent anger  \nInjustice  \nSadness  \nFear of losing control  \n\n\n## Triggers and Mechanis",
+    "content": "# Dominant Emotions\n\nGuilt  \nBody shame  \nSilent anger  \nInjustice  \nSadness  \nFear of losing control  \n\n\n\n## Triggers and Mechanis",
     "metadata": {}
   },
   {
@@ -196,7 +252,7 @@
     "document_id": "Clinical_Case_Eating_Disorder_4",
     "disorder": "disorder eating",
     "section": "Triggers and Mechanisms",
-    "content": "# Triggers and Mechanisms\n\n- **Main Triggers**: Disruption of comforting eating routines, social situations involving 'special' food (pizza, raclette, crepes), perceived family neglect (no groceries, unequal treatment with brother), comparison with other bodies and metabolisms, fatigue, stress, academic overload.\n- **Identified Psychological Mechanisms**: Typical chain reaction: Lack → frustration → loss of control → binge → guilt → desire to restrict → overload → new crisis.\n\n\n## Limiting Belie",
+    "content": "# Triggers and Mechanisms\n\nMain triggers include the disruption of comforting eating routines, social situations involving 'special' food (e.g., pizza, raclette, crepes), perceived family neglect (e.g., no groceries, unequal treatment with her brother), and comparisons with other bodies and metabolisms. Psychological mechanisms involve a typical chain reaction: lack → frustration → loss of control → binge → guilt → desire to restrict → overload → new crisis.  \n\n\n\n## Limiting Belie",
     "metadata": {}
   },
   {
@@ -204,7 +260,7 @@
     "document_id": "Clinical_Case_Eating_Disorder_4",
     "disorder": "disorder eating",
     "section": "Limiting Beliefs",
-    "content": "# Limiting Beliefs\n\n- If I eat something special, I lose control.\n- I only matter if I control my body.\n- I don’t deserve to be considered like others.\n- I must manage on my own, even for basic needs.\n- A slim and rational friend is better than me.\n\n\n## Proposed Solutio",
+    "content": "# Limiting Beliefs\n\nIf I eat something special, I lose control.  \nI only matter if I control my body.  \nI don’t deserve to be considered like others.  \nI must manage on my own, even for basic needs.  \nA slim and rational friend is better than me.  \n\n\n\n## Proposed Solutio",
     "metadata": {}
   },
   {
@@ -212,7 +268,7 @@
     "document_id": "Clinical_Case_Eating_Disorder_4",
     "disorder": "disorder eating",
     "section": "Proposed Solutions",
-    "content": "# Proposed Solutions\n\n- **Immediate Solutions (Daily Management)**: Create an 'emergency food kit', kind food journal, express anti-crisis exercise.\n- **Intermediate Solutions (Deeper Rebalancing)**: Establish nurturing ritual meals, cognitive restructuring, daily soothing visualization.\n- **Long-Term Solutions (Transforming Patterns)**: Body image rebuilding, hypnosis for food reconciliation, family psychoeducation.\n\n\n## Progress Indicato",
+    "content": "# Proposed Solutions\n\nImmediate Solutions (Daily Management)  \n- Create an 'emergency food kit': keep a small box of favorite items (chia, agave syrup, almonds, etc.) in your bag or locker to avoid sudden frustration.  \n- Kind food journal: track not to control but to observe kindly (What did I enjoy eating today? How did I feel after?).  \n- Express anti-crisis exercise: before a binge, pause 3 minutes: 'Am I hungry? Thirsty? Do I need something other than food?' + deep breathing.  \n\nIntermediate Solutions (Deeper Rebalancing)  \n- Establish two to three nurturing ritual meals per week with favorite foods, mindfully, without phone or judgment. Set an intention (self-care, reconnection).  \n- Cognitive restructuring: change 'I ate badly so I’m worthless' → 'I ate differently than my ideal, but I still deserve love.'  \n- Daily soothing visualization: every morning, imagine a meal that calms you. Feel the relaxation, desire, and softness in your body.  \n\nLong-Term Solutions (Transforming Patterns)  \n- Body image rebuilding:  \n  - Progressive body acceptance through mirror work.  \n  - Replace comparisons with positive affirmations rooted in bodily experience.  \n- Hypnosis for food reconciliation: Theme – 'Giving My Body a Voice'.  \n- Family psychoeducation (if possible): Initiate dialogue with parents about the impact of food choices on your well-being, or create visible spaces for your needs (shared grocery list).  \n\nPersonalized Hypnosis Session  \nTitle: Giving My Body a Voice  \nTarget length: 1200 words  \nObjectives:  \n- Deactivate compulsions related to 'forbidden' foods.  \n- Create inner safety without excessive control.  \n- Reconcile the inner child labeled as 'greedy.'  \n- Put pleasure back at the center without guilt.  \n- Sensory anchor: breathing + gentleness + honoring real needs.  \n\n\n\n## Progress Indicato",
     "metadata": {}
   },
   {
@@ -220,175 +276,455 @@
     "document_id": "Clinical_Case_Eating_Disorder_4",
     "disorder": "disorder eating",
     "section": "Progress Indicators",
-    "content": "# Progress Indicators\n\n- **Eating**: Smoother relationship, fewer crises; Indicator: Number of days without bingeing, post-meal guilt level.\n- **Body**: Calmer self-image; Indicator: Ability to look at oneself kindly.\n- **Emotions**: Less stress and fewer crying episodes; Indicator: Number of good sleep days.\n- **Family**: Better recognition; Indicator: Number of peaceful discussions about groceries.",
+    "content": "# Progress Indicators\n\nDomain | Desired Evolution | Indicator  \nEating | Smoother relationship, fewer crises | Number of days without bingeing, post-meal guilt level  \nBody | Calmer self-image | Ability to look at oneself kindly  \nEmotions | Less stress and fewer crying episodes | Number of good sleep days  \nFamily | Better recognition | Number of peaceful discussions about groceries",
     "metadata": {}
   },
   {
-    "id": "f4bc74c94a4de475399cbc65893d716e",
-    "document_id": "Clinical_case_Let_the_Body_Digest_5",
-    "disorder": "disorder eating",
+    "id": "fc2f0e364deb8a00d5ba5f601194789b",
+    "document_id": "Clinical_Case_Adolescent_Frustation_2",
+    "disorder": "emotion regulation",
     "section": "Demographics",
-    "content": "# Demographics\n\nFemale, 19 years old\n\n\n## Summary of Issu",
+    "content": "# Demographics\n\nBoy, 14 years old  \nStatus: Student\n\n\n## Summary of Issu",
     "metadata": {}
   },
   {
-    "id": "20fbf677811fd6268c95661baa05ff6c",
-    "document_id": "Clinical_case_Let_the_Body_Digest_5",
-    "disorder": "disorder eating",
+    "id": "b0a22e0c8cdb9a47384325e7b8e89c39",
+    "document_id": "Clinical_Case_Adolescent_Frustation_2",
+    "disorder": "emotion regulation",
     "section": "Summary of Issues",
-    "content": "# Summary of Issues\n\n- Chronic underlying stress perceived as permanent, with a normalization of emotional discomfort.\n- Constant physical and mental fatigue, with no real recovery.\n- Episodes of explosive, uncontrollable anger (\"color crises\") without apparent rational triggers, often due to overload, injustice, or neglect of self.\n- Over-responsibility in the romantic relationship, with the impression of having to “do everything alone” and low perceived reciprocity.\n- Conflict avoidance: emotional inhibition strategy (“I shut my mouth”) which increases internal pressure and the risk of explosion.\n- Conflicted relationship with food, particularly difficulties chewing or swallowing certain textures (e.g., tough meat), indicating mild food-related OCD, without a full-blown eating disorder but with a disrupted body connection.\n- Sensory hypersensitivity (taste, texture, bodily sensations).\n- Anticipatory anxiety about pregnancy: fear of taking a test, bodily pregnancy-like sensations (pseudocyesis).\n- Phobic avoidance of highways, especially when someone else is driving, linked to a past traumatic event (accident).\n- Ambivalent attitude toward control: desire to manage everything (belongings, meals, road safety), but mental exhaustion from hypervigilance.\n- Possible traits of anxious-obsessive personality or mild OCD, particularly around safety, orderliness, and food.\n- Need for emotional relief and a space to exist without managing everything.\n\n\n## Dominant Emotio",
+    "content": "# Summary of Issues\n\nThe patient is experiencing emotional hyperreactivity to frustration, characterized by intense reactions to perceived injustices or arbitrary interruptions. He exhibits repressed explosive anger, as indicated by expressions of wanting to harm others or destroy objects. Feelings of disappointment and helplessness arise from losing control over his environment, leading to a sense of powerlessness. Conflicted sibling relationships contribute to his emotional state, marked by affective rivalry and difficulty in setting boundaries. The announcement of parental divorce has caused an emotional reaction primarily marked by shock, which requires further exploration. He shows a tendency to mentalize and rationalize his emotions, indicating possible emotional dissociation. Additionally, he is habituating to conflict, suggesting emotional exhaustion or apathy. This case appears to be related to emotion regulation.\n\n\n## Dominant Emotio",
     "metadata": {}
   },
   {
-    "id": "3d641d87abedb40b2d76edc9e9dde44b",
-    "document_id": "Clinical_case_Let_the_Body_Digest_5",
-    "disorder": "disorder eating",
+    "id": "4fa6a1ea6eab26eba0a14d0fd37d6658",
+    "document_id": "Clinical_Case_Adolescent_Frustation_2",
+    "disorder": "emotion regulation",
     "section": "Dominant Emotions",
-    "content": "# Dominant Emotions\n\n- Stress, fatigue, repressed then explosive anger, sense of injustice, fear (control/loss of control), food disgust, diffuse anxiety, emotional hypersensitivity.\n\n\n## Triggers and Mechanis",
+    "content": "# Dominant Emotions\n\nFrustration  \nAnger  \nDisappointment  \nShock  \nAmbivalence  \nSlight implicit shame linked to excessive reactions\n\n\n## Triggers and Mechanis",
     "metadata": {}
   },
   {
-    "id": "cd39c76b7573d181563061fb431138e4",
-    "document_id": "Clinical_case_Let_the_Body_Digest_5",
-    "disorder": "disorder eating",
+    "id": "0d6cbfb965698a694024e9d11147fa61",
+    "document_id": "Clinical_Case_Adolescent_Frustation_2",
+    "disorder": "emotion regulation",
     "section": "Triggers and Mechanisms",
-    "content": "# Triggers and Mechanisms\n\n- Silent accumulation of micro-annoyances, regular emotional inhibition, lack of assertive expression, leading to brutal outbursts.\n- Anxious overcontrol of the body and environment as a defensive strategy against a world perceived as unpredictable.\n- Active avoidance of anxiety-inducing situations (highway, pregnancy test, verbal confrontation), maintaining the anxiety loop.\n- Sensory discomfort experienced as aggression (e.g., tough meat), reflecting a dissociated relationship with the body.\n\n\n## Limiting Belie",
+    "content": "# Triggers and Mechanisms\n\nTypical triggers include sudden interruptions of enjoyable activities, provocative remarks from his sister, and reprimands perceived as unfair. The emotional mechanism involves feelings of injustice leading to frustration and rising anger, which is not expressed verbally. This can result in potential impulsivity, such as throwing objects, followed by feelings of guilt or withdrawal. \n\n\n## Limiting Belie",
     "metadata": {}
   },
   {
-    "id": "72766424ce1e41d57ca3a7b98e68ce42",
-    "document_id": "Clinical_case_Let_the_Body_Digest_5",
-    "disorder": "disorder eating",
+    "id": "107c2556debf7c1d085d9bf641883d9e",
+    "document_id": "Clinical_Case_Adolescent_Frustation_2",
+    "disorder": "emotion regulation",
     "section": "Limiting Beliefs",
-    "content": "# Limiting Beliefs\n\n- “If I don’t manage things, no one will.”\n- “I must stay silent to avoid conflict.”\n- “I’m not allowed to explode, but sometimes I can’t take it anymore.”\n- “I don’t trust my body (for digestion, driving, or handling pregnancy).”\n- “I carry the mental load alone.”\n\n\n## Proposed Solutio",
+    "content": "# Limiting Beliefs\n\n'If I’m stopped, I’m not respected.'  \n'They prevent me from doing what I love, so I must defend myself.'  \n'I have to fight for my place.'  \n'Adults (or my sister) make decisions for me, I am powerless.'  \n'I am often misunderstood.'\n\n\n## Proposed Solutio",
     "metadata": {}
   },
   {
-    "id": "0838676882b3c056b95e8ce030daee5d",
-    "document_id": "Clinical_case_Let_the_Body_Digest_5",
-    "disorder": "disorder eating",
+    "id": "3683adb6fd44ecb0eb4660843e7df01d",
+    "document_id": "Clinical_Case_Adolescent_Frustation_2",
+    "disorder": "emotion regulation",
     "section": "Proposed Solutions",
-    "content": "# Proposed Solutions\n\n1. Immediate Solutions\n   - Anti-stress breathing exercise (3-4-5 or cardiac coherence) twice daily to reduce reactivity threshold.\n   - Emotional self-observation journal: “When do I start boiling?”, “What drains me the most each day?”\n   - Quick post-anger grounding protocol: walk alone for 10 min / apply a cold wet cloth / visually step away from mess.\n   - Body scan focused on throat and jaw (key blockage areas related to food).\n\n2. Intermediate Solutions\n   - Gentle assertiveness training: learning to say “I need help” without fear of conflict through role-play and symbolic dramatization.\n   - Sensory reconditioning with food: introduce meats in softer forms (minced, blended) to bypass texture aversion without confrontation.\n   - Gradual, safe exposure to highway: daytime driving, 15 minutes, on a familiar and predictable route, accompanied by a trusted person.\n\n3. Long-Term Solutions\n   - Emotion/scheme-oriented therapy to dismantle core overcontrol and self-inhibition patterns.\n   - Regular hypnosis sessions to:\n     - Reprogram emotional tolerance.\n     - Reconnect with bodily sensations (food, driving, fatigue).\n     - Let go of control-based automatisms.\n\n\n## Progress Indicato",
+    "content": "# Proposed Solutions\n\nImmediate Solutions:  \n- Guided verbalization exercise to identify emotions during frustration.  \n- Soft emotional interruption technique involving a 3-minute conscious breathing ritual.  \n- Emotional rights sheet to affirm that feeling frustrated is acceptable, focusing on responses to emotions.\n\nIntermediate Solutions:  \n- Structured dialogue with his sister through joint therapeutic activities.  \n- Exercise to deconstruct perceived injustices behind refusals.  \n- ‘Traffic light’ emotion journal to recognize signs of irritation before anger erupts.\n\nLong-Term Solutions:  \n- Thematic hypnosis session focused on frustration and self-assertion.  \n- Playful sensory meditation to develop bodily awareness of emotions.  \n- Symbolic reprogramming of anger to view it as a signal of unmet needs.\n\n\n## Progress Indicato",
     "metadata": {}
   },
   {
-    "id": "e3de32969dc233e7b4faf211b634b420",
-    "document_id": "Clinical_case_Let_the_Body_Digest_5",
-    "disorder": "disorder eating",
+    "id": "84451c237768b35a2f422dff3f574092",
+    "document_id": "Clinical_Case_Adolescent_Frustation_2",
+    "disorder": "emotion regulation",
     "section": "Progress Indicators",
-    "content": "# Progress Indicators\n\n- Weekly emotional load scale (0 to 10).\n- Self-observation journal of emotional outbursts (frequency, duration, intensity).\n- Behavioral flexibility indicator: “Did I allow myself not to control everything today?”\n- Post-session feedback: muscular tension before/after, appetite, sleep quality.\n\n## Final Motivational Phrase\n“You don’t have to carry the world on your shoulders. Your body already knows how to relax, your heart how to find peace… You just have to give them back their voice.”",
+    "content": "# Progress Indicators\n\n- Ability to name emotions beyond simple annoyance.  \n- Reduction of impulsive gestures in response to frustrations.  \n- Increased moments of complicity with his sister.  \n- Ability to delay emotional responses, such as taking a breath before reacting.  \n- Weekly self-evaluation on managing frustrations and expressing emotions calmly.",
     "metadata": {}
   },
   {
-    "id": "b0923fdc2149a50b05b530c073ca35a6",
-    "document_id": "Clinical_Case_1",
-    "disorder": "sleep",
+    "id": "081032a75735aed753b8ed2ad20393e1",
+    "document_id": "Clinical_Case_PTSD_Somatic_Anxiety_3",
+    "disorder": "emotion regulation",
     "section": "Demographics",
-    "content": "# Demographics\n\nFemale, approximately 40 years old (insomnia since age 25, for over 15 years).\n\n\n## Summary of Issu",
+    "content": "# Demographics\n\n- Age: 38 years old\n- Gender: Female\n- Occupation: Educational Assistant\n\n\n## Summary of Issu",
     "metadata": {}
   },
   {
-    "id": "a368bcbd38ecaa1eb1954d4bcb0f9b63",
-    "document_id": "Clinical_Case_1",
-    "disorder": "sleep",
+    "id": "ded079d435fac153b84e563fc872fa52",
+    "document_id": "Clinical_Case_PTSD_Somatic_Anxiety_3",
+    "disorder": "emotion regulation",
     "section": "Summary of Issues",
-    "content": "# Summary of Issues\n\n1. Severe chronic insomnia (for over 15 years)\n   - Difficulty falling asleep or multiple nighttime awakenings.\n   - Deeply disrupted sleep pattern.\n   - Physical and mental exhaustion.\n   - High resistance to medication.\n\n2. Anxious personality with ruminative tendencies\n   - Nighttime mental hyperactivity (existential reflections, nocturnal writing).\n   - Difficulty letting go and embracing mental stillness.\n\n3. History of major relational trauma (abusive relationship)\n   - Experience of psychological, physical, and symbolic violence (confinement, arson, partner’s self-harm, isolation, implicit threats).\n   - Survival strategy through simulated submission (“pretending to be with him to get back to safety”).\n   - Post-traumatic symptoms: nocturnal visual hallucinations (arachnophobia/hypnagogic hallucinations), possible dissociative episode.\n\n4. Unprocessed emotional burden\n   - Lack of external help at the time (isolation abroad).\n   - Feeling of having had to save herself alone.\n   - Trauma memory still very active.\n\n\n## Dominant Emotio",
+    "content": "# Summary of Issues\n\n- Main Issue: Post-traumatic anxiety related to pathological pregnancies (ectopic, molar pregnancy, blighted ovum) with somatic triggers and loss of bodily trust.\n- Somatic anxiety: panic peaks triggered by physical symptoms (tingling), with immediate catastrophic thoughts (“I’m going to die”).\n- Active traumatic memory: ectopic pregnancy with severe internal bleeding, post-operative awakening marked by a brutal announcement (“one more day and you would have died”).\n- Diffuse guilt: surrounding uncarried pregnancies, reinforced by misunderstanding the body (“why is this happening to me?”, “my body isn’t working”).\n- Hyper-rationalization & comparison: tendency to minimize her own suffering by comparing it to others’, generating a form of emotional self-invalidation.\n- Emotional overadaptation: desire not to “add grief to grief,” at the expense of her own feelings.\n- Disconnection from the body: loss of trust in pain as an alert signal, development of a limiting belief about her resilience (“I’m too resilient to feel the signals”).\n\n\n## Dominant Emotio",
     "metadata": {}
   },
   {
-    "id": "44072b5f16af0342bcb9f3c982404ec7",
-    "document_id": "Clinical_Case_1",
-    "disorder": "sleep",
+    "id": "bb9cd416709156de4a5b3ba9408fee09",
+    "document_id": "Clinical_Case_PTSD_Somatic_Anxiety_3",
+    "disorder": "emotion regulation",
     "section": "Dominant Emotions",
-    "content": "# Dominant Emotions\n\n- Deep fear (linked to the trauma).\n- Extreme fatigue.\n- Distress.\n- Emotional loneliness.\n- Ambivalence between lucidity and helplessness.\n- Resilience and desire to heal.\n\n\n## Triggers and Mechanis",
+    "content": "# Dominant Emotions\n\n- Chest tightness, physiological anxiety (tachycardia, remembered physical pain)\n- Fear of dying, acute panic\n- Underlying anger (toward the body, the injustice of events)\n- Suppressed sadness, internalized guilt\n- Sense of existential injustice\n\n\n## Triggers and Mechanis",
     "metadata": {}
   },
   {
-    "id": "7271ede68e086dd43f426046ffea7f18",
-    "document_id": "Clinical_Case_1",
-    "disorder": "sleep",
+    "id": "10efaeb6d7ad9a0af57f2d3e25429d34",
+    "document_id": "Clinical_Case_PTSD_Somatic_Anxiety_3",
+    "disorder": "emotion regulation",
     "section": "Triggers and Mechanisms",
-    "content": "# Triggers and Mechanisms\n\n### Main Emotional Triggers\n- Nighttime silence and inactivity = trigger for rumination.\n- Prolonged solitude.\n- Any situation perceived as loss of control.\n- Unconscious resonance of traumatic episodes (e.g., confinement, helplessness).\n\n### Underlying Psychological Mechanisms\n- Post-traumatic hypervigilance (body in constant alert mode).\n- Anticipatory anxiety (fear of not sleeping, which prevents sleep).\n- Sensory emotional memory (linked to nighttime trauma).\n- Difficulties in emotional regulation (writing and hypnosis used as partial self-regulation attempts).\n\n\n## Limiting Belie",
+    "content": "# Triggers and Mechanisms\n\n- Triggers: any atypical physical sensation (tingling, pain, discomfort) revives the bodily trauma.\n- Mechanism: perception of a failing body → anxiety → loss of control → panic peak → attempt to regain control through breathing techniques (e.g., Respirelax).\n- Underlying schema: “I can’t trust my body / I must control everything or I’ll fall apart.”\n\n\n## Limiting Belie",
     "metadata": {}
   },
   {
-    "id": "67645010045f279a41380dfa37babf99",
-    "document_id": "Clinical_Case_1",
-    "disorder": "sleep",
+    "id": "362d9b10eaa2b939abf60c44c1993122",
+    "document_id": "Clinical_Case_PTSD_Somatic_Anxiety_3",
+    "disorder": "emotion regulation",
     "section": "Limiting Beliefs",
-    "content": "# Limiting Beliefs\n\n- “I’m resistant to medication, so nothing can help me.”\n- “I have to stay strong, alone, and endure.”\n- “My anxiety is part of me, I’ll never be able to change it.”\n- “I can’t trust my own body / night is the enemy.”\n\n\n## Proposed Solutio",
+    "content": "# Limiting Beliefs\n\n- “I’m too resilient to feel the signals.”\n- “Resisting pain ≠ ignoring signals.”\n- “It’s not my body’s fault.”\n\n\n## Proposed Solutio",
     "metadata": {}
   },
   {
-    "id": "16208f67f2e6180ccab90eea6ab09401",
-    "document_id": "Clinical_Case_1",
-    "disorder": "sleep",
+    "id": "3c610e664e7e9acbf0e19c8452766df3",
+    "document_id": "Clinical_Case_PTSD_Somatic_Anxiety_3",
+    "disorder": "emotion regulation",
     "section": "Proposed Solutions",
-    "content": "# Proposed Solutions\n\n1. Immediate solutions:\n   - Body grounding exercise to be done at the first signs of mental activation (e.g., lying body scan + 4-7-8 breathing).\n   - Targeted “emotional discharge” writing before bed to mentally offload worries.\n   - Implementation of a calming and stable evening ritual (soothing atmosphere, dim lighting, constant neutral sounds).\n   - Emergency session: hypnosis to deactivate ruminations.\n\n2. Intermediate solutions:\n   - Gradual work on the traumatic vigilance pattern (teaching the body to distinguish night from danger).\n   - Gentle body movements before bed (e.g., 10 minutes of slow stretching or self-massage).\n   - Guided visualization of safe places, anchored to a physical signal (e.g., hand placed on the chest).\n   - Start of a reeducation of the relationship to night through gentle desensitization (cognitive restructuring via hypnosis).\n\n3. Long-term solutions:\n   - Immersive post-trauma hypnosis sessions (release of body-stored trauma memories).\n   - Work on limiting identity beliefs (e.g., “I’m broken” → “I survived, and I deserve rest”).\n   - Reconnection to the body through guided kinesthetic meditation.\n   - Trauma-focused therapy (EMDR or regressive hypnosis) if accepted later.\n\n\n## Progress Indicato",
+    "content": "# Proposed Solutions\n\nImmediate Solutions:\n- Guided coherent breathing (Respirelax – 5/5, 3 minutes), paired with an anchor (e.g., safety gesture or mental image).\n- Internal emotional validation dialogue: “What I went through was a real ordeal. My feelings are valid.”\n- Personalized crisis sheet: track symptoms / thoughts / actions taken / post-action feelings.\n\nIntermediate Solutions:\n- Cognitive restructuring of beliefs: “Resisting pain ≠ ignoring signals” / “It’s not my body’s fault.”\n- Emotional journaling: guided writing on each pregnancy → what I lost, what I overcame, what I forgive myself for.\n- Regular EMDR sessions to desensitize highly charged memories (post-op awakening, wait before surgery, harsh medical announcements).\n\nLong-Term Solutions:\n- Immersive hypnosis session: Reconnection to the body – Reconciliation with pain – Deactivation of traumatic memory.\n- Sensory body meditation to recreate inner safety through bodily sensations.\n- Progressive resilience anchoring: regular visualization of the resources mobilized at each stage (e.g., the colleague who encouraged her to consult, post-crisis management, courage through pain…).\n\n\n## Progress Indicato",
     "metadata": {}
   },
   {
-    "id": "a573f13238eaaf476e7cf3f7b81b8bd9",
-    "document_id": "Clinical_Case_1",
-    "disorder": "sleep",
+    "id": "0777369096d150cf98136f2461be45e4",
+    "document_id": "Clinical_Case_PTSD_Somatic_Anxiety_3",
+    "disorder": "emotion regulation",
     "section": "Progress Indicators",
-    "content": "# Progress Indicators\n\n- Before each session: rate level of fatigue and mental tension on a scale from 1 to 10.\n- After each session: note whether falling asleep was easier, if intrusive thoughts decreased.\n- Phase 1 Goal (weeks 1–3): reduce fear of night and of sleeplessness.\n- Phase 2: stabilize physical and emotional recovery routines.\n- Phase 3: deep restructuring of vigilance patterns.",
+    "content": "# Progress Indicators\n\nGoal: Reduction in somatic panic attacks  \nIndicator: Number of peaks > 7/10 per week  \nTool: Daily log  \n\nGoal: Increased body trust  \nIndicator: Ability to identify early body signals without panic  \nTool: Self-evaluation 1-10 scale  \n\nGoal: Emotional self-validation  \nIndicator: Frequency of validating feelings without comparison  \nTool: 1x/day (checkmark or note)  \n\nGoal: Lightening of guilt  \nIndicator: Decrease in self-blaming discourse in memories  \nTool: Guided journal  \n\n## Final Motivational Phrase\n“You stood when your body could have fallen. Today, it’s time not only to survive in your body, but to return to it as a friend. Your story doesn’t define you – your ability to transform it will.”",
     "metadata": {}
   },
   {
-    "id": "83f19c255085063a4b7afe95c81d3c3c",
-    "document_id": "Clinical_Case_2 ",
-    "disorder": "sleep",
+    "id": "5b72ef02fdf1609a402d6c71c04e18ef",
+    "document_id": "Clinical_Case_Reclaiming_Agency_4",
+    "disorder": "emotion regulation",
     "section": "Demographics",
-    "content": "# Demographics\n\nFemale, 36 years old\n\n\n## Summary of Issu",
+    "content": "# Demographics\n\n- Age: 15 (referring to Audrey in the immersive situation)\n- Gender: Female\n- No other demographic details provided\n\n\n## Summary of Issu",
     "metadata": {}
   },
   {
-    "id": "e4ba4361a615932ff8ec934ce8f849f2",
-    "document_id": "Clinical_Case_2 ",
-    "disorder": "sleep",
+    "id": "271afb9a3f61850a768de45e56b92e6f",
+    "document_id": "Clinical_Case_Reclaiming_Agency_4",
+    "disorder": "emotion regulation",
     "section": "Summary of Issues",
-    "content": "# Summary of Issues\n\n- Chronic sleep-onset insomnia (average latency > 90 minutes)\n- Cognitive hyperarousal at bedtime (ruminations, future scenarios)\n- High mental load related to work and family life\n- Emotional resistance to letting go\n- Negative conditioning associated with the bed: bed = insomnia struggle\n- Absence of emotional or physical calming rituals\n- High sensitivity to nocturnal stimuli (sounds, light, internal tension)\n\n\n## Dominant Emotio",
+    "content": "# Summary of Issues\n\n- The patient experiences existential frustration, implicit guilt linked to professional choices and family history, fear of judgment and exposure, nostalgia tinged with regret about youthful choices, and affective ambivalence towards partner, parents, and life decisions. \n- Identified cognitive patterns include beliefs that she must please others to be loved, that she does not deserve success unless she suffers for it, that expressing her true nature is dangerous, and that pursuing her passions would betray others. \n- This case appears to be related to emotion regulation.\n\n\n## Dominant Emotio",
     "metadata": {}
   },
   {
-    "id": "cfb687301d977ee021dfc1435b560aeb",
-    "document_id": "Clinical_Case_2 ",
-    "disorder": "sleep",
+    "id": "d71239e53ba5bf0ec947da9410276e53",
+    "document_id": "Clinical_Case_Reclaiming_Agency_4",
+    "disorder": "emotion regulation",
     "section": "Dominant Emotions",
-    "content": "# Dominant Emotions\n\n- Frustration / irritability\n- Anticipatory anxiety\n- Feeling of failure\n- Guilt about not “succeeding in sleeping”\n- Constant physical tension (epigastric area and trapezius)\n\n\n## Triggers and Mechanis",
+    "content": "# Dominant Emotions\n\n- Existential frustration\n- Implicit guilt\n- Fear of judgment and exposure\n- Nostalgia tinged with regret\n- Affective ambivalence\n\n\n## Triggers and Mechanis",
     "metadata": {}
   },
   {
-    "id": "fce8d4414b28a9e7ad56fa64d4e68963",
-    "document_id": "Clinical_Case_2 ",
-    "disorder": "sleep",
+    "id": "5ef59b1db4152db5abc3e05f50620154",
+    "document_id": "Clinical_Case_Reclaiming_Agency_4",
+    "disorder": "emotion regulation",
     "section": "Triggers and Mechanisms",
-    "content": "# Triggers and Mechanisms\n\n1. End of day = mental activation (task review, fear of forgetting, anticipation of tomorrow)\n2. Getting into bed = activation of control system (“I must fall asleep quickly”)\n3. Intrusive thoughts → muscle tension → adrenaline surge → failure to fall asleep\n4. Vicious circle: the more she fights wakefulness, the more insomnia is reinforced\n5. Unconscious belief: “Falling asleep is a test I must pass”\n\n\n## Limiting Belie",
+    "content": "# Triggers and Mechanisms\n\n- Central trigger: the gaze of others, particularly male or authoritative figures, induces infantilization and emotional withdrawal.\n- Chain reaction: Hypervigilance → Inner discomfort → Justification → Social unease → Compensation attempt → Increased discomfort.\n- Underlying mechanism: confusion between authentic inner voice and internalized parental voices.\n- Blocked trajectory: clear desire to pursue photography, communication, and event planning, but no inner permission to do so.\n\n\n## Limiting Belie",
     "metadata": {}
   },
   {
-    "id": "2e6d8647152113f1f5be8d9c5cdc28be",
-    "document_id": "Clinical_Case_2 ",
-    "disorder": "sleep",
+    "id": "bff55122219985fbeda3d7e9426d8594",
+    "document_id": "Clinical_Case_Reclaiming_Agency_4",
+    "disorder": "emotion regulation",
     "section": "Limiting Beliefs",
-    "content": "# Limiting Beliefs\n\n- “If I don’t sleep, I’ll ruin my day tomorrow”\n- “I must control my sleep”\n\n\n## Proposed Solutio",
+    "content": "# Limiting Beliefs\n\n- I must please/meet expectations to be loved.\n- I don’t deserve success unless I suffer for it.\n- Expressing my true nature is dangerous / judged / rejected.\n- If I do what I love, I betray others or take up too much space.\n\n\n## Proposed Solutio",
     "metadata": {}
   },
   {
-    "id": "ae6d59d930c7ab76273440ff9577e6b0",
-    "document_id": "Clinical_Case_2 ",
-    "disorder": "sleep",
+    "id": "6bb6e61ab35f79048a08d628c4ba4c80",
+    "document_id": "Clinical_Case_Reclaiming_Agency_4",
+    "disorder": "emotion regulation",
     "section": "Proposed Solutions",
-    "content": "# Proposed Solutions\n\n### Immediate Solutions\n- Cognitive offloading exercise (write intrusive thoughts in a notebook before bed)\n- Transition ritual: 30 minutes of dim light + calm, non-digital activity\n- Guided 4-7-8 breathing: to slow the heart rate and activate parasympathetic relaxation\n- Body scan focused on tension zones (jaw, solar plexus, shoulders)\n- Ban on “fighting wakefulness”: allow herself to simply be there\n\n### Intermediate Solutions\n- Bed reconditioning: only stay in bed if sleepy. If not, get up for 10 minutes, then return\n- “Paradoxical intention” technique: consciously say “I will stay awake” to reduce pressure to fall asleep\n- Visualization of a safe haven (associated with relaxation, used each night)\n- Use of white noise or binaural sounds to soothe auditory hypervigilance\n\n### Long-Term Solutions\n- Hypnosis sessions focused on letting go, inner safety, and disconnecting the bed from failure\n- Evening immersive meditations with sensory anchoring (e.g., progressive visualization of a calm, protective place)\n- Cognitive restructuring of sleep-related beliefs: “Sleep comes when I let go, not when I chase it”\n\n\n## Progress Indicato",
+    "content": "# Proposed Solutions\n\nA. Immediate solutions – Reconnection and expression:\n- Direct verbalization of discomfort: Saying aloud an emotion + context.\n- Daily “I feel / I say” practice: training to verbalize simply.\n- Morning reconnection ritual: hand on heart, slow breathing, anchoring phrase: “Today, I can listen to my true desires.”\n\nB. Intermediate solutions – Inner restructuring:\n- Guided review of past choices: write a letter to her 15-year-old self.\n- Inner dialogue between “frustrated child” and “wise adult”: self-coaching exercise.\n- Therapy based on values: clarifying what resonates with her today.\n\nC. Long-term solutions – Reconciliation with her history:\n- Hypnosis sessions to reprogram the relationship with others’ gaze.\n- Progressive work on unconditional self-esteem.\n- Symbolic project: restart a creative project previously set aside.\n- Emotional release sessions focused on high school years and the period of “deviation.”\n\n\n## Progress Indicato",
     "metadata": {}
   },
   {
-    "id": "69af97eb9e125eec8cce686c21d1e1cc",
-    "document_id": "Clinical_Case_2 ",
-    "disorder": "sleep",
+    "id": "65f139468bb80a7d6a1a8b507fd37c05",
+    "document_id": "Clinical_Case_Reclaiming_Agency_4",
+    "disorder": "emotion regulation",
     "section": "Progress Indicators",
-    "content": "# Progress Indicators\n\n- Sleep-onset scale: rate ease of falling asleep from 1 to 5 each night\n- Mental watch journal: write 3 recurring thoughts before bed → track changes over time\n- Weekly auto-report: average sleep latency, quality of awakening, emotional state in the morning\n- Motivational tracking: highlighting micro-progress (e.g., “You fell asleep 20 minutes faster than on Monday”)",
+    "content": "# Progress Indicators\n\n- Weekly emotional indicator: level of alignment (0 to 10).\n- Self-assessment of decisions aligned with her true self.\n- Evolution in relationship to external judgment: increased ease saying “no,” social lightness.\n- Markers of inner reconquest: moments of enthusiasm, creativity, serene affirmation.",
+    "metadata": {}
+  },
+  {
+    "id": "3062a360c77b6ed5df369aa1d48af32f",
+    "document_id": "Clinical_Case_Relearning_to_Trust_the_Body_1",
+    "disorder": "emotion regulation",
+    "section": "Demographics",
+    "content": "# Demographics\n\nFemale, age unspecified, mother of three children.\n\n\n## Summary of Issu",
+    "metadata": {}
+  },
+  {
+    "id": "622e078009661d1e89d94805c32c1da8",
+    "document_id": "Clinical_Case_Relearning_to_Trust_the_Body_1",
+    "disorder": "emotion regulation",
+    "section": "Summary of Issues",
+    "content": "# Summary of Issues\n\n- Death anxiety reactivated by intergenerational transmission (mother’s talk about departure and grandmother’s death).\n- Somatic hypervigilance: constant body monitoring with catastrophic interpretations (e.g., dizziness = cancer, reflux = esophagus issue).\n- Obsessive hypochondriac thoughts accompanied by intrusive rumination, even during mundane activities.\n- Emotional blockage with difficulty verbalizing fears: everything is 'locked inside', which amplifies anxiety.\n- Significant mental load, likely related to the maternal role and an emotion regulation mode centered on control and danger anticipation.\n- Avoidance behaviors (e.g., refusal to take treatment due to fear of side effects).\n- Need for control and fear of physical or psychological collapse.\n- Emotional repression, with difficulty releasing fear, sadness or anger other than through symptoms.\nThis case appears to be related to emotion regulation.\n\n\n## Dominant Emotio",
+    "metadata": {}
+  },
+  {
+    "id": "7a1af4a48a253c4ac6be72c95485903c",
+    "document_id": "Clinical_Case_Relearning_to_Trust_the_Body_1",
+    "disorder": "emotion regulation",
+    "section": "Dominant Emotions",
+    "content": "# Dominant Emotions\n\n- Fear (especially of dying, of being sick, of not being there for her children).\n- Sadness linked to loss and anticipation of grief.\n- Strong anticipatory anxiety.\n- Guilt (not wanting to worry others, keeping it all inside).\n- Emotional loneliness.\n\n\n## Triggers and Mechanis",
+    "metadata": {}
+  },
+  {
+    "id": "09a1868843709443038e7e80ac7edd32",
+    "document_id": "Clinical_Case_Relearning_to_Trust_the_Body_1",
+    "disorder": "emotion regulation",
+    "section": "Triggers and Mechanisms",
+    "content": "# Triggers and Mechanisms\n\n- Mother’s discourse about loss, experienced as a generational repetition.\n- Recent flu experience, perceived as a physical attack.\n- Physical fatigue intensifying inner danger signals.\n- Prolonged emotional silence (nothing comes out → everything implodes).\n- Psychological mechanisms include hypercontrol, hypervigilance, and unexpressed emotions leading to a vicious anxiety cycle, with a pre-collapse state where the body becomes the messenger of unspoken emotions and constant projection into a dramatic future without present anchoring.\n\n\n## Limiting Belie",
+    "metadata": {}
+  },
+  {
+    "id": "8e63cd2293c431fef050a0a441a99966",
+    "document_id": "Clinical_Case_Relearning_to_Trust_the_Body_1",
+    "disorder": "emotion regulation",
+    "section": "Limiting Beliefs",
+    "content": "# Limiting Beliefs\n\n- 'If I let my guard down, something bad will happen.'\n- 'My body is going to fail me, I must monitor it constantly.'\n- 'If I talk about my fears, I will worry others or be judged.'\n- 'I have to manage everything alone.'\n- 'What I feel is not valid unless medically proven.'\n\n\n## Proposed Solutio",
+    "metadata": {}
+  },
+  {
+    "id": "22ba4b9621945515c617dab76ad9c88d",
+    "document_id": "Clinical_Case_Relearning_to_Trust_the_Body_1",
+    "disorder": "emotion regulation",
+    "section": "Proposed Solutions",
+    "content": "# Proposed Solutions\n\n1. Immediate Solutions\n   - 3-3-3 Grounding exercise (3 sounds / 3 things I see / 3 body parts I feel) multiple times a day.\n   - Anxiety journal: 5 minutes of free writing every evening to release what’s 'locked inside'.\n   - Thought deactivation technique: 'I take this thought, put it in a box, and return to the present moment.'\n   - SOP method: Breath - Observe - Presence → 1-minute micro-recentering at the onset of illness-related thoughts.\n   \n2. Intermediate Solutions\n   - Therapeutic work on transgenerational narratives: identifying emotionally transmitted themes (fear of death, unspoken topics, guilt).\n   - Guided body scan or self-hypnosis to befriend the body rather than seeing it as an enemy.\n   - Cognitive restructuring of the belief: 'If I listen to my body, it is to protect myself, not to panic.'\n   \n3. Long-Term Solutions\n   - Hypnotherapy on the theme: 'Reassuring the inner child afraid of loss.'\n   - Emotional integration work around the grief (even symbolic) of the grandmother and the fear of losing the mother.\n   - Immersive sensory meditation to move out of anxious overthinking and back into the here-and-now of the body.\n\n\n## Progress Indicato",
+    "metadata": {}
+  },
+  {
+    "id": "60e7ee3abd948c4b53e2d5c5bb25df60",
+    "document_id": "Clinical_Case_Relearning_to_Trust_the_Body_1",
+    "disorder": "emotion regulation",
+    "section": "Progress Indicators",
+    "content": "# Progress Indicators\n\n- Daily panic scale from 0 to 10.\n- Evening note of body trust.\n- Number of interruptions per day due to obsessive thoughts.\n- Gradual reduction of body-checking behaviors.\n- Emotional journal: frequency + ease of expression.",
+    "metadata": {}
+  },
+  {
+    "id": "756b49644cebe628a2bc78bcb0a39f25",
+    "document_id": "Clinical_Case_Agoraphobia_4",
+    "disorder": "phobia",
+    "section": "Demographics",
+    "content": "# Demographics\n\nFemale – 48 years\n\n\n## Summary of Issu",
+    "metadata": {}
+  },
+  {
+    "id": "883d610b8e0cbdca0ab849a4c5e5d52f",
+    "document_id": "Clinical_Case_Agoraphobia_4",
+    "disorder": "phobia",
+    "section": "Summary of Issues",
+    "content": "# Summary of Issues\n\nPrimary Issue (priority): Situational phobia with agoraphobic features, centered on:\n- Enclosed, unavoidable spaces (MRI, highways, medical exams).\n- Panic fear of being unable to escape.\n- Extreme physiological reactions without identifiable conscious fear.\n\nAssociated Secondary Issues:\n- Maternal over-control: difficulty leaving her daughters alone despite their autonomy → anticipatory guilt, fear of failing them in case of danger.\n- Early loss of carefree state: father’s death, early responsibilities in an unsupportive environment.\n- Ambivalence with letting go: tension between desire to enjoy time with husband and persistent anxiety.\n\n\n## Dominant Emotio",
+    "metadata": {}
+  },
+  {
+    "id": "bc32bc5c5d77e9e751c3cf7c6afdac41",
+    "document_id": "Clinical_Case_Agoraphobia_4",
+    "disorder": "phobia",
+    "section": "Dominant Emotions",
+    "content": "# Dominant Emotions\n\n- Panic anxiety\n- Guilt\n- Ambivalence (desired joy / fear of enjoying it)\n- Inner tension\n- Sadness about the inability to feel light-hearted\n- Frustration\n\n\n## Triggers and Mechanis",
+    "metadata": {}
+  },
+  {
+    "id": "6c9ee089acafdaf2701b0f91acfee62a",
+    "document_id": "Clinical_Case_Agoraphobia_4",
+    "disorder": "phobia",
+    "section": "Triggers and Mechanisms",
+    "content": "# Triggers and Mechanisms\n\nTriggers and Reactions:\n- MRI, highways, medical exams → Feeling trapped → Panic activation without real danger.\n- Absence of daughters at home → Catastrophic thoughts, fear they might need her → anticipatory guilt.\n- Disconnecting from daily routine (weekend) → Paradoxical discomfort → tension between legitimate pleasure and anticipated threat.\n\nCentral Mechanism: symbolic agoraphobia = inability to escape a situation + anticipation of losing control = physiological alarm activation.\n\nImmersive Situation & Emotional Anchoring:\nImagine yourself on a highway. No traffic, clear skies. Yet, as you drive, your mind scans for exits. “What if I want to get off now?”… but there’s no exit nearby. Like an endless corridor. Heart racing, palms sweating. You know everything is under control, but your body acts as if an invisible danger is imminent.\n\nOr in that MRI room. Lying down, the metallic noise surrounds you, the headset is on. You know it’s just a machine, that you’re safe… and yet, the inability to move triggers that archaic alarm: “What if I get stuck? What if I can’t get out?”...\n\nIt’s not the fear of dying. It’s the fear of not being able to escape.\n\n\n## Limiting Belie",
+    "metadata": {}
+  },
+  {
+    "id": "000814607d7196dd8c18a5073c9ff2ff",
+    "document_id": "Clinical_Case_Agoraphobia_4",
+    "disorder": "phobia",
+    "section": "Limiting Beliefs",
+    "content": "# Limiting Beliefs\n\n- “I must handle everything to protect others.”\n- “If I don’t control, danger may arise.”\n- “I can’t afford to be carefree.”\n\n\n## Proposed Solutio",
+    "metadata": {}
+  },
+  {
+    "id": "f18c7789fbe2fa2529b43b92c676942d",
+    "document_id": "Clinical_Case_Agoraphobia_4",
+    "disorder": "phobia",
+    "section": "Proposed Solutions",
+    "content": "# Proposed Solutions\n\nImmediate Solutions (quick autonomy):\n- Soothing anticipation exercise: visualize the exit before entering (e.g.: “I know where and when I can get out, I take back control.”)\n- Pre-crisis '3-3-3 sensory' technique: 3 sounds, 3 sensations, 3 objects to name → anchoring in the present moment.\n- Box breathing before trips or exams (4s inhale – 4s hold – 4s exhale – 4s hold) to calm the amygdala.\n\nIntermediate Solutions (moderate recurrence):\n- Heart coherence targeting loss of control (morning and before anxiety-inducing events).\n- Brief therapy on catastrophic scenarios: imaginary graduated exposure (e.g.: visualize the MRI and exiting it).\n- Pre-departure security ritual: leave a note to her daughters, establish a comforting routine.\n\nLong-term Solutions:\n- Hypnotic reprogramming of the security pattern (see script below).\n- Work on the relationship with motherhood and symbolic letting go (Parenting Phase 3).\n- Mourning the loss of carefree moments + cultivating active lightness: create micro-moments of conscious rest without guilt.\n\n\n## Progress Indicato",
+    "metadata": {}
+  },
+  {
+    "id": "4417abb8f6c6f1f639f6f3f0dc73eb7f",
+    "document_id": "Clinical_Case_Agoraphobia_4",
+    "disorder": "phobia",
+    "section": "Progress Indicators",
+    "content": "# Progress Indicators\n\nIndicator – Recommended Follow-up:\n- Physiological tension before an event → Scale 0–10 before/after session.\n- Frequency of avoidance (MRI, highway) → Weekly self-journal.\n- Catastrophic thoughts about children → Record occurrences and intensity (0–10).\n- Feeling of inner freedom → Weekly question: “Did I feel free today?”\n\nFinal Motivational Phrase:\n“You won’t always be able to control the roads… but you can always learn to create a refuge within yourself, an inner space that nothing can lock down. Even when everything feels closed, you can breathe.”",
+    "metadata": {}
+  },
+  {
+    "id": "f25cc3cb99b2eedab4bfdb9f4ef71b72",
+    "document_id": "Clinical_Case_Intrusive_Thoughts_1",
+    "disorder": "phobia",
+    "section": "Demographics",
+    "content": "# Demographics\n\nMale, 19 years old  \n\n\n\n## Summary of Issu",
+    "metadata": {}
+  },
+  {
+    "id": "6edddadfacf7107c72ee5669cfe8d00a",
+    "document_id": "Clinical_Case_Intrusive_Thoughts_1",
+    "disorder": "phobia",
+    "section": "Summary of Issues",
+    "content": "# Summary of Issues\n\n• Impulse phobia: violent, unwanted, anxiety-inducing mental images, with a dissociation between will and perception of the danger of acting out.  \n• Social avoidance and digital withdrawal: slight reduction in time spent on TikTok, but immediate shift to video games, without real diversification of activities.  \n• Hypersensitivity to others’ gaze and mild social anxiety: difficulty speaking to strangers, discomfort in public places like the gym.  \n• Hypermentalization: low emotional verbalization, difficulty feeling or naming emotions linked to intrusive thoughts.  \n• Implicit self-devaluation: feeling of being “abnormal,” difficulty envisioning a positive self-evolution.  \n• Positive behavioral mobilization started (driving school, gym), but still fragile and highly context-dependent.  \n\n\n\n## Dominant Emotio",
+    "metadata": {}
+  },
+  {
+    "id": "50a605c9b92bdbbb725f0a94a3a606a6",
+    "document_id": "Clinical_Case_Intrusive_Thoughts_1",
+    "disorder": "phobia",
+    "section": "Dominant Emotions",
+    "content": "# Dominant Emotions\n\n• Ambivalence  \n• Fear (of self, of losing control)  \n• Anger (unexpressed, possibly internalized)  \n• Latent sadness (unspoken)  \n• Shame or implicit discomfort  \n\n\n\n## Triggers and Mechanis",
+    "metadata": {}
+  },
+  {
+    "id": "2998bf3868d45b08f3e3259488e97cfc",
+    "document_id": "Clinical_Case_Intrusive_Thoughts_1",
+    "disorder": "phobia",
+    "section": "Triggers and Mechanisms",
+    "content": "# Triggers and Mechanisms\n\nTriggers:  \n• Exposure to violent content (TV, social media)  \n• Noisy or oppressive sensory environments (crowded rooms)  \n• Prolonged solitude / mental confinement through screen use  \n• Psychological fatigue due to rumination  \n\nChain Mechanisms:  \nHypervigilance → Mental intrusion (violent images) → Anxious doubt → Need for checking or avoidance → Increased digital withdrawal → Reinforcement of phobic cycle  \n\n\n\n## Limiting Belie",
+    "metadata": {}
+  },
+  {
+    "id": "e02ce3bb7ec72bd0436f05a98e5288f5",
+    "document_id": "Clinical_Case_Intrusive_Thoughts_1",
+    "disorder": "phobia",
+    "section": "Limiting Beliefs",
+    "content": "# Limiting Beliefs\n\n• “I might be dangerous without wanting to be.”  \n• “I’m different, maybe abnormal.”  \n• “If I expose myself, I lose control.”  \n• “If I feel too much, it overflows.”  \n\n\n\n## Proposed Solutio",
+    "metadata": {}
+  },
+  {
+    "id": "3429f14f4d231924dabd39073cb6ed26",
+    "document_id": "Clinical_Case_Intrusive_Thoughts_1",
+    "disorder": "phobia",
+    "section": "Proposed Solutions",
+    "content": "# Proposed Solutions\n\n1. Immediate Solutions:  \n• “Stop Image” technique: associate a neutral mental image (e.g., a door closing) to interrupt the intrusive thought as soon as it appears.  \n• Cardiac coherence 3x/day: to calm the autonomic nervous system and prevent stress peaks that favor intrusive thoughts.  \n• Automatic writing: 5 minutes/day to jot down violent thoughts without judgment, like a controlled mental discharge.  \n\n2. Intermediate Solutions:  \n• Gradual social exposure work: 1 interaction/week with a non-familiar person (e.g., asking a question in a store).  \n• Cognitive reprogramming: actively reframe the belief “I’m dangerous” into “I’m vigilant precisely because I don’t want to harm.”  \n• Morning physical activation ritual: 10 minutes of walking or core exercises every morning to stimulate bodily anchoring.  \n\n3. Long-Term Solutions:  \n• Hypnosis focused on deactivating the “internal danger” schema  \n• Guided meditation to dissociate image/identity: “What I see does not define me”  \n• Progressive program for reinvestment in non-digital social activities  \n\n\n\n## Progress Indicato",
+    "metadata": {}
+  },
+  {
+    "id": "5f80b25893c99ac443d6c08f1106df14",
+    "document_id": "Clinical_Case_Intrusive_Thoughts_1",
+    "disorder": "phobia",
+    "section": "Progress Indicators",
+    "content": "# Progress Indicators\n\n• Frequency of intrusive thoughts (daily > weekly > occasional)  \n• Perceived stress level after thoughts (self-rated from 1 to 10)  \n• Number of weekly social interactions  \n• Daily accumulated screen-free time  \n• Weekly self-assessment: “Do I feel more in control of my mind this week?”",
+    "metadata": {}
+  },
+  {
+    "id": "db83c2b020ec59dd487444f4e1009211",
+    "document_id": "Clinical_Case_Loss_of_Meaning_Avoidance_3",
+    "disorder": "phobia",
+    "section": "Demographics",
+    "content": "# Demographics\n\n- Age: 49 years old\n- Gender: Female\n\n\n## Summary of Issu",
+    "metadata": {}
+  },
+  {
+    "id": "a6fd9447a570f1b17e88e52823d0116e",
+    "document_id": "Clinical_Case_Loss_of_Meaning_Avoidance_3",
+    "disorder": "phobia",
+    "section": "Summary of Issues",
+    "content": "# Summary of Issues\n\n- The patient is experiencing a loss of professional meaning and emotional disengagement in her work as a lawyer. She feels she is wasting her intellectual potential on trivial cases and is disillusioned by the administrative shift in her profession. This has led to anxiety attacks related to work, particularly physical symptoms of anxiety when going to the office. The anxiety stems from a conflict between her originally invested professional identity and the current sense of absurdity. The patient exhibits emotional saturation, defensive hypersensitivity, affective ambivalence, and self-devaluation. This case appears to be related to phobia, particularly in the context of anxiety associated with her professional environment.\n\n\n## Dominant Emotio",
+    "metadata": {}
+  },
+  {
+    "id": "9c45debf865987ecc7aaa63f88f897d3",
+    "document_id": "Clinical_Case_Loss_of_Meaning_Avoidance_3",
+    "disorder": "phobia",
+    "section": "Dominant Emotions",
+    "content": "# Dominant Emotions\n\n- Frustration (towards clients, institutions, the judicial system)\n- Anxiety (linked to loss of meaning and a repetitive empty routine)\n- Defensive cynicism (protective mechanism against emotional burnout)\n- Ambivalence (between attachment to the initial profession and growing disenchantment)\n- Residual sadness / masked depression (emotional disinvestment, moral fatigue)\n\n\n## Triggers and Mechanis",
+    "metadata": {}
+  },
+  {
+    "id": "33ed19991a1e6b8fb5e036b08079ceec",
+    "document_id": "Clinical_Case_Loss_of_Meaning_Avoidance_3",
+    "disorder": "phobia",
+    "section": "Triggers and Mechanisms",
+    "content": "# Triggers and Mechanisms\n\n- Identified triggers include emotionally demanding or financially disrespectful clients, cases perceived as absurd or intellectually unstimulating, work mornings that trigger morning anxiety, and memories of early career years that were emotionally and financially unrewarding. The anxiety mechanism is characterized by a daily repetition of anticipation leading to physical anxiety, mental avoidance, cynicism, emotional drain, and existential rumination.\n\n\n## Limiting Belie",
+    "metadata": {}
+  },
+  {
+    "id": "a73985e852ffb565cc9ffa27b5d80b18",
+    "document_id": "Clinical_Case_Loss_of_Meaning_Avoidance_3",
+    "disorder": "phobia",
+    "section": "Limiting Beliefs",
+    "content": "# Limiting Beliefs\n\n- “I must love my clients to do a good job.”\n- “I must endure everything because I chose this profession.”\n- “I have no credible alternative to my current career.”\n- “If I no longer feel empathy, something is wrong with me.”\n- “Others always want to take advantage of me or my energy.”\n\n\n## Proposed Solutio",
+    "metadata": {}
+  },
+  {
+    "id": "3fa959f60db9c47f8c01d7c02ada2534",
+    "document_id": "Clinical_Case_Loss_of_Meaning_Avoidance_3",
+    "disorder": "phobia",
+    "section": "Proposed Solutions",
+    "content": "# Proposed Solutions\n\n### Immediate Solutions\n- Deep breathing + body anchoring routine in the morning (5-minute routine).\n- Quick exercise “give meaning to my day”: each morning, write down one useful thing in her work (even minor).\n- Daily mirror phrase: “I am more than what I do. What I do can still evolve.”\n\n### Intermediate Solutions\n- Cognitive reframing on the legitimacy of changing or adjusting her activity.\n- Creating a “professional attraction assessment”: what originally attracted her to law, what still remains?\n- Exploring specialization or transmission paths (training, writing, legal animation, etc.) to revalue her expertise differently.\n- Desensitization plan to administrative absurdity through guided humorous recontextualization.\n\n### Long-Term Solutions\n- Therapeutic support with targeted hypnosis for existential exhaustion and inner reconversion.\n- Deep work on the schema “I must endure to exist.”\n- Reclaiming professional identity aligned with core values: freedom, intellectual stimulation, social impact.\n- Gradual implementation of a new professional or intra-professional project: soft reorientation possible.\n\n\n## Progress Indicato",
+    "metadata": {}
+  },
+  {
+    "id": "8ed0c46ada34b6045a47020c0e6c1b26",
+    "document_id": "Clinical_Case_Loss_of_Meaning_Avoidance_3",
+    "disorder": "phobia",
+    "section": "Progress Indicators",
+    "content": "# Progress Indicators\n\n- Frequency and intensity of morning anxiety.\n- Ability to differentiate absurd from structurally meaningful cases.\n- Frequency of avoidance thoughts (“I don’t want to go”) replaced by desire or curiosity.\n- Emergence of new professional or creative desires.",
+    "metadata": {}
+  },
+  {
+    "id": "7079dc33ab99a406bf7c93caa5b21191",
+    "document_id": "Clinical_Case_Panic_Hypervigilance_2",
+    "disorder": "phobia",
+    "section": "Demographics",
+    "content": "# Demographics\n\n• Female, 39 years old  \n\n\n\n## Summary of Issu",
+    "metadata": {}
+  },
+  {
+    "id": "d3cdf02d7f8f8220c5e05730f99fac25",
+    "document_id": "Clinical_Case_Panic_Hypervigilance_2",
+    "disorder": "phobia",
+    "section": "Summary of Issues",
+    "content": "# Summary of Issues\n\n• Panic disorder with obsessive component, particularly centered on fear of death, illness, and loss of bodily control.  \n• Postpartum anxiety disorder not identified at the time, which evolved into a form of maternal impulse phobia (fear that something will happen to the children, fear of being unable to protect them).  \n• Bodily hypervigilance, somatization (abdominal pain), traumatic anchoring around hospitalization.  \n• Traumatic memories related to domestic violence, violent deaths (a woman killed in front of her), and episodes of medical helplessness (poorly treated fever in a child).  \n• Maternal loneliness, experience of mental overload, lack of support during the early years.  \n• Transgenerational transmission of maternal anxiety (maternal overcontrol model).  \n• Internal conflict between the desire for security for her children and the inability to let go, generating emotional overflow.  \n\n\n\n## Dominant Emotio",
+    "metadata": {}
+  },
+  {
+    "id": "8edccc75db668f6fd95135652d6361a4",
+    "document_id": "Clinical_Case_Panic_Hypervigilance_2",
+    "disorder": "phobia",
+    "section": "Dominant Emotions",
+    "content": "# Dominant Emotions\n\n• Fear (of death, illness, abandonment)  \n• Anticipatory anxiety  \n• Powerlessness  \n• Guilt  \n• Sadness  \n• Internalized anger  \n• Protective hyper-emotionality  \n\n\n\n## Triggers and Mechanis",
+    "metadata": {}
+  },
+  {
+    "id": "13009e620b886017fdf51ea901f151ba",
+    "document_id": "Clinical_Case_Panic_Hypervigilance_2",
+    "disorder": "phobia",
+    "section": "Triggers and Mechanisms",
+    "content": "# Triggers and Mechanisms\n\n• Hospitalization abroad (Turkey)  \n• Unexpected bodily pain  \n• Separation from children  \n• Poorly integrated postpartum experience  \n• Violent memories (shooting, Africa, abusive ex-partner)  \n\n\n\n## Limiting Belie",
+    "metadata": {}
+  },
+  {
+    "id": "b93e111365944a72a948f01568715852",
+    "document_id": "Clinical_Case_Panic_Hypervigilance_2",
+    "disorder": "phobia",
+    "section": "Limiting Beliefs",
+    "content": "# Limiting Beliefs\n\n• “I must control everything to prevent bad things from happening.”  \n• “I’m alone in protecting my children.”  \n• “If I relax, something terrible will happen.”  \n• “I’m vulnerable in a dangerous world.”  \n\n\n\n## Proposed Solutio",
+    "metadata": {}
+  },
+  {
+    "id": "f537b491aac7dcd91331724d99f3b717",
+    "document_id": "Clinical_Case_Panic_Hypervigilance_2",
+    "disorder": "phobia",
+    "section": "Proposed Solutions",
+    "content": "# Proposed Solutions\n\nImmediate Solutions  \n• Body scan exercise (5 minutes) and 4-7-8 breathing technique to deactivate somatic alert.  \n• Safety anchoring technique: visualization of smiling, safe children to deactivate obsessive thoughts.  \n• Emotional emergency card: calming phrases + acupressure points (9C point “source of peace”).  \n\nIntermediate Solutions  \n• Therapeutic writing: letters to oneself from the point of view of a serene mother to recondition the maternal image.  \n• Journal of catastrophic anticipations with after-the-fact verification.  \n• Gradual desensitization of traumatic bodily memories (gentle methods like EFT or light EMDR with alternating stimulation).  \n\nLong-Term Solutions  \n• Schema therapy focused on extreme vigilance / self-sacrifice schema.  \n• Hypnosis to deactivate fear of death and post-traumatic bodily anchoring.  \n• Emotional separation work with children (permission to live without fusion).  \n\n\n\n## Progress Indicato",
+    "metadata": {}
+  },
+  {
+    "id": "048b97f026b366ddde4d619b693cd540",
+    "document_id": "Clinical_Case_Panic_Hypervigilance_2",
+    "disorder": "phobia",
+    "section": "Progress Indicators",
+    "content": "# Progress Indicators\n\n• Intensity scale of anxious anticipations (0–10) before and after exposure or separation.  \n• Self-evaluation of crisis frequency (number per week).  \n• Level of bodily relaxation (daily check-in 3 times/day on a tension scale).  \n• Progress in separation capacity (letting the children go, or traveling herself without anxiety spike).",
     "metadata": {}
   },
   {
@@ -396,7 +732,7 @@
     "document_id": "Clinical_Case_3",
     "disorder": "sleep",
     "section": "Demographics",
-    "content": "# Demographics\n\nFemale, 41 years old\n\n\n## Summary of Issu",
+    "content": "# Demographics\n\nFemale, 41 years old  \n\n\n\n## Summary of Issu",
     "metadata": {}
   },
   {
@@ -404,7 +740,7 @@
     "document_id": "Clinical_Case_3",
     "disorder": "sleep",
     "section": "Summary of Issues",
-    "content": "# Summary of Issues\n\n- Sleep disorder with frequent night awakenings (4 to 6 times per night) and difficulty falling back asleep\n- Latent nocturnal hypervigilance triggered by minor noises or intrusive thoughts\n- Anxious anticipation of awakening, creating a cycle of sleep-related anxiety\n- High mental load with rumination about the next day’s tasks during the night\n- Chronic daytime fatigue, irritability, lack of concentration, and guilt\n- Background of a family environment where “rest was not valued,” with an ingrained belief: “I must always be in control or things will fall apart”\n\n\n## Dominant Emotio",
+    "content": "# Summary of Issues\n\n• Sleep disorder with repeated night awakenings (4 to 6 times per night), difficulty falling back asleep  \n• Latent nocturnal hypervigilance, often triggered by tiny noises or intrusive thoughts  \n• Anxious anticipation of awakening, creating a vicious cycle of sleep-related anxiety  \n• High mental load, ruminating about the next day’s tasks during the night  \n• Chronic daytime fatigue, irritability, lack of concentration, and guilt  \n• Background of a family environment where “rest was not valued,” with an ingrained belief: “I must always be in control or things will fall apart”  \n(Note: This case appears to be related to a sleep disorder.)  \n\n\n\n## Dominant Emotio",
     "metadata": {}
   },
   {
@@ -412,7 +748,7 @@
     "document_id": "Clinical_Case_3",
     "disorder": "sleep",
     "section": "Dominant Emotions",
-    "content": "# Dominant Emotions\n\n- Anticipatory anxiety\n- Frustration and helplessness\n- Guilt about not being “productive” during the day\n- Feeling of losing control\n\n\n## Triggers and Mechanis",
+    "content": "# Dominant Emotions\n\n• Anticipatory anxiety  \n• Frustration and helplessness  \n• Guilt about not being “productive” during the day  \n• Feeling of losing control  \n\n\n\n## Triggers and Mechanis",
     "metadata": {}
   },
   {
@@ -420,7 +756,7 @@
     "document_id": "Clinical_Case_3",
     "disorder": "sleep",
     "section": "Triggers and Mechanisms",
-    "content": "# Triggers and Mechanisms\n\n- Phase 1: Light sleep onset with body relaxed but mind on alert\n- Phase 2: Sudden awakening after 90–120 minutes\n- Phase 3: Automatic mental scanning for noises or forgotten tasks\n- Phase 4: Cognitive activation with intrusive thoughts and projections about the next day\n- Phase 5: Struggling against wakefulness, reinforcing insomnia\n- Childhood association of vigilance with safety due to an unstable or anxious environment\n\n\n## Limiting Belie",
+    "content": "# Triggers and Mechanisms\n\nBreakdown of the nocturnal reaction:  \n• Phase 1 – Light sleep onset (body relaxed but mind on alert)  \n• Phase 2 – Sudden awakening (often after 90–120 minutes)  \n• Phase 3 – Automatic mental scanning: “Was there a noise? Did I forget something?”  \n• Phase 4 – Cognitive activation: intrusive thoughts, projections about the next day  \n• Phase 5 – Struggling against wakefulness: “I *must* fall back asleep or I’ll be useless tomorrow” → Reinforces insomnia  \nLink to the past:  \n• In childhood, the patient had to stay “on alert” (unstable parent or anxious environment)  \n• She associated vigilance with safety—even at night  \n\n\n\n## Limiting Belie",
     "metadata": {}
   },
   {
@@ -428,7 +764,7 @@
     "document_id": "Clinical_Case_3",
     "disorder": "sleep",
     "section": "Limiting Beliefs",
-    "content": "# Limiting Beliefs\n\n- If I sleep deeply, I might miss something important.\n- I always need to be ready to respond, even at night.\n- I’m weak if I rest too much.\n\n\n## Proposed Solutio",
+    "content": "# Limiting Beliefs\n\n• If I sleep deeply, I might miss something important.  \n• I always need to be ready to respond, even at night.  \n• I’m weak if I rest too much.  \n\n\n\n## Proposed Solutio",
     "metadata": {}
   },
   {
@@ -436,7 +772,7 @@
     "document_id": "Clinical_Case_3",
     "disorder": "sleep",
     "section": "Proposed Solutions",
-    "content": "# Proposed Solutions\n\n### Immediate Solutions\n- “4-7-8” breathing exercise upon awakening to soothe the nervous system\n- Nighttime grounding card with comforting thoughts or mantra\n- Get out of bed after 20 minutes of active wakefulness\n\n### Intermediate Solutions\n- Sleep reconditioning through sensory anchoring\n- Night awakening journal with kind, pressure-free self-observation\n- Belief retraining via cognitive restructuring\n\n### Long-Term Solutions\n- Regular hypnosis to deactivate internal alert systems\n- Work on inner safety to reinforce the idea that night is a space for release\n- Evening closure rituals\n\n### Recommended Personalized Hypnosis Session\n- Title: “Let the Night Watch Over Me”\n- Objective: Deactivate nocturnal hypervigilance, instill safety, and create an inner guardian\n- Duration: 18–20 minutes\n- Format: Slow, reassuring voice with ambiance of soft rain or crackling fire\n- Structure: Progressive induction, metaphor of a benevolent watcher, final anchor\n\n\n## Progress Indicato",
+    "content": "# Proposed Solutions\n\nImmediate Solutions  \n• “4-7-8” breathing exercise upon awakening to soothe the nervous system  \n• Nighttime grounding card: comforting thought or mantra (“I am safe. Everything can wait until tomorrow.”)  \n• Get out of bed after 20 minutes of active wakefulness (avoid conditioning the bed as a place of struggle)  \nIntermediate Solutions  \n• Sleep reconditioning through sensory anchoring (scent, texture, sound)  \n• Night awakening journal with kind, pressure-free self-observation  \n• Belief retraining via cognitive restructuring: “Deep sleep is my best protection.”  \nLong-Term Solutions  \n• Regular hypnosis to deactivate internal alert systems  \n• Work on inner safety: reinforce the idea that night is a space for release  \n• Evening closure rituals (e.g., visualizing a locked chest, symbolic cutoff from the day)  \nRecommended Personalized Hypnosis Session  \nTitle: “Let the Night Watch Over Me”  \nObjective: Deactivate the pattern of nocturnal hypervigilance, instill a deep sense of safety, and create an inner guardian who takes over at night  \nDuration: 18–20 minutes – Format: Slow, reassuring voice – Ambiance: Soft rain or crackling fire  \nStructure:  \n• Progressive induction centered on releasing automatic thoughts  \n• Metaphor of a benevolent watcher: an inner presence stands guard so the mind can rest  \n• Final anchor: each breath becomes a key that closes a mental door until morning  \n\n\n\n## Progress Indicato",
     "metadata": {}
   },
   {
@@ -444,111 +780,7 @@
     "document_id": "Clinical_Case_3",
     "disorder": "sleep",
     "section": "Progress Indicators",
-    "content": "# Progress Indicators\n\n- Week 1: Track frequency and intensity of awakenings\n- Week 2: Integrate sensory anchor and evaluate nighttime anxiety level\n- Week 3: Signs of stabilization in sleep phases, beginning of rest revaluation\n- Week 4: Reduced awakenings (1–2 max), noticeable evening calmness",
-    "metadata": {}
-  },
-  {
-    "id": "e1cab2a9494bd2692165e495ca77b32e",
-    "document_id": "Clinical_Case_5",
-    "disorder": "sleep",
-    "section": "Demographics",
-    "content": "# Demographics\n\n- Age: 44 years old\n- Gender: Female\n\n\n## Summary of Issu",
-    "metadata": {}
-  },
-  {
-    "id": "8278111b1674c7c1b5e73be30453d423",
-    "document_id": "Clinical_Case_5",
-    "disorder": "sleep",
-    "section": "Summary of Issues",
-    "content": "# Summary of Issues\n\n- Persistent Sleep Disorder: Difficulty falling asleep despite antidepressant treatment; occasional use of Tarax with strong sedative effect but non-restorative.\n- Multifactorial Chronic Fatigue: High mental load due to single parenthood, caring for a dependent mother, and professional overwork without recovery.\n- Feeling of Loneliness and Isolation: Rooted since adolescence due to absence of mother and sense of abandonment; exacerbated by solo parenting and daily overload.\n- Latent Conflict with Mother: Mother described as childish, incompetent, and dependent; repressed anger, emotional ambivalence, and feeling of injustice.\n- Underlying Depressive State: Recent SSRI treatment (Prozac type) with marked initial side effects and little improvement so far, negatively impacting sleep.\n- Financial and Professional Stress: Unexpected increase in expenses (nursery, electricity) and pressure related to performance in real estate sales.\n\n\n## Dominant Emotio",
-    "metadata": {}
-  },
-  {
-    "id": "d75fd3bbebef6ad587a845475f77954c",
-    "document_id": "Clinical_Case_5",
-    "disorder": "sleep",
-    "section": "Dominant Emotions",
-    "content": "# Dominant Emotions\n\n- Extreme fatigue\n- Loneliness\n- Repressed anger\n- Stress\n- Resignation\n- Silent self-deprecation\n\n\n## Triggers and Mechanis",
-    "metadata": {}
-  },
-  {
-    "id": "65d92697a6121f9f8192d3586083c424",
-    "document_id": "Clinical_Case_5",
-    "disorder": "sleep",
-    "section": "Triggers and Mechanisms",
-    "content": "# Triggers and Mechanisms\n\n- Main Trigger: Fatigue, mental overload, and sense of injustice due to lack of help.\n- Psychophysiological Chain: Hypervigilance (constant control) → Anticipatory anxiety → Insomnia → Exhaustion → Irritability + feeling of loneliness → Contained anger → Reinforced self-pressure.\n- Traumatic Resonance: Adolescent emotional abandonment (motorcycle accident, lack of maternal support) replayed in current motherhood and lack of support. Anger toward current mother reactivates past wounds.\n\n\n## Limiting Belie",
-    "metadata": {}
-  },
-  {
-    "id": "82ea7c6e15442d8951efbd382c0040aa",
-    "document_id": "Clinical_Case_5",
-    "disorder": "sleep",
-    "section": "Limiting Beliefs",
-    "content": "# Limiting Beliefs\n\n- “I have to handle everything alone.”\n- “I have no one to rely on.”\n- “If I let go, everything will collapse.”\n- “I’m tired, but I have to hold on.”\n- “No help will come.”\n\n\n## Proposed Solutio",
-    "metadata": {}
-  },
-  {
-    "id": "6be6ca68c483c930a7ce22e79f857d82",
-    "document_id": "Clinical_Case_5",
-    "disorder": "sleep",
-    "section": "Proposed Solutions",
-    "content": "# Proposed Solutions\n\n1. Immediate Solutions (Soothing, Recentering):\n   - Guided body scan for exhaustion state + somatic recentering.\n   - 4-7-8 breathing for management of falling asleep and nighttime anxiety.\n   - “Imaginary support circle” protocol: visualization of protective figures to soothe loneliness.\n2. Intermediate Solutions (Cognitive and Emotional Stabilization):\n   - Implementation of evening rituals (writing, warm light, slow music, etc.).\n   - Mental unloading journal: writing down everything that “weighs” before bedtime to deactivate rumination.\n   - Hypnosis work on the representation of the childish mother: symbolically separating roles, ritualizing emotional detachment.\n3. Long-term Solutions (Schema Rewriting and Healing):\n   - Immersive hypnosis around adolescent loneliness, abandonment wound, and moral fatigue.\n   - Sensory anchoring work of inner support: soothing the feeling of emptiness through secure imagery (inner child, supportive figures).\n   - Cognitive restructuring of beliefs about burden and control.\n\n\n## Progress Indicato",
-    "metadata": {}
-  },
-  {
-    "id": "296e09b004d617aaa8ec5e186122cc52",
-    "document_id": "Clinical_Case_Hypervigilance_Sleep_4",
-    "disorder": "sleep",
-    "section": "Demographics",
-    "content": "# Demographics\n\n- Female, 19 years old\n\n\n\n## Summary of Issu",
-    "metadata": {}
-  },
-  {
-    "id": "7607b6ddde5701e1106b716f185572fd",
-    "document_id": "Clinical_Case_Hypervigilance_Sleep_4",
-    "disorder": "sleep",
-    "section": "Summary of Issues",
-    "content": "# Summary of Issues\n\n- Unstable and conflictual family relationships, including chronic conflict with the mother and repeated disappointments and betrayal by the father.\n- High level of emotional vigilance and mistrust, leading to emotional withdrawal.\n- Intense mental load due to physical exhaustion from internship and commuting, compounded by family stress.\n- Sleep disorder marked by hyperactivation, difficulty falling asleep, persistent mental activity, and probable bodily tension.\n- Need for validation, listening, and recognition, particularly from the grandmother figure.\n- Underlying beliefs include: “I have to defend myself alone,” “You can’t trust anyone, even those you love,” “If I let my guard down, I’ll get hurt,” and “I’m seen as a problem, not as a person.”\n\n\n\n## Dominant Emotio",
-    "metadata": {}
-  },
-  {
-    "id": "743d3a348fb6266e742bf57d1c1e7b5c",
-    "document_id": "Clinical_Case_Hypervigilance_Sleep_4",
-    "disorder": "sleep",
-    "section": "Dominant Emotions",
-    "content": "# Dominant Emotions\n\n- Disappointment\n- Sadness\n- Hurt pride\n- Confusion\n- Suppressed anger\n- Sense of injustice\n- Latent anxiety\n- Psychological exhaustion\n\n\n\n## Triggers and Mechanis",
-    "metadata": {}
-  },
-  {
-    "id": "53ae1ead711497bf72006f45ff15f24b",
-    "document_id": "Clinical_Case_Hypervigilance_Sleep_4",
-    "disorder": "sleep",
-    "section": "Triggers and Mechanisms",
-    "content": "# Triggers and Mechanisms\n\n- Indirect and malicious communication from parents.\n- Lack of recognition for personal investment.\n- Inconsistency in relationships with mother and father.\n- Suspicions of being used by parental figures.\n- Implicit comparisons between siblings.\n- Psychological mechanisms include relational hypervigilance, exhausting over-adaptation, need for sincere connection, refusal to show vulnerability, and partial emotional dissociation.\n\n\n\n## Limiting Belie",
-    "metadata": {}
-  },
-  {
-    "id": "a0e249188d6149a263a72733a72eff68",
-    "document_id": "Clinical_Case_Hypervigilance_Sleep_4",
-    "disorder": "sleep",
-    "section": "Limiting Beliefs",
-    "content": "# Limiting Beliefs\n\n- “I have to defend myself alone.”\n- “You can’t trust anyone, even those you love.”\n- “If I let my guard down, I’ll get hurt.”\n- “I’m seen as a problem, not as a person.”\n\n\n\n## Proposed Solutio",
-    "metadata": {}
-  },
-  {
-    "id": "80a37880519c1b663ae0da5c9867c3e9",
-    "document_id": "Clinical_Case_Hypervigilance_Sleep_4",
-    "disorder": "sleep",
-    "section": "Proposed Solutions",
-    "content": "# Proposed Solutions\n\n- Immediate Solutions: Reverse body scan, emotional separation ritual, silent breathing with mindful awareness, self-anchoring.\n- Intermediate Solutions: Family dialogue rewriting session, emotional remediation exercise focused on the father figure, creation of an imaginary personal space, audio therapy.\n- Long-Term Solutions: Immersive therapeutic hypnosis with the theme “Let the body digest what the mind holds on to.”\n\n\n\n## Progress Indicato",
-    "metadata": {}
-  },
-  {
-    "id": "8300318fd95a17ed1d5e55c3c2dadf23",
-    "document_id": "Clinical_Case_Hypervigilance_Sleep_4",
-    "disorder": "sleep",
-    "section": "Progress Indicators",
-    "content": "# Progress Indicators\n\n- Rate mental tension level each night before sleep.\n- Evaluate physical relaxation after each audio session.\n- Weekly sleep curve: number of hours, perceived quality, sleep onset.\n- Self-observation of nighttime intrusive thoughts: frequency, intensity.\n```",
+    "content": "# Progress Indicators\n\n• Week 1: Track frequency and intensity of awakenings (scale from 0 to 5)  \n• Week 2: Integrate sensory anchor + evaluate nighttime anxiety level  \n• Week 3: Signs of stabilization in sleep phases, beginning of rest revaluation  \n• Week 4: Reduced awakenings (1–2 max), noticeable evening calmness",
     "metadata": {}
   }
 ]

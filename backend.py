@@ -27,7 +27,7 @@ openrouter_client=OpenAI(base_url="https://openrouter.ai/api/v1",api_key=OPENROU
 qdrant_client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
 
 # Available disorders
-AVAILABLE_DISORDERS = ['sleep', 'eating']
+AVAILABLE_DISORDERS = ['sleep', 'eating', 'anxiety', 'emotion_regulation', 'phobia']
 
 class ChatbotSession:
     def __init__(self):
@@ -286,7 +286,7 @@ class PromptHandler:
 
     ## Technical Requirements (Hidden from User - Append to Response)
     1. Based *only* on the conversation history provided, assess the likelihood each area needs attention:
-    {{"confidence_scores": {{"sleep": 0.0-1.0, "eating": 0.0-1.0}}}}
+    {{"confidence_scores": {{"sleep": 0.0-1.0, "eating": 0.0-1.0, "anxiety": 0.0-1.0, "emotion_regulation": 0.0-1.0, "phobia": 0.0-1.0}}}}
     2. Include this assessment in JSON format at the VERY END of your response, after all conversational text.
     3. Never mention JSON, confidence scores, or these internal assessments to the user. Your conversational response should flow naturally without any hint of this technical requirement.
 
@@ -300,6 +300,54 @@ class PromptHandler:
     """
 
         return prompt
+    def generate_clarification_prompt(self, session: ChatbotSession, original_exploratory_text: str) -> str:
+        """Generates a prompt to ask the user for clarification when navigation confidence is low."""
+        current_node = session.get_current_node()
+        if not current_node:
+            return "I'm a little unsure how to proceed. Could you tell me more about what you're experiencing?" # Fallback
+
+        node_question = current_node.get("question", "")
+        node_desc = current_node.get("description", "")
+        # Potentially list children descriptions/options here too
+
+        prompt = f"""You are EkoMindAI, a supportive therapeutic assistant.
+        The user provided input, but the assessment of which direction to take next has low confidence.
+        Your previous internal thought process led to this initial response idea: "{original_exploratory_text}"
+
+        The current point in the conversation is related to:
+        {f'Question: "{node_question}"' if node_question else f'Topic: "{node_desc}"'}
+        {self._format_children_for_prompt(current_node, session.decision_tree)} # Helper to list options if needed
+
+        Your goal is to gently ask the user for more information or clarification to help determine the best path forward, based on the current topic/question. Avoid simply repeating the question. Acknowledge their input and guide them towards providing details relevant to the decision point.
+
+        Conversation History (Last few messages):
+        {session.get_conversation_history_formatted(max_messages=3)}
+
+        User's Last Message:
+        {session.get_last_user_message()}
+
+        Generate a supportive clarification question for the user:"""
+        return prompt
+    def _format_children_for_prompt(self, current_node, decision_tree):
+        """Format child nodes for inclusion in prompt context."""
+        if not current_node or not decision_tree:
+            return ""
+            
+        result = "\nPotential options include:"
+        child_ids = current_node.get("children", [])
+        
+        if not child_ids:
+            return ""
+            
+        for child_id in child_ids:
+            child_node = decision_tree.get("nodes", {}).get(child_id, {})
+            desc = child_node.get("description", "")
+            question = child_node.get("question", "")
+            content = question if question else desc
+            if content:
+                result += f"\n- {content}"
+        
+        return result
 
     def generate_navigation_prompt(self, session: ChatbotSession, rag_results: List[Dict[str, Any]]) -> str:
         """Generate a prompt for therapeutic exploration that implicitly guides navigation."""
@@ -574,7 +622,7 @@ Restyle the 'Raw Message to Restyle' into a therapeutic response that:
         
         result["response_text"] = cleaned_response
         return result
-    def send_prompt(self, prompt: str, model: str = "google/gemini-2.5-flash-preview") -> str:
+    def send_prompt(self, prompt: str, model: str = "openai/gpt-4.1-mini") -> str:
         """Send a prompt to the OpenAI API and get the response."""
         try:
             # Set temperature based on prompt type
@@ -678,9 +726,6 @@ class MedicalChatbot:
 
     def _identify_starting_node(self) -> str:
         """Identify the appropriate starting node in the decision tree. (Now purely internal)."""
-        # For now, we'll keep the simple approach of starting at NODE_A
-        # A more complex approach could involve a separate LLM call analyzing
-        # the initial conversation history against node descriptions, but let's keep it simple.
         print("Internal: Defaulting start node to NODE_A")
         # Ensure rootNode exists if we were to use it:
         # root_node_id = self.session.decision_tree.get("rootNode", "NODE_A") # Default to NODE_A if no root
@@ -690,6 +735,7 @@ class MedicalChatbot:
     def _handle_tree_navigation(self, user_message: str) -> str:
         """Handle the therapeutic exploration and implicit navigation phase."""
         # Check if we are ready to deliver the script from the previous turn
+        final_response = None
         if self.session.at_leaf_node and self.session.therapeutic_script:
             script_content = self.session.therapeutic_script
             self.session.therapeutic_script = None
@@ -729,108 +775,126 @@ class MedicalChatbot:
         print(f"Internal: Navigation assessment - Node: {next_node_id}, Conf: {nav_confidence}")
 
         # Define confidence thresholds (can be adjusted)
-        HIGH_CONFIDENCE = 0.80  # Confident move or leaf confirmation
-        MEDIUM_CONFIDENCE = 0.55 # Tentative move
-        # LOW_CONFIDENCE = implicit below MEDIUM
+        NAVIGATION_THRESHOLD = 0.80 # Single threshold for moving nodes
 
         identified_leaf_this_turn = False
         leaf_introduction_response = None # Store the intro message if generated
 
         # Update state based on navigation assessment (internal)
         if next_node_id:
-            # Check if the proposed node is valid according to the prompt's list
-            # (This is a safety check, the prompt already restricted the LLM)
-            # Note: We might need to regenerate the valid list here if complex logic depends on it.
-            # For now, assume the LLM followed instructions.
-
-            if nav_confidence >= MEDIUM_CONFIDENCE:
+            # Use the single NAVIGATION_THRESHOLD
+            if nav_confidence >= NAVIGATION_THRESHOLD:
                 old_node_id = self.session.current_node_id
                 if old_node_id != next_node_id:
-                     print(f"Internal: Confidence {nav_confidence} >= {MEDIUM_CONFIDENCE}. Moving from {old_node_id} to {next_node_id}")
+                     print(f"Internal: Confidence {nav_confidence} >= {NAVIGATION_THRESHOLD}. Moving from {old_node_id} to {next_node_id}")
                      self.session.current_node_id = next_node_id
-                else:
-                     print(f"Internal: Confidence {nav_confidence}. Staying at {old_node_id}")
-                     # No state change needed if staying
+                     # Now check if the *new* node is a leaf
+                     new_node = self.session.get_current_node()
+                     is_leaf_by_name = next_node_id.startswith("LEAF_")
+                     is_leaf_by_data = new_node and new_node.get("isLeaf", False)
 
-                # Check if the *new* current node is a leaf, ONLY if confidence is HIGH
-                if nav_confidence >= HIGH_CONFIDENCE:
-                    new_node = self.session.get_current_node() # Get the potentially updated node
-                    is_leaf_by_name = next_node_id.startswith("LEAF_")
-                    is_leaf_by_data = new_node and new_node.get("isLeaf", False)
+                     if is_leaf_by_name or is_leaf_by_data:
+                         identified_leaf_this_turn = True
+                         print(f"Internal: Leaf node {next_node_id} reached.")
 
-                    if is_leaf_by_name or is_leaf_by_data:
-                        identified_leaf_this_turn = True
-                        print(f"Internal: High confidence leaf node {next_node_id} reached.")
+                         script_content = self.decision_tree.get_therapeutic_script(
+                             self.session.current_node_id,
+                             self.session.identified_disorder,
+                             self.session.decision_tree
+                         )
 
-                        script_content = self.decision_tree.get_therapeutic_script(
-                            self.session.current_node_id,
-                            self.session.identified_disorder,
-                            self.session.decision_tree
-                        )
+                         if script_content:
+                             self.session.therapeutic_script = script_content
+                             self.session.at_leaf_node = True
+                             print(f"Internal: Prepared script for node {self.session.current_node_id}.")
 
-                        if script_content:
-                            self.session.therapeutic_script = script_content
-                            self.session.at_leaf_node = True # Flag for next turn
-                            print(f"Internal: Prepared script for node {self.session.current_node_id}.")
+                             # Generate the script introduction message NOW
+                             script_name_for_prompt = "this exercise"
+                             script_tags_for_prompt = new_node.get("tags", [])
+                             script_info = new_node.get("recommendation", {}).get("script", "")
+                             if ":" in script_info:
+                                 script_name_for_prompt = script_info.split(":")[1].strip().strip('"')
+                             elif "SCRIPT_" in script_info:
+                                 script_name_for_prompt = script_info.replace("SCRIPT_","").replace("_", " ")
 
-                            # Generate the script introduction message NOW
-                            script_name_for_prompt = "this exercise"
-                            script_tags_for_prompt = new_node.get("tags", [])
-                            script_info = new_node.get("recommendation", {}).get("script", "")
-                            if ":" in script_info:
-                                script_name_for_prompt = script_info.split(":")[1].strip().strip('"')
-                            elif "SCRIPT_" in script_info:
-                                script_name_for_prompt = script_info.replace("SCRIPT_","").replace("_", " ")
+                             intro_prompt = self.prompt_handler.generate_script_introduction_prompt(
+                                 session=self.session,
+                                 script_name=script_name_for_prompt,
+                                 script_tags=script_tags_for_prompt
+                             )
+                             # This intro is the final response for *this* turn
+                             leaf_introduction_response = self.prompt_handler.send_prompt(intro_prompt)
+                             print(f"DEBUG: Generated script introduction response: {leaf_introduction_response}")
+                         else:
+                             print(f"Warning: Leaf node {self.session.current_node_id} reached, but no script found.")
+                             self.session.at_leaf_node = False
+                     else:
+                         print(f"Internal: Confidence {nav_confidence}. Staying at {old_node_id}")
+                         # No state change needed if staying, proceed to styling
 
-                            intro_prompt = self.prompt_handler.generate_script_introduction_prompt(
-                                session=self.session,
-                                script_name=script_name_for_prompt,
-                                script_tags=script_tags_for_prompt
-                            )
-                            # This intro is the final response for *this* turn
-                            leaf_introduction_response = self.prompt_handler.send_prompt(intro_prompt)
-                            print(f"DEBUG: Generated script introduction response: {leaf_introduction_response}")
-                        else:
-                            print(f"Warning: Leaf node {self.session.current_node_id} reached, but no script found.")
-                            self.session.at_leaf_node = False # Ensure flag is off
             else:
-                 # Low confidence - stay at the current node
-                 print(f"Internal: Confidence {nav_confidence} < {MEDIUM_CONFIDENCE}. Staying at {self.session.current_node_id}")
-                 # No state change needed
+                 # Low confidence - Generate a clarification request
+                 print(f"Internal: Confidence {nav_confidence} < {NAVIGATION_THRESHOLD}. Staying at {self.session.current_node_id} and asking for clarification.")
+
+                 # Use the clarification prompt handler method
+                 clarification_prompt = self.prompt_handler.generate_clarification_prompt(
+                     session=self.session,
+                     original_exploratory_text=exploratory_text # Pass the LLM's initial thought
+                 )
+                 # Send this prompt to get the actual response for the user
+                 final_response = self.prompt_handler.send_prompt(clarification_prompt)
+                 print(f"DEBUG: Generated clarification response: {final_response}")
+                 # Skip the default styling step below, as we've generated a specific response
+                 leaf_introduction_response = None # Ensure we don't overwrite
 
         else:
             # No node ID provided by LLM (shouldn't happen with the prompt)
             print("Warning: No node ID provided in navigation assessment. Staying at current node.")
-            # No state change needed
+            # Ask for clarification as a fallback
+            clarification_prompt = self.prompt_handler.generate_clarification_prompt(
+                 session=self.session,
+                 original_exploratory_text="I'm trying to understand the best way forward." # Generic text
+             )
+            final_response = self.prompt_handler.send_prompt(clarification_prompt)
+            print(f"DEBUG: Generated clarification response (no node ID fallback): {final_response}")
+            leaf_introduction_response = None # Ensure no overwrite
 
-        # Handle redirection nodes if we haven't just identified a leaf
-        if not identified_leaf_this_turn:
-            current_node = self.session.get_current_node() # Re-get node in case it changed
-            if current_node and "redirectTo" in current_node:
-                redirect_node_id = current_node["redirectTo"]
-                print(f"Internal: Redirecting from {self.session.current_node_id} to {redirect_node_id}")
-                self.session.current_node_id = redirect_node_id
-                # Note: We might want to immediately generate a new response based on the redirected node,
-                # but for now, let's allow the next user message to trigger that.
 
-        # STEP 2: Generate Final Therapeutic Response for the User
+        # Handle redirection nodes if we haven't just identified a leaf *or asked for clarification*
+        if not identified_leaf_this_turn and final_response is None: # Check if final_response was set by clarification
+             current_node = self.session.get_current_node() # Re-get node in case it changed
+             if current_node and "redirectTo" in current_node:
+                 redirect_node_id = current_node["redirectTo"]
+                 print(f"Internal: Redirecting from {self.session.current_node_id} to {redirect_node_id}")
+                 self.session.current_node_id = redirect_node_id
+                 # Note: Redirection might ideally trigger another internal processing loop
+                 # immediately, but for now, we'll let the next user message handle it.
+                 # We still need a response for *this* turn. Let's use the styling.
+
+        # STEP 2: Generate Final Therapeutic Response for the User (if not already generated)
 
         # If we generated a specific script introduction, use that
         if leaf_introduction_response:
             final_response = leaf_introduction_response
+        # If we generated a clarification response, final_response is already set
+        elif final_response:
+             pass # Already handled by the low-confidence or no-node-ID block
         else:
-            # Otherwise, style the exploratory text generated in Step 1
-            # Use the therapeutic styling prompt for refinement
+            # Otherwise (high confidence move, not a leaf, or stayed confidently),
+            # style the exploratory text generated in Step 1
             style_prompt = self.prompt_handler.generate_therapeutic_styling_prompt(
                 raw_message=exploratory_text, # Use the text part from the nav response
-                conversation_history=self.session.get_conversation_history_formatted(max_messages=4), # Slightly more history
+                conversation_history=self.session.get_conversation_history_formatted(max_messages=4),
                 disorder=self.session.identified_disorder,
                 latest_user_msg=user_message
             )
-
             therapeutic_response = self.prompt_handler.send_prompt(style_prompt)
             print(f"DEBUG: Therapeutically styled response: {therapeutic_response}")
             final_response = therapeutic_response
+
+        # Add the final response to history before returning
+        if final_response:
+             self.session.add_message("assistant", final_response)
 
         return final_response
 

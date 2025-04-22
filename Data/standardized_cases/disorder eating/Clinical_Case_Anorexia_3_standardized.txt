@@ -1,9 +1,7 @@
-# Clinical Case Document
-
-## Demographics
+# Demographics
 Female, 22 years old
 
-## Summary of Issues
+# Summary of Issues
 1. Eating disorder with anorexic predominance:
    - Marked food restriction (skipping lunch, mainly liquid or very low-calorie diet).
    - Avoidance of carbohydrates and rigid eating habits.
@@ -25,7 +23,7 @@ Female, 22 years old
    - Desire to understand, but significant mental fatigue.
    - Attitude oscillating between lucidity and defensive detachment.
 
-## Dominant Emotions
+# Dominant Emotions
 - Intense frustration
 - Silent anger / diffuse irritation
 - Unexpressed sadness in the background
@@ -33,20 +31,20 @@ Female, 22 years old
 - Diffuse fear of losing bodily/physiological control
 - Ambivalence about change
 
-## Triggers and Mechanisms
+# Triggers and Mechanisms
 Major trigger: Initial bereavement that destabilized her mental balance and catalyzed the use of food control as a survival strategy.
 
 Mechanism:
-- Emotional hypervigilance → cognitive rigidity → restrictive strategies → temporary control reinforcement → increased frustration → internalized anger → maintenance loop of the disorder.
+Emotional hypervigilance → cognitive rigidity → restrictive strategies → temporary control reinforcement → increased frustration → internalized anger → maintenance loop of the disorder.
 
-## Limiting Beliefs
+# Limiting Beliefs
 - “I must control everything to exist.”
 - “If I gain weight, I lose control.”
 - “My body betrays me.”
 - “Emotions are dangerous or unmanageable.”
 - “I carry my parents’ mistakes.”
 
-## Proposed Solutions
+# Proposed Solutions
 1. Immediate Solutions
    - Daily emotional self-observation: Anger/frustration/energy scale (0 to 10), morning and evening.
    - Mini body anchor: breathe 4x/day, place a hand on your belly, say inwardly “I am here, my body is alive.”
@@ -62,9 +60,13 @@ Mechanism:
    - Explore transgenerational traumas and unprocessed grief (therapy, EMDR if open).
    - Guided sessions to restore the body as a place to live rather than to control.
 
-## Progress Indicators
-- Week 1: Number of full meals/day - Stabilization at 2 meals, then 3
-- Week 2: Anger/frustration scale - Reduction by at least 2 points
-- Week 3: Inclusion of a pleasure food - Once/week
-- Week 4: Perceived bodily sensations - Gradual return of hunger, pleasure, satiety
-- Week 6: Emotional openness - Ability to name 3 emotions during the week
+# Progress Indicators
+Week    Indicator                             Expected Evolution
+W1     Number of full meals/day              Stabilization at 2 meals, then 3
+W2     Anger/frustration scale                Reduction by at least 2 points
+W3     Inclusion of a pleasure food           Once/week
+W4     Perceived bodily sensations            Gradual return of hunger, pleasure, satiety
+W6     Emotional openness                     Ability to name 3 emotions during the week
+
+# Final Motivational Sentence
+“Your body is not your enemy, it is the first home you’ve ever known. You don’t need to dominate it to exist, only to learn to listen to it again. And that, you can do—one breath at a time.”

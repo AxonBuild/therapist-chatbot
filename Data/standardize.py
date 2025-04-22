@@ -24,7 +24,7 @@ openrouter_client = OpenAI(
 )
 
 # Constants
-MODEL = "openai/gpt-4o"  # Using GPT-4o mini via OpenRouter
+MODEL = "openai/gpt-4o-mini"  # Using GPT-4o mini via OpenRouter
 MAX_TOKENS = 4096
 TEMPERATURE = 0.3  # Lower temperature for more consistent formatting
 

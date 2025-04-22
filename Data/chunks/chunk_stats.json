@@ -1,16 +1,19 @@
 {
-  "total_chunks": 69,
+  "total_chunks": 98,
   "disorders": {
-    "disorder eating": 35,
-    "sleep": 34
+    "anxiety": 21,
+    "disorder eating": 14,
+    "emotion regulation": 28,
+    "phobia": 28,
+    "sleep": 7
   },
   "sections": {
-    "Demographics": 10,
-    "Summary of Issues": 10,
-    "Dominant Emotions": 10,
-    "Triggers and Mechanisms": 10,
-    "Limiting Beliefs": 10,
-    "Proposed Solutions": 10,
-    "Progress Indicators": 9
+    "Demographics": 14,
+    "Summary of Issues": 14,
+    "Dominant Emotions": 14,
+    "Triggers and Mechanisms": 14,
+    "Limiting Beliefs": 14,
+    "Proposed Solutions": 14,
+    "Progress Indicators": 14
   }
 }

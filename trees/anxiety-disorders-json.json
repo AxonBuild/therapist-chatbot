@@ -1,0 +1,116 @@
+{
+  "title": "Anxiety Disorders and Panic Responses Decision Tree",
+  "rootNode": "NODE_A",
+  "nodes": {
+    "NODE_A": {
+      "id": "NODE_A",
+      "question": "Is the anxiety primarily linked to physiological symptoms or loss of control?",
+      "children": ["NODE_A1", "NODE_A2", "NODE_A3", "NODE_B"]
+    },
+    "NODE_A1": {
+      "id": "NODE_A1",
+      "description": "Anxiety with respiratory control fears (e.g., fear of stopping breathing)",
+      "children": ["LEAF_A1A1"]
+    },
+    "LEAF_A1A1": {
+      "id": "LEAF_A1A1",
+      "description": "Fear of stopping breathing, often after physical exertion",
+      "recommendation": {
+        "script": "SCRIPT_A: Your Body Knows What It's Doing",
+        "level": 1
+      },
+      "tags": ["panicdisorder", "respiratoryphobia"],
+      "isLeaf": true
+    },
+    "NODE_A2": {
+      "id": "NODE_A2",
+      "description": "Somatic panic and physiological hypervigilance",
+      "children": ["LEAF_A2A1"]
+    },
+    "LEAF_A2A1": {
+      "id": "LEAF_A2A1",
+      "description": "Anxiety with sensation of losing control over the body",
+      "recommendation": {
+        "script": "SCRIPT_B: You're Not Dying, You're Feeling",
+        "level": 2
+      },
+      "tags": ["somaticanxiety", "panicattack"],
+      "isLeaf": true
+    },
+    "NODE_A3": {
+      "id": "NODE_A3",
+      "description": "Generalized fear of dying or losing control",
+      "children": ["LEAF_A3A1"]
+    },
+    "LEAF_A3A1": {
+      "id": "LEAF_A3A1",
+      "description": "Persistent hypervigilance, catastrophic misinterpretation of body signals",
+      "recommendation": {
+        "script": "SCRIPT_C: The Invisible Burden",
+        "level": 3
+      },
+      "tags": ["panicdisorder", "bodyawareness"],
+      "isLeaf": true
+    },
+    "NODE_B": {
+      "id": "NODE_B",
+      "question": "Is the anxiety centered on a specific context or life phase?",
+      "children": ["NODE_B1", "NODE_B2", "NODE_B3", "LEAF_NO1"]
+    },
+    "NODE_B1": {
+      "id": "NODE_B1",
+      "description": "Agoraphobia with panic and obsessive control fears",
+      "children": ["LEAF_B1A1"]
+    },
+    "LEAF_B1A1": {
+      "id": "LEAF_B1A1",
+      "description": "Highway and confinement fear, emotional overload in family context",
+      "recommendation": {
+        "script": "SCRIPT_D: Finding Inner Safety in an Unpredictable World",
+        "level": 2
+      },
+      "tags": ["agoraphobia", "panicdisorder", "familyload"],
+      "isLeaf": true
+    },
+    "NODE_B2": {
+      "id": "NODE_B2",
+      "description": "Post-bereavement and guilt-related anxiety",
+      "children": ["LEAF_B2A1"]
+    },
+    "LEAF_B2A1": {
+      "id": "LEAF_B2A1",
+      "description": "Guilt towards deceased mother, burden of being the 'pillar'",
+      "recommendation": {
+        "script": "SCRIPT_E: The Invisible Burden",
+        "level": 3
+      },
+      "tags": ["guilt", "postbereavement", "parentifiedchild"],
+      "isLeaf": true
+    },
+    "NODE_B3": {
+      "id": "NODE_B3",
+      "description": "Elderly with fear of dying alone",
+      "children": ["LEAF_B3A1"]
+    },
+    "LEAF_B3A1": {
+      "id": "LEAF_B3A1",
+      "description": "Morning anxiety, solitude, reconnection with the deceased",
+      "recommendation": {
+        "script": "SCRIPT_F: Walking with the Light",
+        "level": 3
+      },
+      "tags": ["fearofdeath", "elderly", "solitude"],
+      "isLeaf": true
+    },
+    "LEAF_NO1": {
+      "id": "LEAF_NO1",
+      "description": "No current anxiety linked to body or loss of control",
+      "recommendation": {
+        "script": "SCRIPT_G: Explore emotional anchors or cognitive schemas",
+        "level": 1
+      },
+      "tags": ["emotionalsupport", "cognitiverestructuring"],
+      "isLeaf": true
+    }
+  }
+}

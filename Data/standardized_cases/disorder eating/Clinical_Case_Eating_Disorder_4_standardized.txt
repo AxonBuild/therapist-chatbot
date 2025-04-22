@@ -1,17 +1,10 @@
-# Clinical Case Document
+Demographics  
+Female, 18 years old, student  
 
-## Demographics
-Female, 18 years old, student
+Summary of Issues  
+The patient is experiencing disorder eating characterized by alternating between strict control and binge eating episodes. She exhibits moral judgments regarding food ('good' vs 'bad'), experiences strong guilt after meals, and feels powerless when her comforting eating routines are disrupted. Additionally, she has a difficult relationship with her body, stemming from childhood body hatred and constant comparison to a very thin friend. Emotional imbalances are present, including academic stress, sleep issues, and emotional hypersensitivity, alongside feelings of family injustice regarding her needs around food. Unstable friendship dynamics further complicate her emotional state, as she navigates a friendship triangle marked by exclusion, jealousy, and unspoken conflicts.  
 
-## Summary of Issues
-- **Eating Disorders**: Alternating between strict control and binge eating episodes, eating habits loaded with moral judgments ('good' vs 'bad' food'), strong guilt after meals, feeling powerless when comforting eating routines are disrupted.
-- **Difficult Relationship with the Body**: Body hatred dating back to childhood, constant comparison (especially with a very thin friend), early labeling ('the greedy one') shaping body identity.
-- **Emotional Imbalance**: Academic stress, sleep issues, emotional hypersensitivity, feeling of family injustice (needs around food not acknowledged), need to be seen, acknowledged, and respected in her choices.
-- **Unstable Friendship Dynamics**: Friendship triangle with implicit tensions (exclusion, jealousy, unspoken conflicts), seeking emotional balance in a trio perceived as 'perfect' but experienced as unstable.
-
-This case appears to be related to disordered eating.
-
-## Dominant Emotions
+Dominant Emotions  
 Guilt  
 Body shame  
 Silent anger  
@@ -19,24 +12,47 @@ Injustice
 Sadness  
 Fear of losing control  
 
-## Triggers and Mechanisms
-- **Main Triggers**: Disruption of comforting eating routines, social situations involving 'special' food (pizza, raclette, crepes), perceived family neglect (no groceries, unequal treatment with brother), comparison with other bodies and metabolisms, fatigue, stress, academic overload.
-- **Identified Psychological Mechanisms**: Typical chain reaction: Lack → frustration → loss of control → binge → guilt → desire to restrict → overload → new crisis.
+Triggers and Mechanisms  
+Main triggers include the disruption of comforting eating routines, social situations involving 'special' food (e.g., pizza, raclette, crepes), perceived family neglect (e.g., no groceries, unequal treatment with her brother), and comparisons with other bodies and metabolisms. Psychological mechanisms involve a typical chain reaction: lack → frustration → loss of control → binge → guilt → desire to restrict → overload → new crisis.  
 
-## Limiting Beliefs
-- If I eat something special, I lose control.
-- I only matter if I control my body.
-- I don’t deserve to be considered like others.
-- I must manage on my own, even for basic needs.
-- A slim and rational friend is better than me.
+Limiting Beliefs  
+If I eat something special, I lose control.  
+I only matter if I control my body.  
+I don’t deserve to be considered like others.  
+I must manage on my own, even for basic needs.  
+A slim and rational friend is better than me.  
 
-## Proposed Solutions
-- **Immediate Solutions (Daily Management)**: Create an 'emergency food kit', kind food journal, express anti-crisis exercise.
-- **Intermediate Solutions (Deeper Rebalancing)**: Establish nurturing ritual meals, cognitive restructuring, daily soothing visualization.
-- **Long-Term Solutions (Transforming Patterns)**: Body image rebuilding, hypnosis for food reconciliation, family psychoeducation.
+Proposed Solutions  
+Immediate Solutions (Daily Management)  
+- Create an 'emergency food kit': keep a small box of favorite items (chia, agave syrup, almonds, etc.) in your bag or locker to avoid sudden frustration.  
+- Kind food journal: track not to control but to observe kindly (What did I enjoy eating today? How did I feel after?).  
+- Express anti-crisis exercise: before a binge, pause 3 minutes: 'Am I hungry? Thirsty? Do I need something other than food?' + deep breathing.  
 
-## Progress Indicators
-- **Eating**: Smoother relationship, fewer crises; Indicator: Number of days without bingeing, post-meal guilt level.
-- **Body**: Calmer self-image; Indicator: Ability to look at oneself kindly.
-- **Emotions**: Less stress and fewer crying episodes; Indicator: Number of good sleep days.
-- **Family**: Better recognition; Indicator: Number of peaceful discussions about groceries.
+Intermediate Solutions (Deeper Rebalancing)  
+- Establish two to three nurturing ritual meals per week with favorite foods, mindfully, without phone or judgment. Set an intention (self-care, reconnection).  
+- Cognitive restructuring: change 'I ate badly so I’m worthless' → 'I ate differently than my ideal, but I still deserve love.'  
+- Daily soothing visualization: every morning, imagine a meal that calms you. Feel the relaxation, desire, and softness in your body.  
+
+Long-Term Solutions (Transforming Patterns)  
+- Body image rebuilding:  
+  - Progressive body acceptance through mirror work.  
+  - Replace comparisons with positive affirmations rooted in bodily experience.  
+- Hypnosis for food reconciliation: Theme – 'Giving My Body a Voice'.  
+- Family psychoeducation (if possible): Initiate dialogue with parents about the impact of food choices on your well-being, or create visible spaces for your needs (shared grocery list).  
+
+Personalized Hypnosis Session  
+Title: Giving My Body a Voice  
+Target length: 1200 words  
+Objectives:  
+- Deactivate compulsions related to 'forbidden' foods.  
+- Create inner safety without excessive control.  
+- Reconcile the inner child labeled as 'greedy.'  
+- Put pleasure back at the center without guilt.  
+- Sensory anchor: breathing + gentleness + honoring real needs.  
+
+Progress Indicators  
+Domain | Desired Evolution | Indicator  
+Eating | Smoother relationship, fewer crises | Number of days without bingeing, post-meal guilt level  
+Body | Calmer self-image | Ability to look at oneself kindly  
+Emotions | Less stress and fewer crying episodes | Number of good sleep days  
+Family | Better recognition | Number of peaceful discussions about groceries  

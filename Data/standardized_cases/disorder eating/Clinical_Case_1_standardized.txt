@@ -1,58 +1,59 @@
-```
-1. Demographics
-   - Age: 38 years old
-   - Gender: Female
-   - Occupation: Banker
+# Demographics
+- Age: 38 years old
+- Gender: Woman
+- Occupation: Banker
 
-2. Summary of Issues
-   - Chronic hypervigilance: entrenched in a constant state of professional tension, with marked somatic effects such as digestive disorders and eating blocks.
-   - Generalized anxiety disorder: constant sense of being “on edge,” persistent mental rumination, loss of pleasure and appetite.
-   - Restrictive and anxiety-driven eating disorder (ED): food blockage before meals, fear of eating, loss of physiological hunger, shame during social meals.
-   - Toxic work environment: feelings of being manipulated, betrayed, devalued; loss of trust in management; constant psychological struggle.
-   - Feelings of illegitimacy, blockage, and helplessness: “I don’t belong there,” yet a sense of being trapped in a context where the body is already on high alert.
-   - Loss of self-confidence, gradual disengagement: difficulty setting boundaries, guilt over not “doing things right,” internal resistance.
-   - Emotional and physical exhaustion: awareness of a possible physical breakdown if the situation doesn’t change soon.
+# Summary of Issues
+- Chronic hypervigilance: entrenched in a constant state of professional tension, with marked somatic effects (digestive disorders, eating blocks).
+- Generalized anxiety disorder: constant sense of being “on edge,” persistent mental rumination, loss of pleasure and appetite.
+- Restrictive and anxiety-driven eating disorder (ED): food blockage before meals, fear of eating, loss of physiological hunger, shame during social meals.
+- Toxic work environment: feelings of being manipulated, betrayed, devalued; loss of trust in management; constant psychological struggle.
+- Feelings of illegitimacy, blockage, and helplessness: “I don’t belong there,” yet a sense of being trapped in a context where the body is already on high alert.
+- Loss of self-confidence, gradual disengagement: difficulty setting boundaries, guilt over not “doing things right,” internal resistance.
+- Emotional and physical exhaustion: awareness of a possible physical breakdown if the situation doesn’t change soon.
 
-3. Dominant Emotions
-   - Intense anxiety
-   - Disgust (toward self, others, food)
-   - Shame (in social eating contexts)
-   - Frustration and helplessness
-   - Repressed anger
-   - Sadness from no longer feeling pleasure
+# Dominant Emotions
+- Intense anxiety
+- Disgust (toward self, others, food)
+- Shame (in social eating contexts)
+- Frustration and helplessness
+- Repressed anger
+- Sadness from no longer feeling pleasure
 
-4. Triggers and Mechanisms
-   - Identified anxiety cycle:
-     1. Anticipating work → hypervigilance
-     2. Loss of appetite → physical digestive tension
-     3. Intrusive thoughts: “I won’t make it / I’ll freeze again”
-     4. Attempt at control (fragmented eating, body scanning)
-     5. Self-blame: “I’m annoying / complicated”
-     6. Stress reinforcement → eating disorder
+# Triggers and Mechanisms
+Identified anxiety cycle:
+1. Anticipating work → hypervigilance
+2. Loss of appetite → physical digestive tension
+3. Intrusive thoughts: “I won’t make it / I’ll freeze again”
+4. Attempt at control (fragmented eating, body scanning)
+5. Self-blame: “I’m annoying / complicated”
+6. Stress reinforcement → eating disorder
 
-5. Limiting Beliefs
-   - “If I don’t anticipate everything, I lose control.”
-   - “I have to hold on, even if it destroys me.”
-   - “It’s not up to me to fall apart.”
-   - “I’m a burden when I express my needs.”
-   - “If I show my weaknesses, I lose legitimacy.”
+# Limiting Beliefs
+- “If I don’t anticipate everything, I lose control.”
+- “I have to hold on, even if it destroys me.”
+- “It’s not up to me to fall apart.”
+- “I’m a burden when I express my needs.”
+- “If I show my weaknesses, I lose legitimacy.”
 
-6. Proposed Solutions
-   - Immediate (soothing / reassurance effects)
-     • Guided breathing before each meal (3 minutes of cardiac coherence → parasympathetic grounding)
-     • “Food permission” exercise: telling yourself, “It’s okay if I don’t finish everything. What matters is feeling at peace with myself.”
-     • One-minute grounding: visualize a safe place, a comforting moment before each meal to associate safety with eating.
-   - Intermediate (progressive restructuring)
-     • Food experience journal: noting emotions and sensations before / during / after meals → helps detach food from anxiety.
-     • Compassionate self-dialogue: transform “I’m annoying” into “I’m in an inner struggle, doing my best to protect myself.”
-     • Work on fear of losing control: through micro-exposure to unpredictability (e.g., not knowing what’s for lunch once a week).
-   - Long-term solutions
-     • Targeted hypnosis on toxic vigilance and inner insecurity.
-     • Immersive meditation: “Rediscovering the joy of eating in safety.”
-     • Symbolic work on professional change: visualization of a door opening toward a space where one can breathe, be respected, and find peace.
+# Proposed Solutions
+Immediate (soothing / reassurance effects)
+- Guided breathing before each meal (3 minutes of cardiac coherence → parasympathetic grounding)
+- “Food permission” exercise: telling yourself, “It’s okay if I don’t finish everything. What matters is feeling at peace with myself.”
+- One-minute grounding: visualize a safe place, a comforting moment before each meal to associate safety with eating.
 
-7. Progress Indicators
-   - Daily self-assessment (anxiety level before meals: scale 0–10)
-   - Food pleasure indicator: once a day, note one pleasant thing about eating (even a small detail)
-   - Weekly evolution of the feeling of blockage vs. freedom at work
-```
+Intermediate (progressive restructuring)
+- Food experience journal: noting emotions and sensations before / during / after meals → helps detach food from anxiety.
+- Compassionate self-dialogue: transform “I’m annoying” into “I’m in an inner struggle, doing my best to protect myself.”
+- Work on fear of losing control: through micro-exposure to unpredictability (e.g., not knowing what’s for lunch once a week).
+
+Long-term solutions
+- Targeted hypnosis on toxic vigilance and inner insecurity.
+- Immersive meditation: “Rediscovering the joy of eating in safety.”
+- Symbolic work on professional change: visualization of a door opening toward a space where one can breathe, be respected, and find peace.
+
+# Progress Indicators
+- Daily self-assessment (anxiety level before meals: scale 0–10)
+- Food pleasure indicator: once a day, note one pleasant thing about eating (even a small detail)
+- Weekly evolution of the feeling of blockage vs. freedom at work
+

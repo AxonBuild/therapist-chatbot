@@ -102,42 +102,5 @@
       "description": "No primary sleep complaint → Explore adjacent issues (e.g., anxiety, food regulation, emotional dissociation)",
       "isLeaf": true
     }
-  },
-  "summary": [
-    {
-      "node": "LEAF_A1A1",
-      "symptomSummary": "Mental spirals, intrusive thoughts",
-      "script": "Taming Sleep and Reconnecting with Inner Safety",
-      "level": 2,
-      "tags": ["sleep_onset", "rumination", "control"]
-    },
-    {
-      "node": "LEAF_A2A1",
-      "symptomSummary": "Night awakenings with hypervigilance",
-      "script": "Let the Night Watch Over Me",
-      "level": 2,
-      "tags": ["nocturnal_awakenings", "hypervigilance", "anticipatory_anxiety"]
-    },
-    {
-      "node": "LEAF_A3A1",
-      "symptomSummary": "Severe insomnia with trauma background",
-      "script": "Return to the Night",
-      "level": 3,
-      "tags": ["chronic_insomnia", "trauma", "night_fear"]
-    },
-    {
-      "node": "LEAF_A4A1",
-      "symptomSummary": "Fatigue, overload, isolation",
-      "script": "Soothing Loneliness and Finding an Inner Resting Space",
-      "level": 3,
-      "tags": ["emotional_fatigue", "overload", "isolation"]
-    },
-    {
-      "node": "LEAF_A5A1",
-      "symptomSummary": "Adolescent insomnia with family stress",
-      "script": "Let the Body Digest What the Mind Holds On To",
-      "level": 3,
-      "tags": ["adolescent_sleep", "hypervigilance", "family_conflict"]
-    }
-  ]
+  }
 }

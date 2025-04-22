@@ -1,0 +1,131 @@
+{
+  "title": "Phobic Disorders Decision Tree",
+  "rootNode": "NODE_A",
+  "nodes": {
+    "NODE_A": {
+      "id": "NODE_A",
+      "question": "Presence of phobic symptoms?",
+      "children": ["NODE_A1", "NODE_A2", "NODE_A3", "NODE_A4"]
+    },
+    "NODE_A1": {
+      "id": "NODE_A1",
+      "question": "Phobic symptoms centered on violent or intrusive thoughts?",
+      "children": ["NODE_A1A", "NODE_A1B"]
+    },
+    "NODE_A1A": {
+      "id": "NODE_A1A",
+      "question": "Intrusive images + fear of acting out?",
+      "children": ["LEAF_A1A1"]
+    },
+    "LEAF_A1A1": {
+      "id": "LEAF_A1A1",
+      "description": "Phobia of impulse with mental intrusion and fear of being dangerous",
+      "recommendation": {
+        "script": "SCRIPT_A: Taming the Wild Thought",
+        "level": 2
+      },
+      "tags": ["phobia", "impulse", "intrusivethoughts", "youngadult"],
+      "isLeaf": true
+    },
+    "NODE_A1B": {
+      "id": "NODE_A1B",
+      "description": "Non",
+      "children": ["LEAF_A1B1"]
+    },
+    "LEAF_A1B1": {
+      "id": "LEAF_A1B1",
+      "description": "Other causes to explore: OCD spectrum, digital overexposure, trauma?",
+      "recommendation": {
+        "script": "SCRIPT_B: Differential Evaluation Needed",
+        "level": 1
+      },
+      "tags": ["diagnostic", "phobia"],
+      "isLeaf": true
+    },
+    "NODE_A2": {
+      "id": "NODE_A2",
+      "question": "Phobic symptoms in closed or inescapable spaces?",
+      "children": ["NODE_A2A", "NODE_A2B"]
+    },
+    "NODE_A2A": {
+      "id": "NODE_A2A",
+      "question": "Highways, MRIs, or exams triggering fear of being stuck?",
+      "children": ["LEAF_A2A1"]
+    },
+    "LEAF_A2A1": {
+      "id": "LEAF_A2A1",
+      "description": "Agoraphobia with symbolic entrapment, maternal overcontrol",
+      "recommendation": {
+        "script": "SCRIPT_C: Finding Inner Space Even in Closed Places",
+        "level": 2
+      },
+      "tags": ["agoraphobia", "control", "panic"],
+      "isLeaf": true
+    },
+    "NODE_A2B": {
+      "id": "NODE_A2B",
+      "description": "Non",
+      "children": ["LEAF_A2B1"]
+    },
+    "LEAF_A2B1": {
+      "id": "LEAF_A2B1",
+      "description": "Explore other somatic phobias or panic schema?",
+      "recommendation": {
+        "script": "SCRIPT_D: General Soothing Protocol",
+        "level": 1
+      },
+      "tags": ["phobia", "body"],
+      "isLeaf": true
+    },
+    "NODE_A3": {
+      "id": "NODE_A3",
+      "question": "Phobia centered on death, illness or hospital memory?",
+      "children": ["NODE_A3A", "NODE_A3B"]
+    },
+    "NODE_A3A": {
+      "id": "NODE_A3A",
+      "question": "Repetitive panic attacks + fear of death or body failing + maternal anchoring?",
+      "children": ["LEAF_A3A1"]
+    },
+    "LEAF_A3A1": {
+      "id": "LEAF_A3A1",
+      "description": "Panic disorder with postpartum hypervigilance and traumatic anchor",
+      "recommendation": {
+        "script": "SCRIPT_E: Inner Security",
+        "level": 3
+      },
+      "tags": ["panic", "deathfear", "hypervigilance", "postpartum"],
+      "isLeaf": true
+    },
+    "NODE_A3B": {
+      "id": "NODE_A3B",
+      "description": "Non",
+      "children": ["LEAF_A3B1"]
+    },
+    "LEAF_A3B1": {
+      "id": "LEAF_A3B1",
+      "description": "Explore existential anxiety, depressive defense, or medical PTSD",
+      "recommendation": {
+        "script": "SCRIPT_F: Rediscovering Inner Calm",
+        "level": 2
+      },
+      "tags": ["anxiety", "death", "PTSD"],
+      "isLeaf": true
+    },
+    "NODE_A4": {
+      "id": "NODE_A4",
+      "description": "No current phobic symptoms",
+      "children": ["LEAF_A4A1"]
+    },
+    "LEAF_A4A1": {
+      "id": "LEAF_A4A1",
+      "description": "Monitor for latent anxiety or avoidance behavior. Reassess in case of evolution",
+      "recommendation": {
+        "script": "SCRIPT_G: Preventive Psychoeducation",
+        "level": 1
+      },
+      "tags": ["prevention", "psychoeducation"],
+      "isLeaf": true
+    }
+  }
+}
