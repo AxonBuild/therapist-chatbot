@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 from typing import List, Dict, Any, Optional
 from openai import OpenAI
 
-# Import your chatbot backend
-from backend import MedicalChatbot
+# Import the therapeutic chatbot from backend
+from backend_new import TherapeuticChatbot, OPENROUTER_API_KEY
 
 # Load environment variables
 load_dotenv()
@@ -187,15 +187,35 @@ st.markdown("""
         font-size: 0.8rem;
         color: #666;
     }
+    
+    .assistant-audio-message {
+        margin-bottom: 10px;
+    }
 </style>
 """, unsafe_allow_html=True)
+
+# Check for OpenRouter API Key (essential for backend)
+if not OPENROUTER_API_KEY:
+    st.error("FATAL: OpenRouter API key not found. The chatbot backend cannot function. Please set the OPENROUTER_API_KEY environment variable.")
+    st.stop() # Stop execution if the key is missing
 
 # Initialize session state
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
 if "chatbot" not in st.session_state:
-    st.session_state.chatbot = MedicalChatbot()
+    try:
+        st.session_state.chatbot = TherapeuticChatbot()
+        # Add an initial greeting if messages are empty
+        if not st.session_state.messages:
+             st.session_state.messages.append({
+                 "role": "assistant",
+                 "content": "Hello! I'm here to listen. How are you feeling today?",
+                 "is_script": False # Mark explicitly
+             })
+    except Exception as e:
+        st.error(f"Failed to initialize the chatbot backend: {e}")
+        st.stop()
 
 if "debug_mode" not in st.session_state:
     st.session_state.debug_mode = False
@@ -203,11 +223,8 @@ if "debug_mode" not in st.session_state:
 if "speech_enabled" not in st.session_state:
     st.session_state.speech_enabled = True
 
-if "current_phase" not in st.session_state:
-    st.session_state.current_phase = "Identifying your concerns"
-
-if "therapeutic_script" not in st.session_state:
-    st.session_state.therapeutic_script = None
+if "selected_voice" not in st.session_state:
+    st.session_state.selected_voice = "nova"  # Default voice
 
 # Logo and App title
 st.markdown('<div class="logo-container"><div class="logo">EM</div></div>', unsafe_allow_html=True)
@@ -218,9 +235,23 @@ st.markdown("<p class='subheader'>Your mental wellness companion</p>", unsafe_al
 def clear_chat_history():
     """Clear the chat history and reset the chatbot session"""
     st.session_state.messages = []
-    st.session_state.chatbot.reset_session()
-    st.session_state.current_phase = "Identifying your concerns"
-    st.session_state.therapeutic_script = None
+    # Reset backend session if possible (assuming a method exists or implicitly handled)
+    # If the backend manages sessions by ID, starting fresh might be enough.
+    # Let's try deleting the specific session if the backend supports it
+    session_id = "streamlit_user_session" # Assuming this is the ID used
+    if "chatbot" in st.session_state and hasattr(st.session_state.chatbot, 'sessions') and session_id in st.session_state.chatbot.sessions:
+        try:
+            del st.session_state.chatbot.sessions[session_id]
+            print(f"INFO: Cleared backend session '{session_id}'")
+        except Exception as e:
+            print(f"WARNING: Could not clear backend session '{session_id}': {e}")
+
+    # Add the initial greeting back
+    st.session_state.messages.append({
+        "role": "assistant",
+        "content": "Hello! I'm here to listen. How are you feeling today?",
+        "is_script": False
+    })
     st.rerun()
 
 # Settings in sidebar
@@ -243,9 +274,6 @@ with st.sidebar:
     if st.session_state.speech_enabled:
         voice_options = ["alloy", "echo", "fable", "onyx", "nova", "shimmer"]
         
-        if "selected_voice" not in st.session_state:
-            st.session_state.selected_voice = "nova"  # Default to nova as it's good for therapeutic content
-            
         selected_voice = st.selectbox(
             "Voice", 
             options=voice_options,
@@ -260,25 +288,20 @@ with st.sidebar:
     if st.button("Reset Conversation", use_container_width=True):
         clear_chat_history()
 
-# Display current phase
-phase_color = "phase-1" if st.session_state.current_phase == "Identifying your concerns" else "phase-2"
-st.markdown(f'<div class="status-indicator {phase_color}">{st.session_state.current_phase}</div>', unsafe_allow_html=True)
-
-# Button to clear chat
-if st.session_state.messages:
-    cols = st.columns([4, 1])
-    with cols[1]:
-        if st.button("Clear Chat", type="secondary", use_container_width=True):
-            clear_chat_history()
-
-# Display chat messages
+# Display chat messages using standard Streamlit chat message approach
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         # Check if this is a therapeutic script message
         if msg.get("is_script", False):
             st.markdown(f"<div class='therapy-script'>{msg['content']}</div>", unsafe_allow_html=True)
         else:
-            st.markdown(msg["content"])
+            st.markdown(f"<div class='assistant-audio-message'>{msg['content']}</div>", unsafe_allow_html=True)
+        
+        # Play audio if available
+        if msg["role"] == "assistant" and st.session_state.speech_enabled and msg.get("audio_path"):
+            with open(msg["audio_path"], "rb") as f:
+                audio_bytes = f.read()
+            st.audio(audio_bytes, format="audio/mp3", autoplay=msg.get("autoplay", False))
     
     # Display debug information if enabled
     if st.session_state.debug_mode and msg.get("debug_info"):
@@ -287,63 +310,77 @@ for msg in st.session_state.messages:
 
 # Chat input
 if user_input := st.chat_input("Share what's on your mind..."):
-    # Add user message to chat
+    # Add user message to frontend chat history
     st.session_state.messages.append({"role": "user", "content": user_input})
    
-    # Display user message
-    with st.chat_message("user"):
-        st.markdown(user_input)
-   
     # Process the message through the chatbot backend
-    response = st.session_state.chatbot.process_message(user_input)
-    
-    # Update phase based on chatbot state
-    if st.session_state.chatbot.session.identified_disorder and st.session_state.current_phase == "Identifying your concerns":
-        st.session_state.current_phase = f"Exploring your {st.session_state.chatbot.session.identified_disorder} concerns"
-    
-    # Determine if the response is a script
-    is_script = response.startswith("SCRIPT:::")
-    if is_script:
-        # Strip the marker
-        display_content = response[len("SCRIPT:::"):]
-        # Use a calmer voice for scripts
-        script_voice = "nova" if st.session_state.selected_voice != "nova" else "shimmer"
-        tts_voice = script_voice
-    else:
-        display_content = response
-        tts_voice = st.session_state.selected_voice
+    session_id = "streamlit_user_session"
+    try:
+        with st.spinner("Thinking..."):
+            response = st.session_state.chatbot.process_message(user_input, session_id=session_id)
 
-    # Generate speech if enabled
-    audio_path = None
-    if st.session_state.speech_enabled and display_content: # Check if content exists
-        audio_path = text_to_speech(display_content, voice=tts_voice)
-    
-    # Display the response (either script or normal message)
-    with st.chat_message("assistant"):
-        if is_script:
-            st.markdown(f"<div class='therapy-script'>{display_content}</div>", unsafe_allow_html=True)
+        # --- Handle Backend Response ---
+        is_script = False
+        display_content = response # Default to the raw response
+
+        # Check for script markers (adjust markers if changed in backend)
+        script_start_marker = "SCRIPT_START"
+        script_end_marker = "SCRIPT_END"
+
+        if script_start_marker in response and script_end_marker in response:
+            is_script = True
+            # Extract content between markers, including the lead-in message
+            lead_in_end = response.find(script_start_marker)
+            lead_in = response[:lead_in_end].strip()
+            script_content_start = lead_in_end + len(script_start_marker)
+            script_content_end = response.find(script_end_marker)
+            script_content = response[script_content_start:script_content_end].strip()
+
+            display_content = f"{lead_in}\n\n{script_content}" # Content for display
+            display_content_for_tts = f"{lead_in} {script_content}" # Content for TTS (flattened)
+            script_voice = "nova" if st.session_state.selected_voice != "nova" else "shimmer"
+            tts_voice = script_voice
         else:
-            # Use a different class maybe for non-script audio messages if needed
-            st.markdown(f"<div class='assistant-audio-message'>{display_content}</div>", unsafe_allow_html=True)
-            
-        # Play audio if available
-        if audio_path:
-            with open(audio_path, "rb") as f:
-                audio_bytes = f.read()
-            st.audio(audio_bytes, format="audio/mp3", autoplay=True)
+            # Not a script, use the response as is
+            display_content = response
+            display_content_for_tts = response
+            tts_voice = st.session_state.selected_voice
 
-    # Add the message to chat history
-    st.session_state.messages.append({
-        "role": "assistant", 
-        "content": display_content, # Use the processed content
-        "is_script": is_script, # Mark if it was a script
-        "debug_info": { # Keep debug info consistent
-            "phase": st.session_state.current_phase,
-            "disorder": st.session_state.chatbot.session.identified_disorder,
-            "confidence": st.session_state.chatbot.session.disorder_confidence if st.session_state.chatbot.session.identified_disorder else 0.0,
-            "current_node": st.session_state.chatbot.session.current_node_id
-        } if st.session_state.debug_mode else None
-    })
+        # Generate speech if enabled
+        audio_path = None
+        if st.session_state.speech_enabled and display_content_for_tts:
+            audio_path = text_to_speech(display_content_for_tts, voice=tts_voice)
+
+        # Add the assistant message to chat history
+        debug_info = None
+        if st.session_state.debug_mode:
+            if hasattr(st.session_state.chatbot, 'sessions') and session_id in st.session_state.chatbot.sessions:
+                backend_session = st.session_state.chatbot.sessions[session_id]
+                debug_info = {
+                    "phase": "Identifying your concerns",
+                    "true_conditions": list(backend_session.get_true_conditions()),
+                    "message_count": backend_session.message_count
+                }
+            else:
+                debug_info = {
+                    "phase": "Identifying your concerns",
+                    "note": "No active backend session found"
+                }
+
+        st.session_state.messages.append({
+            "role": "assistant", 
+            "content": display_content,
+            "audio_path": audio_path,
+            "autoplay": True,  # Set autoplay for this new message
+            "is_script": is_script,
+            "debug_info": debug_info
+        })
+
+        # Rerun to update the chat display
+        st.rerun()
+
+    except Exception as e:
+        st.error(f"An error occurred while processing your message: {e}")
 
 # Disclaimer
 st.markdown("""

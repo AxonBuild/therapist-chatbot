@@ -1,0 +1,48 @@
+{
+  "phobic_conditions": {
+    "impulse_phobia_intrusion": "impulse phobia with mental intrusions and fear of being dangerous",
+    "unclassified_intrusion": "unclassified intrusion symptoms",
+    "symbolic_entrapment": "agoraphobia with symbolic entrapment, maternal overcontrol",
+    "somatic_undefined_panic": "somatic or undefined panic",
+    "postpartum_panic": "panic disorder with postpartum hypervigilance and traumatic anchoring",
+    "death_medical_phobia": "fear of death or medical situations with personal medical history"
+  },
+  "scriptMappings": {
+    "SCRIPT_A": {
+      "title": "Taming the Wild Thought – I Am More Than What I See",
+      "required_conditions": [
+        "impulse_phobia_intrusion"
+      ]
+    },
+    "SCRIPT_B": {
+      "title": "Differential Evaluation Needed",
+      "required_conditions": [
+        "unclassified_intrusion"
+      ]
+    },
+    "SCRIPT_C": {
+      "title": "Finding Inner Space Even in Closed Places",
+      "required_conditions": [
+        "symbolic_entrapment"
+      ]
+    },
+    "SCRIPT_D": {
+      "title": "General Soothing Protocol",
+      "required_conditions": [
+        "somatic_undefined_panic"
+      ]
+    },
+    "SCRIPT_E": {
+      "title": "Inner Security – Postpartum",
+      "required_conditions": [
+        "postpartum_panic"
+      ]
+    },
+    "SCRIPT_F": {
+      "title": "Rediscovering Inner Calm",
+      "required_conditions": [
+        "death_medical_phobia"
+      ]
+    }
+  }
+}

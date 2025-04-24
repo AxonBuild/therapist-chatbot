@@ -1,0 +1,41 @@
+{
+  "emotional_dysregulation_conditions": {
+    "recent_shock": "recent emotional shock (e.g., traumatic phone call, fear of motherhood)",
+    "ptsd_somatic": "PTSD + somatic panic response (e.g., fear of dying, tingling)",
+    "adolescent_frustration": "adolescent reacting strongly to interruption or sibling rivalry",
+    "adult_blocked_choice": "hyperadaptation, fear of judgment, self-censorship",
+    "somatic_health_anxiety": "somatic hypervigilance, transgenerational anxiety"
+  },
+  "scriptMappings": {
+    "SCRIPT_A": {
+      "title": "Healing from Shock and Preparing for Inner Peace",
+      "required_conditions": [
+        "recent_shock"
+      ]
+    },
+    "SCRIPT_B": {
+      "title": "My Body, the Survivor",
+      "required_conditions": [
+        "ptsd_somatic"
+      ]
+    },
+    "SCRIPT_C": {
+      "title": "When the world cuts me off, I remain whole",
+      "required_conditions": [
+        "adolescent_frustration"
+      ]
+    },
+    "SCRIPT_D": {
+      "title": "I Become the Author of My Choices Again",
+      "required_conditions": [
+        "adult_blocked_choice"
+      ]
+    },
+    "SCRIPT_E": {
+      "title": "Trusting My Body Again",
+      "required_conditions": [
+        "somatic_health_anxiety"
+      ]
+    }
+  }
+}

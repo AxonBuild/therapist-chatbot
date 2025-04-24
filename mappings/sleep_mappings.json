@@ -1,0 +1,36 @@
+{
+    "sleep_conditions": {
+        "sleep_onset_insomnia": "difficulty falling asleep initially",
+        "cognitive_hyperactivation": "racing thoughts or overthinking at bedtime",
+        "nocturnal_awakenings": "waking up repeatedly during the night",
+        "hypervigilance": "heightened alertness to noises or surroundings at night",
+        "trauma_related": "sleep problems linked to past trauma or nightmares",
+        "emotional_exhaustion": "emotional burnout or feeling completely drained",
+        "loneliness": "feelings of isolation or being alone",
+        "parental_overload": "stress from parenting or childcare responsibilities",
+        "young_adult_issues": "age-specific problems (college/adolescent)",
+        "family_conflict": "tension or conflict within the family"
+    },
+    "scriptMappings": {
+        "SCRIPT_A": {
+            "title": "Taming Sleep and Reconnecting with Inner Safety",
+            "required_conditions": ["sleep_onset_insomnia", "cognitive_hyperactivation"]
+        },
+        "SCRIPT_B": {
+            "title": "Let the Night Watch Over Me",
+            "required_conditions": ["nocturnal_awakenings", "hypervigilance"]
+        },
+        "SCRIPT_C": {
+            "title": "Return to the Night",
+            "required_conditions": ["trauma_related"]
+        },
+        "SCRIPT_D": {
+            "title": "Soothing Loneliness and Finding an Inner Resting Space",
+            "required_conditions": ["emotional_exhaustion", "loneliness", "parental_overload"]
+        },
+        "SCRIPT_E": {
+            "title": "Let the Body Digest What the Mind Holds On To",
+            "required_conditions": ["young_adult_issues", "family_conflict", "hypervigilance"]
+        }
+    }
+}

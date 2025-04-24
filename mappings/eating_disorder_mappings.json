@@ -1,0 +1,49 @@
+{
+  "eating_disorder_conditions": {
+    "restrictive_control": "rigid control, avoidance of carbs, intense fear of weight gain",
+    "evening_binge_emotion": "evening snacking, emotional compensation, guilt",
+    "digestive_block": "digestive tension, blocked throat, inability to swallow",
+    "food_moralization": "labeling foods as good/bad, shame after meals, early guilt",
+    "stress_related_loss": "professional hypervigilance, fear of eating, toxic context",
+    "mild_disconnection": "early eating pattern concerns, subtle food relationship issues"
+  },
+  "scriptMappings": {
+    "SCRIPT_A": {
+      "title": "Giving My Body a Voice",
+      "required_conditions": [
+        "restrictive_control",
+        "mild_disconnection"
+      ]
+    },
+    "SCRIPT_B": {
+      "title": "Soothing Difficult Evenings",
+      "required_conditions": [
+        "evening_binge_emotion"
+      ]
+    },
+    "SCRIPT_C": {
+      "title": "Let the Body Digest What the Mind Holds On To",
+      "required_conditions": [
+        "digestive_block"
+      ]
+    },
+    "SCRIPT_D": {
+      "title": "Freeing the Body from Hypervigilance",
+      "required_conditions": [
+        "food_moralization"
+      ]
+    },
+    "SCRIPT_E": {
+      "title": "Freeing the Body from Hypervigilance",
+      "required_conditions": [
+        "stress_related_loss"
+      ]
+    },
+    "SCRIPT_F": {
+      "title": "Giving My Body a Voice",
+      "required_conditions": [
+        "mild_disconnection"
+      ]
+    }
+  }
+}

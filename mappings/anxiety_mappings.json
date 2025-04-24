@@ -1,0 +1,48 @@
+{
+  "anxiety_conditions": {
+    "respiratory_phobia": "excessive fear with heart palpitations, accelerated breathing, fear of fainting",
+    "somatic_anxiety": "anxiety with sensation of losing control over the body",
+    "catastrophic_interpretation": "persistent hypervigilance, catastrophic interpretation of body signals",
+    "agoraphobia_family_burden": "fear of highways, fear of not being able to leave a place, emotional overload in the family context",
+    "bereavement_guilt": "guilt towards the deceased mother, burden of being the 'pillar'",
+    "elderly_loneliness": "morning anxiety, loneliness, need for connection with the deceased"
+  },
+  "scriptMappings": {
+    "SCRIPT_A": {
+      "title": "Your Body Knows What It's Doing",
+      "required_conditions": [
+        "respiratory_phobia"
+      ]
+    },
+    "SCRIPT_B": {
+      "title": "Your Not Dying, Your Feeling",
+      "required_conditions": [
+        "somatic_anxiety"
+      ]
+    },
+    "SCRIPT_C": {
+      "title": "The Invisible Burden",
+      "required_conditions": [
+        "catastrophic_interpretation"
+      ]
+    },
+    "SCRIPT_D": {
+      "title": "Finding Inner Safety in an Unpredictable World",
+      "required_conditions": [
+        "agoraphobia_family_burden"
+      ]
+    },
+    "SCRIPT_E": {
+      "title": "The Invisible Burden",
+      "required_conditions": [
+        "bereavement_guilt"
+      ]
+    },
+    "SCRIPT_F": {
+      "title": "Walking with the Light",
+      "required_conditions": [
+        "elderly_loneliness"
+      ]
+    }
+  }
+}
