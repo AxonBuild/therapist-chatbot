@@ -12,7 +12,6 @@ OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 # Specify the model hosted on OpenRouter
 
 OPENROUTER_MODEL_ID = "openai/gpt-4.1-mini"
-OPENROUTER_SITE_NAME = "your_site_name" # Added site name
 
 # Constants
 MIN_MESSAGES_FOR_SCRIPT = 5
@@ -89,6 +88,7 @@ class ChatSession:
         self.suggested_follow_ups: list[str] = []
         self.message_count: int = 0 # Total messages (user + assistant)
         self.offering_script: dict | None = None # Track if we're offering a script {script_id: str, script_title: str, disorder_key: str}
+        self.delivered_scripts: set[tuple[str, str]] = set()  # Track delivered scripts as (script_id, disorder_key)
 
     def add_message(self, role: str, content: str):
         """Adds a message to the history and increments count."""
@@ -383,30 +383,34 @@ Analyze the following conversation history and determine if the user exhibits an
                 raise ValueError("Response is not a JSON object.")
 
             updated_count = 0
-            # Reset all conditions to False before update? Or just update based on response?
-            # Let's just update based on response for now.
-            # If a condition isn't in the response, it retains its previous state.
+            true_conditions_printout = []  # Collect (disorder, condition_key, description)
 
             # Update conditions
             for desc, value in data.items():
-                if desc == "follow-ups": # Skip the follow-ups key here
+                if desc == "follow-ups":
                     continue
 
-                # Find which disorder this description belongs to
                 disorder_key, condition_key = self.condition_manager.get_disorder_and_key_from_description(desc)
 
                 if disorder_key and condition_key:
                     if disorder_key in session.identified_conditions and condition_key in session.identified_conditions[disorder_key]:
                         if isinstance(value, bool):
-                            # Update the specific condition within the specific disorder
                             session.identified_conditions[disorder_key][condition_key] = value
                             updated_count += 1
+                            if value:
+                                true_conditions_printout.append((disorder_key, condition_key, desc))
                         else:
                             print(f"WARNING: Invalid boolean value for condition '{desc}' (Disorder: {disorder_key}, Key: {condition_key}): {value}")
                     else:
-                         print(f"WARNING: Condition '{desc}' (Disorder: {disorder_key}, Key: {condition_key}) found in response but not initialized in session state.")
-                # else: # Don't warn if key not found, might be extra keys in response or mapping issue
-                     # print(f"WARNING: Condition description '{desc}' from LLM response not found in known conditions map.")
+                        print(f"WARNING: Condition '{desc}' (Disorder: {disorder_key}, Key: {condition_key}) found in response but not initialized in session state.")
+
+            # Print all true conditions after update
+            if true_conditions_printout:
+                print("TRUE CONDITIONS THIS CALL:")
+                for disorder, key, desc in true_conditions_printout:
+                    print(f"  - [{disorder}] {key}: {desc}")
+            else:
+                print("No conditions marked as true in this call.")
 
             # Update follow-ups (remains the same)
             if "follow-ups" in data and isinstance(data["follow-ups"], list):
@@ -470,7 +474,7 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
         condition_prompt = self._build_condition_prompt(history_str) # No disorder key needed
         condition_response = None
         if condition_prompt:
-            condition_response = self.llm_client.send_prompt(condition_prompt, temperature=0.3)
+            condition_response = self.llm_client.send_prompt(condition_prompt, temperature=0.7)
         self._parse_condition_response(condition_response, session) # No disorder key needed
 
         # 3. Check for Script Match across ALL disorders
@@ -503,6 +507,9 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
                     ai_response_content = f"{lead_in}SCRIPT_START\n{script_content}\nSCRIPT_END"
                     final_response_type = "script"
                     print(f"INFO: Delivering script '{offered_script_id}' (Disorder: {offered_disorder_key}) after user acceptance")
+                    session.message_count = 0
+                    # --- Mark this script as delivered ---
+                    session.delivered_scripts.add((offered_script_id, offered_disorder_key))
                 else:
                     print(f"WARNING: Failed to load script '{offered_script_id}' (Disorder: {offered_disorder_key}) content after user acceptance")
                     ai_response_content = f"I apologize, but I'm having trouble retrieving the exercise I mentioned. Let's continue our conversation instead. How have you been feeling lately?"
@@ -514,22 +521,25 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
 
         # Normal flow (not responding to script offer)
         elif matched_script_id and matched_disorder_key and session.message_count >= MIN_MESSAGES_FOR_SCRIPT:
-            print(f"INFO: Condition match for script '{matched_script_id}' (Disorder: {matched_disorder_key}) and message count ({session.message_count}) threshold met.")
-
-            # Offer the matched script
-            script_title = self.condition_manager.get_script_title(matched_script_id, matched_disorder_key) or matched_script_id
-
-            # Store the script info *and its disorder context* for next turn
-            session.offering_script = {
-                "script_id": matched_script_id,
-                "script_title": script_title,
-                "disorder_key": matched_disorder_key # Store the context
-            }
-
-            # Create a thoughtful offer message
-            ai_response_content = f"Based on what you've shared, I think a guided exercise called '{script_title}' might be helpful for addressing some of the challenges you're experiencing. Would you like me to share this exercise with you now? It's completely up to you, and we can continue our conversation either way."
-            final_response_type = "manual" # Offering is a manual-type response
-            print(f"INFO: Offering script '{matched_script_id}' (Disorder: {matched_disorder_key}) to user")
+            # --- Only offer if not already delivered ---
+            if (matched_script_id, matched_disorder_key) not in session.delivered_scripts:
+                print(f"INFO: Condition match for script '{matched_script_id}' (Disorder: {matched_disorder_key}) and message count ({session.message_count}) threshold met.")
+                script_title = self.condition_manager.get_script_title(matched_script_id, matched_disorder_key) or matched_script_id
+                session.offering_script = {
+                    "script_id": matched_script_id,
+                    "script_title": script_title,
+                    "disorder_key": matched_disorder_key
+                }
+                ai_response_content = f"Based on what you've shared, I think a guided exercise called '{script_title}' might be helpful for addressing some of the challenges you're experiencing. Would you like me to share this exercise with you now? It's completely up to you, and we can continue our conversation either way."
+                final_response_type = "manual"
+                print(f"INFO: Offering script '{matched_script_id}' (Disorder: {matched_disorder_key}) to user")
+            else:
+                # --- Script already delivered, do not re-offer ---
+                ai_response_content = (
+                    "We've already explored the main exercise I can offer for your situation. "
+                    "Let's continue our conversation and see how else I can support you."
+                )
+                final_response_type = "manual"
 
         elif matched_script_id:
             # Script matched but message count too low
