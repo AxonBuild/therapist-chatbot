@@ -344,37 +344,39 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
         return prompt.strip()
 
     @compute_time
-    def process_message(self, user_message: str, session_id: str = "default") -> str:
-        """Processes a user message and returns the assistant's response."""
+    def process_message(self, user_message: str, session_id: str = "default") -> dict | str:
+        """Processes a user message and returns the assistant's response.
+        
+        Returns:
+            For regular responses: a string containing the assistant's message
+            For script responses: a dictionary with script metadata including content, script_id, and disorder_key
+        """
         # 1. Get/Create Session & Update History
         session = self._get_or_create_session(session_id)
         session.add_message("user", user_message)
 
-        # --- No single disorder context needed here anymore ---
-
         # 2. Identify Conditions across ALL disorders (LLM Call 1)
         history_str = session.format_history_for_prompt()
-        condition_prompt = self._build_condition_prompt(history_str) # No disorder key needed
+        condition_prompt = self._build_condition_prompt(history_str)
         condition_response = None
         if condition_prompt:
             condition_response = self.llm_client_2.send_prompt(condition_prompt, temperature=0.7)
-        self._parse_condition_response(condition_response, session) # No disorder key needed
+        self._parse_condition_response(condition_response, session)
 
         # 3. Check for Script Match across ALL disorders
         true_conditions_set = session.get_true_conditions_set()
-        # find_matching_script now returns (script_id, disorder_key)
         matched_script_id, matched_disorder_key = self.condition_manager.find_matching_script(true_conditions_set)
 
         # 4. Response Decision Logic
         ai_response_content = None
-        final_response_type = "manual" # Default
+        final_response_type = "manual"  # Default
 
         # Check if we're in script offering mode from previous turn
         if session.offering_script:
             # Retrieve details from the stored offer
             offered_script_id = session.offering_script.get("script_id")
             offered_script_title = session.offering_script.get("script_title")
-            offered_disorder_key = session.offering_script.get("disorder_key") # Get the disorder context of the offered script
+            offered_disorder_key = session.offering_script.get("disorder_key")
 
             # Clear the offering state regardless of user's answer
             session.offering_script = None
@@ -387,12 +389,24 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
                 script_content = self.condition_manager.get_script_content(offered_script_id, offered_disorder_key, SCRIPTS_DIR)
                 if script_content:
                     lead_in = f"I'm glad you're open to trying this. Here's the '{offered_script_title}' exercise:\n\n---\n"
-                    ai_response_content = f"{lead_in}SCRIPT_START\n{script_content}\nSCRIPT_END"
+                    formatted_content = f"{lead_in}SCRIPT_START\n{script_content}\nSCRIPT_END"
                     final_response_type = "script"
                     print(f"INFO: Delivering script '{offered_script_id}' (Disorder: {offered_disorder_key}) after user acceptance")
                     session.message_count = 0
-                    # --- Mark this script as delivered ---
+                    # Mark this script as delivered
                     session.delivered_scripts.add((offered_script_id, offered_disorder_key))
+                    
+                    # Update the session history with just the formatted content for conversation record
+                    session.add_message("assistant", formatted_content)
+                    
+                    # Return a dictionary with metadata instead of just the content
+                    return {
+                        "content": formatted_content,
+                        "is_script": True,
+                        "script_id": offered_script_id,
+                        "script_title": offered_script_title,
+                        "disorder_key": offered_disorder_key
+                    }
                 else:
                     print(f"WARNING: Failed to load script '{offered_script_id}' (Disorder: {offered_disorder_key}) content after user acceptance")
                     ai_response_content = f"I apologize, but I'm having trouble retrieving the exercise I mentioned. Let's continue our conversation instead. How have you been feeling lately?"
@@ -404,7 +418,7 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
 
         # Normal flow (not responding to script offer)
         elif matched_script_id and matched_disorder_key and session.message_count >= MIN_MESSAGES_FOR_SCRIPT:
-            # --- Only offer if not already delivered ---
+            # Only offer if not already delivered
             if (matched_script_id, matched_disorder_key) not in session.delivered_scripts:
                 print(f"INFO: Condition match for script '{matched_script_id}' (Disorder: {matched_disorder_key}) and message count ({session.message_count}) threshold met.")
                 script_title = self.condition_manager.get_script_title(matched_script_id, matched_disorder_key) or matched_script_id
@@ -417,7 +431,7 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
                 final_response_type = "manual"
                 print(f"INFO: Offering script '{matched_script_id}' (Disorder: {matched_disorder_key}) to user")
             else:
-                # --- Script already delivered, do not re-offer ---
+                # Script already delivered, do not re-offer
                 ai_response_content = (
                     "We've already explored the main exercise I can offer for your situation. "
                     "Let's continue our conversation and see how else I can support you."
@@ -430,7 +444,6 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
             final_response_type = "manual"
         else:
             # No script conditions met anywhere
-            # print("INFO: No script conditions met across any disorder. Generating manual response.")
             final_response_type = "manual"
 
         # 5. Generate Manual Response if needed (LLM Call 2)
@@ -440,13 +453,16 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
             ai_response_content = self.llm_client.send_prompt(manual_prompt, temperature=0.8)
             if not ai_response_content:
                 print("ERROR: Failed to generate manual response from LLM. Using fallback.")
-                ai_response_content = "I understand. It sounds like a difficult situation. Could you tell me a little more about that?" # Generic fallback
+                ai_response_content = "I understand. It sounds like a difficult situation. Could you tell me a little more about that?"  # Generic fallback
 
-        # 6. Update session history and return
-        session.add_message("assistant", ai_response_content)
-        # print(f"Assistant Response ({final_response_type}):\n{ai_response_content}") # Debug
+        # 6. Update session history and return for manual responses
+        if final_response_type == "manual":
+            session.add_message("assistant", ai_response_content)
+            return ai_response_content
+        
+        # For script responses, we already returned earlier
+        # This should not be reached if we have a script, but just in case:
         return ai_response_content
-
 # --- Example Usage ---
 if __name__ == "__main__":
     print("Initializing Chatbot...")

@@ -4,9 +4,11 @@ import json
 import time
 import base64
 import tempfile
+import re
 from dotenv import load_dotenv
 from typing import List, Dict, Any, Optional
 from openai import OpenAI
+import glob
 
 # Import the therapeutic chatbot from backend
 from backend_new import TherapeuticChatbot, OPENROUTER_API_KEY
@@ -16,6 +18,84 @@ load_dotenv()
 
 # Create OpenAI client for TTS
 openai_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+
+def get_script_audio_path(script_id: str, disorder_key: str, base_scripts_dir: str) -> str | None:
+    """
+    Returns the path to the pre-generated audio file for a script, if it exists.
+    
+    Args:
+        script_id: Format like "SCRIPT_A" (base identifier without extension)
+        disorder_key: Folder name like "phobic" or "sleep"
+        base_scripts_dir: Base directory for all script files
+    
+    Returns:
+        Full path to the audio file if found, None otherwise
+    """
+    # Normalize script_id by removing any file extension
+    if "." in script_id:
+        script_id = script_id.split(".")[0]  # Remove extension if present
+    
+    # Ensure script_id starts with "SCRIPT_"
+    if not script_id.startswith("SCRIPT_"):
+        script_id = f"SCRIPT_{script_id}"
+    
+    # Exact path structure: scripts/[disorder_key]/scripts/
+    script_dir = os.path.join("scripts", disorder_key, "scripts")
+    print(f"DEBUG: Looking for audio files in {script_dir}")
+    
+    # Check if the directory exists
+    if not os.path.exists(script_dir):
+        print(f"WARNING: Directory does not exist: {script_dir}")
+        return None
+    
+    # List all audio files in the directory
+    try:
+        audio_files = [f for f in os.listdir(script_dir) if f.endswith('.mp3')]
+        
+        # Print all available audio files for debugging
+        if audio_files:
+            print(f"DEBUG: Available audio files in {script_dir}:")
+            for file in audio_files:
+                print(f"  - {file}")
+        else:
+            print(f"DEBUG: No audio files found in {script_dir}")
+            return None
+        
+        # Look for any file that starts with the script_id
+        for file in audio_files:
+            if file.startswith(f"{script_id}"):
+                path = os.path.join(script_dir, file)
+                print(f"DEBUG: Found match starting with {script_id}: {path}")
+                return path
+        
+        print(f"WARNING: No audio file starting with {script_id} found in {script_dir}")
+        return None
+        
+    except Exception as e:
+        print(f"ERROR: Failed to list audio files in {script_dir}: {e}")
+        return None
+
+def debug_audio_files(base_dir="."):
+    """
+    List all audio files in the scripts directories to help with debugging.
+    Can be called from debug mode to see what files are available.
+    """
+    audio_files = {}
+    
+    # Check for all disorder directories
+    for root, dirs, files in os.walk(base_dir):
+        for dir_name in dirs:
+            if dir_name == "scripts":
+                # This is a scripts directory
+                scripts_path = os.path.join(root, dir_name)
+                parent_dir = os.path.basename(os.path.dirname(scripts_path))
+                
+                # Find all MP3 files in this directory
+                mp3_files = glob.glob(os.path.join(scripts_path, "*.mp3"))
+                if mp3_files:
+                    audio_files[parent_dir] = mp3_files
+    
+    return audio_files
 
 # Function to convert text to speech using OpenAI
 def text_to_speech(text, voice="alloy"):
@@ -284,6 +364,12 @@ with st.sidebar:
             st.session_state.selected_voice = selected_voice
             st.rerun()
     
+    # Debug audio files button (only shown in debug mode)
+    if st.session_state.debug_mode:
+        if st.button("Debug Audio Files"):
+            audio_files = debug_audio_files()
+            st.json(audio_files)
+    
     # Reset button
     if st.button("Reset Conversation", use_container_width=True):
         clear_chat_history()
@@ -321,35 +407,107 @@ if user_input := st.chat_input("Share what's on your mind..."):
 
         # --- Handle Backend Response ---
         is_script = False
-        display_content = response # Default to the raw response
-
-        # Check for script markers (adjust markers if changed in backend)
-        script_start_marker = "SCRIPT_START"
-        script_end_marker = "SCRIPT_END"
-
-        if script_start_marker in response and script_end_marker in response:
-            is_script = True
-            # Extract content between markers, including the lead-in message
-            lead_in_end = response.find(script_start_marker)
-            lead_in = response[:lead_in_end].strip()
-            script_content_start = lead_in_end + len(script_start_marker)
-            script_content_end = response.find(script_end_marker)
-            script_content = response[script_content_start:script_content_end].strip()
-
-            display_content = f"{lead_in}\n\n{script_content}" # Content for display
-            display_content_for_tts = f"{lead_in} {script_content}" # Content for TTS (flattened)
-            script_voice = "nova" if st.session_state.selected_voice != "nova" else "shimmer"
-            tts_voice = script_voice
+        script_id = None
+        disorder_key = None
+        script_title = None
+        display_content = ""
+        
+        # Check if response is a dictionary (contains script metadata)
+        if isinstance(response, dict):
+            print("DEBUG: Received dictionary response from backend:", response)
+            display_content = response.get("content", "")
+            is_script = response.get("is_script", False)
+            script_id = response.get("script_id")
+            disorder_key = response.get("disorder_key")
+            script_title = response.get("script_title")
+            
+            # Still check for script markers to extract the actual content
+            script_start_marker = "SCRIPT_START"
+            script_end_marker = "SCRIPT_END"
+            
+            if script_start_marker in display_content and script_end_marker in display_content:
+                lead_in_end = display_content.find(script_start_marker)
+                lead_in = display_content[:lead_in_end].strip()
+                script_content_start = lead_in_end + len(script_start_marker)
+                script_content_end = display_content.find(script_end_marker)
+                script_content = display_content[script_content_start:script_content_end].strip()
+                
+                # Format for display while keeping metadata
+                display_content = f"{lead_in}\n\n{script_content}"
+                display_content_for_tts = f"{lead_in} {script_content}"  # Flattened for TTS
+            else:
+                # Fallback if somehow the markers are missing
+                display_content_for_tts = display_content
         else:
-            # Not a script, use the response as is
+            # Response is a string
             display_content = response
             display_content_for_tts = response
+            
+            # Check for embedded script markers in string response (fallback case)
+            script_start_marker = "SCRIPT_START"
+            script_end_marker = "SCRIPT_END"
+            
+            if script_start_marker in display_content and script_end_marker in display_content:
+                is_script = True
+                lead_in_end = display_content.find(script_start_marker)
+                lead_in = display_content[:lead_in_end].strip()
+                script_content_start = lead_in_end + len(script_start_marker)
+                script_content_end = display_content.find(script_end_marker)
+                script_content = display_content[script_content_start:script_content_end].strip()
+                
+                display_content = f"{lead_in}\n\n{script_content}"  # Content for display
+                display_content_for_tts = f"{lead_in} {script_content}"  # Flattened for TTS
+                
+                # Try to extract script_id from content as fallback
+                script_pattern = r'SCRIPT_[A-Z]_[A-Za-z_]+'
+                script_matches = re.findall(script_pattern, display_content)
+                if script_matches:
+                    script_id = script_matches[0]
+                    
+                    # Try to determine disorder key as fallback
+                    if "sleep" in display_content.lower() or "night" in display_content.lower():
+                        disorder_key = "sleep"
+                    elif "phobic" in display_content.lower() or "anxiety" in display_content.lower():
+                        disorder_key = "phobic"
+                    else:
+                        disorder_key = "general"  # default fallback
+
+        # Set voice based on whether this is a script
+        if is_script:
+            tts_voice = "nova" if st.session_state.selected_voice != "nova" else "shimmer"
+        else:
             tts_voice = st.session_state.selected_voice
 
         # Generate speech if enabled
         audio_path = None
-        if st.session_state.speech_enabled and display_content_for_tts:
-            audio_path = text_to_speech(display_content_for_tts, voice=tts_voice)
+        if is_script and st.session_state.speech_enabled:
+            if script_id and disorder_key:
+                print(f"DEBUG: Looking for audio for script_id={script_id}, disorder_key={disorder_key}")
+                # Try to get pre-generated audio
+                audio_path = get_script_audio_path(script_id, disorder_key, ".")
+                
+                if audio_path:
+                    print(f"DEBUG: Found pre-generated audio at {audio_path}")
+                else:
+                    print(f"DEBUG: No pre-generated audio found for {script_id} in {disorder_key}")
+                  
+            # If still no audio path, fallback to TTS
+            if not audio_path and display_content_for_tts:
+                print(f"DEBUG: Falling back to TTS for script")
+                try:
+                    # Validate display_content_for_tts is a string
+                    if not isinstance(display_content_for_tts, str):
+                        display_content_for_tts = str(display_content_for_tts)
+                    audio_path = text_to_speech(display_content_for_tts, voice=tts_voice)
+                except Exception as e:
+                    print(f"ERROR: TTS generation failed: {e}")
+                    
+        elif st.session_state.speech_enabled and display_content_for_tts:
+            # For non-script messages, use TTS
+            try:
+                audio_path = text_to_speech(display_content_for_tts, voice=tts_voice)
+            except Exception as e:
+                print(f"ERROR: TTS generation failed: {e}")
 
         # Add the assistant message to chat history
         debug_info = None
@@ -358,8 +516,13 @@ if user_input := st.chat_input("Share what's on your mind..."):
                 backend_session = st.session_state.chatbot.sessions[session_id]
                 debug_info = {
                     "phase": "Identifying your concerns",
-                    "true_conditions": list(backend_session.get_true_conditions()),
-                    "message_count": backend_session.message_count
+                    "true_conditions": list(backend_session.get_true_conditions_set()),
+                    "message_count": backend_session.message_count,
+                    "is_script": is_script,
+                    "script_id": script_id,
+                    "disorder_key": disorder_key,
+                    "script_title": script_title,
+                    "response_type": "dictionary" if isinstance(response, dict) else "string"
                 }
             else:
                 debug_info = {
@@ -381,6 +544,9 @@ if user_input := st.chat_input("Share what's on your mind..."):
 
     except Exception as e:
         st.error(f"An error occurred while processing your message: {e}")
+        if st.session_state.debug_mode:
+            import traceback
+            st.error(traceback.format_exc())
 
 # Disclaimer
 st.markdown("""
