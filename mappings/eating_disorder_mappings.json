@@ -38,12 +38,6 @@
       "required_conditions": [
         "stress_related_loss"
       ]
-    },
-    "SCRIPT_F": {
-      "title": "Giving My Body a Voice",
-      "required_conditions": [
-        "mild_disconnection"
-      ]
     }
   }
 }
