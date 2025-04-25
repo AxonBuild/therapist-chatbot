@@ -91,23 +91,19 @@ class ChatSession:
     def __init__(self, session_id: str, all_initial_conditions: dict[str, dict[str, str]]):
         self.session_id: str = session_id
         self.conversation_history: list[dict] = []
-        # Store conditions nested by disorder: {disorder_key: {condition_key: bool}}
         self.identified_conditions: dict[str, dict[str, bool]] = {}
         for disorder, conditions in all_initial_conditions.items():
             self.identified_conditions[disorder] = {key: False for key in conditions}
-
         self.suggested_follow_ups: list[str] = []
-        self.message_count: int = 0 # Total messages (user + assistant)
-        self.offering_script: dict | None = None # Track if we're offering a script {script_id: str, script_title: str, disorder_key: str}
-        self.delivered_scripts: set[tuple[str, str]] = set()  # Track delivered scripts as (script_id, disorder_key)
+        self.message_count: int = 0
+        self.offering_script: dict | None = None
+        self.delivered_scripts: set[tuple[str, str]] = set()
 
     def add_message(self, role: str, content: str):
-        """Adds a message to the history and increments count."""
         self.conversation_history.append({"role": role, "content": content})
         self.message_count += 1
 
     def get_true_conditions_set(self) -> set[str]:
-        """Returns a flat set of condition keys currently marked as True across all disorders."""
         true_set = set()
         for disorder, conditions in self.identified_conditions.items():
             for key, value in conditions.items():
@@ -116,183 +112,97 @@ class ChatSession:
         return true_set
 
     def format_history_for_prompt(self) -> str:
-        """Formats the conversation history into a simple string for the LLM."""
-        formatted = []
-        for msg in self.conversation_history:
-            role = "AI" if msg["role"] == "assistant" else "USER"
-            formatted.append(f"{role}: {msg['content']}")
-        return "\n".join(formatted)
+        return "\n".join([f"{m['role'].capitalize()}: {m['content']}" for m in self.conversation_history])
 
 # --- Condition and Script Management ---
 
 class ConditionScriptManager:
-    """Loads and manages disorder conditions and script mappings."""
+    """Loads and manages all disorder conditions and script mappings in a merged structure."""
     def __init__(self, mappings_dir: str):
         self.mappings_dir = mappings_dir
-        self.disorder_data = {} # Stores data like {"sleep": {"conditions": {...}, "scriptMappings": {...}}, "anxiety": {...}}
-        self._all_conditions_map: dict[str, str] = {} # Map: {description: disorder_key}
-        self._load_all_mappings()
+        self.disorder_data = {}  # {disorder_key: {"conditions": {...}, "scriptMappings": {...}}}
+        self.merged_conditions = {}  # {key: {"description": ..., "disorder": ...}}
+        self._load_and_merge_mappings()
 
-    def _load_all_mappings(self):
-        """Loads all JSON mapping files and builds the all_conditions_map."""
-        if not os.path.isdir(self.mappings_dir):
-            print(f"WARNING: Mappings directory not found: {self.mappings_dir}")
-            return
+    def _load_and_merge_mappings(self):
+        """Loads all JSON mapping files and merges conditions into a single dict."""
         for filename in os.listdir(self.mappings_dir):
-            if filename.endswith("_mappings.json"):
-                disorder_key = filename.replace("_mappings.json", "")
-                filepath = os.path.join(self.mappings_dir, filename)
-                try:
-                    with open(filepath, 'r', encoding='utf-8') as f:
-                        data = json.load(f)
-                        # Basic validation
-                        if isinstance(data, dict) and "scriptMappings" in data:
-                            # Find the conditions key (e.g., "sleep_conditions")
-                            conditions_key = f"{disorder_key}_conditions"
-                            if conditions_key in data and isinstance(data[conditions_key], dict):
-                                self.disorder_data[disorder_key] = {
-                                    "conditions": data[conditions_key],
-                                    "scriptMappings": data["scriptMappings"]
-                                }
-                                # Add conditions to the global map
-                                for key, desc in data[conditions_key].items():
-                                    if desc in self._all_conditions_map:
-                                        print(f"WARNING: Duplicate condition description found: '{desc}' in '{disorder_key}' and '{self._all_conditions_map[desc]}'. Using first found.")
-                                    else:
-                                        self._all_conditions_map[desc] = disorder_key
-                                print(f"INFO: Loaded mappings for '{disorder_key}'")
-                            else:
-                                print(f"WARNING: Could not find or invalid conditions key '{conditions_key}' in {filename}")
-                        else:
-                            print(f"WARNING: Invalid format or missing keys in {filename}")
-                except json.JSONDecodeError:
-                    print(f"ERROR: Failed to decode JSON from {filename}")
-                except Exception as e:
-                    print(f"ERROR: Failed to load or process {filename}: {e}")
+            if filename.endswith(".json"):
+                base = os.path.splitext(filename)[0]  # e.g., 'sleep_mappings'
+                if base.endswith("_mappings"):
+                    disorder_key = base[:-len("_mappings")]
+                else:
+                    disorder_key = base
+                conditions_key = f"{disorder_key}_conditions"
+                with open(os.path.join(self.mappings_dir, filename), "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    print("DEBUG: Looking for conditions_key:", conditions_key, "in", filename)
+                    if conditions_key in data and "scriptMappings" in data:
+                        # Merge conditions
+                        for key, desc in data[conditions_key].items():
+                            if key in self.merged_conditions:
+                                print(f"WARNING: Duplicate condition key '{key}' found in '{disorder_key}'.")
+                            self.merged_conditions[key] = {
+                                "description": desc,
+                                "disorder": disorder_key
+                            }
+                        # Store full mapping for script logic
+                        self.disorder_data[disorder_key] = {
+                            "conditions": data[conditions_key],
+                            "scriptMappings": data["scriptMappings"]
+                        }
+                        #print("disorder data",self.disorder_data[disorder_key])
 
-    def get_all_condition_descriptions(self) -> list[str]:
-        """Gets a list of all condition descriptions across all disorders."""
-        return list(self._all_conditions_map.keys())
+                        print(f"INFO: Loaded and merged mappings for '{disorder_key}'")
+                    else:
+                        print(f"WARNING: Could not find valid keys in {filename}. Found keys: {list(data.keys())}")
 
-    def get_disorder_and_key_from_description(self, description: str) -> tuple[str | None, str | None]:
-        """Finds the disorder and internal condition key based on its description."""
-        disorder_key = self._all_conditions_map.get(description)
-        if disorder_key:
-            conditions = self.get_conditions_for_disorder(disorder_key)
-            if conditions:
-                for key, desc in conditions.items():
-                    if desc == description:
-                        return disorder_key, key
-        return None, None # Return None for both if not found
+    def get_merged_conditions(self) -> dict:
+        return self.merged_conditions
+
+    def get_disorder_keys(self) -> list[str]:
+        return list(self.disorder_data.keys())
+
+    def get_conditions_for_disorder(self, disorder_key: str) -> dict:
+        return self.disorder_data.get(disorder_key, {}).get("conditions", {})
 
     def find_matching_script(self, identified_conditions_set: set[str]) -> tuple[str | None, str | None]:
-        """
-        Finds the first script whose requirements are met by the identified conditions.
-        Checks across all loaded disorders.
-        Returns (script_id, disorder_key) or (None, None).
-        """
         for disorder_key, data in self.disorder_data.items():
             mappings = data.get("scriptMappings")
             if not mappings:
                 continue
-
-            # Get conditions relevant *only* to this disorder for checking its scripts
-            # Note: identified_conditions_set contains keys like 'sleep_onset_insomnia'
-            # We need to filter this set based on the current disorder_key if keys are prefixed,
-            # or assume the set contains globally unique keys if not prefixed.
-            # Assuming keys are unique across disorders (e.g., 'sleep_onset_insomnia', 'anxiety_panic_attack')
-            # If keys are NOT unique (e.g., 'difficulty_sleeping' in multiple files), this needs refinement.
-
             for script_id, script_data in mappings.items():
                 required = set(script_data.get("required_conditions", []))
-                # Check if the required conditions for *this script* are a subset
-                # of the *globally identified* true conditions.
                 if required and required.issubset(identified_conditions_set):
                     print(f"DEBUG: Matched script '{script_id}' from disorder '{disorder_key}'")
-                    return script_id, disorder_key # Return the first match
-
-        return None, None # No match found across all disorders
-
-    def get_disorder_keys(self) -> list[str]:
-        """Returns a list of loaded disorder keys (e.g., ['sleep', 'anxiety'])."""
-        return list(self.disorder_data.keys())
-
-    def get_conditions_for_disorder(self, disorder_key: str) -> dict | None:
-        """Gets the condition dictionary {key: description} for a disorder."""
-        return self.disorder_data.get(disorder_key, {}).get("conditions")
-
-    def get_condition_descriptions(self, disorder_key: str) -> list[str] | None:
-        """Gets a list of condition descriptions for a disorder."""
-        conditions = self.get_conditions_for_disorder(disorder_key)
-        return list(conditions.values()) if conditions else None
-
-    def get_condition_key_from_description(self, description: str, disorder_key: str) -> str | None:
-        """Finds the internal condition key based on its description."""
-        conditions = self.get_conditions_for_disorder(disorder_key)
-        if conditions:
-            for key, desc in conditions.items():
-                if desc == description:
-                    return key
-        return None
+                    return script_id, disorder_key
+        return None, None
 
     def get_script_title(self, script_id: str, disorder_key: str) -> str | None:
-        """Gets the title of a specific script."""
         return self.disorder_data.get(disorder_key, {}).get("scriptMappings", {}).get(script_id, {}).get("title")
 
-    def get_script_content(self, script_id: str, disorder_key: str, script_dir: str) -> str | None:
-        """Loads script content by searching the relevant disorder directory."""
-        script_dir = os.path.join(script_dir, disorder_key, "scripts")
-
-        if not os.path.isdir(script_dir):
-            print(f"ERROR: Script directory not found: {script_dir}")
+    def get_script_content(self, script_id: str, disorder_key: str, base_scripts_dir: str) -> str | None:
+        script_dir = os.path.join(base_scripts_dir, disorder_key, "scripts")
+        # Match any file that starts with the script_id and ends with .txt or .docx
+        pattern_txt = os.path.join(script_dir, f"{script_id}*.txt")
+        pattern_docx = os.path.join(script_dir, f"{script_id}*.docx")
+        matches = glob.glob(pattern_txt) + glob.glob(pattern_docx)
+        if not matches:
+            print(f"WARNING: Script file not found: {pattern_txt} or {pattern_docx}")
             return None
-
-        found_file_path = None
-        try:
-            # Use glob to find files starting with the script_id
-            # This handles potential variations after the ID more easily
-            search_pattern = os.path.join(script_dir, f"{script_id}*")
-            possible_files = glob.glob(search_pattern)
-
-            if not possible_files:
-                print(f"ERROR: No file starting with '{script_id}' found in {script_dir}")
+        script_path = matches[0]  # Use the first match
+        # If it's a .docx, you may want to extract text (requires python-docx)
+        if script_path.endswith(".docx"):
+            try:
+                from docx import Document
+                doc = Document(script_path)
+                return "\n".join([para.text for para in doc.paragraphs])
+            except ImportError:
+                print("ERROR: python-docx not installed. Cannot read .docx files.")
                 return None
-
-            # Filter for actual files (glob might return directories if names match)
-            found_files = [f for f in possible_files if os.path.isfile(f)]
-
-            if not found_files:
-                 print(f"ERROR: Pattern '{script_id}*' matched directories but no files in {script_dir}")
-                 return None
-
-            found_file_path = found_files[0] # Use the first file found
-            if len(found_files) > 1:
-                 print(f"WARNING: Multiple files found starting with '{script_id}' in {script_dir}. Using: {found_file_path}")
-
-            # --- Loading Logic ---
-            print(f"INFO: Loading script content from: {found_file_path}")
-            if found_file_path.endswith(".txt"):
-                with open(found_file_path, 'r', encoding='utf-8') as f:
-                    return f.read()
-            elif found_file_path.endswith(".docx"):
-                try:
-                    import docx # Local import to avoid making it a hard dependency if not used
-                    doc = docx.Document(found_file_path)
-                    full_text = [para.text for para in doc.paragraphs]
-                    return '\n'.join(full_text)
-                except ImportError:
-                    print("ERROR: 'python-docx' library not installed. Cannot read .docx file. Please run: pip install python-docx")
-                    return None
-                except Exception as e:
-                    print(f"ERROR: Failed to read .docx file {found_file_path}: {e}")
-                    return None
-            else:
-                print(f"WARNING: Found file {found_file_path} has unsupported extension. Cannot load.")
-                return None
-
-        except Exception as e:
-            print(f"ERROR: Failed to list/access/read script file in {script_dir} for {script_id}: {e}")
-            return None
+        else:
+            with open(script_path, "r", encoding="utf-8") as f:
+                return f.read()
 
 # --- Main Chatbot Logic ---
 
@@ -306,7 +216,7 @@ class TherapeuticChatbot:
         
         self.llm_client_2 = LLMClient(
             api_key=OPENROUTER_API_KEY,
-            model_id="openai/gpt-4.1-nano",
+            model_id="openai/gpt-4.1-mini",
         )
         self.condition_manager = ConditionScriptManager(MAPPINGS_DIR)
         self.sessions: dict[str, ChatSession] = {}
@@ -341,41 +251,32 @@ class TherapeuticChatbot:
 
     def _build_condition_prompt(self, history_str: str) -> str | None:
         """Builds the prompt for the condition identification LLM call using ALL conditions."""
-        all_descriptions = self.condition_manager.get_all_condition_descriptions()
-        if not all_descriptions:
-            print("ERROR: No condition descriptions found across any disorders.")
+        merged_conditions = self.condition_manager.get_merged_conditions()
+        if not merged_conditions:
+            print("ERROR: No merged conditions found.")
             return None
-
-        # Sort descriptions for consistent prompt order
-        all_descriptions.sort()
-        conditions_list_str = "\n".join([f"- {desc}" for desc in all_descriptions])
-
+        conditions_list_str = "\n".join([f"- {key}: {val['description']}" for key, val in merged_conditions.items()])
+        #print("condition_list_str: ",conditions_list_str)
         prompt = f"""
-Analyze the following conversation history and determine if the user exhibits any of the listed conditions based *only* on the information present in the conversation.
+Analyze the following conversation history and determine if the user exhibits any of the listed conditions.
 
 # Conversation History
 {history_str}
 
-# Conditions to Evaluate (Across all potential areas):
+# Conditions to Evaluate:
 {conditions_list_str}
 
 # Instructions:
-1. Evaluate each condition independently based on the *entire* conversation history provided.
-2. Respond *only* in JSON format. Do not add any introductory text or explanations before or after the JSON object.
-3. The JSON object must have:
-    - Keys for *every* condition description listed above.
-    - Values must be boolean (`true` or `false`).
-    - A key named "follow-ups" with a value that is a JSON array of exactly 5 potential, relevant, open-ended follow-up questions the assistant could ask the user next, based on the conversation.
+1. For each condition, if you are confident the user is experiencing it, include its key in your response.
+2. Respond ONLY with a JSON object with:
+   - "present_conditions": a list of the keys that are present/true for the user.
+   - "follow-ups": a list of 5 relevant, open-ended follow-up questions.
 
 # Response (JSON only):
-```json
 {{
-  "condition description 1 (from list above)": true/false,
-  "condition description 2 (from list above)": true/false,
-  ...
-  "follow-ups": ["question 1", "question 2", "question 3", "question 4", "question 5"]
+  "present_conditions": ["key1", "key2"],
+  "follow-ups": ["question 1", "question 2", ...]
 }}
-```
 """
         return prompt.strip()
 
@@ -384,67 +285,32 @@ Analyze the following conversation history and determine if the user exhibits an
         if not response_str:
             print("WARNING: Received empty response from condition identification LLM.")
             return
-
-        # Clean potential markdown code fences
-        if response_str.startswith("```json"):
-            response_str = response_str[7:]
-        if response_str.endswith("```"):
-            response_str = response_str[:-3]
         response_str = response_str.strip()
-        print(f"INFO: Parsing condition response (length: {len(response_str)})") # Avoid printing potentially huge responses
-
         try:
             data = json.loads(response_str)
-            if not isinstance(data, dict):
-                raise ValueError("Response is not a JSON object.")
-
-            updated_count = 0
-            true_conditions_printout = []  # Collect (disorder, condition_key, description)
-
-            # Update conditions
-            for desc, value in data.items():
-                if desc == "follow-ups":
-                    continue
-
-                disorder_key, condition_key = self.condition_manager.get_disorder_and_key_from_description(desc)
-
-                if disorder_key and condition_key:
-                    if disorder_key in session.identified_conditions and condition_key in session.identified_conditions[disorder_key]:
-                        if isinstance(value, bool):
-                            session.identified_conditions[disorder_key][condition_key] = value
-                            updated_count += 1
-                            if value:
-                                true_conditions_printout.append((disorder_key, condition_key, desc))
-                        else:
-                            print(f"WARNING: Invalid boolean value for condition '{desc}' (Disorder: {disorder_key}, Key: {condition_key}): {value}")
-                    else:
-                        print(f"WARNING: Condition '{desc}' (Disorder: {disorder_key}, Key: {condition_key}) found in response but not initialized in session state.")
-
+            present_keys = data.get("present_conditions", [])
+            # Reset all to False first
+            for disorder, conditions in session.identified_conditions.items():
+                for key in conditions:
+                    conditions[key] = False
+            # Set only present keys to True
+            true_conditions_printout = []
+            for key in present_keys:
+                for disorder, conditions in session.identified_conditions.items():
+                    if key in conditions:
+                        conditions[key] = True
+                        true_conditions_printout.append((disorder, key))
             # Print all true conditions after update
             if true_conditions_printout:
                 print("TRUE CONDITIONS THIS CALL:")
-                for disorder, key, desc in true_conditions_printout:
-                    print(f"  - [{disorder}] {key}: {desc}")
+                for disorder, key in true_conditions_printout:
+                    print(f"  - [{disorder}] {key}")
             else:
                 print("No conditions marked as true in this call.")
-
-            # Update follow-ups (remains the same)
-            if "follow-ups" in data and isinstance(data["follow-ups"], list):
-                session.suggested_follow_ups = [str(q) for q in data["follow-ups"]]
-            else:
-                print("WARNING: 'follow-ups' key missing or not a list in LLM response.")
-                session.suggested_follow_ups = [] # Clear old ones if new ones are invalid
-
-            print(f"INFO: Parsed condition response. Updated {updated_count} conditions across disorders.")
-            # print(f"DEBUG: Session conditions after update: {json.dumps(session.identified_conditions, indent=2)}") # Debug
-
-        except json.JSONDecodeError as e:
-            print(f"ERROR: Failed to decode JSON response for conditions: {e}\nResponse snippet:\n{response_str[:500]}...") # Print snippet
-            session.suggested_follow_ups = []
+            # Handle follow-ups
+            session.suggested_follow_ups = data.get("follow-ups", [])
         except Exception as e:
-            print(f"ERROR: Failed to parse condition response: {e}\nResponse snippet:\n{response_str[:500]}...") # Print snippet
-            session.suggested_follow_ups = []
-
+            print(f"ERROR: Failed to parse condition response: {e}")
 
     def _build_manual_response_prompt(self, session: ChatSession) -> str:
         """Builds the prompt for generating a manual, empathetic response."""
