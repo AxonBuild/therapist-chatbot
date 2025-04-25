@@ -1,6 +1,7 @@
 import json
 import os
-import glob # For searching files
+import glob
+import time # For searching files
 from openai import OpenAI # Use OpenAI library structure for OpenRouter
 from dotenv import load_dotenv
 load_dotenv()
@@ -43,6 +44,15 @@ Act as an empathetic, supportive assistant. Follow these guidelines:
 10. **Use Follow-ups:** Incorporate the provided follow-up questions naturally, adapting them to the conversation flow.
 """
 
+def compute_time(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        print(f"\n>> Function {func.__name__} took {end_time - start_time:.2f} seconds to execute.\n")
+        return result
+    return wrapper
+
 # --- LLM Client ---
 
 class LLMClient:
@@ -53,6 +63,7 @@ class LLMClient:
         self.model_id = model_id
         self.client = OpenAI(base_url="https://openrouter.ai/api/v1",api_key=OPENROUTER_API_KEY)
 
+    @compute_time
     def send_prompt(self, prompt: str, temperature: float = 0.5, system_message: str | None = None) -> str | None:
         """Sends a prompt to the LLM and returns the text response."""
         messages = []
@@ -292,6 +303,11 @@ class TherapeuticChatbot:
             api_key=OPENROUTER_API_KEY,
             model_id=OPENROUTER_MODEL_ID,
         )
+        
+        self.llm_client_2 = LLMClient(
+            api_key=OPENROUTER_API_KEY,
+            model_id="openai/gpt-4.1-nano",
+        )
         self.condition_manager = ConditionScriptManager(MAPPINGS_DIR)
         self.sessions: dict[str, ChatSession] = {}
         # No default disorder key needed here anymore
@@ -461,6 +477,7 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
 """
         return prompt.strip()
 
+    @compute_time
     def process_message(self, user_message: str, session_id: str = "default") -> str:
         """Processes a user message and returns the assistant's response."""
         # 1. Get/Create Session & Update History
@@ -474,7 +491,7 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
         condition_prompt = self._build_condition_prompt(history_str) # No disorder key needed
         condition_response = None
         if condition_prompt:
-            condition_response = self.llm_client.send_prompt(condition_prompt, temperature=0.7)
+            condition_response = self.llm_client_2.send_prompt(condition_prompt, temperature=0.7)
         self._parse_condition_response(condition_response, session) # No disorder key needed
 
         # 3. Check for Script Match across ALL disorders
