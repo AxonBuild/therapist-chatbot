@@ -335,44 +335,45 @@ def clear_chat_history():
     st.rerun()
 
 # Settings in sidebar
-with st.sidebar:
-    st.title("Settings")
-    
-    # Debug mode toggle
-    debug_toggle = st.toggle("Debug Mode", value=st.session_state.debug_mode)
-    if debug_toggle != st.session_state.debug_mode:
-        st.session_state.debug_mode = debug_toggle
-        st.rerun()
-    
-    # Text-to-speech toggle
-    speech_toggle = st.toggle("Text-to-Speech", value=st.session_state.speech_enabled)
-    if speech_toggle != st.session_state.speech_enabled:
-        st.session_state.speech_enabled = speech_toggle
-        st.rerun()
-    
-    # Voice selection for OpenAI TTS
-    if st.session_state.speech_enabled:
-        voice_options = ["alloy", "echo", "fable", "onyx", "nova", "shimmer"]
+if os.getenv("ENV") != "production":
+    with st.sidebar:
+        st.title("Settings")
         
-        selected_voice = st.selectbox(
-            "Voice", 
-            options=voice_options,
-            index=voice_options.index(st.session_state.selected_voice)
-        )
-        
-        if selected_voice != st.session_state.selected_voice:
-            st.session_state.selected_voice = selected_voice
+        # Debug mode toggle
+        debug_toggle = st.toggle("Debug Mode", value=st.session_state.debug_mode)
+        if debug_toggle != st.session_state.debug_mode:
+            st.session_state.debug_mode = debug_toggle
             st.rerun()
-    
-    # Debug audio files button (only shown in debug mode)
-    if st.session_state.debug_mode:
-        if st.button("Debug Audio Files"):
-            audio_files = debug_audio_files()
-            st.json(audio_files)
-    
-    # Reset button
-    if st.button("Reset Conversation", use_container_width=True):
-        clear_chat_history()
+        
+        # Text-to-speech toggle
+        speech_toggle = st.toggle("Text-to-Speech", value=st.session_state.speech_enabled)
+        if speech_toggle != st.session_state.speech_enabled:
+            st.session_state.speech_enabled = speech_toggle
+            st.rerun()
+        
+        # Voice selection for OpenAI TTS
+        if st.session_state.speech_enabled:
+            voice_options = ["alloy", "echo", "fable", "onyx", "nova", "shimmer"]
+            
+            selected_voice = st.selectbox(
+                "Voice", 
+                options=voice_options,
+                index=voice_options.index(st.session_state.selected_voice)
+            )
+            
+            if selected_voice != st.session_state.selected_voice:
+                st.session_state.selected_voice = selected_voice
+                st.rerun()
+        
+        # Debug audio files button (only shown in debug mode)
+        if st.session_state.debug_mode:
+            if st.button("Debug Audio Files"):
+                audio_files = debug_audio_files()
+                st.json(audio_files)
+        
+        # Reset button
+        if st.button("Reset Conversation", use_container_width=True):
+            clear_chat_history()
 
 # Display chat messages using standard Streamlit chat message approach
 for msg in st.session_state.messages:
@@ -481,6 +482,7 @@ if user_input := st.chat_input("Share what's on your mind..."):
             else:
                 tts_voice = st.session_state.selected_voice
 
+        with st.spinner("Generating Audio..."):
             # Generate speech if enabled
             audio_path = None
             if is_script and st.session_state.speech_enabled:
