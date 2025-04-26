@@ -1,6 +1,8 @@
 import json
 import os
 import glob
+import random
+import re
 import time # For searching files
 from openai import OpenAI # Use OpenAI library structure for OpenRouter
 from dotenv import load_dotenv
@@ -15,7 +17,7 @@ OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 OPENROUTER_MODEL_ID = "openai/gpt-4.1-mini"
 
 # Constants
-MIN_MESSAGES_FOR_SCRIPT = 5
+MIN_MESSAGES_FOR_SCRIPT = 10
 MAPPINGS_DIR = "mappings"
 SCRIPTS_DIR = "scripts"
 
@@ -44,6 +46,29 @@ Act as an empathetic, supportive assistant. Follow these guidelines:
 10. **Use Follow-ups:** Incorporate the provided follow-up questions naturally, adapting them to the conversation flow.
 """
 
+# use random responses to present scripts
+script_responses = [
+    "Based on what you've shared, I think a guided exercise called '{script_title}' might be helpful for addressing some of the challenges you're experiencing. Would you like me to share this exercise with you now? It's completely up to you, and we can continue our conversation either way.",
+    
+    "From what I understand about your situation, an exercise called '{script_title}' could be beneficial for the difficulties you've mentioned. Would you be interested in trying this exercise together? No pressure - we can also keep talking about other approaches.",
+    
+    "I wonder if an exercise known as '{script_title}' might help with what you're going through right now. Would you like to explore this technique? Feel free to say yes or no - I'm here to support whatever direction feels right for you.",
+    
+    "Given what you've described, an exercise called '{script_title}' might offer some relief for these challenges. Would you be open to learning about this exercise? We can certainly continue our discussion regardless of your choice.",
+    
+    "As I listen to your experience, I'm thinking an activity called '{script_title}' could be particularly relevant for your situation. Would you like me to walk you through it? It's entirely your decision, and we can proceed however feels most comfortable.",
+    
+    "Something that might help with what you're describing is a method called '{script_title}'. Would this be something you'd like to try now? There's no obligation - I'm here to follow your lead on what would be most supportive.",
+    
+    "Based on our conversation, I believe an activity called '{script_title}' could address some of these concerns. Would you be interested in hearing more about this exercise? We can continue our discussion either way - it's completely your choice.",
+    
+    "I think an activity known as '{script_title}' might be valuable for working through what you've shared. Would now be a good time to introduce this exercise? Please feel free to decline if you'd prefer to continue in another direction.",
+    
+    "After reflecting on what you've told me, an approach called '{script_title}' seems like it could be helpful here. Would you like me to guide you through this exercise? Whatever you decide is perfectly fine - I'm here to support your journey.",
+    
+    "Your experiences suggest that an exercise called '{script_title}' might provide some helpful tools for what you're facing. Would you be open to exploring this together? The choice is yours, and there's no pressure either way."
+]
+
 def compute_time(func):
     def wrapper(*args, **kwargs):
         start_time = time.time()
@@ -64,7 +89,7 @@ class LLMClient:
         self.client = OpenAI(base_url="https://openrouter.ai/api/v1",api_key=OPENROUTER_API_KEY)
 
     @compute_time
-    def send_prompt(self, prompt: str, temperature: float = 0.5, system_message: str | None = None) -> str | None:
+    def send_prompt(self, prompt: str, temperature: float = 0.5, system_message: str | None = None, extract_json: bool = False) -> str | None:
         """Sends a prompt to the LLM and returns the text response."""
         messages = []
         if system_message:
@@ -78,11 +103,33 @@ class LLMClient:
                 temperature=temperature
             )
             response = completion.choices[0].message.content
+            response = response.strip() if response else None
+            if extract_json and response:
+                response = self._extract_json(response)
+                
             # print(f"\n--- LLM Request ---\nModel: {self.model_id}\nTemp: {temperature}\nPrompt:\n{prompt}\n--- LLM Response ---\n{response}\n---\n") # Debug
-            return response.strip() if response else None
+            return response
         except Exception as e:
             print(f"ERROR: LLM API call failed: {e}")
             return None
+
+    def _extract_json(self, response: str):
+        try:
+            extracted = re.findall(r'```(json)*([\s\S]*?)```', response)
+            if len(extracted) == 0:
+                extracted = re.findall(r'({[\s\S]*})', response)
+
+            if len(extracted) == 0:
+                raise ValueError
+            elif len(extracted) != 1:
+                print("*important* Incorrect format of the response. More than 1 json found. Using the first one.", response)
+                response = extracted[0]
+
+            data = extracted[0][-1] if type(extracted[0]) in [list, tuple] else extracted[0]
+            return json.loads(data)
+        except:
+            print(f"\Failed to extract json from:\n{response}\n\n-------")
+            raise
 
 # --- Session State ---
 
@@ -95,13 +142,13 @@ class ChatSession:
         for disorder, conditions in all_initial_conditions.items():
             self.identified_conditions[disorder] = {key: False for key in conditions}
         self.suggested_follow_ups: list[str] = []
-        self.message_count: int = 0
+        self.script_message_count: int = 0
         self.offering_script: dict | None = None
         self.delivered_scripts: set[tuple[str, str]] = set()
 
     def add_message(self, role: str, content: str):
         self.conversation_history.append({"role": role, "content": content})
-        self.message_count += 1
+        self.script_message_count += 1
 
     def get_true_conditions_set(self) -> set[str]:
         true_set = set()
@@ -177,6 +224,12 @@ class ConditionScriptManager:
                     print(f"DEBUG: Matched script '{script_id}' from disorder '{disorder_key}'")
                     return script_id, disorder_key
         return None, None
+    
+    def remove_matched_script(self, script_id: str, disorder_key: str):
+        mappings = self.disorder_data.get(disorder_key, {}).get("scriptMappings")
+        if mappings and script_id in mappings:
+            del mappings[script_id]
+            print(f"DEBUG: Removed script '{script_id}' from disorder '{disorder_key}'")
 
     def get_script_title(self, script_id: str, disorder_key: str) -> str | None:
         return self.disorder_data.get(disorder_key, {}).get("scriptMappings", {}).get(script_id, {}).get("title")
@@ -225,6 +278,22 @@ class TherapeuticChatbot:
         if not self.condition_manager.get_disorder_keys():
              raise ValueError("No disorder mappings loaded successfully. Cannot initialize chatbot.")
 
+    def _check_user_accepted_script(self, user_input: str) -> bool:
+        prompt = f"""
+You are an agent whose job is to decide whether the user has accepted the script offered to them.
+This is the last user message: {user_input}
+
+Respond with JSON in the following format:
+{{
+    "accepted": true | false
+}}
+"""
+
+        response = self.llm_client.send_prompt(prompt, extract_json=True)
+        print(f"INFO: User Script Acceptance Response: {response}")
+        if not response:
+            return False
+        return response["accepted"]
 
     def _get_or_create_session(self, session_id: str) -> ChatSession:
         """Retrieves an existing session or creates a new one with all conditions."""
@@ -339,6 +408,12 @@ Generate a supportive, empathetic response to the *last USER message* in the his
 
 Your response should be substantive (typically 3-5 sentences) to show genuine engagement, but not overwhelmingly long. Focus on emotional support rather than problem-solving or advice.
 
+# IMPORTANT
+- Try not to repeat previous therapist messages or phrases in your response. 
+- Ensure each message is meaningful.
+- Do not use phrases like "it sounds like", "it looks like", "it feels like". 
+- Sound aloof and respectful.
+
 # Your Response:
 """
         return prompt.strip()
@@ -369,6 +444,7 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
 
         # 4. Response Decision Logic
         ai_response_content = None
+        script_rejected = False
         final_response_type = "manual"  # Default
 
         # Check if we're in script offering mode from previous turn
@@ -381,8 +457,7 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
             # Clear the offering state regardless of user's answer
             session.offering_script = None
 
-            acceptance_keywords = ["yes", "yeah", "sure", "okay", "ok", "fine", "alright", "go ahead", "please", "let's try"]
-            user_accepted = any(keyword in user_message.lower() for keyword in acceptance_keywords)
+            user_accepted = self._check_user_accepted_script(user_message)
 
             if user_accepted and offered_script_id and offered_disorder_key:
                 # User accepted, deliver the script using the stored disorder key
@@ -392,7 +467,7 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
                     formatted_content = f"{lead_in}SCRIPT_START\n{script_content}\nSCRIPT_END"
                     final_response_type = "script"
                     print(f"INFO: Delivering script '{offered_script_id}' (Disorder: {offered_disorder_key}) after user acceptance")
-                    session.message_count = 0
+                    session.script_message_count = 0
                     # Mark this script as delivered
                     session.delivered_scripts.add((offered_script_id, offered_disorder_key))
                     
@@ -413,21 +488,24 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
                     final_response_type = "manual"
             else:
                 # User declined or gave ambiguous response
-                ai_response_content = f"That's completely fine. We can continue our conversation without the exercise. Let's focus on what you'd like to discuss today. How have you been feeling lately?"
+                session.script_message_count = 0
+                self.condition_manager.remove_matched_script(offered_script_id, offered_disorder_key)
+                
+                script_rejected = True
                 final_response_type = "manual"
 
         # Normal flow (not responding to script offer)
-        elif matched_script_id and matched_disorder_key and session.message_count >= MIN_MESSAGES_FOR_SCRIPT:
+        elif matched_script_id and matched_disorder_key and session.script_message_count >= MIN_MESSAGES_FOR_SCRIPT:
             # Only offer if not already delivered
             if (matched_script_id, matched_disorder_key) not in session.delivered_scripts:
-                print(f"INFO: Condition match for script '{matched_script_id}' (Disorder: {matched_disorder_key}) and message count ({session.message_count}) threshold met.")
+                print(f"INFO: Condition match for script '{matched_script_id}' (Disorder: {matched_disorder_key}) and message count ({session.script_message_count}) threshold met.")
                 script_title = self.condition_manager.get_script_title(matched_script_id, matched_disorder_key) or matched_script_id
                 session.offering_script = {
                     "script_id": matched_script_id,
                     "script_title": script_title,
                     "disorder_key": matched_disorder_key
                 }
-                ai_response_content = f"Based on what you've shared, I think a guided exercise called '{script_title}' might be helpful for addressing some of the challenges you're experiencing. Would you like me to share this exercise with you now? It's completely up to you, and we can continue our conversation either way."
+                ai_response_content = script_responses[random.randint(0, len(script_responses) - 1)].format(script_title=script_title)
                 final_response_type = "manual"
                 print(f"INFO: Offering script '{matched_script_id}' (Disorder: {matched_disorder_key}) to user")
             else:
@@ -440,7 +518,7 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
 
         elif matched_script_id:
             # Script matched but message count too low
-            print(f"INFO: Condition match for script '{matched_script_id}' (Disorder: {matched_disorder_key}) but message count ({session.message_count}) is less than {MIN_MESSAGES_FOR_SCRIPT}. Generating manual response.")
+            print(f"INFO: Condition match for script '{matched_script_id}' (Disorder: {matched_disorder_key}) but message count ({session.script_message_count}) is less than {MIN_MESSAGES_FOR_SCRIPT}. Generating manual response.")
             final_response_type = "manual"
         else:
             # No script conditions met anywhere
@@ -454,6 +532,9 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
             if not ai_response_content:
                 print("ERROR: Failed to generate manual response from LLM. Using fallback.")
                 ai_response_content = "I understand. It sounds like a difficult situation. Could you tell me a little more about that?"  # Generic fallback
+                
+            if script_rejected:
+                ai_response_content = f"It is alright, we can continue our conversation without the exercise.\n{ai_response_content}"
 
         # 6. Update session history and return for manual responses
         if final_response_type == "manual":
@@ -463,6 +544,7 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
         # For script responses, we already returned earlier
         # This should not be reached if we have a script, but just in case:
         return ai_response_content
+
 # --- Example Usage ---
 if __name__ == "__main__":
     print("Initializing Chatbot...")
