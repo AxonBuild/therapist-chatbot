@@ -89,12 +89,11 @@ class LLMClient:
         self.client = OpenAI(base_url="https://openrouter.ai/api/v1",api_key=OPENROUTER_API_KEY)
 
     @compute_time
-    def send_prompt(self, prompt: str, temperature: float = 0.5, system_message: str | None = None, extract_json: bool = False) -> str | None:
+    def send_prompt(self, prompt: str, temperature: float = 0.5, extract_json: bool = False, messages=[]) -> str | None:
         """Sends a prompt to the LLM and returns the text response."""
-        messages = []
-        if system_message:
-             messages.append({"role": "system", "content": system_message})
-        messages.append({"role": "user", "content": prompt})
+        messages = messages
+        if len(messages) == 0:
+            messages.append({"role": "user", "content": prompt})
 
         try:
             completion = self.client.chat.completions.create(
@@ -262,15 +261,6 @@ class ConditionScriptManager:
 class TherapeuticChatbot:
     """Orchestrates the chatbot flow."""
     def __init__(self):
-        self.llm_client = LLMClient(
-            api_key=OPENROUTER_API_KEY,
-            model_id=OPENROUTER_MODEL_ID,
-        )
-        
-        self.llm_client_2 = LLMClient(
-            api_key=OPENROUTER_API_KEY,
-            model_id="openai/gpt-4.1-mini",
-        )
         self.condition_manager = ConditionScriptManager(MAPPINGS_DIR)
         self.sessions: dict[str, ChatSession] = {}
         # No default disorder key needed here anymore
@@ -288,8 +278,9 @@ Respond with JSON in the following format:
     "accepted": true | false
 }}
 """
-
-        response = self.llm_client.send_prompt(prompt, extract_json=True)
+        llm = LLMClient(OPENROUTER_API_KEY, "openai/gpt-4.1-mini")
+        
+        response = llm.send_prompt(prompt, extract_json=True)
         print(f"INFO: User Script Acceptance Response: {response}")
         if not response:
             return False
@@ -349,14 +340,12 @@ Analyze the following conversation history and determine if the user exhibits an
 """
         return prompt.strip()
 
-    def _parse_condition_response(self, response_str: str | None, session: ChatSession):
+    def _parse_condition_response(self, data: str | None, session: ChatSession):
         """Parses the LLM's JSON response and updates the session state across disorders."""
-        if not response_str:
+        if not data:
             print("WARNING: Received empty response from condition identification LLM.")
             return
-        response_str = response_str.strip()
         try:
-            data = json.loads(response_str)
             present_keys = data.get("present_conditions", [])
             # Reset all to False first
             for disorder, conditions in session.identified_conditions.items():
@@ -379,7 +368,7 @@ Analyze the following conversation history and determine if the user exhibits an
             # Handle follow-ups
             session.suggested_follow_ups = data.get("follow-ups", [])
         except Exception as e:
-            print(f"ERROR: Failed to parse condition response: {e}")
+            print(f"ERROR: Failed to parse condition response: {e}\n{data}")
 
     def _build_manual_response_prompt(self, session: ChatSession) -> str:
         """Builds the prompt for generating a manual, empathetic response."""
@@ -387,39 +376,17 @@ Analyze the following conversation history and determine if the user exhibits an
         follow_ups_str = "\n".join([f"- {q}" for q in session.suggested_follow_ups]) if session.suggested_follow_ups else "None available."
 
         prompt = f"""
-You are a supportive, empathetic therapeutic assistant. Your goal is to respond to the user's last message in a warm, validating, and thoughtful way, following the provided guidelines.
+You are a supportive, empathetic therapist. Your goal is to respond to the user in a warm, validating, and thoughtful way.
 
 # Conversation History:
 {history_str}
-
-# Your Guidelines:
-{THERAPEUTIC_GUIDELINES}
-
-# Potential Follow-up Questions (for inspiration, adapt as needed):
-{follow_ups_str}
-
-# Task:
-Generate a supportive, empathetic response to the *last USER message* in the history. Your response should:
-1. Validate their feelings and experiences
-2. Demonstrate that you've truly heard and understood them
-3. Create a safe, non-judgmental space for them to continue sharing
-4. Include thoughtful reflection on what they've shared
-5. End with a gentle, open-ended question that invites deeper exploration
-
-Your response should be substantive (typically 3-5 sentences) to show genuine engagement, but not overwhelmingly long. Focus on emotional support rather than problem-solving or advice.
-
-# IMPORTANT
-- Try not to repeat previous therapist messages or phrases in your response. 
-- Ensure each message is meaningful.
-- Do not use phrases like "it sounds like", "it looks like", "it feels like". 
-- Sound aloof and respectful.
 
 # Your Response:
 """
         return prompt.strip()
 
     @compute_time
-    def process_message(self, user_message: str, session_id: str = "default") -> dict | str:
+    def process_message(self, user_message: str, session_id: str = "default", model=None) -> dict | str:
         """Processes a user message and returns the assistant's response.
         
         Returns:
@@ -427,6 +394,8 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
             For script responses: a dictionary with script metadata including content, script_id, and disorder_key
         """
         # 1. Get/Create Session & Update History
+        llm = LLMClient(api_key=OPENROUTER_API_KEY, model_id=model)
+        
         session = self._get_or_create_session(session_id)
         session.add_message("user", user_message)
 
@@ -435,7 +404,7 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
         condition_prompt = self._build_condition_prompt(history_str)
         condition_response = None
         if condition_prompt:
-            condition_response = self.llm_client_2.send_prompt(condition_prompt, temperature=0.7)
+            condition_response = llm.send_prompt(condition_prompt, temperature=0.7, extract_json=True)
         self._parse_condition_response(condition_response, session)
 
         # 3. Check for Script Match across ALL disorders
@@ -527,8 +496,12 @@ Your response should be substantive (typically 3-5 sentences) to show genuine en
         # 5. Generate Manual Response if needed (LLM Call 2)
         if final_response_type == "manual" and not ai_response_content:
             # Manual prompt generation remains the same, using the general guidelines
-            manual_prompt = self._build_manual_response_prompt(session)
-            ai_response_content = self.llm_client.send_prompt(manual_prompt, temperature=0.8)
+            messages = [
+                {"role": "system", "content": "You are a supportive, empathetic therapist. Your goal is to respond to the user in a warm, validating, and thoughtful way."},
+                *session.conversation_history,
+                {"role": "user", "content": user_message}
+            ]
+            ai_response_content = llm.send_prompt(prompt=None, messages=messages, temperature=0.8)
             if not ai_response_content:
                 print("ERROR: Failed to generate manual response from LLM. Using fallback.")
                 ai_response_content = "I understand. It sounds like a difficult situation. Could you tell me a little more about that?"  # Generic fallback

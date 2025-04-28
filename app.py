@@ -19,6 +19,18 @@ load_dotenv()
 # Create OpenAI client for TTS
 openai_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
+model_options = [
+    "openai/gpt-4.1-mini",
+    "openai/gpt-4o",
+    "openai/gpt-4o-mini",
+    "deepseek/deepseek-chat-v3-0324",
+    "google/gemini-2.5-flash-preview",
+    "google/gemini-2.0-flash-001",
+    "google/gemini-flash-1.5",
+    "anthropic/claude-3.7-sonnet",
+    "meta-llama/llama-4-maverick",
+]
+
 def get_script_audio_path(script_id: str, disorder_key: str, base_scripts_dir: str) -> str | None:
     """
     Returns the path to the pre-generated audio file for a script, if it exists.
@@ -300,8 +312,11 @@ if "chatbot" not in st.session_state:
 if "debug_mode" not in st.session_state:
     st.session_state.debug_mode = False
 
+if "selected_model" not in st.session_state:
+    st.session_state.selected_model = model_options[0]
+
 if "speech_enabled" not in st.session_state:
-    st.session_state.speech_enabled = True
+    st.session_state.speech_enabled = False
 
 if "selected_voice" not in st.session_state:
     st.session_state.selected_voice = "nova"  # Default voice
@@ -335,45 +350,57 @@ def clear_chat_history():
     st.rerun()
 
 # Settings in sidebar
-if os.getenv("ENV") != "production":
-    with st.sidebar:
-        st.title("Settings")
-        
-        # Debug mode toggle
+
+with st.sidebar:
+    st.title("Settings")
+    
+    # Debug mode toggle
+    if os.getenv("ENV") != "production":
         debug_toggle = st.toggle("Debug Mode", value=st.session_state.debug_mode)
         if debug_toggle != st.session_state.debug_mode:
             st.session_state.debug_mode = debug_toggle
             st.rerun()
+    
+    # Text-to-speech toggle
+    speech_toggle = st.toggle("Text-to-Speech", value=st.session_state.speech_enabled)
+    if speech_toggle != st.session_state.speech_enabled:
+        st.session_state.speech_enabled = speech_toggle
+        st.rerun()
         
-        # Text-to-speech toggle
-        speech_toggle = st.toggle("Text-to-Speech", value=st.session_state.speech_enabled)
-        if speech_toggle != st.session_state.speech_enabled:
-            st.session_state.speech_enabled = speech_toggle
+    # model selection
+    selected_model = st.selectbox(
+        "Model", 
+        options=model_options,
+        index=model_options.index(st.session_state.selected_model)
+    )
+    
+    if selected_model != st.session_state.selected_model:
+        st.session_state.selected_model = selected_model
+        st.rerun()
+    
+    # Voice selection for OpenAI TTS
+    if st.session_state.speech_enabled:
+        voice_options = ["alloy", "echo", "fable", "onyx", "nova", "shimmer"]
+        
+        selected_voice = st.selectbox(
+            "Voice", 
+            options=voice_options,
+            index=voice_options.index(st.session_state.selected_voice)
+        )
+        
+        if selected_voice != st.session_state.selected_voice:
+            st.session_state.selected_voice = selected_voice
             st.rerun()
-        
-        # Voice selection for OpenAI TTS
-        if st.session_state.speech_enabled:
-            voice_options = ["alloy", "echo", "fable", "onyx", "nova", "shimmer"]
-            
-            selected_voice = st.selectbox(
-                "Voice", 
-                options=voice_options,
-                index=voice_options.index(st.session_state.selected_voice)
-            )
-            
-            if selected_voice != st.session_state.selected_voice:
-                st.session_state.selected_voice = selected_voice
-                st.rerun()
-        
-        # Debug audio files button (only shown in debug mode)
-        if st.session_state.debug_mode:
-            if st.button("Debug Audio Files"):
-                audio_files = debug_audio_files()
-                st.json(audio_files)
-        
-        # Reset button
-        if st.button("Reset Conversation", use_container_width=True):
-            clear_chat_history()
+    
+    # Debug audio files button (only shown in debug mode)
+    if st.session_state.debug_mode:
+        if st.button("Debug Audio Files"):
+            audio_files = debug_audio_files()
+            st.json(audio_files)
+    
+    # Reset button
+    if st.button("Reset Conversation", use_container_width=True):
+        clear_chat_history()
 
 # Display chat messages using standard Streamlit chat message approach
 for msg in st.session_state.messages:
@@ -407,7 +434,7 @@ if user_input := st.chat_input("Share what's on your mind..."):
     session_id = "streamlit_user_session"
     try:
         with st.spinner("Thinking..."):
-            response = st.session_state.chatbot.process_message(user_input, session_id=session_id)
+            response = st.session_state.chatbot.process_message(user_input, session_id=session_id, model=st.session_state.selected_model)
 
             # --- Handle Backend Response ---
             is_script = False
