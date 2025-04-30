@@ -93,7 +93,7 @@ class LLMClient:
     @compute_time
     def send_prompt(self, prompt: str, temperature: float = 0.5, extract_json: bool = False, messages=[]) -> str | None:
         """Sends a prompt to the LLM and returns the text response."""
-        messages = messages
+        messages = messages.copy()
         if len(messages) == 0:
             messages.append({"role": "user", "content": prompt})
 
@@ -160,7 +160,7 @@ class ChatSession:
         return true_set
 
     def format_history_for_prompt(self) -> str:
-        return "\n".join([f"{m['role'].capitalize()}: {m['content']}" for m in self.conversation_history])
+        return "\n".join([f"{m['role'].capitalize()}: {m['content']}" for m in self.conversation_history if m['role'] != 'assistant'])
 
 # --- Condition and Script Management ---
 
@@ -372,42 +372,21 @@ Analyze the following conversation history and determine if the user exhibits an
         except Exception as e:
             print(f"ERROR: Failed to parse condition response: {e}\n{data}")
 
-    def _build_manual_response_prompt(self, session: ChatSession) -> str:
-        """Builds the prompt for generating a manual, empathetic response."""
-        history_str = session.format_history_for_prompt()
-        follow_ups_str = "\n".join([f"- {q}" for q in session.suggested_follow_ups]) if session.suggested_follow_ups else "None available."
-
-        prompt = f"""
-You are a supportive, empathetic therapist. Your goal is to respond to the user in a warm, validating, and thoughtful way.
-
-# Conversation History:
-{history_str}
-
-# Your Response:
-"""
-        return prompt.strip()
-
-    def _build_keyword_identifier_prompt(self, history_str: str) -> str:
+    def _build_keyword_identifier_prompt(self, user_messages_list: str) -> str:
         prompt = f"""
 # Task
-You are given a conversation between a patient and a therapist AI. You task is to extract any symptoms or conditions that the patient is experiencing from the conversation.
+You are given messages from a patient talking to a therapist. You task is to extract ALL the symptoms and conditions that the patient is experiencing from the list of messages.
 
-# Conversation
-{history_str}
+# Messages
+{user_messages_list}
 
-# Instructions
-Keep your output precise, such as:
-- Shame about body appearance
-- Fear of losing control over thoughts
-- Intrusive or repetitive fearful thoughts
-- Harsh internal self-judgment
-- Tightness in chest
-- Loneliness
+# Instructions for answering:
+Keep your output precise and short.
 
-# Response
+# Response Format Guidelines
 Give your output in the following JSON format:
 {{
-    "symptoms": ["symptom1", "symptom2", ...]
+    "symptoms": ["list of symptoms"]
 }}
 """
 
@@ -439,7 +418,6 @@ You are a supportive, empathetic therapist. Your goal is to respond to the user 
         session = self._get_or_create_session(session_id)
         session.add_message("user", user_message)
 
-        # 2. Identify Conditions across ALL disorders (LLM Call 1)
         history_str = session.format_history_for_prompt()
         
         keyword_prompt = self._build_keyword_identifier_prompt(history_str)
@@ -451,8 +429,7 @@ You are a supportive, empathetic therapist. Your goal is to respond to the user 
         
         messages = [
             {"role": "system", "content": self._build_system_prompt(guidance_notes=guidance_notes)},
-            *session.conversation_history,
-            {"role": "user", "content": user_message}
+            *session.conversation_history
         ]
         
         ai_response_content = llm.send_prompt(prompt=None, messages=messages, temperature=0.8)
