@@ -9,6 +9,7 @@ from openai import OpenAI
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
 import numpy as np
+import glob
 
 # Load environment variables
 load_dotenv()
@@ -34,16 +35,34 @@ print(f"Connecting to Qdrant at: {qdrant_url}")
 openai_client = OpenAI(api_key=openai_api_key)
 qdrant_client = QdrantClient(url=qdrant_url, api_key=qdrant_api_key)
 
-def load_chunks(file_path: str) -> List[Dict[str, Any]]:
-    """Load chunks from JSON file."""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        print(f"Loaded {len(data)} chunks from {file_path}")
-        return data
-    except Exception as e:
-        print(f"Error loading chunks: {e}")
-        return []
+def load_guidance_notes(directory: str) -> List[Dict[str, Any]]:
+    """Load all JSON files from the Guidance Notes directory."""
+    all_entries = []
+    file_paths = glob.glob(os.path.join(directory, "*.json"))
+    
+    print(f"Found {len(file_paths)} JSON files in {directory}")
+    
+    for file_path in file_paths:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            filename = os.path.basename(file_path)
+            print(f"Processing {filename}: found {len(data.get('keywords', []))} keywords")
+            
+            # Create an entry for each keyword
+            for keyword in data.get("keywords", []):
+                entry = {
+                    "keyword": keyword,
+                    "filename": filename,
+                }
+                all_entries.append(entry)
+                
+        except Exception as e:
+            print(f"Error loading {file_path}: {e}")
+    
+    print(f"Created {len(all_entries)} total entries from all files")
+    return all_entries
 
 def delete_collection_if_exists():
     """Delete the collection if it exists for a fresh start."""
@@ -80,11 +99,17 @@ def create_collection():
             try:
                 qdrant_client.create_payload_index(
                     collection_name=COLLECTION_NAME,
-                    field_name="disorder",
-                    field_schema="keyword"
+                    field_name="keyword",
+                    field_schema=PayloadSchemaType.KEYWORD
                 )
                 
-                print("Created index for 'disorder' field")
+                qdrant_client.create_payload_index(
+                    collection_name=COLLECTION_NAME,
+                    field_name="filename",
+                    field_schema=PayloadSchemaType.KEYWORD
+                )
+                
+                print("Created indexes for 'keyword' and 'filename' fields")
             except Exception as e1:
                 print(f"Couldn't create index with string syntax: {e1}")
                 
@@ -94,11 +119,17 @@ def create_collection():
                     
                     qdrant_client.create_payload_index(
                         collection_name=COLLECTION_NAME,
-                        field_name="disorder",
+                        field_name="keyword",
                         field_schema=PayloadSchemaType.KEYWORD
                     )
                     
-                    print("Created index for 'disorder' field using PayloadSchemaType")
+                    qdrant_client.create_payload_index(
+                        collection_name=COLLECTION_NAME,
+                        field_name="filename",
+                        field_schema=PayloadSchemaType.KEYWORD
+                    )
+                    
+                    print("Created indexes using PayloadSchemaType")
                 except Exception as e2:
                     print(f"Couldn't create index with enum syntax either: {e2}")
         
@@ -138,14 +169,14 @@ def embed_text(text: str) -> List[float]:
         print(f"Error generating embedding: {e}")
         raise  # Re-raise to halt processing if embeddings fail
 
-def process_and_upload_chunk(chunk: Dict[str, Any], idx: int) -> bool:
-    """Process and upload a single chunk with detailed error reporting."""
+def process_and_upload_entry(entry: Dict[str, Any], idx: int) -> bool:
+    """Process and upload a single keyword entry with detailed error reporting."""
     try:
-        # Generate embedding
-        text = chunk["content"]
-        print(f"  Generating embedding for chunk {idx} (length: {len(text)})")
+        # Generate embedding for the keyword
+        keyword = entry["keyword"]
+        print(f"  Generating embedding for keyword: '{keyword}' from {entry['filename']}")
         
-        embedding = embed_text(text)
+        embedding = embed_text(keyword)
         
         # Print first few values of embedding for diagnostic purposes
         if DEBUG:
@@ -158,11 +189,8 @@ def process_and_upload_chunk(chunk: Dict[str, Any], idx: int) -> bool:
             id=idx,
             vector=embedding,
             payload={
-                "chunk_id": chunk["id"],
-                "document_id": chunk["document_id"],
-                "disorder": chunk["disorder"],
-                "section": chunk["section"],
-                "content": chunk["content"]
+                "keyword": keyword,
+                "filename": entry["filename"]
             }
         )
         
@@ -191,22 +219,27 @@ def process_and_upload_chunk(chunk: Dict[str, Any], idx: int) -> bool:
             else:
                 print(f"  Warning: Retrieved point has no vector")
         
-        print(f"  Successfully uploaded chunk {idx}")
+        print(f"  Successfully uploaded keyword '{keyword}' from {entry['filename']}")
         return True
         
     except Exception as e:
-        print(f"Error processing chunk {idx}: {e}")
+        print(f"Error processing entry {idx}: {e}")
         return False
 
 def main():
     # Directory configuration
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    chunks_file = os.path.join(current_dir, "chunks", "all_chunks.json")
+    # current_dir = os.path.dirname(os.path.abspath(__file__))
+    guidance_notes_dir = os.path.join("Data", "Guidance Notes")
     
-    # Load chunks
-    chunks = load_chunks(chunks_file)
-    if not chunks:
-        print("No chunks to process. Exiting.")
+    # Make sure the directory exists
+    if not os.path.exists(guidance_notes_dir):
+        print(f"Directory '{guidance_notes_dir}' does not exist. Creating it.")
+        os.makedirs(guidance_notes_dir)
+    
+    # Load entries from all JSON files
+    entries = load_guidance_notes(guidance_notes_dir)
+    if not entries:
+        print("No entries to process. Exiting.")
         return
     
     # Delete existing collection for a fresh start
@@ -219,20 +252,20 @@ def main():
     
     # Process a small subset for testing if in debug mode
     if DEBUG:
-        print("Debug mode: Processing only first few chunks")
-        chunks = chunks[:min(5, len(chunks))]
+        print("Debug mode: Processing only first few entries")
+        entries = entries[:min(5, len(entries))]
     
-    # Process and upload chunks one by one for better diagnostics
-    print(f"Processing {len(chunks)} chunks...")
+    # Process and upload entries one by one for better diagnostics
+    print(f"Processing {len(entries)} keyword entries...")
     success_count = 0
     
-    for i, chunk in enumerate(chunks):
-        print(f"\nProcessing chunk {i+1}/{len(chunks)}")
-        if process_and_upload_chunk(chunk, i):
+    for i, entry in enumerate(entries):
+        print(f"\nProcessing entry {i+1}/{len(entries)}")
+        if process_and_upload_entry(entry, i):
             success_count += 1
         
-        # Small delay between chunks
-        if i < len(chunks) - 1:
+        # Small delay between entries
+        if i < len(entries) - 1:
             time.sleep(1)
     
     # Verify final counts
@@ -249,18 +282,26 @@ def main():
     # Try a basic search to verify functionality
     try:
         print("\nTesting search functionality...")
+        test_query = "anxiety"
+        print(f"Testing search with query: '{test_query}'")
+        
+        # First embed the query
+        query_vector = embed_text(test_query)
+        
         results = qdrant_client.search(
             collection_name=COLLECTION_NAME,
-            query_vector=[0.1] * VECTOR_SIZE,
-            limit=1
+            query_vector=query_vector,
+            limit=3
         )
         print(f"Search test returned {len(results)} results")
+        
         if results:
-            print(f"First result ID: {results[0].id}")
+            for i, result in enumerate(results):
+                print(f"Result {i+1}: '{result.payload.get('keyword')}' from {result.payload.get('filename')} (Score: {result.score:.4f})")
     except Exception as e:
         print(f"Error testing search: {e}")
     
-    print(f"\nProcess complete. Successfully uploaded {success_count}/{len(chunks)} chunks.")
+    print(f"\nProcess complete. Successfully uploaded {success_count}/{len(entries)} keyword entries.")
 
 if __name__ == "__main__":
     main()
