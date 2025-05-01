@@ -13,9 +13,6 @@ load_dotenv()
 # or replace os.getenv("OPENROUTER_API_KEY") with your actual key string.
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
-# Specify the model hosted on OpenRouter
-OPENROUTER_MODEL_ID = "openai/gpt-4.1-mini"
-
 def compute_time(func):
     def wrapper(*args, **kwargs):
         start_time = time.time()
@@ -93,15 +90,8 @@ class ChatSession:
         self.conversation_history.append({"role": role, "content": content})
         self.script_message_count += 1
 
-    def get_true_conditions_set(self) -> set[str]:
-        true_set = set()
-        for disorder, conditions in self.identified_conditions.items():
-            for key, value in conditions.items():
-                if value:
-                    true_set.add(key)
-        return true_set
-
     def format_history_for_prompt(self) -> str:
+        # only include user messages
         return "\n".join([f"{m['role'].capitalize()}: {m['content']}" for m in self.conversation_history if m['role'] != 'assistant'])
 
     
@@ -187,15 +177,3 @@ class TherapeuticChatbot:
         session.add_message("assistant", ai_response_content)
         return ai_response_content
         
-# --- Example Usage ---
-if __name__ == "__main__":
-    print("Initializing Chatbot...")
-    # Ensure you have OPENROUTER_API_KEY set in your environment
-    if not OPENROUTER_API_KEY:
-        print("\n!!! WARNING: OPENROUTER_API_KEY environment variable not set. LLM calls will fail. !!!\n")
-
-    # Ensure python-docx is installed if you have .docx scripts
-    try:
-        import docx
-    except ImportError:
-        print("\n--- NOTE: 'python-docx' not installed. .docx scripts cannot be loaded. Run: pip install python-docx ---\n")
