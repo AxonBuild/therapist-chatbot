@@ -245,43 +245,29 @@ st.markdown("""
         border-color: #8E617F;
     }
     
+    /* Updated script styling */
     .therapy-script {
-        background-color: #f8f4f8;
+        background-color: #f9f4f9;
         border-left: 5px solid #5E3B50;
-        padding: 1rem;
+        padding: 1.5rem;
         border-radius: 0.5rem;
         margin: 1rem 0;
+        line-height: 1.6;
+        font-size: 1.05rem;
     }
     
-    .status-indicator {
-        margin-bottom: 20px;
-        padding: 10px;
-        border-radius: 5px;
-        font-weight: bold;
-        text-align: center;
+    .therapy-script h1, .therapy-script h2, .therapy-script h3 {
+        color: #5E3B50;
+        margin-bottom: 1rem;
     }
     
-    .phase-1 {
-        background-color: #e1f5fe;
-        color: #0277bd;
-    }
-    
-    .phase-2 {
-        background-color: #e8f5e9;
-        color: #2e7d32;
-    }
-    
-    .debug-info {
-        background-color: #f5f5f5;
-        padding: 10px;
-        border-radius: 5px;
-        margin-top: 10px;
+    .script-metadata {
+        background-color: #f0f0f0;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        margin-top: 0.5rem;
         font-size: 0.8rem;
         color: #666;
-    }
-    
-    .assistant-audio-message {
-        margin-bottom: 10px;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -330,9 +316,6 @@ st.markdown("<p class='subheader'>Your mental wellness companion</p>", unsafe_al
 def clear_chat_history():
     """Clear the chat history and reset the chatbot session"""
     st.session_state.messages = []
-    # Reset backend session if possible (assuming a method exists or implicitly handled)
-    # If the backend manages sessions by ID, starting fresh might be enough.
-    # Let's try deleting the specific session if the backend supports it
     session_id = "streamlit_user_session" # Assuming this is the ID used
     if "chatbot" in st.session_state and hasattr(st.session_state.chatbot, 'sessions') and session_id in st.session_state.chatbot.sessions:
         try:
@@ -350,7 +333,6 @@ def clear_chat_history():
     st.rerun()
 
 # Settings in sidebar
-
 with st.sidebar:
     st.title("Settings")
     
@@ -367,7 +349,7 @@ with st.sidebar:
         st.session_state.speech_enabled = speech_toggle
         st.rerun()
         
-    # model selection
+    # Model selection
     selected_model = st.selectbox(
         "Model", 
         options=model_options,
@@ -402,14 +384,32 @@ with st.sidebar:
     if st.button("Reset Conversation", use_container_width=True):
         clear_chat_history()
 
-# Display chat messages using standard Streamlit chat message approach
+# --- In the message display section ---
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         # Check if this is a therapeutic script message
         if msg.get("is_script", False):
-            st.markdown(f"<div class='therapy-script'>{msg['content']}</div>", unsafe_allow_html=True)
+            # MODIFIED: Display different styling for scripts without content
+            if "script_id" in msg:
+                st.markdown(f"""
+                <div class='therapy-script'>
+                    <h3>🎯 Script Selected: {msg.get("script_id")}</h3>
+                    <p>This script has been selected based on the conversation.</p>
+                    <p><em>The script content will be available in a future version.</em></p>
+                </div>
+                """, unsafe_allow_html=True)
+            else:
+                st.markdown(f"<div class='therapy-script'>{msg['content']}</div>", unsafe_allow_html=True)
+            
+            # Display script metadata if available
+            if msg.get("metadata"):
+                meta = msg["metadata"]
+                st.markdown(f"""<div class="script-metadata">
+                    <div>Level: {meta.get('level', 'N/A')} | Target: {meta.get('target_population', 'N/A')}</div>
+                    <div>Duration: ~{meta.get('estimated_duration', 'N/A')} min</div>
+                </div>""", unsafe_allow_html=True)
         else:
-            st.markdown(f"<div class='assistant-audio-message'>{msg['content']}</div>", unsafe_allow_html=True)
+            st.markdown(msg["content"])
         
         # Play audio if available
         if msg["role"] == "assistant" and st.session_state.speech_enabled and msg.get("audio_path"):
@@ -422,8 +422,9 @@ for msg in st.session_state.messages:
         with st.expander("Debug Info"):
             st.json(msg["debug_info"])
 
-# Chat input
+# --- Inside the chat input section where responses are handled ---
 if user_input := st.chat_input("Share what's on your mind..."):
+    # Display user message
     with st.chat_message("user"):
         st.write(user_input)
     
@@ -434,142 +435,99 @@ if user_input := st.chat_input("Share what's on your mind..."):
     session_id = "streamlit_user_session"
     try:
         with st.spinner("Thinking..."):
-            response = st.session_state.chatbot.process_message(user_input, session_id=session_id, model=st.session_state.selected_model)
+            response = st.session_state.chatbot.process_message(
+                user_input, 
+                session_id=session_id,
+                model=st.session_state.selected_model
+            )
 
-            # --- Handle Backend Response ---
-            is_script = False
-            script_id = None
-            disorder_key = None
-            script_title = None
-            display_content = ""
-            
-            # Check if response is a dictionary (contains script metadata)
-            if isinstance(response, dict):
-                print("DEBUG: Received dictionary response from backend:", response)
-                display_content = response.get("content", "")
-                is_script = response.get("is_script", False)
-                script_id = response.get("script_id")
-                disorder_key = response.get("disorder_key")
-                script_title = response.get("script_title")
+            # Handle structured response (new format with script)
+            if isinstance(response, dict) and "script_offered" in response:
+                # First display the normal response
+                normal_response = response.get("response", "")
                 
-                # Still check for script markers to extract the actual content
-                script_start_marker = "SCRIPT_START"
-                script_end_marker = "SCRIPT_END"
+                # Generate audio for normal response if enabled
+                normal_audio_path = None
+                if st.session_state.speech_enabled:
+                    normal_audio_path = text_to_speech(normal_response, voice=st.session_state.selected_voice)
                 
-                if script_start_marker in display_content and script_end_marker in display_content:
-                    lead_in_end = display_content.find(script_start_marker)
-                    lead_in = display_content[:lead_in_end].strip()
-                    script_content_start = lead_in_end + len(script_start_marker)
-                    script_content_end = display_content.find(script_end_marker)
-                    script_content = display_content[script_content_start:script_content_end].strip()
-                    
-                    # Format for display while keeping metadata
-                    display_content = f"{lead_in}\n\n{script_content}"
-                    display_content_for_tts = f"{lead_in} {script_content}"  # Flattened for TTS
-                else:
-                    # Fallback if somehow the markers are missing
-                    display_content_for_tts = display_content
-            else:
-                # Response is a string
-                display_content = response
-                display_content_for_tts = response
+                # Add normal response to session
+                st.session_state.messages.append({
+                    "role": "assistant", 
+                    "content": normal_response,
+                    "audio_path": normal_audio_path,
+                    "autoplay": True
+                })
                 
-                # Check for embedded script markers in string response (fallback case)
-                script_start_marker = "SCRIPT_START"
-                script_end_marker = "SCRIPT_END"
+                # Get script info
+                script_id = response.get("script_id", "")
                 
-                if script_start_marker in display_content and script_end_marker in display_content:
-                    is_script = True
-                    lead_in_end = display_content.find(script_start_marker)
-                    lead_in = display_content[:lead_in_end].strip()
-                    script_content_start = lead_in_end + len(script_start_marker)
-                    script_content_end = display_content.find(script_end_marker)
-                    script_content = display_content[script_content_start:script_content_end].strip()
-                    
-                    display_content = f"{lead_in}\n\n{script_content}"  # Content for display
-                    display_content_for_tts = f"{lead_in} {script_content}"  # Flattened for TTS
-                    
-                    # Try to extract script_id from content as fallback
-                    script_pattern = r'SCRIPT_[A-Z]_[A-Za-z_]+'
-                    script_matches = re.findall(script_pattern, display_content)
-                    if script_matches:
-                        script_id = script_matches[0]
-                        
-                        # Try to determine disorder key as fallback
-                        if "sleep" in display_content.lower() or "night" in display_content.lower():
-                            disorder_key = "sleep"
-                        elif "phobic" in display_content.lower() or "anxiety" in display_content.lower():
-                            disorder_key = "phobic"
-                        else:
-                            disorder_key = "general"  # default fallback
-
-            # Set voice based on whether this is a script
-            if is_script:
-                tts_voice = "nova" if st.session_state.selected_voice != "nova" else "shimmer"
-            else:
-                tts_voice = st.session_state.selected_voice
-
-        with st.spinner("Generating Audio..."):
-            # Generate speech if enabled
-            audio_path = None
-            if is_script and st.session_state.speech_enabled:
-                if script_id and disorder_key:
-                    print(f"DEBUG: Looking for audio for script_id={script_id}, disorder_key={disorder_key}")
-                    # Try to get pre-generated audio
-                    audio_path = get_script_audio_path(script_id, disorder_key, ".")
-                    
-                    if audio_path:
-                        print(f"DEBUG: Found pre-generated audio at {audio_path}")
-                    else:
-                        print(f"DEBUG: No pre-generated audio found for {script_id} in {disorder_key}")
-                    
-                # If still no audio path, fallback to TTS
-                if not audio_path and display_content_for_tts:
-                    print(f"DEBUG: Falling back to TTS for script")
-                    try:
-                        # Validate display_content_for_tts is a string
-                        if not isinstance(display_content_for_tts, str):
-                            display_content_for_tts = str(display_content_for_tts)
-                        audio_path = text_to_speech(display_content_for_tts, voice=tts_voice)
-                    except Exception as e:
-                        print(f"ERROR: TTS generation failed: {e}")
-                        
-            elif st.session_state.speech_enabled and display_content_for_tts:
-                # For non-script messages, use TTS
-                try:
-                    audio_path = text_to_speech(display_content_for_tts, voice=tts_voice)
-                except Exception as e:
-                    print(f"ERROR: TTS generation failed: {e}")
-
-            # Add the assistant message to chat history
-            debug_info = None
-            if st.session_state.debug_mode:
-                if hasattr(st.session_state.chatbot, 'sessions') and session_id in st.session_state.chatbot.sessions:
-                    backend_session = st.session_state.chatbot.sessions[session_id]
+                # MODIFIED: Display script filename instead of content
+                script_display = f"**Script File: {script_id}**\n\nScript would play here when available."
+                
+                # For debugging, keep script content available but don't display it
+                script_content = response.get("script_content", "")
+                
+                # Generate audio for script (commented out)
+                script_audio_path = None
+                # if st.session_state.speech_enabled and script_content:
+                #     script_audio_path = text_to_speech(script_content, voice=st.session_state.selected_voice)
+                
+                # Debug info for script
+                debug_info = None
+                if st.session_state.debug_mode:
                     debug_info = {
-                        "phase": "Identifying your concerns",
-                        "true_conditions": list(backend_session.get_true_conditions_set()),
-                        "message_count": backend_session.script_message_count,
-                        "is_script": is_script,
                         "script_id": script_id,
-                        "disorder_key": disorder_key,
-                        "script_title": script_title,
-                        "response_type": "dictionary" if isinstance(response, dict) else "string"
+                        "metadata": response.get("metadata", {}),
+                        # Add the first 100 chars of script content for verification
+                        "script_content_preview": script_content[:100] + "..." if script_content else "No content"
                     }
-                else:
+                    
+                    # Add guidance delivery status if available
+                    if hasattr(st.session_state.chatbot, 'sessions'):
+                        session = st.session_state.chatbot.sessions.get(session_id)
+                        if hasattr(session, "delivered_guidance"):
+                            debug_info["delivered_guidance"] = session.delivered_guidance
+                    
+                # Add script to messages
+                st.session_state.messages.append({
+                    "role": "assistant", 
+                    "content": script_display,  # Display filename instead
+                    "is_script": True,
+                    "script_id": script_id,  # Store script ID for reference
+                    "audio_path": script_audio_path,
+                    "autoplay": False,
+                    "metadata": response.get("metadata", {}),
+                    "debug_info": debug_info
+                })
+                
+            else:
+                # Handle normal text response (old format)
+                audio_path = None
+                if st.session_state.speech_enabled:
+                    audio_path = text_to_speech(response, voice=st.session_state.selected_voice)
+                
+                # Debug info for normal response
+                debug_info = None
+                if st.session_state.debug_mode:
                     debug_info = {
-                        "phase": "Identifying your concerns",
-                        "note": "No active backend session found"
+                        "response_type": "text"
                     }
-
-            st.session_state.messages.append({
-                "role": "assistant", 
-                "content": display_content,
-                "audio_path": audio_path,
-                "autoplay": True,  # Set autoplay for this new message
-                "is_script": is_script,
-                "debug_info": debug_info
-            })
+                    
+                    # Add guidance delivery status if available
+                    if hasattr(st.session_state.chatbot, 'sessions'):
+                        session = st.session_state.chatbot.sessions.get(session_id)
+                        if hasattr(session, "delivered_guidance"):
+                            debug_info["delivered_guidance"] = session.delivered_guidance
+                
+                # Store normal response
+                st.session_state.messages.append({
+                    "role": "assistant", 
+                    "content": response,
+                    "audio_path": audio_path,
+                    "autoplay": True,
+                    "debug_info": debug_info
+                })
 
             # Rerun to update the chat display
             st.rerun()

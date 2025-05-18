@@ -45,7 +45,8 @@ def embed_text(text: str) -> List[float]:
 
  # Try a basic search to verify functionality
 
-def fetch_guidance_notes(symptoms: List[str]):
+def fetch_guidance_notes(symptoms: List[str], session=None):
+    """Fetch guidance notes based on symptoms and include delivery status if session provided."""
     requests = [
         SearchRequest(
             vector=embed_text(symptom),
@@ -61,7 +62,6 @@ def fetch_guidance_notes(symptoms: List[str]):
         requests=requests
     )
     
-    
     flattened_response = []
     for result in response:
         flattened_response.extend(result)
@@ -71,21 +71,49 @@ def fetch_guidance_notes(symptoms: List[str]):
     note_files = set()
     for result in flattened_response:
         print("-", result.payload.get("keyword"), result.score)
-        note_files.add(os.path.join("Data", "Guidance Notes", result.payload.get("filename") ))
+        note_files.add(os.path.join("Data", "Guidance Notes", result.payload.get("filename")))
     
     print("Note Files to load:", note_files)
     
     context = ""
     for note_file in note_files:
-        data = json.load(open(note_file, "r", encoding="utf-8"))
-        themes = '\n'.join(data["themes"])
-        context += f"""
+        try:
+            data = json.load(open(note_file, "r", encoding="utf-8"))
+            themes = '\n'.join(data["themes"])
+            
+            # Get primary and secondary content from updated JSON structure
+            primary_content = data.get("primary_content", "")
+            secondary_content = data.get("secondary_content", "")
+            
+            # Check delivery status if session provided
+            primary_status = "Pending"
+            secondary_status = "Pending"
+            
+            if session and hasattr(session, "delivered_guidance"):
+                filename = os.path.basename(note_file)
+                if filename in session.delivered_guidance:
+                    primary_status = "Delivered" if session.delivered_guidance[filename]["primary"] else "Pending"
+                    secondary_status = "Delivered" if session.delivered_guidance[filename]["secondary"] else "Pending"
+            
+            # Format with status
+            context += f"""
 - For symptoms like:
 {themes}
 
-{data["context"]}
+Primary content: {primary_content}
+Status: {primary_status}
 
-      
+Secondary content: {secondary_content}
+Status: {secondary_status}
+
 """
+        except Exception as e:
+            print(f"Error processing note file {note_file}: {e}")
     
     return context
+
+if __name__ == "__main__":
+    # Example usage
+    symptoms = ["anxiety", "depression"]
+    context = fetch_guidance_notes(symptoms)
+    print("Context:", context)
