@@ -1,0 +1,59 @@
+{
+  "case_id": "Clinical_case_86",
+  "age": "38",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 38-year-old woman presenting with heightened anxiety and obsessive thoughts regarding death, triggered by recent pregnancy losses (molar pregnancy and blighted ovum) and hormonal fluctuations. She expresses intense fears of dying and concerns about the well-being of her 6-year-old daughter if she were to pass away. Despite generally positive family dynamics with her current partner, she reports residual emotional turmoil linked to her ex-partner, who has a history of substance abuse and erratic behavior. Additionally, the patient has unresolved family dynamics involving feelings of emotional neglect from her father and perceived overinvestment from her mother during childhood.",
+  "main_issues": [
+    "- Obsessive thoughts and anxiety surrounding death",
+    "- Emotional distress linked to multiple pregnancy losses",
+    "- Residual impact of former partner's addiction and emotional instability",
+    "- Unresolved childhood emotional neglect from her father",
+    "- Overinvestment and emotional pressure from her mother"
+  ],
+  "emotions": [
+    "Anxiety",
+    "Fear",
+    "Guilt",
+    "Resentment",
+    "Emotional confusion"
+  ],
+  "limiting_beliefs": [
+    "- 'I must be constantly vigilant to prevent bad things from happening.'",
+    "- 'If I let my guard down, something terrible will happen.'",
+    "- 'I am responsible for the well-being of everyone around me.'",
+    "- 'I am not allowed to express my needs because they might be perceived as burdensome.'"
+  ],
+  "therapeutic_goals": [
+    "- Address obsessive thoughts related to death and reframe catastrophic thinking",
+    "- Develop grounding techniques to manage anxiety spikes",
+    "- Explore grief and loss related to pregnancy complications",
+    "- Establish boundaries with her ex-partner to protect emotional stability",
+    "- Reframe childhood narratives to reduce the impact of parental dynamics"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises and grounding techniques to alleviate acute anxiety",
+      "- Journaling to externalize fears and reduce cognitive rumination",
+      "- Hypnosis session recommendation: Emotional Reset and Anxiety Diffusion"
+    ],
+    "intermediate": [
+      "- Explore grief processing through guided visualization",
+      "- Develop assertiveness scripts to manage interactions with her ex-partner",
+      "- Reframe childhood narratives to identify and release internalized guilt"
+    ],
+    "long_term": [
+      "- Continue therapeutic support focused on death acceptance and life-affirming practices",
+      "- Implement structured self-care routines to maintain emotional equilibrium",
+      "- Foster a sense of self-worth independent of familial roles and responsibilities"
+    ]
+  },
+  "motivational_closure": "You are allowed to find peace in the present. Each day is a reminder that your life is a work in progress, and that you can choose how you respond to its challenges. You are more resilient than you realize.",
+  "tags": [
+    "AnxietyRelease",
+    "DeathAcceptance",
+    "GriefProcessing",
+    "EmotionalResilience",
+    "SelfWorth",
+    "Boundaries"
+  ]
+}

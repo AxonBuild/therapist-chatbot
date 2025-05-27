@@ -1,0 +1,64 @@
+{
+  "case_id": "Clinical_case_108",
+  "age": "54",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with significant emotional distress linked to ongoing familial conflict involving her fiancé's parents, her own children, and her upcoming wedding. She expresses feelings of injustice, frustration, and exhaustion as she navigates conflicting loyalties and persistent criticism from her fiancé's family. Additionally, she struggles with hormonal fluctuations that exacerbate her emotional sensitivity, leading to moments of irritability, sadness, and heightened stress.",
+  "main_issues": [
+    "- Emotional volatility possibly linked to hormonal fluctuations",
+    "- Conflicts with fiancé's parents, characterized by criticism and intrusive behavior",
+    "- Persistent conflict involving her children and the fiancé, leading to feelings of injustice",
+    "- Struggles to maintain emotional boundaries during family disputes",
+    "- Frustration with being repeatedly asked to forgive without receiving genuine apologies"
+  ],
+  "emotions": [
+    "Frustration",
+    "Injustice",
+    "Exhaustion",
+    "Irritability",
+    "Sadness"
+  ],
+  "limiting_beliefs": [
+    "- I am responsible for maintaining peace even if it hurts me.",
+    "- If I don't forgive, I am a bad person.",
+    "- I must appease my fiancé's family to keep the peace.",
+    "- My feelings are less valid than others' expectations."
+  ],
+  "therapeutic_goals": [
+    "- Implement techniques for emotional regulation during moments of heightened stress",
+    "- Reframe limiting beliefs around forgiveness and self-worth",
+    "- Develop assertiveness skills to communicate boundaries clearly and effectively",
+    "- Reduce emotional reactivity linked to hormonal fluctuations",
+    "- Establish coping strategies for managing family conflicts without self-betrayal"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to regulate stress response during family interactions",
+      "- Affirmations: 'I am not responsible for others' emotions.'",
+      "- Journaling to externalize feelings of injustice and prevent emotional buildup",
+      "- Visualization exercise: Establishing a mental boundary to prevent emotional intrusion"
+    ],
+    "intermediate": [
+      "- Assertiveness training to address boundary violations respectfully",
+      "- Narrative journaling to process ongoing conflicts and reframe limiting beliefs",
+      "- Self-compassion exercises to validate personal feelings and reduce self-blame",
+      "- Hypnosis session: Reclaiming emotional authority and reinforcing self-worth"
+    ],
+    "long_term": [
+      "- Therapy to explore the impact of familial criticism on self-concept",
+      "- Monthly follow-ups to assess progress in emotional regulation and boundary setting",
+      "- Integration of relaxation techniques to maintain emotional stability",
+      "- Hypnosis session: Releasing the need to appease others and embracing self-validation"
+    ]
+  },
+  "motivational_closure": "You deserve to feel valued and respected, regardless of others' opinions or expectations. Your well-being matters, and you have the right to establish boundaries that protect your peace and emotional health.",
+  "tags": [
+    "BoundarySetting",
+    "EmotionalRegulation",
+    "SelfWorth",
+    "Forgiveness",
+    "Assertiveness",
+    "Empowerment",
+    "ConflictResolution",
+    "SelfValidation"
+  ]
+}

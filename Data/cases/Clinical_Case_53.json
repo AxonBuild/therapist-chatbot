@@ -1,0 +1,59 @@
+{
+  "case_id": "Clinical_Case_53",
+  "age": "19",
+  "gender_identity": "male presents with impulse phobia characterized by violent, unwanted mental images, coupled with a dissociation between will and perceived danger of acting out. Social avoidance and digital withdrawal are evident, with a marked hypersensitivity to others' gaze and mild social anxiety. He demonstrates low emotional verbalization, a tendency to internalize emotions, and self-devaluation stemming from intrusive thoughts. Although he has initiated some positive behavioral changes, such as enrolling in driving school and going to the gym, these efforts remain fragile and context-dependent.",
+  "summary": "(RAG Format)\nThis 19-year-old male presents with impulse phobia characterized by violent, unwanted mental images, coupled with a dissociation between will and perceived danger of acting out. Social avoidance and digital withdrawal are evident, with a marked hypersensitivity to others' gaze and mild social anxiety. He demonstrates low emotional verbalization, a tendency to internalize emotions, and self-devaluation stemming from intrusive thoughts. Although he has initiated some positive behavioral changes, such as enrolling in driving school and going to the gym, these efforts remain fragile and context-dependent.",
+  "main_issues": [
+    "- Impulse phobia with intrusive, violent images and obsessive fear of acting out",
+    "- Social avoidance and increased digital withdrawal",
+    "- Hypersensitivity to social evaluation and mild social anxiety",
+    "- Hypermentalization with low emotional expression",
+    "- Self-devaluation and difficulty envisioning positive self-evolution"
+  ],
+  "emotions": [
+    "Ambivalence (wanting to connect but fearing exposure)",
+    "Fear (of self, of losing control)",
+    "Internalized anger and latent sadness",
+    "Shame or implicit discomfort linked to intrusive thoughts"
+  ],
+  "limiting_beliefs": [
+    "- \"I might be dangerous without wanting to be.\"",
+    "- \"I'm different, maybe abnormal.\"",
+    "- \"If I expose myself, I lose control.\"",
+    "- \"If I feel too much, it overflows.\""
+  ],
+  "therapeutic_goals": [
+    "- Reduce intrusive thoughts and reframe their meaning",
+    "- Develop emotional anchoring and bodily reconnection",
+    "- Gradually increase social exposure without reinforcement of phobic patterns",
+    "- Foster a more balanced self-perception and reduce self-devaluation",
+    "- Encourage emotional expression without fear of overflow"
+  ],
+  "solutions": {
+    "immediate": [
+      "- \"Stop Image\" technique: visualizing a neutral image (e.g., a door closing) to interrupt intrusive thoughts",
+      "- Cardiac coherence practice 3x/day to calm the autonomic nervous system",
+      "- Automatic writing exercise (5 minutes/day) to externalize intrusive thoughts without judgment"
+    ],
+    "intermediate": [
+      "- Gradual social exposure work: initiate 1 interaction/week with a non-familiar person",
+      "- Cognitive reprogramming: reframe \"I'm dangerous\" to \"I'm vigilant precisely because I don't want to harm\"",
+      "- Morning physical activation ritual (10 minutes of walking or core exercises) for bodily anchoring"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Intrusive Thoughts and Inner Peace",
+      "- Dissociating intrusive thoughts from personal identity",
+      "- Reinforcing a safe inner space where thoughts can pass without threat",
+      "- Reconnecting with a peaceful, grounded self-image"
+    ]
+  },
+  "motivational_closure": "You are not what you think. You are the one watching the thoughts pass by, learning, day by day, to choose what to let in. The fact that you're talking about it, trying to understand, is already the greatest act of inner strength.",
+  "tags": [
+    "IntrusiveThoughts",
+    "ImpulsePhobia",
+    "SocialAnxiety",
+    "SelfValidation",
+    "EmotionalAnchoring",
+    "InnerPeace"
+  ]
+}

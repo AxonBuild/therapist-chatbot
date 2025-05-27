@@ -1,0 +1,64 @@
+{
+  "case_id": "Clinical_case_139",
+  "age": "25",
+  "gender_identity": "man",
+  "summary": "(RAG Format)\nThis 25-year-old man presents with a recurrent pattern of emotional distress and attachment instability, primarily triggered by perceived ambivalence in romantic relationships. Despite recognizing the negative impact of his fixation on his former partner's behavior, he reports difficulty detaching emotionally, exacerbated by social media monitoring and anticipatory anxiety. His narrative reveals underlying fears of abandonment and rejection, alongside unresolved emotional injuries from past toxic relationships.",
+  "main_issues": [
+    "- Emotional hypervigilance and monitoring of former partner's social media activity.",
+    "- Persistent rumination on ambiguous romantic signals and perceived rejection.",
+    "- Difficulty detaching emotionally from a past relationship, leading to distress and preoccupation.",
+    "- Unresolved emotional wounds from a prior toxic relationship marked by manipulation and rejection.",
+    "- Underlying fear of abandonment manifesting as compulsive checking and over-analysis."
+  ],
+  "emotions": [
+    "Anxiety",
+    "Fear of rejection",
+    "Emotional dependency",
+    "Insecurity",
+    "Obsessive rumination"
+  ],
+  "limiting_beliefs": [
+    "- \"If she doesn't reach out, it means I don't matter.\"",
+    "- \"I need constant reassurance to feel secure.\"",
+    "- \"If I let go, I'll lose control over the situation.\"",
+    "- \"I can't be happy unless I know where I stand with her.\""
+  ],
+  "therapeutic_goals": [
+    "- Address underlying abandonment fears linked to past toxic relationship.",
+    "- Develop emotional regulation techniques to reduce obsessive monitoring.",
+    "- Reframe cognitive distortions around perceived rejection and self-worth.",
+    "- Cultivate a sense of self outside of romantic attachments.",
+    "- Support emotional detachment while maintaining a sense of self-stability."
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Implement a daily journaling practice to track triggers related to obsessive monitoring.",
+      "- Hypnosis session to reinforce emotional detachment and self-soothing techniques.",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Cognitive restructuring exercises to challenge catastrophic thinking around rejection.",
+      "- Guided visualization to release emotional ties and reclaim personal power.",
+      "- Hypnosis session focused on calming anxiety related to uncertainty and loss.",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Psychotherapy to address abandonment schema and emotional dependency.",
+      "- Sensorimotor techniques to ground physical sensations during emotional distress.",
+      "- Hypnosis session to integrate a sense of self-worth independent of external validation."
+    ]
+  },
+  "motivational_closure": "You are not defined by their attention or absence. Your worth is not contingent upon another's response. The power to reclaim your peace lies in your ability to let go, to trust yourself, and to recognize that you are enough.",
+  "tags": [
+    "EmotionalDetachment",
+    "SelfWorth",
+    "AnxietyRelief",
+    "AbandonmentHealing",
+    "ObsessiveRumination",
+    "SelfSoothing",
+    "EmotionalDependency"
+  ]
+}

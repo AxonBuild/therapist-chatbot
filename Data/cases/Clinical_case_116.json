@@ -1,0 +1,44 @@
+{
+  "case_id": "Clinical_case_116",
+  "age": "25",
+  "gender_identity": "Man (Second Case)",
+  "summary": "(RAG Format)\nThe patient, a 25-year-old man, presents with unresolved grief linked to the loss of his mother and grandmother, who were the primary sources of emotional validation in his life. He reports struggling to find a sense of self-worth and recognition in the absence of these key figures. Despite occasional gestures of appreciation from others, he remains unable to internalize positive affirmations and continues to feel unseen and undervalued. Sessions reveal emotional exhaustion stemming from repeated emotional flooding when recalling memories of his mother, particularly during her illness and his efforts to share significant life events with her.",
+  "main_issues": [
+    "- Unresolved grief from the loss of mother and grandmother",
+    "- Inability to internalize positive affirmations and recognition",
+    "- Persistent feelings of insignificance despite contributions to others",
+    "- Emotional exhaustion from unprocessed grief and unresolved attachment",
+    "- Difficulty detaching from painful memories of maternal loss and emotional support withdrawal"
+  ],
+  "emotions": [
+    "Grief",
+    "Guilt",
+    "Emptiness",
+    "Self-doubt",
+    "Emotional fatigue"
+  ],
+  "limiting_beliefs": [
+    "- 'If I don't receive recognition, I don't matter'",
+    "- 'If I let go of the grief, I am betraying their memory'",
+    "- 'I am only valuable if others acknowledge it'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe self-worth to be independent of external validation",
+    "- Facilitate emotional release of unresolved grief related to mother and grandmother",
+    "- Develop grounding techniques to manage emotional flooding during memory recall",
+    "- Encourage self-compassion and the recognition of personal achievements"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are not defined by the loss you have endured or the recognition you may or may not receive. Your worth is inherent, just as you are, without the need for external validation. You are seen, you are valued, and you are enough - simply by being.",
+  "tags": [
+    "GriefRelease",
+    "SelfWorth",
+    "EmotionalRecovery",
+    "LettingGo",
+    "InternalValidation"
+  ]
+}

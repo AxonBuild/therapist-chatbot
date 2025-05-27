@@ -1,0 +1,47 @@
+{
+  "case_id": "Clinical_case_142",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with significant emotional volatility, difficulty managing interpersonal conflicts, and heightened sensitivity to perceived criticism. He reports feeling stagnant since returning from a transformative trip to Indonesia, where he experienced a profound sense of inner peace and self-reflection. Upon his return, he feels increasingly frustrated and trapped in unresolved family conflicts, particularly with his father and younger sister, both of whom he perceives as dismissive and critical.",
+  "main_issues": [
+    "- Intense emotional reactivity and difficulty regulating anger",
+    "- Persistent conflicts with father characterized by perceived invalidation and control",
+    "- Ambivalence in romantic relationship due to differing life plans and priorities",
+    "- Feeling trapped in family dynamics that undermine his sense of autonomy",
+    "- Loss of grounding and direction after returning from Indonesia"
+  ],
+  "emotions": [
+    "Frustration",
+    "Anger",
+    "Resentment",
+    "Confusion",
+    "Sense of stagnation"
+  ],
+  "limiting_beliefs": [
+    "- 'If I don't assert myself, I'll be overpowered.'",
+    "- 'I can't trust others to respect my boundaries.'",
+    "- 'Leaving is the only way to escape conflict.'",
+    "- 'If I don't stay in control, I'll lose myself.'"
+  ],
+  "therapeutic_goals": [
+    "- Assist in identifying and deconstructing triggers for intense anger responses",
+    "- Support the patient in exploring alternative conflict resolution strategies with his father and sister",
+    "- Encourage reflection on the impact of his Indonesia experience to integrate feelings of calm and clarity",
+    "- Help the patient establish a clearer sense of personal direction and values, independent of family expectations",
+    "- Explore underlying fears of disconnection and abandonment in the romantic relationship"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are capable of maintaining your inner calm and clarity, even when the world around you feels chaotic. Each time you choose to ground yourself and respond rather than react, you reclaim your power and align with your true self. This is your time to redefine what connection, respect, and inner peace mean to you.",
+  "tags": [
+    "EmotionalRegulation",
+    "FamilyConflict",
+    "Assertiveness",
+    "InnerCalm",
+    "SelfTrust",
+    "Autonomy"
+  ]
+}

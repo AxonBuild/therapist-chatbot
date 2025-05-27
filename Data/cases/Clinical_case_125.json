@@ -1,0 +1,50 @@
+{
+  "case_id": "Clinical_case_125",
+  "age": "44",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 44-year-old woman presents with ongoing emotional and financial stressors related to family dynamics, unresolved parental conflicts, and financial instability. She reports increased emotional exhaustion and frustration, particularly regarding her mother's deteriorating cognitive state and her father's financial dependence. Additionally, she is experiencing significant distress related to financial insecurity, exacerbated by lending a substantial amount of money to her father while struggling to maintain her own financial stability. Her coping mechanisms include compulsive cleaning and organizing, which provide a temporary sense of control and relief. She also expresses a desire for substantial changes in her living space as a way to feel a sense of renewal and reset amidst ongoing stress.",
+  "main_issues": [
+    "- Persistent emotional exhaustion from managing family dynamics and financial responsibilities.",
+    "- Compulsive cleaning and organizing as a coping mechanism for emotional stress.",
+    "- Financial instability due to recent loans given to her father and fears of financial recurrence from her past struggles.",
+    "- Emotional disconnect from her mother, who is exhibiting signs of cognitive decline and potential dementia.",
+    "- Unresolved grief and frustration regarding her mother's refusal to seek medical treatment.",
+    "- Desire for change and transformation in her living environment as a way to regain a sense of control and autonomy."
+  ],
+  "emotions": [
+    "Frustration",
+    "Exhaustion",
+    "Resentment",
+    "Anxiety",
+    "Financial insecurity",
+    "Ambivalence"
+  ],
+  "limiting_beliefs": [
+    "- I must always be the one to fix things for my family, even if it drains me.",
+    "- If I take care of my own needs, I am being selfish.",
+    "- I will never fully recover from my financial struggles - the past will always repeat itself.",
+    "- I am powerless to help my mother because she refuses treatment."
+  ],
+  "therapeutic_goals": [
+    "- Address compulsive cleaning and organizing as a coping mechanism and develop alternative emotional regulation strategies.",
+    "- Encourage financial boundary setting with her father and clarify expectations around loan repayment.",
+    "- Support her in processing feelings of loss and frustration regarding her mother's cognitive decline.",
+    "- Explore unresolved grief and provide techniques for managing anticipatory grief.",
+    "- Facilitate a structured exploration of potential life changes, such as transforming her living space to create a renewed sense of autonomy and purpose.",
+    "- Implement grounding and self-compassion techniques to mitigate feelings of exhaustion and resentment."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Your worth is not defined by how much you give or how much you clean. You are allowed to rest, to reclaim your time, and to nurture yourself without guilt. Today, you honor your needs and allow yourself to step back from the chaos without losing yourself in it.",
+  "tags": [
+    "FinancialInsecurity",
+    "FamilyDynamics",
+    "CompulsiveCleaning",
+    "EmotionalExhaustion",
+    "SelfCompassion",
+    "AnticipatoryGrief"
+  ]
+}

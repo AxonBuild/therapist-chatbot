@@ -1,0 +1,61 @@
+{
+  "case_id": "Clinical_Case_45",
+  "age": "12",
+  "gender_identity": "girl presents with somatic anxiety characterized by dizziness, blurred vision, and sensations of weakness, particularly after physical exertion. Panic attacks have been triggered by episodes of relative fasting, likely resulting in hypoglycemia, which she interprets as signs of imminent danger. A respiratory impulse phobia has emerged, centered around the fear of unintentionally stopping breathing, suggesting a disconnect between bodily sensations and perceived danger. She exhibits recurring negative thoughts, a fear of losing control, and a heightened focus on bodily sensations, with no identified traumatic event but potential reactivation of older emotional memories.",
+  "summary": "(RAG Format)\nThis 12-year-old girl presents with somatic anxiety characterized by dizziness, blurred vision, and sensations of weakness, particularly after physical exertion. Panic attacks have been triggered by episodes of relative fasting, likely resulting in hypoglycemia, which she interprets as signs of imminent danger. A respiratory impulse phobia has emerged, centered around the fear of unintentionally stopping breathing, suggesting a disconnect between bodily sensations and perceived danger. She exhibits recurring negative thoughts, a fear of losing control, and a heightened focus on bodily sensations, with no identified traumatic event but potential reactivation of older emotional memories.",
+  "main_issues": [
+    "- Somatic anxiety with physical symptoms (dizziness, blurred vision, weakness)",
+    "- Panic attacks linked to fasting and hypoglycemia",
+    "- Respiratory impulse phobia ('What if I stop breathing?')",
+    "- Negative self-talk and intrusive thoughts",
+    "- Confusion between physical sensations and real danger",
+    "- Emotional hypersensitivity and fear of losing control"
+  ],
+  "emotions": [
+    "Fear (of losing control, of self-harm)",
+    "Anxiety linked to body monitoring and hypoglycemia",
+    "Uncertainty and confusion regarding bodily sensations",
+    "Unconscious guilt ('What if I'm the one causing it?')",
+    "Emotional vulnerability in the context of pre-adolescence"
+  ],
+  "limiting_beliefs": [
+    "- \"I might lose control of myself.\"",
+    "- \"I could stop breathing without meaning to.\"",
+    "- \"My thoughts can harm me.\"",
+    "- \"If I feel something strongly, it must be dangerous.\""
+  ],
+  "therapeutic_goals": [
+    "- Decrease somatic anxiety and reduce catastrophic interpretations",
+    "- Normalize bodily sensations as safe and functional",
+    "- Anchor a sense of bodily trust and internal safety",
+    "- Develop emotional differentiation between thoughts and real danger",
+    "- Reduce respiratory impulse phobia through grounding and breathwork"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Body psychoeducation: explaining how the body regulates breathing automatically",
+      "- Friendly breath exercise: hand on chest, hand on belly, breathing as a comforting friend",
+      "- Grounding exercise: gentle bouncing on feet, pressing hands against a wall to anchor in the present"
+    ],
+    "intermediate": [
+      "- Emotional journal: 'What I felt / What I thought / What I did to feel better'",
+      "- Safe visualization: create a comforting, imaginary place to retreat to during anxiety peaks",
+      "- Thought reframing: 'My body knows how to breathe. I can trust it.'"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Trusting the Body and Calming the Mind",
+      "- Reframe catastrophic thoughts as transient clouds passing in the sky",
+      "- Anchor breathing as a consistent, reliable ally in moments of panic",
+      "- Strengthen bodily confidence and internal safety during perceived threats"
+    ]
+  },
+  "motivational_closure": "Your body is your best ally. Even when your mind has doubts, your breath keeps going. And every breath is proof that you're here, that you're strong, and that you're moving forward.",
+  "tags": [
+    "Anxiety",
+    "SomaticSymptoms",
+    "Breathwork",
+    "InternalSafety",
+    "EmotionalRegulation",
+    "AdolescentAnxiety"
+  ]
+}

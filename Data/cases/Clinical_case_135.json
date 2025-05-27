@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_case_135",
+  "age": "54",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 54-year-old woman presents with unresolved emotional turmoil related to unexpressed anger and feelings of betrayal following her husband's actions during a critical life event. Despite recognizing her suppressed resentment, she continues to struggle with feelings of regret for not having acted in alignment with her true desires. Additionally, she reports heightened assertiveness in her professional setting, a notable contrast to her passivity in her marital relationship. This dynamic suggests a deeper internal conflict between self-expression and self-sabotage, with potential links to her recent health crisis.",
+  "main_issues": [
+    "- Persistent resentment and emotional dissonance related to her husband's perceived betrayal.",
+    "- Unresolved feelings of guilt for not having left the relationship during a pivotal moment.",
+    "- Increased assertiveness in the workplace juxtaposed with emotional suppression in the marriage.",
+    "- Difficulty reconciling her desire for autonomy with perceived obligations toward her partner.",
+    "- Potential link between unexpressed anger and recent health concerns."
+  ],
+  "emotions": [
+    "Resentment",
+    "Guilt",
+    "Suppressed anger",
+    "Internal conflict",
+    "Emotional disconnection"
+  ],
+  "limiting_beliefs": [
+    "- \"If I had left, I would have been seen as heartless.\"",
+    "- \"If I express my anger, I will hurt him further.\"",
+    "- \"My needs are less important than maintaining the relationship.\"",
+    "- \"I can't change the past, so I must accept this situation.\""
+  ],
+  "therapeutic_goals": [
+    "- Support emotional processing of unresolved resentment and guilt linked to the marital conflict.",
+    "- Develop assertive communication techniques to express needs without fear of judgment.",
+    "- Explore underlying beliefs around self-worth and perceived obligations toward her partner.",
+    "- Implement grounding techniques to manage emotional activation in relational contexts.",
+    "- Reframe cognitive distortions around self-blame and perceived inability to act."
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Breathing exercises to ground and center before confronting unresolved emotions.",
+      "- Journaling to articulate unexpressed anger and identify core needs in the relationship.",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Cognitive restructuring to challenge self-blame and reframe her narrative of the past.",
+      "- Visualization exercises to release pent-up resentment and imagine alternate outcomes.",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Psychotherapy to address patterns of self-sabotage and emotional suppression.",
+      "- Hypnosis session to integrate assertiveness and self-compassion in relational dynamics.",
+      "- Sensorimotor techniques to process residual anger and reduce somatic tension."
+    ]
+  },
+  "motivational_closure": "You have the right to voice your truth without guilt. Each time you choose to honor your feelings, you reclaim a part of yourself that has been lost in the silence. Healing begins with the courage to speak.",
+  "tags": [
+    "Assertiveness",
+    "ResentmentRelease",
+    "EmotionalProcessing",
+    "SelfCompassion",
+    "RelationalDynamics",
+    "SelfWorth",
+    "GuiltProcessing"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "case_id": "Clinical_Case_24",
+  "age": "17",
+  "gender_identity": "Girl (Second Consultation)",
+  "summary": "(RAG Format)\nThe patient is a 17-year-old girl presenting with significant emotional dysregulation, academic disengagement, and intense digital dependency. She describes difficulties concentrating, frequent crying episodes without clear triggers, disrupted sleep, and chronic fatigue despite long sleep durations. The emotional impact of a recent romantic rupture is still present, with unresolved feelings and confusion regarding relational boundaries. She feels neglected emotionally, hides key aspects of her life from her mother, and retreats into virtual spaces to cope with disconnection and inner chaos.",
+  "main_issues": [
+    "- Excessive emotional reactivity and mood fluctuations",
+    "- Academic disconnection and lack of motivation",
+    "- Sleep disturbances and low physical energy despite long sleep duration",
+    "- Romantic rupture with persistent emotional attachment",
+    "- Tendency to isolate from adult emotional support (e.g., mother)",
+    "- Overreliance on phone usage and virtual relationships as coping"
+  ],
+  "emotions": [
+    "Sadness",
+    "Frustration",
+    "Confusion",
+    "Emotional loneliness",
+    "Anxiety"
+  ],
+  "limiting_beliefs": [
+    "- 'I don't matter enough to others to be prioritized.'",
+    "- 'If I don't perform, I disappoint.'",
+    "- 'I can't fully trust others with my emotions.'",
+    "- 'Letting go means being abandoned.'"
+  ],
+  "therapeutic_goals": [
+    "- Normalize emotional responses and reduce guilt linked to hypersensitivity",
+    "- Reestablish emotional self-regulation strategies in romantic attachment",
+    "- Promote sleep recovery and body-mind reconnection through daily rhythm",
+    "- Encourage healthy digital habits and real-life grounding",
+    "- Foster open and secure communication with caregivers"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Breathing techniques and anxiety grounding tools for emotional peaks",
+      "- Structured sleep and screen hygiene routines",
+      "- Journal writing: \"What I feel, I'm allowed to feel.\"",
+      "- Hypnosis session recommendation: emotional reset and digital detachment imagery",
+      "Tags: #EmotionalReset #DigitalOverload #SleepRecovery",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Emotional expression rituals (letter to the ex, not sent)",
+      "- Guided conversation templates to reconnect with mother safely",
+      "- Behavioral activation: daily non-screen-based micro-pleasures",
+      "- Hypnosis session recommendation: safe inner emotional anchoring and boundary rebuilding",
+      "Tags: #TeenAttachment #EmotionalAnchoring #BoundaryRebuilding",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Safe inner attachment reconstruction (EMDR/future-self support)",
+      "- Real-life self-worth rebuilding through anchored routines",
+      "- Hypnosis session recommendation: identity consolidation and emotional clarity restoration",
+      "Tags: #IdentitySupport #RomanticGrief #EmotionalStability"
+    ]
+  },
+  "motivational_closure": "You are not too much. Your emotions are valid. And you are learning to live with them, not against them. One breath at a time, one truth at a time.",
+  "tags": [
+    "EmotionalReset",
+    "DigitalOverload",
+    "SleepRecovery",
+    "TeenAttachment",
+    "EmotionalAnchoring",
+    "BoundaryRebuilding",
+    "IdentitySupport",
+    "RomanticGrief",
+    "EmotionalStability",
+    "EmotionalDysregulation",
+    "TeenRomanticBreakup",
+    "SchoolAvoidance",
+    "DigitalOverstimulation",
+    "Fatigue",
+    "SomaticAnxiety",
+    "BoundaryRepair",
+    "InnerClarity"
+  ]
+}

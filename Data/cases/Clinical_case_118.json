@@ -1,0 +1,44 @@
+{
+  "case_id": "Clinical_case_118",
+  "age": "50",
+  "gender_identity": "Woman (Second Case)",
+  "summary": "(RAG Format)\nThe patient, a 50-year-old woman, presents with emotional distress and ambivalence following the end of a complex relationship. She expresses persistent feelings of responsibility for her partner's well-being despite his resistance to accepting help. The session highlights a pattern of attempting to 'fix' others while neglecting her own emotional needs. She also reports a fear of solitude and uncertainty about her capacity to maintain boundaries and avoid falling back into old patterns.",
+  "main_issues": [
+    "- Persistent sense of responsibility for the well-being of a resistant partner",
+    "- Ambivalence regarding the end of a long-term relationship",
+    "- Fear of solitude and emotional abandonment",
+    "- Emotional exhaustion from repeated attempts to 'save' others",
+    "- Difficulty establishing and maintaining boundaries in personal relationships"
+  ],
+  "emotions": [
+    "Guilt",
+    "Fear of loneliness",
+    "Self-blame",
+    "Resentment",
+    "Emotional exhaustion"
+  ],
+  "limiting_beliefs": [
+    "- 'If I don't help, I am a bad person'",
+    "- 'If I walk away, I am abandoning him'",
+    "- 'I am responsible for others' happiness'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe self-perception from 'rescuer' to self-advocate",
+    "- Develop self-soothing techniques to manage fear of solitude",
+    "- Establish emotional boundaries to prevent further emotional exhaustion",
+    "- Encourage self-compassion and release of guilt associated with unmet expectations"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are allowed to choose yourself. You are allowed to step back and let others take responsibility for their own actions. Your well-being matters just as much as anyone else's. Letting go is not failure - it is an act of courage and self-respect.",
+  "tags": [
+    "SelfCompassion",
+    "EmotionalRecovery",
+    "GuiltRelease",
+    "BoundarySetting",
+    "LettingGo"
+  ]
+}

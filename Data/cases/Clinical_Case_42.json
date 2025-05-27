@@ -1,0 +1,60 @@
+{
+  "case_id": "Clinical_Case_42",
+  "age": "80",
+  "gender_identity": "widow, a retired antique dealer, presents with acute anxiety linked to the fear of dying alone. The trigger appears to be sudden weight loss, echoing her husband's terminal cancer trajectory. Ritualized behaviors have emerged, such as dressing quickly to avoid being found naked, reflecting a deep-seated death phobia. Despite her strong verbal expression, she remains detached from her bodily sensations, a pattern typical of highly autonomous individuals who have long been the 'strong ones' for others. Her grief remains unresolved, having lost her husband during Covid without traditional mourning rituals. Emotional pain is further projected onto her children's suffering, mirroring her own unprocessed wounds.",
+  "summary": "(RAG Format)\nThis 80-year-old widow, a retired antique dealer, presents with acute anxiety linked to the fear of dying alone. The trigger appears to be sudden weight loss, echoing her husband's terminal cancer trajectory. Ritualized behaviors have emerged, such as dressing quickly to avoid being found naked, reflecting a deep-seated death phobia. Despite her strong verbal expression, she remains detached from her bodily sensations, a pattern typical of highly autonomous individuals who have long been the 'strong ones' for others. Her grief remains unresolved, having lost her husband during Covid without traditional mourning rituals. Emotional pain is further projected onto her children's suffering, mirroring her own unprocessed wounds.",
+  "main_issues": [
+    "- Acute death-related anxiety and fear of being found alone",
+    "- Hyper-mentalization and disconnection from bodily sensations",
+    "- Unresolved grief, compounded by Covid restrictions on mourning",
+    "- Projective identification with children's suffering",
+    "- Ritualized behaviors linked to fear of undignified death"
+  ],
+  "emotions": [
+    "Existential anxiety",
+    "Emotional loneliness",
+    "Diffuse sadness masked by hyper-mentalization",
+    "Latent guilt related to children and perceived inadequacies",
+    "Fear of physical decline symbolized by weight loss"
+  ],
+  "limiting_beliefs": [
+    "- 'If I lose weight, it's the beginning of the end.'",
+    "- 'I must be ready to die, but properly.'",
+    "- 'I am alone with my anxieties.'",
+    "- 'Analysis is not enough, but I don't know how to feel.'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe fear of death as a natural yet non-imminent process",
+    "- Normalize physical sensations without catastrophic interpretations",
+    "- Facilitate emotional release without hyper-mentalization",
+    "- Anchor a sense of presence and inner connection during solitary moments",
+    "- Integrate grief work while recognizing her enduring value as a family pillar"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Sternum self-massage + '4-4-8' breathing for immediate grounding",
+      "- Verbal grounding mantra: 'I am here, I am alive, it's not now.'",
+      "- Create a symbolic end-of-life ritual to reduce anticipatory anxiety"
+    ],
+    "intermediate": [
+      "- Daily feeling journal to bridge thought and sensation without analysis",
+      "- Evening ritual: comforting scent or music to signal the end of the day and re-anchor presence",
+      "- Imaginary dialogue with her husband to externalize unspoken grief"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Reclaiming Solitude as a Space of Connection",
+      "- Reframe solitude as a place of internal connection and self-soothing",
+      "- Dissociate weight loss from imminent death narratives",
+      "- Visualize a thread of light connecting her to her husband and children, symbolizing continuity"
+    ]
+  },
+  "motivational_closure": "You have faced the grief journey with immense dignity. Today, it's not the end you need to prepare for, but the rest of your journey. You are not alone. Your heart still beats for precious things, and your memories are not chains—they are bridges to peace.",
+  "tags": [
+    "DeathAnxiety",
+    "GriefIntegration",
+    "EmotionalLoneliness",
+    "ExistentialFear",
+    "InternalSafety",
+    "AgingSupport"
+  ]
+}

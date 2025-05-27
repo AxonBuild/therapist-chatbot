@@ -1,0 +1,81 @@
+{
+  "case_id": "Clinical_Case_12",
+  "age": "10",
+  "gender_identity": "Girl",
+  "summary": "(RAG Format)\nThe patient, a 10-year-old girl, presents with emotional sensitivity related to her parents' separation and perceived inconsistency in her father's behavior. She reports feeling a sense of abandonment when her father is emotionally distant and experiences a reactivation of early childhood memories when both parents are together. She expresses confusion and sadness regarding her father's unpredictable presence, particularly when he is less affectionate or fails to follow through on commitments. Physical symptoms include throat constriction and a sense of unease when reflecting on times she was unable to reach her mother, potentially amplifying the sensation of being left behind.",
+  "main_issues": [
+    "- Emotional instability linked to inconsistent paternal presence",
+    "- Fear of abandonment when parents are not together",
+    "- Heightened sensitivity to perceived rejection",
+    "- Association of physical symptoms (throat constriction) with emotional distress",
+    "- Emotional regression to early childhood dynamics when parents are together"
+  ],
+  "emotions": [
+    "Sadness",
+    "Confusion",
+    "Fear of abandonment",
+    "Hope when father is attentive",
+    "Resentment when father is emotionally unavailable"
+  ],
+  "limiting_beliefs": [
+    "- 'If I am not important to my father, I am not lovable'",
+    "- 'My father's inconsistency means I am not good enough'",
+    "- 'If my parents are not together, I am unsafe'"
+  ],
+  "therapeutic_goals": [
+    "- Normalize the feeling of being loved regardless of parental dynamics",
+    "- Reframe the father's inconsistency as unrelated to the child's worth",
+    "- Install an emotional anchor of safety and self-worth",
+    "- Reduce the emotional impact of perceived rejection",
+    "- Desensitize childhood memories linked to parental separation"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Psychoeducation on emotional safety and parental dynamics",
+      "- Grounding techniques when feeling throat constriction",
+      "- Reassurance exercises to validate self-worth independent of father's behavior",
+      "- Hypnosis session recommendation: emotional grounding and self-validation",
+      "Tags: #EmotionalSafety #SelfValidation #Grounding",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Hypnotherapy to release old emotional anchors linked to father's perceived rejection",
+      "- EMDR on parental separation and associated childhood memories",
+      "- Emotional processing exercises to build self-reliance and self-compassion",
+      "- Hypnosis session recommendation: symbolic release from emotional dependence",
+      "Tags: #EmotionalProcessing #SelfCompassion #SymbolicRelease",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Guided hypnosis for emotional autonomy and sense of inner safety",
+      "- Daily affirmations to reinforce self-worth and reduce dependence on parental approval",
+      "- Building emotional anchors to navigate future separations or perceived rejections",
+      "- Hypnosis session recommendation: integrating emotional independence",
+      "Tags: #EmotionalIndependence #SelfWorth #InnerSafety"
+    ]
+  },
+  "motivational_closure": "You are more than the moments that made you feel unseen. Your worth is not defined by anyone else's actions. Every breath, every heartbeat, is a reminder that you are loved, valued, and whole - just as you are.",
+  "tags": [
+    "EmotionalSafety",
+    "SelfValidation",
+    "Grounding",
+    "EmotionalProcessing",
+    "SelfCompassion",
+    "SymbolicRelease",
+    "EmotionalIndependence",
+    "SelfWorth",
+    "InnerSafety",
+    "EmotionalSafety",
+    "SelfValidation",
+    "Grounding",
+    "EmotionalProcessing",
+    "SelfCompassion",
+    "SymbolicRelease",
+    "EmotionalIndependence",
+    "SelfWorth",
+    "InnerSafety"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "case_id": "Clinical_case_87",
+  "age": "44",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 44-year-old woman presenting with significant frustration regarding her interactions with specific patients, particularly a long-term borderline patient whose sessions consistently overrun. The patient expresses a sense of professional exhaustion, feelings of being emotionally drained, and a growing sense of self-doubt in her therapeutic efficacy. Additionally, she reflects on her own loneliness and perceived destiny of remaining alone, noting a tendency to seek guidance from psychic readings, despite recognizing their inconsistency.",
+  "main_issues": [
+    "- Professional burnout and frustration with challenging patients",
+    "- Sense of emotional exhaustion and self-doubt in professional efficacy",
+    "- Persistent feelings of loneliness and existential questioning",
+    "- Overreliance on external guidance (psychics) as a coping mechanism",
+    "- Difficulty setting boundaries with demanding patients"
+  ],
+  "emotions": [
+    "Frustration",
+    "Exhaustion",
+    "Loneliness",
+    "Self-doubt",
+    "Confusion"
+  ],
+  "limiting_beliefs": [
+    "- 'If I set boundaries, I will lose my patients.'",
+    "- 'I am destined to be alone.'",
+    "- 'I am not an effective therapist.'",
+    "- 'Other people's needs are more important than my own.'"
+  ],
+  "therapeutic_goals": [
+    "- Develop effective boundary-setting strategies to manage demanding patients",
+    "- Implement self-care routines to reduce emotional exhaustion",
+    "- Encourage self-reflection on limiting beliefs surrounding loneliness and self-worth",
+    "- Foster detachment from psychic readings as a source of validation"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Grounding exercises for emotional regulation post-session",
+      "- Journaling to externalize frustration and clarify boundaries",
+      "- Hypnosis session recommendation: Emotional Reset and Self-Worth Anchoring"
+    ],
+    "intermediate": [
+      "- Develop assertiveness scripts to manage patient overstepping",
+      "- Reframe limiting beliefs about professional efficacy",
+      "- Guided visualization to reinforce personal boundaries"
+    ],
+    "long_term": [
+      "- Integrate regular self-care check-ins to monitor emotional depletion",
+      "- Develop a plan for reducing reliance on external validation (psychics)",
+      "- Establish a mentorship connection for professional support"
+    ]
+  },
+  "motivational_closure": "You are allowed to take up space. Your boundaries are valid, and your needs matter. You are not here to save everyone, but to offer guidance from a place of grounded presence.",
+  "tags": [
+    "BoundarySetting",
+    "SelfWorth",
+    "EmotionalExhaustion",
+    "Loneliness",
+    "Validation",
+    "BurnoutRecovery"
+  ]
+}

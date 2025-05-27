@@ -1,0 +1,55 @@
+{
+  "case_id": "Clinical_case_83",
+  "age": "15",
+  "gender_identity": "Boy",
+  "summary": "(RAG Format)\nThe patient is a 15-year-old boy experiencing emotional withdrawal, lack of motivation, and excessive screen time. He reports feelings of boredom and frustration at home, where he perceives constant criticism from both parents regarding his lack of activity and perceived laziness. At school, he struggles with maintaining focus, with some signs of academic decline and a noticeable increase in gaming and social media use, averaging over 4 hours per day. Additionally, he has begun to exhibit signs of stress-related stuttering, which was not present previously but has intensified alongside increased familial tensions and academic pressure.",
+  "main_issues": [
+    "- Emotional withdrawal and avoidance behaviors",
+    "- Excessive screen time (4+ hours/day) impacting daily functioning",
+    "- Parental criticism contributing to feelings of inadequacy",
+    "- Stress-related stuttering and speech hesitation",
+    "- Academic disengagement and lack of motivation"
+  ],
+  "emotions": [
+    "Frustration",
+    "Boredom",
+    "Anxiety",
+    "Guilt",
+    "Defensiveness"
+  ],
+  "limiting_beliefs": [
+    "\"If I say what I really feel, they won't understand.\"",
+    "\"I'm not good enough to meet their expectations.\"",
+    "\"Gaming is the only way to escape the pressure.\""
+  ],
+  "therapeutic_goals": [
+    "- Develop emotional regulation strategies to manage frustration and defensiveness",
+    "- Reduce screen time and promote healthier coping mechanisms",
+    "- Rebuild self-esteem through goal-setting and small achievements",
+    "- Address underlying anxiety contributing to stuttering",
+    "- Foster open communication with parents to reduce criticism and increase support"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to manage stress-related stuttering",
+      "- Hypnosis session recommendation: grounding and calming, focusing on reducing speech anxiety"
+    ],
+    "intermediate": [
+      "- Hypnosis session: releasing frustration and promoting emotional expression",
+      "- Structured time management plan to reduce screen time and increase productive activities"
+    ],
+    "long_term": [
+      "- Hypnosis session: enhancing self-esteem and fostering assertive communication",
+      "- Rebuilding a sense of personal agency through gradual exposure to social interactions"
+    ]
+  },
+  "motivational_closure": "Your voice matters, and you deserve to be heard. Each step you take toward expressing yourself is a step toward reclaiming your confidence and building the life you want.",
+  "tags": [
+    "EmotionalWithdrawal",
+    "SpeechAnxiety",
+    "ScreenTimeManagement",
+    "SelfEsteem",
+    "Assertiveness",
+    "ParentalCriticism"
+  ]
+}

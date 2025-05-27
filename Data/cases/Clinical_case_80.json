@@ -1,0 +1,55 @@
+{
+  "case_id": "Clinical_case_80",
+  "age": "42",
+  "gender_identity": "Man",
+  "summary": "(RAG Format)\nThe patient is a 42-year-old man experiencing intense emotional distress linked to unresolved trauma from past incidents involving violence, crime, and loss. He reports a heightened sense of insecurity, both physical and emotional, stemming from multiple experiences with violence involving close friends. Recurrent dreams of being chased and pursued evoke strong feelings of fear and powerlessness, suggesting unresolved traumatic memories. Additionally, the patient expresses persistent feelings of guilt and unresolved anger related to the loss of his sister and his perceived inability to act or express himself during critical moments. These dynamics manifest as intrusive thoughts, emotional volatility, and sleep disturbances characterized by vivid, unsettling dreams.",
+  "main_issues": [
+    "- Recurrent traumatic dreams with unresolved conclusions",
+    "- Guilt and anger associated with the loss of a sister",
+    "- Persistent feelings of insecurity and perceived powerlessness",
+    "- Emotional avoidance and suppression of anger",
+    "- Intrusive memories related to violent incidents and crime exposure"
+  ],
+  "emotions": [
+    "Fear",
+    "Guilt",
+    "Anger",
+    "Powerlessness",
+    "Sadness",
+    "Emotional numbness"
+  ],
+  "limiting_beliefs": [
+    "\"If I allow myself to feel, I will lose control.\"",
+    "\"I must remain strong to prevent further loss.\"",
+    "\"I should have done more to protect those I love.\""
+  ],
+  "therapeutic_goals": [
+    "- Process unresolved guilt related to his sister's death",
+    "- Release suppressed anger in a safe and controlled manner",
+    "- Reduce the intensity and frequency of traumatic dreams",
+    "- Develop grounding techniques to manage intrusive memories",
+    "- Rebuild a sense of inner security and self-trust"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Guided visualization for grounding and emotional stabilization",
+      "- Hypnosis session recommendation: symbolic closure with the sister, focusing on forgiveness and emotional release"
+    ],
+    "intermediate": [
+      "- Hypnosis session: processing feelings of anger and helplessness linked to violent incidents",
+      "- Reframing of guilt narratives to reduce self-blame and cultivate acceptance"
+    ],
+    "long_term": [
+      "- Hypnosis session: reconstructing inner safety and detaching from traumatic imprints",
+      "- Integration of assertiveness training to rebuild a sense of control and boundary-setting"
+    ]
+  },
+  "motivational_closure": "Your past does not define your present. You have the right to grieve, to feel anger, and to release it safely. Each step you take toward healing is a step toward reclaiming your peace.",
+  "tags": [
+    "TraumaRelease",
+    "GuiltProcessing",
+    "AngerManagement",
+    "EmotionalStabilization",
+    "SymbolicClosure"
+  ]
+}

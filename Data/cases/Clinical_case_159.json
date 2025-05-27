@@ -1,0 +1,61 @@
+{
+  "case_id": "Clinical_case_159",
+  "age": "56",
+  "gender_identity": "Man",
+  "summary": "(RAG Format)\nThe patient presents with complex emotional dynamics involving feelings of inadequacy, fear of conflict, and unresolved maternal issues. There is a significant focus on the maternal relationship marked by emotional neglect, criticism, and devaluation. Recent EMDR sessions have unearthed deep-rooted feelings of not being 'good enough,' coupled with lingering guilt associated with perceived abandonment.",
+  "main_issues": [
+    "- Recurrent feelings of inadequacy and fear of disappointing others",
+    "- Conflict avoidance and heightened emotional reactivity to criticism",
+    "- Unresolved maternal issues linked to childhood devaluation",
+    "- Emotional detachment from maternal figure prior to her death",
+    "- Guilt and unresolved conflict regarding mother's passing"
+  ],
+  "emotions": [
+    "Inadequacy",
+    "Guilt",
+    "Anger",
+    "Emotional detachment",
+    "Fear of conflict",
+    "Longing for validation"
+  ],
+  "limiting_beliefs": [
+    "- \"I am not good enough.\"",
+    "- \"If I assert myself, I will be rejected.\"",
+    "- \"I must avoid conflict to keep the peace.\"",
+    "- \"I am responsible for others' well-being.\""
+  ],
+  "therapeutic_goals": [
+    "- Reinforce self-worth and self-validation",
+    "- Address unresolved conflict and guilt related to maternal relationship",
+    "- Develop assertiveness and emotional boundaries",
+    "- Reprocess devaluation memories through EMDR",
+    "- Establish emotional detachment from past criticisms"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Grounding techniques to manage emotional reactivity",
+      "- EMDR session targeting the 'you will abandon Robert' incident",
+      "- Hypnosis session recommendation: Releasing guilt and fostering self-compassion"
+    ],
+    "intermediate": [
+      "- EMDR sessions addressing maternal devaluation and the 'Ouginet' nickname",
+      "- Hypnotic regression to process lingering resentment and guilt",
+      "- Visualization of a strong, self-assured identity"
+    ],
+    "long_term": [
+      "- Assertiveness training to counter conflict avoidance",
+      "- Emotional boundary setting with family members",
+      "- Ongoing EMDR for unresolved family dynamics"
+    ]
+  },
+  "motivational_closure": "The past may echo in the present, but it does not have to dictate the future. You have the power to define your worth, independent of what was said or done. Each step forward is a step toward reclaiming your narrative.",
+  "tags": [
+    "SelfWorth",
+    "GuiltRelease",
+    "ConflictResolution",
+    "EmotionalDetachment",
+    "Assertiveness",
+    "FamilyDynamics",
+    "EMDR"
+  ]
+}

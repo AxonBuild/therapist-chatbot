@@ -4,8 +4,8 @@ import re
 import time # For searching files
 from openai import OpenAI # Use OpenAI library structure for OpenRouter
 from dotenv import load_dotenv
-from typing import List
-from rag import fetch_guidance_notes
+from typing import List, Set, Dict, Any, Tuple
+from clinical_cases_rag import fetch_clinical_cases, analyze_solution_delivery
 from script_loader import ScriptLoader
 
 load_dotenv()
@@ -91,6 +91,7 @@ class LLMClient:
                 "Activity_offered": False  # Default to false when parsing fails
             }
 
+
 # --- Session State ---
 
 class ChatSession:
@@ -104,27 +105,84 @@ class ChatSession:
         self.offering_script: dict | None = None
         self.delivered_scripts: set[tuple[str, str]] = set()
         
-        # New: Track which guidance note sections have been delivered
-        self.delivered_guidance: dict[str, dict[str, bool]] = {}
+        #Track which guidance note sections have been delivered
+        #self.delivered_guidance: dict[str, dict[str, bool]] = {}
+
+        # New: Clinical case tracking
+        self.matched_limiting_beliefs: Dict[str, Dict[str, Any]] = {}  # All matched beliefs over time
+        self.message_belief_history: List[Dict[str, Any]] = []  # Track which message had which beliefs
+        self.delivered_solutions: dict[str, dict] = {}  # Maps case_id to solution delivery status
+        self.previously_matched_cases: set[str] = set()  # Track which cases were previously matched
 
     def add_message(self, role: str, content: str):
         self.conversation_history.append({"role": role, "content": content})
         self.script_message_count += 1
 
     def format_history_for_prompt(self) -> str:
-        # only include user messages
-        return "\n".join([f"{m['role'].capitalize()}: {m['content']}" for m in self.conversation_history if m['role'] != 'assistant'])
+        # Only include user messages
+        return "\n".join([f"{m['role'].capitalize()}: {m['content']}" for m in self.conversation_history])
     
-    # New: Method to update guidance note delivery status
-    def update_guidance_delivery(self, note_filename: str, primary_delivered: bool, secondary_delivered: bool):
-        """Update which guidance components have been delivered"""
-        if note_filename not in self.delivered_guidance:
-            self.delivered_guidance[note_filename] = {"primary": False, "secondary": False}
+    # def update_guidance_delivery(self, note_filename: str, primary_delivered: bool, secondary_delivered: bool):
+    #     """Legacy: Update which guidance components have been delivered"""
+    #     if note_filename not in self.delivered_guidance:
+    #         self.delivered_guidance[note_filename] = {"primary": False, "secondary": False}
         
-        if primary_delivered:
-            self.delivered_guidance[note_filename]["primary"] = True
-        if secondary_delivered:
-            self.delivered_guidance[note_filename]["secondary"] = True
+    #     if primary_delivered:
+    #         self.delivered_guidance[note_filename]["primary"] = True
+    #     if secondary_delivered:
+    #         self.delivered_guidance[note_filename]["secondary"] = True
+            
+    def update_limiting_belief_matches(self, belief_matches: Dict[str, Dict[str, Any]], message_index: int):
+            """Track limiting beliefs with message context and accumulation"""
+            current_message_beliefs = []
+            
+            for belief, info in belief_matches.items():
+                # Add to overall tracking (don't overwrite)
+                if belief not in self.matched_limiting_beliefs:
+                    self.matched_limiting_beliefs[belief] = info
+                    self.matched_limiting_beliefs[belief]["first_detected"] = message_index
+                    self.matched_limiting_beliefs[belief]["occurrences"] = 1
+                else:
+                    # Increment occurrence count
+                    self.matched_limiting_beliefs[belief]["occurrences"] += 1
+                    self.matched_limiting_beliefs[belief]["last_detected"] = message_index
+                
+                current_message_beliefs.append(belief)
+                
+                # Add to previously matched cases
+                if "case_id" in info:
+                    self.previously_matched_cases.add(info["case_id"])
+            
+            # Track which beliefs appeared in this message
+            self.message_belief_history.append({
+                "message_index": message_index,
+                "beliefs": current_message_beliefs
+            })
+    def get_all_limiting_beliefs_context(self) -> str:
+        """Get formatted context of all limiting beliefs detected"""
+        if not self.matched_limiting_beliefs:
+            return ""
+        
+        context = "Previously identified limiting belief patterns:\n"
+        for belief, info in self.matched_limiting_beliefs.items():
+            occurrences = info.get("occurrences", 1)
+            context += f"- \"{belief}\" (mentioned {occurrences} time{'s' if occurrences > 1 else ''})\n"
+        
+        return context
+    
+    def update_solution_delivery(self, case_id: str, solution_status: Dict[str, bool]):
+        """Update which solutions have been delivered for a case"""
+        if case_id not in self.delivered_solutions:
+            self.delivered_solutions[case_id] = {
+                "immediate": False,
+                "intermediate": False,
+                "long_term": False
+            }
+        
+        # Update status
+        for solution_type, delivered in solution_status.items():
+            if delivered:
+                self.delivered_solutions[case_id][solution_type] = True
 # --- Main Chatbot Logic ---
 
 class TherapeuticChatbot:
@@ -156,18 +214,17 @@ class TherapeuticChatbot:
                 "symptoms": ["list of symptoms"]
             }}
         """
-
         return prompt
     
-    def _build_system_prompt(self, guidance_notes: str, json_output: bool = True) -> str:
-        """Build system prompt with guidance notes and JSON output instructions if needed."""
-        flag = True if guidance_notes else False
+    def _build_system_prompt(self, clinical_guidance: str, json_output: bool = True) -> str:
+        """Build system prompt with clinical case guidance and JSON output instructions."""
+        has_guidance = True if clinical_guidance else False
         
         prompt = f"""
             You are a supportive, empathetic therapist. Your goal is to respond to the user in a warm, validating, and thoughtful way.
-    
-            {"Helpful material you can use:" if flag else ""}
-            {guidance_notes}
+            
+            {"Here are clinical patterns and therapeutic approaches that may help with this conversation:" if has_guidance else ""}
+            {clinical_guidance}
             """
         
         if json_output:
@@ -190,51 +247,11 @@ class TherapeuticChatbot:
             """
         
         return prompt
-    def _analyze_content_delivery(self, response_text: str, session_id: str, symptoms: List[str],model=None) -> dict:
-        """Analyze which guidance note content was delivered in the response."""
-        session = self._get_or_create_session(session_id)
         
-        # Fetch the same guidance notes again to analyze them
-        # (This could be optimized by passing the notes directly)
-        guidance_notes = fetch_guidance_notes(symptoms)
-        
-        llm = LLMClient(api_key=OPENROUTER_API_KEY, model_id=model)
-        
-        analysis_prompt = f"""
-        Analyze if the following therapeutic response addressed the key points from the guidance notes.
-        
-        Response:
-        {response_text}
-        
-        Guidance Notes:
-        {guidance_notes}
-        
-        For each guidance note, determine if the primary content and secondary content were addressed.
-        Return your analysis as a JSON object with the following format:
-        
-        {{
-            "note_filename1": {{
-                "primary_delivered": true/false,
-                "secondary_delivered": true/false
-            }},
-            "note_filename2": {{
-                "primary_delivered": true/false,
-                "secondary_delivered": true/false
-            }}
-        }}
-        """
-        
-        try:
-            delivery_analysis = llm.send_prompt(analysis_prompt, extract_json=True)
-            return delivery_analysis or {}
-        except Exception as e:
-            print(f"Error analyzing content delivery: {e}")
-            return {}
-        
-    def _get_appropriate_script(self, symptoms: List[str], session: ChatSession,model=None) -> dict:
+    def _get_appropriate_script(self, symptoms: List[str], session: ChatSession, model=None) -> dict:
         """Select appropriate script based on symptoms and user profile."""
         # First extract user profile from conversation
-        user_profile = self._extract_user_profile(session,model=model)
+        user_profile = self._extract_user_profile(session, model=model)
         
         # Then find matching script
         script_result = self._find_matching_script(symptoms, user_profile)
@@ -256,8 +273,6 @@ class TherapeuticChatbot:
         
         # Get the script content
         script_content = script_loader.get_script_content(script_id)
-        print(f"Script ID: {script_id}, Match Score: {match_score}")
-        print(f"Script Content: {script_content}")
         
         return {
             "script_id": script_id,
@@ -265,11 +280,12 @@ class TherapeuticChatbot:
             "metadata": matching_script,
             "match_score": match_score  # Include the score
         }
+        
     def _extract_user_profile(self, session: ChatSession, model=None) -> dict:
         """Extract user age group, emotional intensity, and specific concerns."""
         conversation = "\n".join([f"{m['role'].capitalize()}: {m['content']}" for m in session.conversation_history])
         
-        llm = LLMClient(api_key=OPENROUTER_API_KEY, model_id=model)
+        llm = LLMClient(api_key=OPENROUTER_API_KEY, model_id=model or "openai/gpt-4o-mini")
         
         profile_prompt = f"""
         Based on this conversation, analyze the user's profile and emotional state.
@@ -306,40 +322,46 @@ class TherapeuticChatbot:
 
     @compute_time
     def process_message(self, user_message: str, session_id: str = "default", model=None) -> dict | str:
-        """Processes a user message and returns the assistant's response.
-        
-        Returns:
-            For regular responses: a string containing the assistant's message
-            For script responses: a dictionary with script metadata including content, script_id, and disorder_key
-        """
-        # 1. Get/Create Session & Update History
+        """Processes a user message and returns the assistant's response."""
+        # Initialize LLM client and model
+        model = model or "openai/gpt-4o-mini"
         llm = LLMClient(api_key=OPENROUTER_API_KEY, model_id=model)
         
+        # Get/create session and update history
         session = self._get_or_create_session(session_id)
         session.add_message("user", user_message)
 
+        # Extract conversation history for keyword identification
         history_str = session.format_history_for_prompt()
         
-        # Extract symptoms
+        # Extract symptoms from the conversation
         keyword_prompt = self._build_keyword_identifier_prompt(history_str)
         keyword_response = llm.send_prompt(keyword_prompt, temperature=0.7, extract_json=True)
         symptoms = keyword_response.get("symptoms", [])
         
-        # Fetch guidance notes with delivery status
-        guidance_notes = fetch_guidance_notes(symptoms, session)
+        # Fetch clinical cases based on symptoms and latest message
+        clinical_guidance, matched_cases = fetch_clinical_cases(
+            symptoms=symptoms, 
+            user_message=user_message,
+            session=session
+        )
+        print(f"Matched clinical cases: {matched_cases}")
+        print(f"Clinical guidance: {clinical_guidance}")
         
-        # Build updated system prompt for JSON output
-        system_prompt = self._build_system_prompt(guidance_notes=guidance_notes, json_output=True)
+        # Build system prompt with clinical guidance
+        system_prompt = self._build_system_prompt(clinical_guidance=clinical_guidance, json_output=True)
         
+        # Construct messages for LLM
         messages = [
             {"role": "system", "content": system_prompt},
             *session.conversation_history
         ]
         
-        # Request JSON response
+        # Get response from LLM
         ai_response = llm.send_prompt(prompt=None, messages=messages, temperature=0.8, extract_json=True)
         print(f"AI Response: {ai_response}")
         
+        # Handle potential failure
         if not ai_response:
             print("ERROR: Failed to generate response from LLM. Using fallback.")
             response_text = "I understand. It sounds like a difficult situation. Could you tell me a little more about that?"
@@ -357,24 +379,20 @@ class TherapeuticChatbot:
                 response_text = ai_response if isinstance(ai_response, str) else "I understand. Could you tell me more?"
                 activity_offered = False
         
-        # Analyze which content was delivered
-        if guidance_notes:
-            delivery_analysis = self._analyze_content_delivery(response_text, session_id, symptoms,model)
+        # Analyze which solutions were delivered
+        if matched_cases:
+            delivery_analysis = analyze_solution_delivery(response_text, matched_cases, llm)
             
-            # Update session with delivery status
-            for note_file, status in delivery_analysis.items():
-                session.update_guidance_delivery(
-                    note_file,
-                    status.get("primary_delivered", False),
-                    status.get("secondary_delivered", False)
-                )
+            # Update session with solution delivery status
+            for case_id, status in delivery_analysis.items():
+                session.update_solution_delivery(case_id, status)
         
         # Add assistant response to session history
         session.add_message("assistant", response_text)
-        message_count = len(session.conversation_history)
-    
-        # Only offer scripts after a certain number of exchanges to build rapport first
-        if activity_offered and message_count <= 2:  # Adjust this threshold as needed
+        
+        # Check message count for activity offering
+        message_count = len(session.conversation_history) // 2  # Count exchanges, not individual messages
+        if activity_offered and message_count <= 2:
             print(f"Script offering suppressed - too early in conversation (message count: {message_count})")
             activity_offered = False
         
@@ -383,8 +401,8 @@ class TherapeuticChatbot:
             # Get script based on symptoms and user profile
             script_result = self._get_appropriate_script(symptoms, session, model)
             
-            # ADDED: Check if script has a good enough score
-            if script_result and script_result.get("match_score", 0) >= 10:  # Set minimum threshold
+            # Check if script has a good enough score
+            if script_result and script_result.get("match_score", 0) >= 10:  # Minimum threshold
                 return {
                     "response": response_text,
                     "script_id": script_result.get("script_id"),
@@ -394,8 +412,6 @@ class TherapeuticChatbot:
                 }
             else:
                 print(f"Script rejected - match score too low: {script_result.get('match_score', 0) if script_result else 0}")
-                # Return just the response without script
-                return response_text
-        
-        # Return normal response if no activity offered or no script found
+                
+        # Return normal response if no script offered or match score too low
         return response_text

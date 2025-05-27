@@ -1,0 +1,62 @@
+{
+  "case_id": "Clinical_Case_47",
+  "age": "18",
+  "gender_identity": "student presents with an eating disorder characterized by alternating between strict control and binge eating episodes. Her eating habits are loaded with moral judgments ('good' vs 'bad' food), leading to intense guilt after meals. A sense of powerlessness emerges when comforting eating routines are disrupted, often resulting in binge eating. Additionally, she has a complex relationship with her body, rooted in early childhood labeling ('the greedy one') and constant comparison with a very thin friend. Emotional imbalance is evident, combining academic stress, sleep disturbances, and a perceived sense of family injustice regarding food-related needs.",
+  "summary": "(RAG Format)\nThis 18-year-old student presents with an eating disorder characterized by alternating between strict control and binge eating episodes. Her eating habits are loaded with moral judgments ('good' vs 'bad' food), leading to intense guilt after meals. A sense of powerlessness emerges when comforting eating routines are disrupted, often resulting in binge eating. Additionally, she has a complex relationship with her body, rooted in early childhood labeling ('the greedy one') and constant comparison with a very thin friend. Emotional imbalance is evident, combining academic stress, sleep disturbances, and a perceived sense of family injustice regarding food-related needs.",
+  "main_issues": [
+    "- Alternating control and binge eating cycles",
+    "- Moralized relationship with food ('good' vs 'bad' foods)",
+    "- Body hatred and ongoing comparison with others",
+    "- Emotional imbalance driven by academic stress and family dynamics",
+    "- Tensions within a friendship triangle, seeking validation and recognition"
+  ],
+  "emotions": [
+    "Guilt",
+    "Body shame",
+    "Silent anger",
+    "Injustice",
+    "Sadness",
+    "Fear of losing control"
+  ],
+  "limiting_beliefs": [
+    "- \"If I eat something special, I lose control.\"",
+    "- \"I only matter if I control my body.\"",
+    "- \"I don't deserve to be considered like others.\"",
+    "- \"I must manage on my own, even for basic needs.\"",
+    "- \"A slim and rational friend is better than me.\""
+  ],
+  "therapeutic_goals": [
+    "- Decrease binge eating episodes and reframe the moralized food narrative",
+    "- Restore a more balanced self-perception without constant comparison",
+    "- Normalize food enjoyment without guilt or self-restriction",
+    "- Anchor emotional regulation strategies to reduce anger and frustration",
+    "- Establish safe spaces for authentic emotional expression"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Create an 'emergency food kit' with comforting, nutritious snacks to avoid sudden frustration",
+      "- Kind food journal: track meals with a focus on enjoyment rather than control",
+      "- Anti-crisis breathing exercise: pause for 3 minutes before eating and assess hunger vs. emotion"
+    ],
+    "intermediate": [
+      "- Nurturing ritual meals: establish 2-3 weekly meals without distractions, focusing on taste and calm",
+      "- Cognitive reframing: replace 'I ate badly' with 'I honored my hunger'",
+      "- Morning visualization: imagine a calm, nourishing meal to set the tone for the day"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Reconnecting with the Body and Honoring Needs",
+      "- Deactivate food-related guilt and compulsions",
+      "- Restore internal safety without excessive control",
+      "- Anchor a sensory anchor: breathing + gentleness + honoring real needs"
+    ]
+  },
+  "motivational_closure": "You don't need to be perfect to deserve to be heard. Your body is not your enemy—it's a compass, and you are learning to understand its language.",
+  "tags": [
+    "EatingDisorder",
+    "BodyImage",
+    "EmotionalRegulation",
+    "FoodGuilt",
+    "ControlAnxiety",
+    "InnerSafety"
+  ]
+}

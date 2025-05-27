@@ -1,0 +1,61 @@
+{
+  "case_id": "Clinical_Case_37",
+  "age": "40",
+  "gender_identity": "woman has been experiencing severe chronic insomnia for over 15 years, linked to post-traumatic hypervigilance. Her sleep is characterized by difficulties in falling asleep, frequent awakenings, and persistent mental and physical exhaustion. She exhibits a high resistance to medication and maintains an anxious personality with ruminative tendencies, particularly at night. The insomnia pattern is rooted in major relational trauma involving psychological, physical, and symbolic violence, which has not been fully processed. Post-traumatic symptoms include nocturnal visual hallucinations, fear of being confined, and persistent anticipatory anxiety about sleep.",
+  "summary": "(RAG Format)\nThis 40-year-old woman has been experiencing severe chronic insomnia for over 15 years, linked to post-traumatic hypervigilance. Her sleep is characterized by difficulties in falling asleep, frequent awakenings, and persistent mental and physical exhaustion. She exhibits a high resistance to medication and maintains an anxious personality with ruminative tendencies, particularly at night. The insomnia pattern is rooted in major relational trauma involving psychological, physical, and symbolic violence, which has not been fully processed. Post-traumatic symptoms include nocturnal visual hallucinations, fear of being confined, and persistent anticipatory anxiety about sleep.",
+  "main_issues": [
+    "- Severe chronic insomnia lasting over 15 years",
+    "- Nocturnal hypervigilance and fear of being confined",
+    "- Anxious rumination and cognitive hyperactivity at night",
+    "- Post-traumatic symptoms linked to relational trauma",
+    "- High resistance to medication and sleep interventions",
+    "- Feelings of emotional isolation and unprocessed grief"
+  ],
+  "emotions": [
+    "Deep fear linked to trauma and night as a threatening context",
+    "Extreme mental and physical fatigue",
+    "Persistent distress and sense of helplessness",
+    "Emotional loneliness and ambivalence between wanting to heal and feeling incapable",
+    "Residual anger masked by exhaustion and passivity"
+  ],
+  "limiting_beliefs": [
+    "- 'If I don't stay vigilant, something bad will happen.'",
+    "- 'My anxiety is part of me; it's unchangeable.'",
+    "- 'I have to endure alone; nobody will understand.'",
+    "- 'Night is dangerous; I can't relax when it's dark.'"
+  ],
+  "therapeutic_goals": [
+    "- Reduce hypervigilance and reframe night as a safe period",
+    "- Dissociate trauma memories from the present to reduce nighttime fear",
+    "- Anchor a sense of inner safety during night awakenings",
+    "- Rebuild a trusting relationship with sleep and the body",
+    "- Develop a structured evening ritual to induce relaxation"
+  ],
+  "solutions": {
+    "immediate": [
+      "- '4-7-8' breathing exercise at the first signs of nighttime hyperarousal",
+      "- Grounding mantra: 'I am here, I am safe, this is my space.'",
+      "- Evening ritual with dim lighting, soft music, and sensory relaxation (e.g., hand massage with calming oil)"
+    ],
+    "intermediate": [
+      "- Daily body scan to reconnect with physical sensations without fear",
+      "- Visualization of a protective 'light cocoon' to create a safe nighttime space",
+      "- Cognitive reframing of night as a 'shelter' rather than a threat"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Reclaiming Night as a Space of Inner Peace and Safety",
+      "- Reframe sleep as a protective, restorative state",
+      "- Dissociate traumatic experiences from present sensations",
+      "- Anchor a calming word or image as a sleep trigger"
+    ]
+  },
+  "motivational_closure": "You survived the darkness of the past. Now, each night is an opportunity to reclaim the night as a sanctuary—a place where your body can finally rest, and your mind can lay down its weapons.",
+  "tags": [
+    "Insomnia",
+    "PostTraumaticHypervigilance",
+    "EmotionalRelease",
+    "NightAwakenings",
+    "InternalSafety",
+    "Restoration"
+  ]
+}

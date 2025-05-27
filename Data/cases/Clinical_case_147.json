@@ -1,0 +1,47 @@
+{
+  "case_id": "Clinical_case_147",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with significant emotional distress centered around feelings of guilt, body image dissatisfaction, and unresolved emotional responses to her fiancé's past infidelity. She reports a heightened sense of self-criticism, particularly in relation to perceived physical imperfections and a persistent urge to pursue cosmetic procedures as a means to resolve underlying insecurities. Additionally, she describes a strong internalized need to achieve perfection, leading to obsessive behaviors and negative self-comparisons on social media.",
+  "main_issues": [
+    "- Intense feelings of guilt and self-blame related to past relational experiences",
+    "- Persistent body image dissatisfaction with obsessive focus on physical flaws",
+    "- Compulsive comparisons to others, particularly via social media",
+    "- Emotional numbness and avoidance as coping mechanisms for unresolved emotional pain",
+    "- Obsession with cosmetic surgery as a perceived solution to internal distress"
+  ],
+  "emotions": [
+    "Guilt",
+    "Shame",
+    "Insecurity",
+    "Frustration",
+    "Emotional Detachment"
+  ],
+  "limiting_beliefs": [
+    "- 'If I were more perfect, he wouldn't have cheated.'",
+    "- 'My worth is determined by how I look.'",
+    "- 'If I don't appear perfect, I am less valuable.'",
+    "- 'If I can fix my appearance, I'll feel better inside.'"
+  ],
+  "therapeutic_goals": [
+    "- Address and reframe guilt as a non-constructive emotional response",
+    "- Foster self-compassion and reduce self-blame related to past infidelity",
+    "- Support healthier coping strategies to manage body image concerns",
+    "- Decrease compulsive comparison behaviors and reduce social media exposure",
+    "- Encourage emotional processing of unresolved relational pain"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are not defined by what others did or did not see in you. Your worth is inherent, and it is not diminished by the actions of others. Every time you choose to release guilt, to embrace yourself as you are, you are reclaiming your power — and that is where true beauty lies.",
+  "tags": [
+    "GuiltRelease",
+    "BodyImageHealing",
+    "SelfCompassion",
+    "RelationalRecovery",
+    "Perfectionism",
+    "ConfidenceRebuilding"
+  ]
+}

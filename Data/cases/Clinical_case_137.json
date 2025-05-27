@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_case_137",
+  "age": "30",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 30-year-old woman presents with a recurring pattern of avoidance and emotional discomfort when confronted with relational dynamics that mirror past negative experiences. Despite identifying the similarities between current interactions and a previous toxic relationship, she reports intense emotional reactions, including anxiety and a sense of being trapped. Her narrative reveals unresolved emotional patterns, particularly around boundaries and assertiveness in romantic and social settings.",
+  "main_issues": [
+    "- Re-experiencing relational patterns that echo a past toxic relationship.",
+    "- Emotional discomfort and physical symptoms (e.g., tightness in the chest) when setting boundaries.",
+    "- Difficulty maintaining assertive communication when feeling pressured or triggered.",
+    "- Avoidance of potential romantic connections that resemble past dynamics.",
+    "- Underlying fear of being drawn back into unhealthy relational patterns."
+  ],
+  "emotions": [
+    "Anxiety",
+    "Emotional discomfort",
+    "Fear of repetition",
+    "Emotional suppression",
+    "Avoidance"
+  ],
+  "limiting_beliefs": [
+    "- \"If I say no, I will hurt them.\"",
+    "- \"It's easier to avoid than to confront.\"",
+    "- \"I might not be strong enough to resist falling back into old patterns.\"",
+    "- \"If I let my guard down, I'll be trapped again.\""
+  ],
+  "therapeutic_goals": [
+    "- Support emotional processing of past relational trauma to reduce residual fear responses.",
+    "- Develop assertive communication techniques to set and maintain boundaries effectively.",
+    "- Reframe cognitive distortions around self-worth and relational dynamics.",
+    "- Implement grounding exercises to manage physical symptoms of anxiety when feeling pressured.",
+    "- Reinforce emotional resilience and self-protection strategies in social and romantic contexts."
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Grounding exercises to alleviate physical symptoms of anxiety during boundary-setting interactions.",
+      "- Journaling to identify recurring patterns in relational dynamics and triggers.",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Cognitive restructuring to challenge fears around asserting boundaries without feeling guilt.",
+      "- Guided imagery to visualize safe and healthy relational interactions.",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Psychotherapy to process unresolved emotional injuries linked to past relational trauma.",
+      "- Hypnosis session to reinforce assertiveness and emotional self-protection.",
+      "- Sensorimotor techniques to reconnect with the body and reduce anxiety responses."
+    ]
+  },
+  "motivational_closure": "You have the right to say no without explanation. You are not obligated to relive old stories. Your strength lies in recognizing patterns, setting boundaries, and protecting the peace you've worked so hard to achieve.",
+  "tags": [
+    "BoundarySetting",
+    "Assertiveness",
+    "EmotionalResilience",
+    "AnxietyRelief",
+    "RelationalPatterns",
+    "EmotionalProtection",
+    "SelfWorth"
+  ]
+}

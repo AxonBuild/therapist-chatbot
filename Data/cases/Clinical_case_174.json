@@ -1,0 +1,64 @@
+{
+  "case_id": "Clinical_case_174",
+  "age": "45",
+  "gender_identity": "man is currently experiencing significant emotional distress, characterized by chronic fatigue, emotional numbness, and a pervasive sense of anhedonia. He reports heightened anxiety regarding upcoming medical examinations, specifically a fibroscopy that he feels unprepared to undergo. Additionally, he describes a marked loss of desire and motivation, potentially exacerbated by medication (Norset) with known sedative properties. Despite these challenges, he exhibits occasional emotional release triggered by external stimuli, such as media, but is unable to sustain this emotional expression in other contexts.",
+  "summary": "(RAG Format)\nThis 45-year-old man is currently experiencing significant emotional distress, characterized by chronic fatigue, emotional numbness, and a pervasive sense of anhedonia. He reports heightened anxiety regarding upcoming medical examinations, specifically a fibroscopy that he feels unprepared to undergo. Additionally, he describes a marked loss of desire and motivation, potentially exacerbated by medication (Norset) with known sedative properties. Despite these challenges, he exhibits occasional emotional release triggered by external stimuli, such as media, but is unable to sustain this emotional expression in other contexts.",
+  "main_issues": [
+    ":",
+    "- Chronic fatigue and pervasive emotional numbness",
+    "- Marked loss of desire and motivation, potentially linked to medication",
+    "- Heightened anxiety surrounding medical examinations (fibroscopy)",
+    "- Emotional repression and difficulty in emotional release",
+    "- Anhedonia and feelings of disconnection from daily life",
+    "- Dependence on home environment as a perceived safe space, avoidance of external stressors"
+  ],
+  "emotions": [
+    ":",
+    "Fatigue",
+    "Anxiety",
+    "Emotional Numbness",
+    "Anhedonia",
+    "Frustration",
+    "Avoidance"
+  ],
+  "limiting_beliefs": [
+    ":",
+    "- \"If I let go of control, things will get worse.\"",
+    "- \"I cannot cope with the emotional intensity.\"",
+    "- \"Medication is numbing me, but it's the only way to get through the day.\""
+  ],
+  "therapeutic_goals": [
+    ":",
+    "- Increase emotional awareness and facilitate emotional release.",
+    "- Reduce anticipatory anxiety regarding medical procedures.",
+    "- Address the impact of medication on emotional and physical state.",
+    "- Encourage gradual re-engagement with external environments and routines.",
+    "- Develop strategies for managing fatigue and preventing emotional overload."
+  ],
+  "solutions": {
+    "immediate": [
+      "- Psychoeducation on the emotional impact of sedative medication.",
+      "- Introduction of grounding techniques to manage anticipatory anxiety.",
+      "- Hypnosis session recommendation: Anchoring relaxation and inner calm before medical procedures."
+    ],
+    "intermediate": [
+      "- EMDR to address underlying fears related to medical interventions.",
+      "- Hypnosis session recommendation: Reclaiming inner motivation and emotional vitality.",
+      "- Cognitive restructuring to challenge limiting beliefs about fatigue and avoidance."
+    ],
+    "long_term": [
+      "- Continued EMDR to resolve emotional numbness and restore emotional expression.",
+      "- Hypnosis work to cultivate resilience and re-engagement with daily activities.",
+      "- Mindfulness practices to stabilize emotional reactivity and prevent relapses."
+    ]
+  },
+  "motivational_closure": ":\nThe path to reclaiming emotional vitality may be challenging, but each small step forward is a step toward a more engaged and fulfilling life. Emotions are meant to flow, not to remain stagnant. With each breath, you allow yourself the space to release, renew, and reconnect with your inner strength.",
+  "tags": [
+    "EmotionalRelease",
+    "ChronicFatigue",
+    "MedicalAnxiety",
+    "SedativeImpact",
+    "EmotionalNumbness",
+    "Anhedonia"
+  ]
+}

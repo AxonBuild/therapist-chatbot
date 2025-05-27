@@ -1,0 +1,43 @@
+{
+  "case_id": "Clinical_case_67",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with significant emotional distress linked to the discovery of their partner's infidelity. They describe a profound sense of betrayal, confusion, and self-blame, with persistent feelings of a 'knot in the throat' associated with the traumatic moment of discovering the betrayal. Despite attempts to rationalize the event and move forward, they remain emotionally anchored to the shock of the discovery. They express difficulty processing the experience, oscillating between a desire to minimize the impact ('It's not a big deal, I should move on') and deeper feelings of unresolved emotional pain.",
+  "main_issues": [
+    "- Persistent emotional distress and physical tension ('knot in the throat') related to betrayal.",
+    "- Feelings of self-blame and perceived responsibility for the partner's infidelity.",
+    "- Struggle to validate own emotions and experiences without minimizing them.",
+    "- Difficulty reconciling rational thoughts ('I should move on') with emotional reality ('I feel hurt and betrayed')."
+  ],
+  "emotions": [
+    "Betrayal",
+    "Confusion",
+    "Self-blame",
+    "Resentment",
+    "Emotional suppression"
+  ],
+  "limiting_beliefs": [
+    "- 'I should have seen it coming.'",
+    "- 'It's my fault they cheated.'",
+    "- 'I don't deserve better than this.'"
+  ],
+  "therapeutic_goals": [
+    "- Facilitate emotional release associated with the initial discovery of the betrayal.",
+    "- Challenge and reframe self-blame narratives to restore self-compassion.",
+    "- Encourage acceptance of emotional experiences without minimization or suppression.",
+    "- Identify and anchor new self-worth statements that promote self-empowerment."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are not responsible for another's actions, nor do their choices define your worth. Each day offers a new chance to honor your emotions, to let go of what was, and to reclaim your sense of self.",
+  "tags": [
+    "Betrayal",
+    "EmotionalRelease",
+    "SelfCompassion",
+    "TrustRebuilding",
+    "EmotionalStability"
+  ]
+}

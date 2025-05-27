@@ -1,0 +1,50 @@
+{
+  "case_id": "Clinical_case_131",
+  "age": "38",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 38-year-old woman presents with emotional instability, substance use (cannabis, benzodiazepines), and pervasive feelings of disconnection and existential ennui. She expresses a profound sense of meaninglessness, compounded by medication mismanagement and fluctuating adherence to psychiatric treatment. The patient reports a lack of motivation, persistent anhedonia, and increased substance use as a coping mechanism. The patient also exhibits a pattern of emotional dissociation, reflecting a potential undiagnosed ADHD or HPE. Interactions with her mother have resurfaced unresolved conflicts, contributing to heightened emotional distress and increased substance consumption.",
+  "main_issues": [
+    "- Emotional disconnection and existential ennui.",
+    "- Persistent substance use (cannabis, benzodiazepines) with potential dependency.",
+    "- Medication mismanagement (antidepressants, sedatives).",
+    "- Unresolved maternal conflicts triggering substance use.",
+    "- Potential ADHD or HPE profile with high reactivity to boredom.",
+    "- Excessive rumination and lack of purpose or direction."
+  ],
+  "emotions": [
+    "Boredom",
+    "Emotional disconnection",
+    "Resentment",
+    "Existential anxiety",
+    "Self-sabotage",
+    "Shame"
+  ],
+  "limiting_beliefs": [
+    "- Life is meaningless.",
+    "- Nothing matters - it's all just empty.",
+    "- I need substances to manage my mind.",
+    "- If I don't feel, I won't suffer."
+  ],
+  "therapeutic_goals": [
+    "- Address existential boredom and reinforce a sense of purpose.",
+    "- Evaluate ADHD/HPE profile and consider appropriate interventions.",
+    "- Facilitate reduction of benzodiazepine and cannabis use through structured coping mechanisms.",
+    "- Encourage emotional reconnection through guided self-reflection and structured activities.",
+    "- Address unresolved maternal conflicts and the emotional impact of her presence.",
+    "- Establish a sustainable routine to reduce rumination and stabilize mood."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Your mind may wander to dark places, but it doesn't have to stay there. You are capable of finding purpose in the smallest of things. Today, you begin to reclaim your time, your space, and your emotional life - one choice at a time.",
+  "tags": [
+    "ExistentialAnxiety",
+    "BoredomManagement",
+    "SubstanceReduction",
+    "EmotionalReconnection",
+    "SelfAnchoring",
+    "ADHDConsideration"
+  ]
+}

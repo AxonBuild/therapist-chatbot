@@ -1,0 +1,62 @@
+{
+  "case_id": "Clinical_Case_59",
+  "age": "29",
+  "gender_identity": "nurse presents with a longstanding body image disorder rooted in school bullying and reinforced by family attitudes toward weight. Despite maintaining a healthy body, she perceives herself as \"too fat\" and engages in chronic restriction behaviors. A moralized and guilt-driven relationship with food developed early, modeled by a restrictive family environment. Past bullying has left traces of fear, shame, and emotional isolation, while professional fatigue contributes to a disconnection from her identity and emotional needs. She expresses a desire to restore self-confidence and body acceptance, and to transition toward a life of greater meaning and emotional safety.",
+  "summary": "(RAG Format)\nThis 29-year-old nurse presents with a longstanding body image disorder rooted in school bullying and reinforced by family attitudes toward weight. Despite maintaining a healthy body, she perceives herself as \"too fat\" and engages in chronic restriction behaviors. A moralized and guilt-driven relationship with food developed early, modeled by a restrictive family environment. Past bullying has left traces of fear, shame, and emotional isolation, while professional fatigue contributes to a disconnection from her identity and emotional needs. She expresses a desire to restore self-confidence and body acceptance, and to transition toward a life of greater meaning and emotional safety.",
+  "main_issues": [
+    "- Persistent dysmorphia and body-related guilt despite normative weight",
+    "- Internalized bullying experiences (emotional manipulation, exclusion)",
+    "- Parental modeling of restrictive attitudes and moralized food culture",
+    "- Emotional disconnection and fatigue in the nursing profession",
+    "- Inhibited relationship with pleasure and self-kindness",
+    "- Frustration linked to failed career redirection attempts"
+  ],
+  "emotions": [
+    "Shame",
+    "Guilt",
+    "Residual fear",
+    "Internalized anger",
+    "Frustration",
+    "Emotional disillusionment"
+  ],
+  "limiting_beliefs": [
+    "- \"If I enjoy myself, I gain weight.\"",
+    "- \"My body is a problem to solve.\"",
+    "- \"I must not be weak, I must keep functioning.\"",
+    "- \"I'm too different to be accepted.\"",
+    "- \"If I don't control everything, I fall apart.\""
+  ],
+  "therapeutic_goals": [
+    "- Deactivate emotional anchors linked to bullying and judgment",
+    "- Restore a compassionate and realistic body image",
+    "- Reintegrate pleasure and food without guilt",
+    "- Reconnect with identity and emotional vitality",
+    "- Reduce professional emotional overload and open new life perspectives"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Food deconditioning exercise (observing automatic thoughts during purchase, reframing)",
+      "- Self-compassion practice (daily 3-minute internal dialogue: \"You're doing your best...\")",
+      "- Positive body anchoring (1-minute gratitude to the body each morning)"
+    ],
+    "intermediate": [
+      "- EMDR focused on school bullying and parental restriction phrases",
+      "- Therapeutic writing (unsent letters, especially to former peer 'Cynthia')",
+      "- Body-centered hypnosis to reconnect with sensory pleasure"
+    ],
+    "long_term": [
+      "- Symbolic integration of past wounds through hypnosis and emotional reconnection",
+      "- Gentle career redirection (coaching based on values and identity)",
+      "- Development of inner safety beyond external validation"
+    ]
+  },
+  "motivational_closure": "You no longer have to earn your body. It's already yours. You no longer have to earn your space. It belongs to you. The journey is not about controlling or correcting—it's about reconciling, softening, and belonging.",
+  "tags": [
+    "BodyImageHealing",
+    "EmotionalReconnection",
+    "SelfCompassion",
+    "FoodDeconditioning",
+    "SchoolBullying",
+    "ProfessionalExhaustion"
+  ]
+}

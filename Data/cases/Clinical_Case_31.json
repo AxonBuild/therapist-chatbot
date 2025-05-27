@@ -1,0 +1,84 @@
+{
+  "case_id": "Clinical_Case_31",
+  "age": "45",
+  "gender_identity": "Man",
+  "summary": "(RAG Format)\nThe patient is a 45-year-old man currently undergoing psychological support following a recent divorce after several years of relational ambivalence. He is a highly committed father, actively involved in his children's lives, particularly in supporting his younger son's competitive skiing. He demonstrates an internal conflict between emotional attachment to his ex-wife and the emergence of a new, promising romantic relationship. The patient expresses fatigue, nostalgia for the family unit, and struggles to fully detach emotionally from his former partner, despite a separation that was already emotionally effective for three years. Family tensions and betrayal experiences, particularly with his sister over inheritance matters, have reactivated childhood wounds and reinforced transgenerational patterns of emotional injustice. Nevertheless, he shows reflective capacity, self-awareness, and a clear commitment to not reproducing the dysfunctions of his paternal lineage.",
+  "main_issues": [
+    "- Emotional ambivalence post-divorce",
+    "- Difficulty fully detaching from the ex-wife despite current new relationship",
+    "- Guilt and sadness regarding shared custody of children",
+    "- Fatigue linked to co-parenting and solo parenting efforts",
+    "- Betrayal and disappointment from his sister in the context of inheritance",
+    "- Lingering effects of childhood experiences with a narcissistic or emotionally immature father"
+  ],
+  "emotions": [
+    "Sadness",
+    "Fatigue",
+    "Guilt",
+    "Nostalgia",
+    "Frustration",
+    "Emotional loyalty",
+    "Disappointment"
+  ],
+  "limiting_beliefs": [
+    "- 'I must hold the family together or I've failed.'",
+    "- 'Letting go means I betray my children.'",
+    "- 'I cannot allow myself to feel vulnerable.'",
+    "- 'History will always repeat itself.'",
+    "- 'I must overcompensate for the absence of the family structure.'"
+  ],
+  "therapeutic_goals": [
+    "- Reinforce the capacity to emotionally separate the conjugal and parental roles",
+    "- Support the integration of a new relationship with inner permission and clarity",
+    "- Work on processing the fraternal betrayal and grief",
+    "- Release guilt linked to co-parenting and perceived absence",
+    "- Install a long-term emotional posture that supports masculine vulnerability and stability"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Psychoeducation around post-separation emotional processes",
+      "- Grounding and nervous system regulation techniques for fatigue and overload",
+      "- Daily journal on emotional ambivalence and fatherhood experience",
+      "- Hypnosis session recommendation: calming internal noise and addressing guilt as a father",
+      "Tags: #PostDivorceFatigue #FatherhoodGuilt #EmotionalOverload",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- EMDR work on paternal transgenerational patterns",
+      "- Schema therapy for guilt and relational loyalty",
+      "- Cognitive restructuring around loyalty to ex-partner",
+      "- Hypnosis session recommendation: symbolic release from ex-partner and restoration of emotional clarity",
+      "Tags: #SymbolicDetachment #MasculineClarity #CoParentingHealing",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Guided hypnotherapy for installing an internal posture of emotional clarity and rooted masculine identity",
+      "- Narrative therapy for rewriting personal family legacy",
+      "- Couple therapy (if relationship progresses) to prevent projection of past wounds",
+      "- Hypnosis session recommendation: rebuilding emotional sovereignty and securing future bonds",
+      "Tags: #EmotionalSovereignty #MaleIdentity #NewRelationshipIntegration"
+    ]
+  },
+  "motivational_closure": "You are not repeating the past. You are consciously shaping a future where love does not mean sacrifice, and where presence does not require perfection. Your strength is not in what you carry alone, but in what you choose to release.",
+  "tags": [
+    "PostDivorceFatigue",
+    "FatherhoodGuilt",
+    "EmotionalOverload",
+    "SymbolicDetachment",
+    "MasculineClarity",
+    "CoParentingHealing",
+    "EmotionalSovereignty",
+    "MaleIdentity",
+    "NewRelationshipIntegration",
+    "PostDivorceHealing",
+    "CoParentingFatigue",
+    "TransgenerationalTrauma",
+    "FatherhoodGuilt",
+    "MasculineVulnerability",
+    "EmotionalClarity",
+    "RelationshipAmbivalence"
+  ]
+}

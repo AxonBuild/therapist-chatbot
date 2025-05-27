@@ -1,0 +1,82 @@
+{
+  "case_id": "Clinical_Case_18",
+  "age": "25",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient, a 25-year-old woman, presents with residual emotional hypersensitivity stemming from a long-standing pattern of psychological manipulation by her father. She reports an ongoing process of detachment and emotional realignment, especially since living with her partner. Current symptoms include high stress reactivity, palpitations, light-headedness, and anticipatory anxiety, particularly when isolated. Despite previous fears, she now shows significant progress in setting boundaries and identifying toxic relational dynamics. However, underlying self-doubt and bodily hyper-awareness persist, particularly in situations that provoke past emotional memories or exertion (e.g., during sports).",
+  "main_issues": [
+    "- Paternal manipulation creating guilt and dual loyalty conflict",
+    "- Hypervigilance somatique (extrasystoles, palpitations)",
+    "- Difficulty trusting bodily sensations",
+    "- Harsh self-judgment and performance pressure",
+    "- Emotional dissociation and legacy of non-consensual experiences"
+  ],
+  "emotions": [
+    "Ambivalence",
+    "Guilt",
+    "Anxiety",
+    "Autonomy conflict",
+    "Frustration",
+    "Fear of invalidation"
+  ],
+  "limiting_beliefs": [
+    "- 'If I distance myself from my father, I am a bad daughter'",
+    "- 'My sensations might be signs of something serious'",
+    "- 'I need to control everything to avoid danger'",
+    "- 'I can't trust myself fully'"
+  ],
+  "therapeutic_goals": [
+    "- Consolidate emotional autonomy and boundaries",
+    "- Normalize bodily signals (heart rate, extrasystoles)",
+    "- Desensitize old emotional anchors related to parental manipulation",
+    "- Install internal safety and self-trust",
+    "- Reduce cardiac-related anxiety and restore trust in physical resilience"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Psychoeducation on cardiac signals and extrasystoles",
+      "- Grounding techniques to reduce anticipatory anxiety",
+      "- Affirmation training: reconnecting with internal validation",
+      "- Hypnosis session recommendation: reconnecting with heart safety and emotional confidence",
+      "Tags: #HeartCalm #AnxietyRelief #AutonomySafety",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Somatic-focused hypnotherapy: restoring bodily confidence",
+      "- EMDR on manipulation scenes and emotional guilt anchors",
+      "- Reinforcement of emotional differentiation from parental dynamics",
+      "- Hypnosis session recommendation: symbolic release from guilt and body reconnection",
+      "Tags: #BodyReconnection #GuiltSymbolism #SomaticAutonomy",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Guided hypnosis for autonomy and identity integration",
+      "- Self-trust rituals before facing high-stress situations",
+      "- Integration of inner security and emotional boundaries",
+      "- Hypnosis session recommendation: long-form inner authority and safe independence",
+      "Tags: #SelfTrust #InnerStrength #SafeDetachment"
+    ]
+  },
+  "motivational_closure": "You are not the echo of someone else's fears. Your body knows balance. Your mind knows direction. Every breath, every beat, is a reminder that you are safe, capable, and home inside yourself.",
+  "tags": [
+    "HeartCalm",
+    "AnxietyRelief",
+    "AutonomySafety",
+    "BodyReconnection",
+    "GuiltSymbolism",
+    "SomaticAutonomy",
+    "SelfTrust",
+    "InnerStrength",
+    "SafeDetachment",
+    "PaternalManipulation",
+    "AnxietySomatique",
+    "Autonomy",
+    "CardiacHypervigilance",
+    "EmotionalIndependence",
+    "BodyTrust",
+    "GuiltDetachment",
+    "SelfValidation"
+  ]
+}

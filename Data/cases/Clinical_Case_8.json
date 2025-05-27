@@ -1,0 +1,75 @@
+{
+  "case_id": "Clinical_Case_8",
+  "age": "33",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient, a 33-year-old woman, has been experiencing emotional upheaval related to the suicide of her mother at age 13. During her recent medical leave, she reports improvements in her lifestyle, including better sleep patterns, healthier eating habits, and increased physical activity, which she credits for emotional stabilization. However, she remains emotionally sensitive to her mother's death, often reliving the trauma, particularly when reflecting on her brother's reaction and her perceived responsibility at the time.",
+  "main_issues": [
+    "- Lingering trauma related to the suicide of the mother",
+    "- Persistent feelings of guilt and responsibility for her brother",
+    "- Emotional instability despite lifestyle improvements",
+    "- Heightened sensitivity to childhood memories and familial loss"
+  ],
+  "emotions": [
+    "Guilt",
+    "Grief",
+    "Emotional Vulnerability",
+    "Nostalgia",
+    "Self-doubt"
+  ],
+  "limiting_beliefs": [
+    "- 'I could have prevented my mother's death.'",
+    "- 'I failed my brother when he needed me the most.'",
+    "- 'I will always be haunted by these memories.'",
+    "- 'I am responsible for the well-being of others.'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe the traumatic memory of her mother's death and alleviate the sense of responsibility",
+    "- Encourage self-compassion and release the perceived burden of responsibility towards her brother",
+    "- Develop emotional grounding techniques for when nostalgic or traumatic memories surface",
+    "- Strengthen present-moment awareness to reduce emotional flooding"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Implement grounding techniques to counteract emotional flooding",
+      "- Introduce calming rituals to foster a sense of control",
+      "- Hypnosis session recommendation: grounding in the present and emotional release",
+      "Tags: #EmotionalGrounding #PresentMoment #EmotionalRelease",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Explore underlying guilt through therapeutic dialogue and cognitive reframing",
+      "- Validate her emotional experiences while encouraging a more compassionate self-perspective",
+      "- Hypnosis session recommendation: reframing traumatic memories and reinforcing self-compassion",
+      "Tags: #GuiltRelease #MemoryReframing #SelfCompassion",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Hypnosis work to reinforce emotional sovereignty and detachment from childhood guilt",
+      "- Integration of symbolic imagery to transform past trauma into present-day resilience",
+      "- Encourage ongoing journaling to maintain emotional clarity and release",
+      "- Hypnosis session recommendation: transforming nostalgia into empowerment",
+      "Tags: #EmotionalSovereignty #TraumaTransformation #EmpowermentPath"
+    ]
+  },
+  "motivational_closure": "Despite the lingering echoes of the past, you are actively reclaiming your emotional space. Each step towards self-compassion is a step towards freedom. You are not defined by what happened, but by what you choose to do with the memories you carry. As you release the weight of responsibility, you make room for self-kindness and a renewed sense of self.",
+  "tags": [
+    "EmotionalGrounding",
+    "PresentMoment",
+    "EmotionalRelease",
+    "GuiltRelease",
+    "MemoryReframing",
+    "SelfCompassion",
+    "EmotionalSovereignty",
+    "TraumaTransformation",
+    "EmpowermentPath",
+    "TraumaMemory",
+    "GuiltRelease",
+    "EmotionalGrounding",
+    "SelfCompassion",
+    "NostalgiaHealing",
+    "ResiliencePath"
+  ]
+}

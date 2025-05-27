@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_Case_11",
+  "age": "60",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient, a 60-year-old woman, expresses a sense of disappointment and frustration regarding her brother and sister-in-law. She perceives herself as the 'black sheep' of the family, feeling overshadowed by her brother, who is portrayed as the 'golden child.' Recent interactions have intensified these feelings, particularly a comment made by her brother regarding potential inheritance matters, which left her feeling devalued and insignificant. Additionally, she expresses feelings of being dismissed and neglected by her brother's wife, who allegedly speaks negatively about her behind her back.",
+  "main_issues": [
+    "- Emotional neglect and perceived dismissal by her brother",
+    "- Feelings of being the 'black sheep' and unappreciated within the family",
+    "- Anger and resentment towards her brother's wife",
+    "- Anxiety regarding potential inheritance disputes",
+    "- Emotional exhaustion from familial dynamics",
+    "- Sense of inadequacy and jealousy over her brother's perceived success"
+  ],
+  "emotions": [
+    "Resentment",
+    "Jealousy",
+    "Hurt",
+    "Anger",
+    "Emotional fatigue",
+    "Sense of rejection"
+  ],
+  "limiting_beliefs": [
+    "- 'I am the black sheep of the family.'",
+    "- 'I am unimportant compared to my brother.'",
+    "- 'My worth is defined by money and status.'",
+    "- 'If my brother ignores me, I must not matter.'",
+    "- 'My brother's wife is turning him against me.'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe self-worth as independent of family validation",
+    "- Release resentment and embrace self-validation",
+    "- Develop emotional boundaries with family members",
+    "- Reduce sensitivity to financial discussions and perceived slights",
+    "- Foster emotional independence and inner strength"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Implement grounding techniques to manage emotional triggers",
+      "- Practice self-soothing exercises to release anger and frustration",
+      "- Hypnosis session recommendation: Releasing family resentment and reclaiming self-worth"
+    ],
+    "intermediate": [
+      "- Explore familial dynamics in therapy to identify patterns of rejection",
+      "- Practice assertive communication to express feelings without conflict",
+      "- Hypnosis session recommendation: Emotional release and inner validation"
+    ],
+    "long_term": [
+      "- Develop structured self-compassion practices to reinforce self-worth",
+      "- Establish boundaries with family to maintain emotional stability",
+      "- Hypnosis session recommendation: Reclaiming self-worth and emotional independence"
+    ]
+  },
+  "motivational_closure": "Despite feeling overlooked and undervalued, you hold within you a strength and worth that is not defined by your family or their perceptions. You are seen. You are valued. You are enough.",
+  "tags": [
+    "FamilyResentment",
+    "SelfWorth",
+    "EmotionalRelease",
+    "Assertiveness",
+    "BoundarySetting",
+    "ReclaimingIdentity",
+    "InnerStrength"
+  ]
+}

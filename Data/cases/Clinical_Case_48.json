@@ -1,0 +1,62 @@
+{
+  "case_id": "Clinical_Case_48",
+  "age": "19",
+  "gender_identity": "woman presents with chronic underlying stress perceived as permanent, with a normalization of emotional discomfort. She experiences constant physical and mental fatigue, with no real recovery, and episodes of explosive, uncontrollable anger ('color crises') triggered by overload, injustice, or neglect of self. Over-responsibility in her romantic relationship exacerbates the feeling of having to manage everything alone, resulting in mental exhaustion. Conflict avoidance has become her emotional inhibition strategy, increasing internal pressure and the risk of emotional outbursts.",
+  "summary": "(RAG Format)\nThis 19-year-old woman presents with chronic underlying stress perceived as permanent, with a normalization of emotional discomfort. She experiences constant physical and mental fatigue, with no real recovery, and episodes of explosive, uncontrollable anger ('color crises') triggered by overload, injustice, or neglect of self. Over-responsibility in her romantic relationship exacerbates the feeling of having to manage everything alone, resulting in mental exhaustion. Conflict avoidance has become her emotional inhibition strategy, increasing internal pressure and the risk of emotional outbursts.",
+  "main_issues": [
+    "- Chronic stress with no real recovery periods",
+    "- Explosive anger outbursts without apparent triggers",
+    "- Conflict avoidance and emotional inhibition ('I shut my mouth')",
+    "- Disrupted body connection, particularly in relation to food textures",
+    "- Fear of pregnancy and control-related bodily anxiety",
+    "- Hypervigilance in romantic relationships, feeling overburdened and under-supported"
+  ],
+  "emotions": [
+    "Stress and fatigue",
+    "Repressed anger and emotional overload",
+    "Sense of injustice and neglect",
+    "Diffuse anxiety and anticipation of loss of control",
+    "Emotional hypersensitivity and sensory discomfort"
+  ],
+  "limiting_beliefs": [
+    "- \"If I don't manage things, no one will.\"",
+    "- \"I must stay silent to avoid conflict.\"",
+    "- \"I'm not allowed to explode, but sometimes I can't take it anymore.\"",
+    "- \"I don't trust my body (for digestion, driving, or handling pregnancy).\"",
+    "- \"I carry the mental load alone.\""
+  ],
+  "therapeutic_goals": [
+    "- Decrease emotional reactivity to perceived injustices and interruptions",
+    "- Facilitate emotional expression beyond anger and frustration",
+    "- Develop self-soothing techniques to manage explosive impulses",
+    "- Normalize bodily sensations as non-threatening",
+    "- Anchor a sense of inner control without hypervigilance"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Anti-stress breathing exercise (3-4-5 or cardiac coherence) twice daily to reduce reactivity threshold",
+      "- Emotional self-observation journal: 'When do I start boiling?', 'What drains me the most each day?'",
+      "- Quick post-anger grounding protocol: walk alone for 10 min / apply a cold wet cloth / visually step away from mess"
+    ],
+    "intermediate": [
+      "- Gentle assertiveness training: learning to say 'I need help' without fear of conflict",
+      "- Sensory reconditioning with food: introduce meats in softer forms to bypass texture aversion without confrontation",
+      "- Gradual, safe exposure to highway: daytime driving, 15 minutes, on familiar routes, with a trusted person"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Reconnecting with the Body and Letting Go of Control",
+      "- Releasing tension linked to the need for control",
+      "- Reframing bodily sensations as indicators, not threats",
+      "- Establishing a safe internal space to decompress when feeling overwhelmed"
+    ]
+  },
+  "motivational_closure": "You don't have to carry the world on your shoulders. Your body already knows how to relax, your heart how to find peace... You just have to give them back their voice.",
+  "tags": [
+    "ChronicStress",
+    "EmotionalRegulation",
+    "BodyConnection",
+    "ControlAnxiety",
+    "SensoryHypersensitivity",
+    "LettingGo"
+  ]
+}

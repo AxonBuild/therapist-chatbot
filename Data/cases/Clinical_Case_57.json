@@ -1,0 +1,76 @@
+{
+  "case_id": "Clinical_Case_57",
+  "age": "49",
+  "gender_identity": "lawyer is experiencing a deep loss of professional meaning, accompanied by emotional disengagement and anxiety. She feels disillusioned with the current nature of her work, overwhelmed by trivial cases, and disconnected from the intellectual and social values that once motivated her. Her body reacts with anxiety each morning, reflecting a profound conflict between her original vocational ideals and the current perceived futility of her tasks. Emotional saturation has led to cynicism, avoidance, and masked depression, all compounded by affective ambivalence and limiting beliefs around endurance and identity.",
+  "summary": "(RAG Format)\nThis 49-year-old lawyer is experiencing a deep loss of professional meaning, accompanied by emotional disengagement and anxiety. She feels disillusioned with the current nature of her work, overwhelmed by trivial cases, and disconnected from the intellectual and social values that once motivated her. Her body reacts with anxiety each morning, reflecting a profound conflict between her original vocational ideals and the current perceived futility of her tasks. Emotional saturation has led to cynicism, avoidance, and masked depression, all compounded by affective ambivalence and limiting beliefs around endurance and identity.",
+  "main_issues": [
+    "- Disillusionment and emotional withdrawal from her legal profession",
+    "- Anxiety attacks when going to the office, linked to daily repetition and inner conflict",
+    "- Defensive hypersensitivity and emotional overexposure",
+    "- Internalized devaluation and fear of professional change",
+    "- Chronic existential rumination and fatigue"
+  ],
+  "emotions": [
+    "Frustration (clients, institutions, cases)",
+    "Morning anxiety",
+    "Cynicism as emotional defense",
+    "Ambivalence (attachment vs detachment from the profession)",
+    "Sadness and moral fatigue"
+  ],
+  "limiting_beliefs": [
+    "around endurance and identity.",
+    "Main Issues Identified",
+    "- Disillusionment and emotional withdrawal from her legal profession",
+    "- Anxiety attacks when going to the office, linked to daily repetition and inner conflict",
+    "- Defensive hypersensitivity and emotional overexposure",
+    "- Internalized devaluation and fear of professional change",
+    "- Chronic existential rumination and fatigue",
+    "Dominant Emotional Dynamics",
+    "- Frustration (clients, institutions, cases)",
+    "- Morning anxiety",
+    "- Cynicism as emotional defense",
+    "- Ambivalence (attachment vs detachment from the profession)",
+    "- Sadness and moral fatigue",
+    "Limiting Beliefs",
+    "- \"I must love my clients to do a good job.\"",
+    "- \"I must endure everything because I chose this profession.\"",
+    "- \"I have no credible alternative to my current career.\"",
+    "- \"If I no longer feel empathy, something is wrong with me.\"",
+    "- \"Others always want to take advantage of me or my energy.\""
+  ],
+  "therapeutic_goals": [
+    "- Alleviate morning anxiety and work-related dread",
+    "- Restore meaning through value-based reflection and reconnection",
+    "- Normalize emotional disengagement as a protective phase, not a failure",
+    "- Support identity reconstruction beyond the profession",
+    "- Anchor the legitimacy of professional reorientation"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Morning 5-minute routine: deep breathing and body anchoring",
+      "- \"Give meaning to my day\" journal (one small meaningful task daily)",
+      "- Mirror phrase: \"I am more than what I do. What I do can still evolve.\""
+    ],
+    "intermediate": [
+      "- Cognitive reframing: permission to adjust or change paths",
+      "- \"Professional attraction assessment\" - revisit initial motivations",
+      "- Explore specialization or transmission routes (training, writing, mentoring)",
+      "- Humorous recontextualization of administrative absurdities"
+    ],
+    "long_term": [
+      "- Targeted hypnosis for existential fatigue and reconnection with purpose",
+      "- Deep therapy on \"I must endure to exist\" schema",
+      "- Reclaiming a professional identity aligned with freedom and stimulation",
+      "- Step-by-step soft reorientation or intra-professional reinvention"
+    ]
+  },
+  "motivational_closure": "It's not that you're no longer in the right place — it's that the place has stopped resembling you. And every day, you can take a step toward recreating a space where your voice once again carries weight.",
+  "tags": [
+    "LossOfMeaning",
+    "ProfessionalFatigue",
+    "WorkAnxiety",
+    "EmotionalAvoidance",
+    "VocationalReorientation",
+    "IdentityReclaiming"
+  ]
+}

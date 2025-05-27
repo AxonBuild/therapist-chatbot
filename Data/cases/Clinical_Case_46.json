@@ -1,0 +1,60 @@
+{
+  "case_id": "Clinical_Case_46",
+  "age": "22",
+  "gender_identity": "woman presents with an eating disorder with anorexic predominance, characterized by marked food restriction and rigid eating habits. She avoids carbohydrates, follows a predominantly liquid or very low-calorie diet, and harbors intense frustration linked to potential weight regain. Her body image is highly distorted, with a fixation on unrealistic body goals such as achieving a 'thigh gap.' The onset of these symptoms is connected to an unresolved bereavement, which destabilized her sense of control and catalyzed the use of food restriction as a coping mechanism.",
+  "summary": "(RAG Format)\nThis 22-year-old woman presents with an eating disorder with anorexic predominance, characterized by marked food restriction and rigid eating habits. She avoids carbohydrates, follows a predominantly liquid or very low-calorie diet, and harbors intense frustration linked to potential weight regain. Her body image is highly distorted, with a fixation on unrealistic body goals such as achieving a 'thigh gap.' The onset of these symptoms is connected to an unresolved bereavement, which destabilized her sense of control and catalyzed the use of food restriction as a coping mechanism.",
+  "main_issues": [
+    "- Severe food restriction and liquid-based diet",
+    "- Unrealistic body image and body hatred",
+    "- Emotional overcontrol and cognitive rigidity",
+    "- Transgenerational emotional burden and inherited guilt",
+    "- Ambivalence towards therapeutic care"
+  ],
+  "emotions": [
+    "Intense frustration",
+    "Internalized anger",
+    "Unexpressed sadness",
+    "Bodily and existential guilt",
+    "Diffuse fear of losing control"
+  ],
+  "limiting_beliefs": [
+    "- \"I must control everything to exist.\"",
+    "- \"If I gain weight, I lose control.\"",
+    "- \"My body betrays me.\"",
+    "- \"Emotions are dangerous or unmanageable.\"",
+    "- \"I carry my parents' mistakes.\""
+  ],
+  "therapeutic_goals": [
+    "- Reduce restrictive eating behaviors and reframe food as nourishment",
+    "- Facilitate safe emotional expression to prevent internalized anger",
+    "- Develop self-soothing techniques to manage frustration and sadness",
+    "- Anchor a secure connection with the body as a source of safety, not control"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Daily emotional self-observation: anger/frustration/energy scale (0 to 10)",
+      "- 4x/day grounding exercise: hand on belly, inhale deeply, affirm \"I am here, my body is alive.\"",
+      "- Conscious nutrition: one pleasure food per week without judgment"
+    ],
+    "intermediate": [
+      "- Emotion-food journal: tracking emotional states and their impact on eating behaviors",
+      "- Cognitive deactivation exercise: \"What if I allowed 5% of letting go?\" - daily self-questioning ritual",
+      "- Dialogue exercise: write a letter to the younger self, exploring the initial need for control"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Reconnecting with the Body and Allowing Emotional Release",
+      "- Deactivate overcontrol patterns and rigid thinking",
+      "- Soothe internalized anger and allow safe emotional expression",
+      "- Establish a secure internal space where the body can be a source of grounding, not fear"
+    ]
+  },
+  "motivational_closure": "Your body is not your enemy—it is the first home you ever had. You don't need to dominate it to exist; you only need to learn to listen to it again. One breath, one meal, one feeling at a time.",
+  "tags": [
+    "Anorexia",
+    "BodyConnection",
+    "EmotionalRegulation",
+    "ControlAnxiety",
+    "SelfCompassion",
+    "FoodFreedom"
+  ]
+}

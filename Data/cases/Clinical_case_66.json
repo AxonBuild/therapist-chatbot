@@ -1,0 +1,66 @@
+{
+  "case_id": "Clinical_case_66",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with unresolved frustration and emotional distress related to the reception of genetic test results. A delay in receiving these results, coupled with perceived dismissal by medical staff, has exacerbated feelings of being overlooked and dismissed. Additionally, the patient reports experiencing ongoing difficulties in prioritizing her own needs over family responsibilities, leading to self-neglect. Recent conversations regarding her daughter Lola and her interactions with the therapist have highlighted a focus on superficial topics, which the patient interprets as a sign of emotional avoidance or superficial coping mechanisms.",
+  "main_issues": [
+    "- Emotional distress linked to genetic testing experience",
+    "- Feelings of neglect and dismissal by medical professionals",
+    "- Struggle to prioritize personal needs over family obligations",
+    "- Emotional avoidance and surface-level coping mechanisms in daughter",
+    "- Resentment towards perceived emotional neglect from spouse"
+  ],
+  "emotions": [
+    "Frustration",
+    "Resentment",
+    "Self-neglect",
+    "Emotional Avoidance",
+    "Feeling Overlooked"
+  ],
+  "limiting_beliefs": [
+    "- \"My needs always come last.\"",
+    "- \"I am invisible to those who should care.\"",
+    "- \"I can't express my anger without being dismissed.\"",
+    "- \"If I focus on myself, I am being selfish.\""
+  ],
+  "therapeutic_goals": [
+    "- Validate feelings of frustration and resentment related to medical dismissal",
+    "- Empower patient to assert personal needs and boundaries within the family",
+    "- Encourage exploration of underlying emotions beyond surface-level topics",
+    "- Implement self-care strategies to reduce self-neglect",
+    "- Facilitate communication with spouse to address feelings of emotional neglect"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Grounding techniques to manage frustration and emotional overwhelm",
+      "- Guided journaling to process the experience with genetic testing",
+      "- Hypnosis session recommendation: Reclaiming self-worth and prioritizing self-care",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Develop assertiveness strategies for medical and familial interactions",
+      "- Structured dialogues to address feelings of neglect with spouse",
+      "- Exploration of deeper emotional content with daughter beyond superficial topics",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Establish regular self-care routines to prevent emotional burnout",
+      "- Create a safe space for open communication with family members",
+      "- Hypnosis session recommendation: Rebuilding self-confidence and self-priority"
+    ]
+  },
+  "motivational_closure": "",
+  "tags": [
+    "GeneticTesting",
+    "MedicalDismissal",
+    "SelfCare",
+    "EmotionalNeglect",
+    "Assertiveness",
+    "FamilyDynamics",
+    "EmotionalExpression",
+    "SelfWorth"
+  ]
+}

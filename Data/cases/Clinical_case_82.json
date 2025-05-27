@@ -1,0 +1,55 @@
+{
+  "case_id": "Clinical_case_82",
+  "age": "45",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 45-year-old woman experiencing intense emotional fluctuations related to hormonal imbalances. She reports recurring episodes of emotional volatility, feelings of loneliness, and suppressed anger, particularly during hormonal cycles. Despite recognizing her need for emotional support and comfort, she struggles to verbalize it clearly, often defaulting to self-blame and frustration. Additionally, she expresses persistent feelings of emotional neglect stemming from childhood, where her attempts to express distress were dismissed or invalidated by her father and other authority figures. These dynamics have contributed to her current pattern of emotional isolation and a tendency to self-regulate without seeking support.",
+  "main_issues": [
+    "- Hormonal fluctuations leading to emotional instability and irritability",
+    "- Difficulty expressing the need for comfort and validation",
+    "- Persistent guilt over perceived emotional overreactions",
+    "- Unresolved anger toward her father for past emotional neglect",
+    "- Recurrent feelings of loneliness and emotional isolation"
+  ],
+  "emotions": [
+    "Guilt",
+    "Anger",
+    "Loneliness",
+    "Frustration",
+    "Emotional suppression"
+  ],
+  "limiting_beliefs": [
+    "\"Expressing my emotions is pointless because no one will understand.\"",
+    "\"If I ask for comfort, I will be seen as weak or irrational.\"",
+    "\"My needs are not important enough to be acknowledged.\""
+  ],
+  "therapeutic_goals": [
+    "- Develop strategies for expressing emotional needs without guilt",
+    "- Reframe guilt narratives to foster self-compassion and acceptance",
+    "- Process childhood feelings of emotional neglect to reduce current frustration",
+    "- Establish healthier boundaries in communication with family members",
+    "- Introduce self-soothing techniques to manage hormonal fluctuations"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises for emotional regulation during hormonal peaks",
+      "- Hypnosis session recommendation: grounding and emotional release, focusing on suppressed anger and guilt"
+    ],
+    "intermediate": [
+      "- Hypnosis session: reprocessing childhood neglect and reinforcing self-worth",
+      "- Assertiveness training to improve communication of emotional needs"
+    ],
+    "long_term": [
+      "- Hypnosis session: releasing emotional attachments to paternal validation",
+      "- Establishing regular self-reflection practices to identify and express needs proactively"
+    ]
+  },
+  "motivational_closure": "Your emotions are valid, and your needs are worthy of being heard. You have the right to seek comfort and to express your feelings without fear of judgment. With each breath, you reclaim the space to feel, to express, and to be understood.",
+  "tags": [
+    "EmotionalRelease",
+    "HormonalBalance",
+    "GuiltProcessing",
+    "SelfCompassion",
+    "PaternalNeglect",
+    "EmotionalValidation"
+  ]
+}

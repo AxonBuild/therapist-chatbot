@@ -1,0 +1,48 @@
+{
+  "case_id": "Clinical_case_166",
+  "age": "68",
+  "gender_identity": "Female",
+  "summary": "(RAG Format)\nThe patient presents with a complex medical and emotional history characterized by chronic neuropathic pain, fibromyalgia, and unresolved psychological distress linked to early maternal neglect and familial rejection. She reports pervasive feelings of being the 'black sheep' within her family, feeling persistently rejected by her mother, while her sister was perceived as the favored child. The patient also expresses unresolved grief and emotional conflict related to a denied pregnancy and the ongoing perception of being unwanted. These unresolved emotional conflicts have manifested in chronic pain, psychosomatic symptoms, and a deep sense of emotional exhaustion.",
+  "main_issues": [
+    "- Chronic neuropathic pain potentially triggered by medical treatments (e.g., Cutenza patches, post-vaccine reaction).",
+    "- Persistent emotional distress linked to perceived maternal rejection and sibling favoritism.",
+    "- Unresolved grief and confusion around the denied pregnancy and familial neglect.",
+    "- Fibromyalgia exacerbated by emotional stress and unresolved trauma.",
+    "- Ongoing emotional exhaustion and feelings of being a burden or 'black sheep' in the family."
+  ],
+  "emotions": [
+    "Rejection",
+    "Grief",
+    "Emotional Exhaustion",
+    "Anger",
+    "Resentment",
+    "Guilt"
+  ],
+  "limiting_beliefs": [
+    "- 'I was never wanted, so I don't deserve affection.'",
+    "- 'If I express my pain, I am a burden.'",
+    "- 'My sister was the chosen one, and I was the reject.'",
+    "- 'I must bear the pain in silence to avoid being a burden.'"
+  ],
+  "therapeutic_goals": [
+    "- Normalize the experience of chronic pain as a manifestation of emotional distress and unresolved trauma.",
+    "- Validate the patient's experiences of rejection and emotional neglect to facilitate emotional release.",
+    "- Implement grounding techniques to reduce emotional volatility and connect to the present moment.",
+    "- Support the patient in processing unresolved grief around the denied pregnancy and familial rejection.",
+    "- Foster self-compassion and a reframing of her narrative to reduce the internalized belief of being 'unwanted.'"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You have carried the weight of rejection and neglect for too long, believing that your worth is tied to how others treated you. It is time to release that weight, to reclaim your voice, and to honor the truth that you were always worthy of love and compassion. You are not defined by the pain of the past - you are free to redefine your present and your future.",
+  "tags": [
+    "Rejection",
+    "ChronicPain",
+    "EmotionalHealing",
+    "InnerChild",
+    "SelfCompassion",
+    "UnresolvedGrief"
+  ]
+}

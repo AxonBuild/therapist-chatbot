@@ -1,0 +1,78 @@
+{
+  "case_id": "Clinical_Case_33",
+  "age": "38",
+  "gender_identity": "Woman (Mother of Maxime)",
+  "summary": "(RAG Format)\nThe mother reports concerns about her son Maxime's progress at school, especially in French language skills. Despite attending French school since kindergarten and receiving additional tutoring, he remains significantly behind his peers. He excels in math and chess, but struggles in subjects related to language and expression. The school has not communicated these concerns earlier, and now suggests the possibility of repeating the year. The mother feels frustrated and unsupported by the school system, as her requests for additional materials and reading lists have been ignored. Maxime is described as socially withdrawn at school, possibly due to his perceived linguistic shortcomings. He currently practices individual sports (boxing, tennis, swimming), but lacks a team-based activity. A new multisport collective activity has been introduced, which may help support his socialization.",
+  "main_issues": [
+    "- Significant delay in French language acquisition",
+    "- Lack of communication and cooperation from school",
+    "- Emotional withdrawal and self-protection mechanisms in school setting",
+    "- Lack of social integration and peer bonding",
+    "- Parental stress and concern about future academic progression"
+  ],
+  "emotions": [
+    "Frustration",
+    "Helplessness",
+    "Protective anxiety",
+    "Disappointment",
+    "Uncertainty"
+  ],
+  "limiting_beliefs": [
+    "- 'The school does not support or care about my child's development.'",
+    "- 'Despite extra efforts, my child cannot catch up.'",
+    "- 'Redoubling would damage my child's self-confidence.'"
+  ],
+  "therapeutic_goals": [
+    "- Strengthen Maxime's confidence in reading and comprehension",
+    "- Encourage structured autonomy in homework and reading routines",
+    "- Facilitate social integration through collective extracurricular activities",
+    "- Empower parental strategy and educational advocacy"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Initiate structured reading plan (e.g., 10 pages per day + oral summary)",
+      "- Establish daily routine for homework support and parental feedback",
+      "- Send formal emails to school with proof of unanswered requests",
+      "- Hypnosis session recommendation: emotional reassurance for the mother, stress relief, and focus on advocacy clarity",
+      "Tags: #ParentalStress #AcademicSupport #AdvocacyClarity",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Maintain French language tutoring sessions twice a week",
+      "- Reinforce collective activity through multisport club during vacations",
+      "- Practice oral storytelling or presentations to improve linguistic confidence",
+      "- Hypnosis session recommendation: empowering maternal intuition and promoting trust in child's progression",
+      "Tags: #MaternalConfidence #TrustInProgress #LanguageEmpowerment",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Avoid redoubling and pursue personalized academic support instead",
+      "- Consider assessment by an educational psychologist if progress stalls",
+      "- Build positive narrative around effort, progress, and strengths",
+      "- Hypnosis session recommendation: rebuilding narrative of growth and emotional connection to learning",
+      "Tags: #SchoolTrajectory #PositiveNarrative #LongTermResilience"
+    ]
+  },
+  "motivational_closure": "Maxime does not need to be perfect to grow. He needs the belief that he is capable, and a space that recognizes both his efforts and his strengths. Through consistency, structure, and emotional support, he can learn to love learning - and you are already showing him the path.",
+  "tags": [
+    "ParentalStress",
+    "AcademicSupport",
+    "AdvocacyClarity",
+    "MaternalConfidence",
+    "TrustInProgress",
+    "LanguageEmpowerment",
+    "SchoolTrajectory",
+    "PositiveNarrative",
+    "LongTermResilience",
+    "ParentalStress",
+    "AcademicConfidence",
+    "EmotionalSupport",
+    "LanguageDelay",
+    "ResilienceBuilding",
+    "EducationalEmpowerment",
+    "SchoolAdvocacy"
+  ]
+}

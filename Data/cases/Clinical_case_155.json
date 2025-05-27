@@ -1,0 +1,65 @@
+{
+  "case_id": "Clinical_case_155",
+  "age": "42",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with chronic feelings of inadequacy, a pervasive fear of abandonment, and a persistent sense of not being 'good enough' in relationships. Emotional triggers are notably connected to her former partner's current behaviors, mirroring unresolved childhood dynamics involving perceived neglect and emotional rejection by parental figures. Recurrent themes include feelings of betrayal, jealousy, and a perceived need to prove her worth to be valued and loved.",
+  "main_issues": [
+    "- Fear of abandonment and rejection",
+    "- Persistent comparison to others in relationships",
+    "- Difficulty asserting personal worth without external validation",
+    "- Emotional flashbacks linked to parental neglect and perceived favoritism",
+    "- Recurrent feelings of jealousy and inadequacy in romantic contexts"
+  ],
+  "emotions": [
+    "Jealousy",
+    "Inadequacy",
+    "Fear",
+    "Anger",
+    "Resentment"
+  ],
+  "limiting_beliefs": [
+    "- \"I am not enough to be loved.\"",
+    "- \"Others are always better than me.\"",
+    "- \"If I let my guard down, I will be abandoned.\"",
+    "- \"My worth is defined by how much others want me.\""
+  ],
+  "therapeutic_goals": [
+    "- Reframe beliefs of inadequacy and develop self-validation techniques",
+    "- Process unresolved grief and feelings of rejection from childhood",
+    "- Establish emotional boundaries to reduce dependency on external validation",
+    "- Facilitate self-compassion exercises to counteract feelings of jealousy",
+    "- Implement grounding techniques to manage emotional flashbacks"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Grounding exercises to manage jealousy and emotional flashbacks",
+      "- Guided visualization to reinforce self-worth and personal boundaries",
+      "- Hypnosis session recommendation: anchoring self-love and releasing external validation needs",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Internal dialogue exercises to restructure limiting beliefs",
+      "- Therapeutic journaling to explore patterns of perceived rejection",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Development of an internal safe space for emotional recovery",
+      "- Establish self-soothing techniques to counteract feelings of inadequacy",
+      "- Hypnosis session recommendation: creating a resilient self-image and emotional anchor"
+    ]
+  },
+  "motivational_closure": "",
+  "tags": [
+    "AbandonmentFear",
+    "SelfWorth",
+    "Jealousy",
+    "EmotionalRecovery",
+    "ParentalNeglect",
+    "SelfValidation",
+    "EmotionalBoundaries",
+    "InnerHealing"
+  ]
+}

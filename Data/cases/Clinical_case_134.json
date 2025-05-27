@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_case_134",
+  "age": "23",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 23-year-old woman presents with heightened emotional distress stemming from familial invalidation and perceived rejection following the release of a personal podcast. Despite receiving positive feedback from peers and listeners, her parents reacted negatively, expressing disapproval and framing her narrative as a personal attack against them. The patient expresses disappointment and disillusionment as this response reinforces longstanding patterns of emotional neglect and a lack of support. Additionally, she reports struggling to assert boundaries, particularly when dealing with criticism or unsolicited advice from her parents.",
+  "main_issues": [
+    "- Emotional distress related to familial invalidation and criticism after releasing a personal podcast.",
+    "- Disappointment and unmet expectations regarding parental support and validation.",
+    "- Ongoing struggle to assert boundaries in the face of parental disapproval.",
+    "- Internal conflict between authenticity and perceived familial obligations.",
+    "- Persistent patterns of self-censorship to avoid conflict or rejection."
+  ],
+  "emotions": [
+    "Disappointment",
+    "Guilt",
+    "Anger",
+    "Emotional suppression",
+    "Frustration"
+  ],
+  "limiting_beliefs": [
+    "- \"If I express my truth, I will hurt my parents.\"",
+    "- \"My voice only matters if it is validated by my parents.\"",
+    "- \"I must avoid conflict to maintain peace in the family.\"",
+    "- \"If I assert myself, I am being selfish or ungrateful.\""
+  ],
+  "therapeutic_goals": [
+    "- Develop assertive communication strategies to navigate criticism without self-censorship.",
+    "- Support emotional processing of unmet expectations and familial invalidation.",
+    "- Reframe cognitive distortions around self-worth and external validation.",
+    "- Implement grounding techniques to manage emotional reactivity in conversations with parents.",
+    "- Foster self-compassion and reinforce the value of her authentic voice."
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Grounding exercises to manage emotional activation during familial interactions.",
+      "- Journaling to externalize unexpressed anger and articulate personal needs.",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Cognitive restructuring to challenge internalized guilt and self-blame.",
+      "- Visualization exercises to establish and maintain emotional boundaries.",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Psychotherapy to address unresolved familial dynamics and emotional dependency.",
+      "- Hypnosis session to integrate self-validation and reduce dependency on external approval.",
+      "- Assertiveness training to communicate needs effectively without fear of rejection."
+    ]
+  },
+  "motivational_closure": "You are allowed to speak your truth without seeking permission. Your voice is valid, and your experiences deserve to be heard - not just by others, but by yourself first.",
+  "tags": [
+    "Assertiveness",
+    "SelfValidation",
+    "EmotionalProcessing",
+    "BoundarySetting",
+    "FamilialDynamics",
+    "GuiltProcessing",
+    "SelfWorth"
+  ]
+}

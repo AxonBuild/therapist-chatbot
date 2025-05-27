@@ -1,0 +1,46 @@
+{
+  "case_id": "Clinical_case_94",
+  "age": "48",
+  "gender_identity": "man",
+  "summary": "(RAG Format)\nThe patient is a 48-year-old man experiencing persistent anticipatory anxiety, particularly in relation to the fear of recurring panic episodes. He reports a heightened sensitivity to environmental noise and a strong aversion to unstructured time at home, feeling trapped and overwhelmed by familial obligations. Despite a period of relative stability, he struggles to balance personal needs with perceived familial duties, leading to feelings of being 'trapped' and 'unable to do what I want.' He has developed coping strategies such as retreating to a designated quiet space, but underlying tension remains.",
+  "main_issues": [
+    "- Anticipatory anxiety linked to fear of panic recurrence",
+    "- Inability to prioritize personal needs without guilt",
+    "- Heightened sensitivity to environmental noise and family chaos",
+    "- Perceived pressure to fulfill familial obligations over personal desires",
+    "- Difficulty managing unstructured time without feeling trapped"
+  ],
+  "emotions": [
+    "Anxiety",
+    "Frustration",
+    "Guilt",
+    "Helplessness",
+    "Overwhelm"
+  ],
+  "limiting_beliefs": [
+    "- 'I can't do what I want without feeling guilty.'",
+    "- 'I must always be present and involved with my family.'",
+    "- 'If I take time for myself, I'm being selfish.'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe the concept of personal time as a necessary act of self-care, not selfishness.",
+    "- Implement structured time-out techniques to manage sensory overload.",
+    "- Introduce cognitive reframing to challenge guilt associated with taking personal time.",
+    "- Normalize feelings of overwhelm and provide coping strategies for high-sensory environments.",
+    "- Encourage consistent use of his quiet space as a grounding strategy."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You have the right to honor your own needs without guilt. Time for yourself is not a luxury—it is a necessity. By allowing space for calm, you create more room for authentic connection, both with yourself and those you love.",
+  "tags": [
+    "SensoryOverload",
+    "GuiltRelease",
+    "TimeManagement",
+    "FamilyObligations",
+    "PersonalBoundaries",
+    "CalmAnchor"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "case_id": "Clinical_Case_16",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThis couple, together for nine years, initially presented difficulties in emotional communication, empathy, and conflict management. Over the past two months, significant progress has been observed: more structured communication using emotional statements (\"I feel...\" instead of accusations), increased mutual support, and improved emotional regulation after conflicts. They also started addressing future planning topics, including discussions about finances, family projects, and fears related to pregnancy for the woman.",
+  "main_issues": [
+    "- Initial poor communication, leading to escalating conflicts",
+    "- Difficulty managing emotional triggers during discussions",
+    "- Improvement in post-conflict debriefing and mutual listening",
+    "- Fear of future milestones (pregnancy, family planning)",
+    "- Anxiety around major life transitions and shared responsibilities"
+  ],
+  "emotions": [
+    "Fear",
+    "Anxiety",
+    "Hope",
+    "Attachment",
+    "Cautious optimism"
+  ],
+  "limiting_beliefs": [
+    "- 'If we argue, it means something is fundamentally wrong.'",
+    "- 'I must suppress my emotions to maintain peace.'",
+    "- 'I am not ready for major life changes.'",
+    "- 'Expressing vulnerability will destabilize the relationship.'"
+  ],
+  "therapeutic_goals": [
+    "- Strengthen emotional communication and mutual validation",
+    "- Normalize conflict as a natural part of intimacy",
+    "- Develop structured discussions around future projects (housing, finances, family)",
+    "- Support the woman's emotional regulation regarding pregnancy fears",
+    "- Foster individual and shared resilience within the relationship"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Reinforce weekly emotional check-ins (structured, timed conversations)",
+      "- Reframe emotional reactions as normal parts of relationship dynamics",
+      "- Implement repair rituals after minor conflicts (short debriefings)",
+      "- Hypnosis session recommendation: co-regulation and emotional de-escalation",
+      "Tags: #ConflictRepair #CoupleCoRegulation #CommunicationSafety",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Develop a \"Future Vision\" exercise: both partners list goals and fears individually, then share and align visions",
+      "- Practice active listening with focus exercises to reduce misunderstandings",
+      "- Use gentle exposure techniques to emotionally normalize discussions about children and commitment",
+      "- Hypnosis session recommendation: future projection and shared emotional anchoring",
+      "Tags: #FuturePlanning #PregnancyFears #EmotionalAnchoring",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Optional EMDR therapy for regulating excessive fears related to childbirth and identity shifts",
+      "- Couple's narrative development to integrate past challenges into a shared resilience story",
+      "- Hypnosis session recommendation: strengthening long-term bond and joint vision reinforcement",
+      "Tags: #CoupleResilience #LongTermBonding #SharedVision"
+    ]
+  },
+  "motivational_closure": "You are not building perfection — you are building connection. It is through honest words, shared fears, and imperfect steps that love becomes strong enough to grow.",
+  "tags": [
+    "ConflictRepair",
+    "CoupleCoRegulation",
+    "CommunicationSafety",
+    "FuturePlanning",
+    "PregnancyFears",
+    "EmotionalAnchoring",
+    "CoupleResilience",
+    "LongTermBonding",
+    "SharedVision",
+    "CouplesTherapy",
+    "CommunicationSkills",
+    "EmotionalRegulation",
+    "ConflictResolution",
+    "FuturePlanning",
+    "ParentalFears",
+    "SharedGrowth",
+    "RelationshipAnchoring"
+  ]
+}

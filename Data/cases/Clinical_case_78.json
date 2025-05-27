@@ -1,0 +1,59 @@
+{
+  "case_id": "Clinical_case_78",
+  "age": "35",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with intense emotional reactivity, especially in situations where she feels pressured or controlled. She experiences heightened anger and frustration, which she attributes to unresolved conflicts with her father and the emotional neglect experienced in childhood. Her self-perception is marked by feelings of inadequacy and a fear of being perceived as irrational or 'hysterical.' The patient also expresses guilt around asserting her needs, as it contradicts the learned pattern of emotional suppression.",
+  "main_issues": [
+    "- Emotional reactivity and explosive anger in response to perceived oppression",
+    "- Guilt around asserting needs and setting boundaries",
+    "- Persistent self-judgment and self-criticism",
+    "- Difficulty reconciling feelings of abandonment and emotional neglect",
+    "- Unresolved anger toward her father and ambivalence toward her mother"
+  ],
+  "emotions": [
+    "Anger",
+    "Guilt",
+    "Frustration",
+    "Emotional volatility",
+    "Confusion around self-worth"
+  ],
+  "limiting_beliefs": [
+    "- \"If I express my anger, I will be seen as irrational or hysterical.\"",
+    "- \"I am not allowed to assert my needs without hurting others.\"",
+    "- \"I am unimportant and my needs are secondary to everyone else's.\"",
+    "- \"If I don't keep the peace, I will be abandoned.\""
+  ],
+  "therapeutic_goals": [
+    "- Develop strategies to manage anger without self-judgment",
+    "- Reframe negative self-beliefs around assertiveness and self-worth",
+    "- Explore childhood patterns of emotional suppression and neglect",
+    "- Establish clear emotional boundaries with family members",
+    "- Integrate grounding techniques to prevent emotional overwhelm"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Hypnosis session focused on releasing suppressed anger and establishing calm",
+      "- Daily journaling to externalize anger and validate personal experiences",
+      "- Breathing techniques for immediate emotional regulation during conflict"
+    ],
+    "intermediate": [
+      "- Cognitive reframing to address guilt associated with assertiveness",
+      "- Visualization exercises to foster a sense of internal safety and stability",
+      "- Hypnosis session centered on self-compassion and releasing parental influence"
+    ],
+    "long_term": [
+      "- Continued work on establishing emotional boundaries",
+      "- Identifying and addressing core beliefs related to self-worth and personal value",
+      "- Assertiveness training to effectively communicate needs without fear of rejection"
+    ]
+  },
+  "motivational_closure": "You have the right to express your needs without feeling guilty or irrational. Each step you take toward acknowledging your own boundaries is a step toward reclaiming your inner strength and sense of self.",
+  "tags": [
+    "EmotionalRegulation",
+    "Assertiveness",
+    "SelfWorth",
+    "Boundaries",
+    "AngerManagement",
+    "InnerCalm"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_case_138",
+  "age": "25",
+  "gender_identity": "man",
+  "summary": "(RAG Format)\nThis 25-year-old man presents with significant emotional dysregulation centered around ambiguous romantic interactions, leading to obsessive rumination and compulsive social media monitoring. Despite recognizing the maladaptive nature of his behaviors, he reports difficulty detaching from perceived rejection, exacerbated by unresolved patterns of emotional dependency and fear of abandonment stemming from previous toxic relationships.",
+  "main_issues": [
+    "- Persistent monitoring of former partner's social media activity, leading to heightened anxiety.",
+    "- Emotional preoccupation with ambiguous cues, leading to compulsive analysis and emotional distress.",
+    "- Inability to establish emotional detachment, maintaining fixation on potential reconciliation.",
+    "- Unresolved emotional injuries from past relationships, particularly marked by manipulation and rejection.",
+    "- Underlying fear of abandonment manifesting as emotional dependency and obsessive rumination."
+  ],
+  "emotions": [
+    "Anxiety",
+    "Fear of rejection",
+    "Emotional dependency",
+    "Obsessive rumination",
+    "Emotional instability"
+  ],
+  "limiting_beliefs": [
+    "- \"If I don't monitor her, I might miss something important.\"",
+    "- \"If she doesn't reach out, it means I'm not worthy.\"",
+    "- \"My value is defined by her attention and presence.\"",
+    "- \"I can't be okay unless I have clarity on where we stand.\""
+  ],
+  "therapeutic_goals": [
+    "- Reduce compulsive monitoring behaviors through cognitive restructuring.",
+    "- Establish emotional detachment techniques to regain self-focus and reduce fixation.",
+    "- Reframe limiting beliefs around self-worth and perceived rejection.",
+    "- Develop coping mechanisms for managing uncertainty and emotional ambiguity.",
+    "- Address unresolved emotional patterns linked to previous toxic relationships."
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Implement a structured digital detox to minimize triggers linked to social media monitoring.",
+      "- Guided breathing and grounding exercises to manage emotional reactivity during moments of uncertainty.",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Cognitive restructuring to reframe catastrophic thinking around rejection and perceived neglect.",
+      "- Visualization exercises to symbolically release emotional ties to former partners.",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Psychotherapy to address core abandonment schema and reduce emotional dependency.",
+      "- Hypnosis session to reinforce self-worth independent of external validation.",
+      "- Integration of self-soothing techniques to manage obsessive rumination."
+    ]
+  },
+  "motivational_closure": "Your worth is not measured by another's attention or absence. You are more than the uncertainty you feel, and with each step you take toward self-reclamation, you're reclaiming your own narrative.",
+  "tags": [
+    "EmotionalDetachment",
+    "SelfWorth",
+    "AnxietyRelief",
+    "AbandonmentHealing",
+    "ObsessiveRumination",
+    "SelfSoothing",
+    "EmotionalDependency"
+  ]
+}

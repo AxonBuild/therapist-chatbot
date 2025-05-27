@@ -1,0 +1,50 @@
+{
+  "case_id": "Clinical_case_124",
+  "age": "45",
+  "gender_identity": "man",
+  "summary": "(RAG Format)\nThis 45-year-old man presents with persistent physical and cognitive symptoms exacerbated by work-related stress, unresolved physical pain, and fatigue. He reports chronic neck and head pain localized in the occipital region, often accompanied by sensations of heaviness, prickling, and a sense of disorientation. Despite ongoing medical evaluations, including upcoming MRIs and regular osteopathy sessions, he continues to experience episodes of mental fog and fatigue, particularly during driving. Additionally, he describes a pervasive sense of emotional and cognitive exhaustion, feeling as though he is operating on autopilot, with occasional spikes of adrenaline and heightened tension during driving, leading to feelings of inadequacy and frustration.",
+  "main_issues": [
+    "- Chronic neck and head pain with a sense of heaviness and prickling sensations.",
+    "- Intermittent cognitive fog, particularly during driving, leading to feelings of disorientation and unease.",
+    "- Persistent emotional and cognitive exhaustion despite ongoing medical evaluations and interventions.",
+    "- Underlying work-related stress compounded by the pressure to maintain multiple business ventures.",
+    "- Fear of losing control while driving, contributing to avoidance behaviors and increased self-doubt.",
+    "- Sense of failure and frustration due to inability to manage physical symptoms effectively."
+  ],
+  "emotions": [
+    "Frustration",
+    "Exhaustion",
+    "Self-doubt",
+    "Anxiety",
+    "Fear of failure",
+    "Emotional numbness"
+  ],
+  "limiting_beliefs": [
+    "- If I cannot control my physical symptoms, I am a failure.",
+    "- I am not capable of managing my business and health simultaneously.",
+    "- I am a burden to my family if I cannot drive safely.",
+    "- My body is betraying me, and I am powerless to change it."
+  ],
+  "therapeutic_goals": [
+    "- Address physical pain through integrated physical therapy and relaxation techniques.",
+    "- Implement grounding exercises to reduce cognitive fog and promote mental clarity during driving.",
+    "- Develop a structured schedule to manage work-related stress and prevent further burnout.",
+    "- Support the processing of self-doubt and feelings of inadequacy related to driving limitations.",
+    "- Encourage self-compassion practices to mitigate self-critical thoughts.",
+    "- Explore potential underlying trauma related to physical symptoms and driving experiences."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are not defined by your physical limitations or the setbacks you face. Today, you can choose to release the weight of what you cannot control and embrace what you can - your breath, your focus, and your resolve to regain your balance, one step at a time.",
+  "tags": [
+    "ChronicPain",
+    "NeckTension",
+    "CognitiveFog",
+    "EmotionalExhaustion",
+    "DrivingAnxiety",
+    "SelfCompassion"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_Case_9",
+  "age": "26",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient, a 26-year-old woman, presents with a recurring pattern of emotional fusion in romantic relationships, marked by a strong need for validation and attention. Despite a recent period of emotional stability and newfound independence, she expresses significant nostalgia and sadness when reflecting on her childhood, particularly around familial gatherings and the loss of her grandfather. She reports difficulty maintaining boundaries in relationships, often feeling compelled to adapt to her partner's needs and suppress her own desires. Her current emotional state is characterized by ambivalence between desiring connection and fearing emotional dependence. She also experiences heightened sensitivity to rejection, a tendency to over-adapt to others, and a persistent feeling of emotional isolation, despite maintaining a relatively active social life. Additionally, she exhibits dissociative tendencies when recalling childhood memories, suggesting unresolved emotional trauma and a disrupted connection to her emotional core.",
+  "main_issues": [
+    "- Emotional fusion and dependency in relationships",
+    "- Persistent nostalgia and sadness linked to childhood",
+    "- Difficulty asserting boundaries and maintaining self-identity",
+    "- Heightened emotional sensitivity and fear of rejection",
+    "- Dissociative tendencies when recalling childhood memories",
+    "- Emotional isolation despite active social engagement"
+  ],
+  "emotions": [
+    "Ambivalence between desiring connection and fearing dependency",
+    "Deep-seated feelings of loneliness and nostalgia",
+    "Sadness and longing for familial warmth and connection",
+    "Fear of rejection masked by emotional detachment",
+    "Emotional suppression as a coping mechanism",
+    "A tendency to invalidate her own needs to maintain relational harmony"
+  ],
+  "limiting_beliefs": [
+    "- 'If I don't adapt to others, I will be abandoned.'",
+    "- 'My feelings are not as important as others' feelings.'",
+    "- 'I must suppress my needs to maintain peace in relationships.'",
+    "- 'I will never experience the warmth and connection I had as a child.'",
+    "- 'I am emotionally self-sufficient; I don't need others.'"
+  ],
+  "therapeutic_goals": [
+    "- Reinforce self-worth and personal boundaries",
+    "- Address unresolved childhood grief and emotional loss",
+    "- Develop healthy emotional independence without severing connections",
+    "- Reframe limiting beliefs around dependency and self-sufficiency",
+    "- Foster emotional regulation skills to prevent dissociation",
+    "- Cultivate self-compassion and self-acceptance"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Practice grounding techniques during moments of emotional overwhelm",
+      "- Implement self-soothing exercises to reduce feelings of loneliness",
+      "- Hypnosis session recommendation: Reconnecting with inner child to heal emotional dissonance"
+    ],
+    "intermediate": [
+      "- Explore unresolved grief and loss related to childhood and family",
+      "- Develop communication strategies for establishing emotional boundaries",
+      "- Hypnosis session recommendation: Reclaiming autonomy and self-worth in relationships"
+    ],
+    "long_term": [
+      "- Strengthen self-identity and personal values independent of relationships",
+      "- Foster emotional independence while maintaining meaningful connections",
+      "- Hypnosis session recommendation: Embracing self as a secure emotional base"
+    ]
+  },
+  "motivational_closure": "You are allowed to honor your own needs without sacrificing connection. You can create a life where you are both emotionally independent and deeply connected. Your worth is not defined by your ability to adapt to others, but by your capacity to stay true to yourself. Each step you take towards self-compassion is a step towards true inner freedom.",
+  "tags": [
+    "EmotionalDependency",
+    "Boundaries",
+    "Nostalgia",
+    "InnerChildHealing",
+    "SelfWorth",
+    "EmotionalRegulation"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "case_id": "Clinical_case_85",
+  "age": "19",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 19-year-old woman presenting with unresolved trauma responses related to multiple sexual assaults, including a recent incident involving a former partner. She describes ritualistic behaviors such as compulsive washing and self-harm, both of which are associated with feelings of contamination and shame. Additionally, she reports persistent suicidal ideation linked to these traumatic experiences. She has also disclosed a history of substance use, including alcohol and cocaine, as maladaptive coping mechanisms. The patient exhibits ambivalence toward identifying the recent assault as non-consensual, indicating significant internalized guilt and confusion surrounding boundaries and self-worth.",
+  "main_issues": [
+    "- Compulsive washing and self-harm as trauma responses",
+    "- Suicidal ideation and ritualistic behaviors",
+    "- Substance use (alcohol, cocaine) as coping mechanisms",
+    "- Internalized guilt and confusion regarding consent",
+    "- Fear of losing control and attempts to reclaim it through rituals"
+  ],
+  "emotions": [
+    "Shame",
+    "Guilt",
+    "Confusion",
+    "Anxiety",
+    "Hopelessness"
+  ],
+  "limiting_beliefs": [
+    "- 'I am to blame for what happened to me.'",
+    "- 'I must be clean to erase the dirtiness I feel.'",
+    "- 'If I don't have control, I will be hurt again.'",
+    "- 'I am unworthy of protection or safety.'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe trauma-related guilt and foster self-compassion",
+    "- Develop grounding techniques to manage intrusive thoughts",
+    "- Explore safe emotional expression through guided visualization",
+    "- Address substance use triggers and provide harm reduction strategies",
+    "- Reinforce the concept of consent and personal boundaries"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to manage acute emotional distress",
+      "- Journaling prompts to externalize feelings of guilt and shame",
+      "- Hypnosis session recommendation: Emotional Release and Self-Compassion"
+    ],
+    "intermediate": [
+      "- Trauma processing through guided visualization",
+      "- Establish a safety plan for managing suicidal ideation",
+      "- Develop a structured self-soothing ritual that replaces compulsive washing"
+    ],
+    "long_term": [
+      "- Explore substance use triggers and implement harm reduction strategies",
+      "- Continue therapeutic work on consent and boundary recognition",
+      "- Reframe self-worth as independent of past trauma"
+    ]
+  },
+  "motivational_closure": "You are not defined by what happened to you. Your worth is inherent, and you deserve to feel safe and whole. Each day, you have the power to choose self-compassion over self-blame.",
+  "tags": [
+    "TraumaRelease",
+    "GuiltProcessing",
+    "SelfCompassion",
+    "ConsentRebuilding",
+    "SubstanceUse",
+    "EmotionalSafety"
+  ]
+}

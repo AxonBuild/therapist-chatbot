@@ -1,0 +1,59 @@
+{
+  "case_id": "Clinical_case_168",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with pronounced emotional reactivity and internalized anger linked to a complex dynamic with her father. Since resuming contact at age 13, she has struggled with feelings of being controlled, particularly regarding eating habits. The father's coercive behavior around food has reactivated restrictive eating patterns, reinforcing a sense of powerlessness and frustration.\n\n    Additionally, the patient reports social isolation, characterized by minimal peer interactions and a tendency to withdraw to her room, engaging minimally with family members. School-related stress and public transportation triggers further exacerbate her sense of overwhelm, manifesting in heightened irritability and emotional outbursts.\n\n    Persistent sleep disturbances and episodes of daytime exhaustion are noted, with the patient expressing feelings of being \"overwhelmed\" by the social environment and struggling to maintain focus in class.",
+  "main_issues": [
+    "- Resurfacing anger and frustration related to perceived paternal control.",
+    "- Restrictive eating patterns linked to paternal coercion around food.",
+    "- Social isolation and withdrawal, with limited peer interactions.",
+    "- Emotional reactivity and anger outbursts, especially in public settings.",
+    "- Sleep disturbances and daytime exhaustion impacting academic performance."
+  ],
+  "emotions": [
+    "Anger",
+    "Frustration",
+    "Loneliness",
+    "Exhaustion",
+    "Guilt"
+  ],
+  "limiting_beliefs": [
+    "- 'If I express my anger, I will lose control and be punished.'",
+    "- 'No one understands what I am going through.'",
+    "- 'I must keep my feelings to myself to avoid conflict.'",
+    "- 'Expressing my needs makes me weak.'"
+  ],
+  "therapeutic_goals": [
+    "- Develop constructive outlets for anger expression without fear of punishment.",
+    "- Reframe paternal interactions to reduce perceived control and reclaim autonomy.",
+    "- Foster self-compassion to alleviate guilt and internalized anger.",
+    "- Implement grounding techniques to manage emotional reactivity in social contexts.",
+    "- Normalize anger as a valid emotional response without the fear of losing control."
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to manage acute emotional surges and prevent escalation.",
+      "- Guided visualization to create a 'Safe Space' for emotional processing.",
+      "- Hypnosis session recommendation: Releasing suppressed anger safely and reclaiming inner voice."
+    ],
+    "intermediate": [
+      "- Assertiveness training to communicate boundaries effectively with the father.",
+      "- Cognitive restructuring to challenge beliefs surrounding anger and control.",
+      "- Social exposure techniques to gradually rebuild peer interactions in controlled settings."
+    ],
+    "long_term": [
+      "- Hypnosis session recommendation: Reclaiming My Voice - Expressing Anger Without Fear.",
+      "- Reframe paternal control as a reflection of his own limitations, not her responsibility.",
+      "- Anchor a calm, centered state for future conflicts or perceived coercive situations."
+    ]
+  },
+  "motivational_closure": "You have been holding in words and feelings for too long. It is not a sign of weakness to express your needs or to voice your anger. It is a step toward reclaiming your space, your power, and your sense of self.",
+  "tags": [
+    "AdolescentAnger",
+    "SocialIsolation",
+    "EmotionalBoundaries",
+    "ControlAnxiety",
+    "PaternalConflict",
+    "SelfExpression"
+  ]
+}

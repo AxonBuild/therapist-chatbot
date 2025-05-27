@@ -1,0 +1,44 @@
+{
+  "case_id": "Clinical_case_120",
+  "age": "55",
+  "gender_identity": "Man",
+  "summary": "(RAG Format)\nThe patient, a 55-year-old man, presents with residual traumatic responses linked to the suicide of his wife. He was the first to discover her body and is struggling with intrusive memories of the event. He describes unpredictable flashbacks that occur without warning, often triggered by mundane activities such as walking down the street or working. The emotional response is characterized by a sense of disorientation, emotional numbness, and a persistent feeling of being stuck in the moment of the traumatic event.",
+  "main_issues": [
+    "- Intrusive memories and flashbacks related to the traumatic event",
+    "- Emotional numbness and avoidance of triggers associated with the trauma",
+    "- Sense of powerlessness and inability to process the traumatic memory",
+    "- Difficulty in verbalizing the emotional impact of the event",
+    "- Heightened startle response and hypervigilance in daily activities"
+  ],
+  "emotions": [
+    "Shock",
+    "Fear",
+    "Sadness",
+    "Helplessness",
+    "Emotional detachment"
+  ],
+  "limiting_beliefs": [
+    "- 'I should have been able to prevent it'",
+    "- 'If I think about it, I will break down'",
+    "- 'I am responsible for what happened'"
+  ],
+  "therapeutic_goals": [
+    "- Reduce the intensity of flashbacks and intrusive memories",
+    "- Facilitate emotional processing of the traumatic event",
+    "- Reframe self-blame and guilt associated with the trauma",
+    "- Develop grounding techniques to manage sudden emotional triggers"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You survived a moment of unimaginable pain, and each day you continue to move forward. You are stronger than the memories that haunt you, and with each breath, you reclaim your sense of peace. You are not defined by that moment - you are defined by the courage it takes to heal.",
+  "tags": [
+    "TraumaRelease",
+    "EmotionalProcessing",
+    "Grounding",
+    "SelfCompassion",
+    "EmotionalRecovery"
+  ]
+}

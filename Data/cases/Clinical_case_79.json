@@ -1,0 +1,52 @@
+{
+  "case_id": "Clinical_case_79",
+  "age": "26",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 26-year-old woman experiencing significant emotional distress linked to hypersensitivity to sound and disrupted sleep patterns. She describes persistent hypervigilance during the night, marked by frequent awakenings and an inability to achieve restorative sleep. The patient reports heightened sensitivity to environmental sounds, including neighbor noise and mechanical disturbances, which trigger agitation and feelings of powerlessness. She also experiences residual tension in the throat area, particularly when recalling unresolved conflicts with neighbors and previous experiences in childhood involving noise disturbances.",
+  "main_issues": [
+    "- Persistent sleep disruption due to hypervigilance",
+    "- Sound sensitivity leading to increased agitation",
+    "- Throat tension associated with unprocessed anger",
+    "- Recurring feelings of injustice and helplessness",
+    "- Emotional exhaustion due to chronic alertness"
+  ],
+  "emotions": [
+    "Anger",
+    "Powerlessness",
+    "Restlessness",
+    "Anxiety",
+    "Emotional exhaustion"
+  ],
+  "limiting_beliefs": [
+    "\"I must stay alert to avoid missing anything important.\"",
+    "\"If I relax, I will lose control.\"",
+    "\"Noise means danger and I must be prepared to act.\""
+  ],
+  "therapeutic_goals": [
+    "- Develop strategies to release somatic tension, especially in the throat area",
+    "- Reduce sound reactivity and cultivate inner calm",
+    "- Create a safe mental space for relaxation and sleep restoration"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Guided breathing and grounding exercises for immediate calming",
+      "- Hypnosis session recommendation: somatic release focusing on the throat tension and calming the hypervigilance response"
+    ],
+    "intermediate": [
+      "- Hypnosis session: reprocessing of unresolved anger linked to noise disturbances",
+      "- Emotional decompression focusing on safe auditory anchors to shift focus away from intrusive sounds"
+    ],
+    "long_term": [
+      "- Hypnosis session: developing a positive internal auditory landscape to override disruptive sounds",
+      "- Integration of calming routines to establish a more consistent sleep pattern"
+    ]
+  },
+  "motivational_closure": "You are not defined by the noises around you. With each breath, you reclaim your inner calm, transforming agitation into moments of soothing stillness. The power to restore your inner sanctuary is within you.",
+  "tags": [
+    "Hypervigilance",
+    "ThroatTension",
+    "SleepRestoration",
+    "SoundSensitivity",
+    "EmotionalExhaustion"
+  ]
+}

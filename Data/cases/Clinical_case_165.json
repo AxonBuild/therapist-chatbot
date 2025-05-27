@@ -1,0 +1,45 @@
+{
+  "case_id": "Clinical_case_165",
+  "age": "57",
+  "gender_identity": "Female",
+  "summary": "(RAG Format)\nThe patient presents with a significant increase in perceived stress and emotional exhaustion. She expresses a sense of disconnection from her work responsibilities, feeling overwhelmed by the demands of her job and her family obligations. She reports oscillating between a desire to let go and a lingering sense of guilt for not maintaining her previous standards. This ambivalence is marked by a shift in her work approach, adopting a more laissez-faire attitude while simultaneously battling self-reproach. She also experiences sleep disturbances and emotional reactivity, often feeling emotionally volatile and fatigued.",
+  "main_issues": [
+    "- Emotional exhaustion related to work and family obligations.",
+    "- Difficulty maintaining previous work standards, leading to guilt.",
+    "- Oscillation between a need to let go and internalized pressure to perform.",
+    "- Sleep disturbances and emotional volatility.",
+    "- Persistent feelings of overwhelm and disorientation."
+  ],
+  "emotions": [
+    "Guilt",
+    "Emotional Exhaustion",
+    "Confusion",
+    "Overwhelm",
+    "Frustration"
+  ],
+  "limiting_beliefs": [
+    "- 'If I relax, I am failing my responsibilities.'",
+    "- 'If I don't perform, I am not valuable.'",
+    "- 'Letting go means giving up.'"
+  ],
+  "therapeutic_goals": [
+    "- Normalize the experience of emotional exhaustion as a signal for self-care.",
+    "- Encourage a balanced perspective on work responsibilities versus personal well-being.",
+    "- Implement stress-reduction techniques to reduce emotional volatility.",
+    "- Develop cognitive reframing techniques to address limiting beliefs around productivity and self-worth.",
+    "- Establish grounding practices to manage feelings of overwhelm."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Your worth is not defined by how much you do or how perfectly you do it. You are allowed to rest, to breathe, and to let go. In releasing the pressure to perform, you open space for self-compassion and renewed strength.",
+  "tags": [
+    "GuiltRelease",
+    "WorkStress",
+    "EmotionalExhaustion",
+    "SelfCompassion",
+    "LettingGo"
+  ]
+}

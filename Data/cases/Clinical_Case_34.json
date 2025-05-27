@@ -1,0 +1,82 @@
+{
+  "case_id": "Clinical_Case_34",
+  "age": "60",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with persistent sleep difficulties marked by nocturnal ruminations, a strong sense of uselessness during the day, and intense fatigue. Emotional suffering is exacerbated by guilt related to parenting and professional uncertainty. Her insomnia has led to progressive cognitive overload, creating anticipatory anxiety and reinforcing the sleep disorder itself. Past psychiatric hospitalizations are mentioned. The patient feels caught in a cycle of vulnerability, chronic stress, and loss of confidence, and expresses doubts about her ability to recover. Despite these challenges, she maintains daily routines such as swimming and continues to care for her family.",
+  "main_issues": [
+    "- Persistent and severe sleep disorder with anticipatory anxiety",
+    "- Emotional exhaustion and cognitive overload",
+    "- Guilt linked to her son's past experiences",
+    "- Fear of professional and financial insecurity",
+    "- Rumination and low self-esteem",
+    "- Fragile identity regulation in response to external evaluation"
+  ],
+  "emotions": [
+    "Guilt",
+    "Anxiety",
+    "Helplessness",
+    "Emotional fatigue",
+    "Sadness"
+  ],
+  "limiting_beliefs": [
+    "- 'I am incapable of recovering'",
+    "- 'I always disappoint those around me'",
+    "- 'If I don't sleep, I can't function'",
+    "- 'I've already tried everything, nothing will work'"
+  ],
+  "therapeutic_goals": [
+    "- Reduce the intensity and frequency of ruminations",
+    "- Restore confidence in her ability to regulate sleep and emotion",
+    "- Reinforce a sense of internal security",
+    "- Alleviate guilt linked to parenting",
+    "- Work on self-worth through anchoring and reconnection practices"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Initiate sleep-focused hypnosis protocol",
+      "- Breathing exercises before bedtime",
+      "- Journaling to externalize ruminations before sleeping",
+      "- Hypnosis session recommendation: calming imagery and symbolic guardian installation for sleep",
+      "Tags: #SleepSupport #NightRuminations #SymbolicProtection",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Structured emotional anchoring protocol (evening routine)",
+      "- Therapeutic hypnosis to explore guilt and internal dialogue",
+      "- EMDR sequence focused on anticipatory anxiety and insomnia triggers",
+      "- Hypnosis session recommendation: reconnection to self-worth and emotional self-compassion",
+      "Tags: #GuiltHealing #EveningStability #EmotionalAnchoring",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Reprogramming self-narrative (symbolic identity work)",
+      "- Cognitive reframing around the notion of usefulness and performance",
+      "- Reconnection with positive projections for the future (e.g., legacy, meaning)",
+      "- Hypnosis session recommendation: identity repair and long-term inner peace restoration",
+      "Tags: #SleepRecovery #SelfNarrativeHealing #EmotionalIntegration"
+    ]
+  },
+  "motivational_closure": "Even in the heart of fatigue, your presence, your concern for your loved ones, and your desire to heal are powerful indicators of resilience. Let us now transform your nights into moments of renewal, so that every day may slowly become a source of clarity and peace again.",
+  "tags": [
+    "SleepSupport",
+    "NightRuminations",
+    "SymbolicProtection",
+    "GuiltHealing",
+    "EveningStability",
+    "EmotionalAnchoring",
+    "SleepRecovery",
+    "SelfNarrativeHealing",
+    "EmotionalIntegration",
+    "ChronicInsomnia",
+    "Ruminations",
+    "GuiltHealing",
+    "SleepAnxiety",
+    "SelfWorth",
+    "EmotionalAnchoring",
+    "NightFatigue",
+    "SymbolicReconnection"
+  ]
+}

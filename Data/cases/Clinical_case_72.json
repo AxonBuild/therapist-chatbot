@@ -1,0 +1,67 @@
+{
+  "case_id": "Clinical_case_72",
+  "age": "60",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with a persistent pattern of self-doubt and feelings of rejection in social and familial contexts. She has expressed a recurring tendency to question her legitimacy in relationships, both in personal and social settings. Additionally, the patient has explored connections between past emotional wounds and current relationship patterns, particularly around themes of betrayal, trust, and emotional validation. Recurrent dreams and reflections indicate unresolved grief and a sense of exclusion dating back to significant familial events.",
+  "main_issues": [
+    "- Persistent self-doubt and questioning of personal legitimacy",
+    "- Fear of betrayal and avoidance of intimate connections",
+    "- Recurrent dreams reflecting unresolved emotional wounds",
+    "- Patterns of self-sabotage in intimate relationships",
+    "- Difficulty asserting personal needs in social and familial contexts"
+  ],
+  "emotions": [
+    "Fear",
+    "Self-doubt",
+    "Guilt",
+    "Sadness",
+    "Emotional confusion"
+  ],
+  "limiting_beliefs": [
+    "- \"I am not worthy of being chosen.\"",
+    "- \"If I assert myself, I will be rejected.\"",
+    "- \"If I stay small, I won't be noticed or hurt.\"",
+    "- \"My worth is defined by others' validation.\""
+  ],
+  "therapeutic_goals": [
+    "- Strengthen sense of self-worth and personal legitimacy",
+    "- Address patterns of avoidance in intimate relationships",
+    "- Process unresolved grief linked to past betrayals",
+    "- Develop assertiveness strategies in social contexts",
+    "- Implement grounding techniques to manage emotional overload"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Grounding exercises to manage self-doubt during social interactions",
+      "- Guided visualization to reinforce personal boundaries",
+      "- Hypnosis session recommendation: anchoring self-worth and detachment from past rejection",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Exploration of childhood attachment dynamics and emotional needs",
+      "- Hypnotic regression to process unresolved betrayal and grief",
+      "- Internal dialogue to reframe limiting beliefs around self-worth",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Creation of an inner protective space for emotional recovery",
+      "- Continued work on assertiveness and boundary setting in relationships",
+      "- Hypnosis session recommendation: embodying a resilient self-image"
+    ]
+  },
+  "motivational_closure": "",
+  "tags": [
+    "SelfWorth",
+    "RejectionRecovery",
+    "EmotionalGrounding",
+    "BetrayalHealing",
+    "EmotionalValidation",
+    "InnerDialogue",
+    "EmotionalResilience",
+    "BoundarySetting",
+    "SelfEmpowerment"
+  ]
+}

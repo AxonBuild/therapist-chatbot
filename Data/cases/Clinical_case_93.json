@@ -1,0 +1,46 @@
+{
+  "case_id": "Clinical_case_93",
+  "age": "46",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThe patient is a 46-year-old woman experiencing intense emotional distress following a series of traumatic events, including the death of her son's best friend, the betrayal by her partner of 22 years, and the discovery of long-standing financial mismanagement by the partner. She reports feelings of overwhelm, betrayal, and confusion, exacerbated by the repeated triggers associated with these events. Additionally, she feels responsible for her son's emotional health and is struggling to process her own grief while attempting to provide support for him. She expresses a deep sense of disillusionment regarding her former partner, whom she now perceives as having lived a double life for years.",
+  "main_issues": [
+    "- Recurring intrusive memories related to the death of her son's best friend",
+    "- Persistent emotional distress linked to her partner's infidelity and deception",
+    "- Feelings of betrayal and disillusionment after uncovering financial mismanagement",
+    "- Emotional exhaustion from supporting her son while neglecting her own needs",
+    "- Difficulty reconciling the past with the present, feeling as though she was living a lie"
+  ],
+  "emotions": [
+    "Grief",
+    "Betrayal",
+    "Overwhelm",
+    "Guilt",
+    "Anger"
+  ],
+  "limiting_beliefs": [
+    "- 'I should have seen this coming.'",
+    "- 'I can't trust my own judgment.'",
+    "- 'If I focus on myself, I am neglecting my son.'"
+  ],
+  "therapeutic_goals": [
+    "- Process and release the trauma associated with her son's best friend's death.",
+    "- Address unresolved feelings of betrayal and anger towards her former partner.",
+    "- Reframe the self-blame and challenge distorted beliefs regarding personal responsibility.",
+    "- Develop healthy emotional boundaries to balance self-care with parenting responsibilities.",
+    "- Facilitate the grieving process while establishing new coping mechanisms."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are not defined by what others have done to you. You have the right to feel, to grieve, and to heal on your own terms. Each day is an opportunity to reclaim your voice, your truth, and your strength.",
+  "tags": [
+    "BetrayalTrauma",
+    "GriefProcessing",
+    "SelfCare",
+    "EmotionalBoundaries",
+    "ParentalGuilt",
+    "ReclaimingSelf"
+  ]
+}

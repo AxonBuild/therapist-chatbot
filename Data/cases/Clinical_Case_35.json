@@ -1,0 +1,85 @@
+{
+  "case_id": "Clinical_Case_35",
+  "age": "9",
+  "gender_identity": "Boy",
+  "summary": "(RAG Format)\nThis 9-year-old boy presents with school-related emotional distress rooted in repeated bullying episodes and a punitive, inconsistent response from school staff. He has been physically and verbally targeted by a small group of classmates, leading to a chronic sense of vulnerability and injustice. Although he maintains a close and meaningful friendship with one peer, this positive bond is strained by his fear of being forced to leave the school, creating a conflict between emotional security and personal safety. His narratives reveal a deep mistrust in adults, especially authority figures who fail to intervene reliably. Simultaneously, the child reports a strong phobia of spiders, which appears to symbolically express his internalized fears, lack of control, and helplessness. His emotional expression remains relatively contained, possibly due to fear of negative consequences or a learned strategy of silence. He shows signs of emotional inhibition, loyalty conflict (stay with friend vs. escape danger), and phobic somatization.",
+  "main_issues": [
+    "- Peer bullying and emotional isolation at school",
+    "- Institutional injustice and inconsistent adult protection",
+    "- Conflict between safety and relational attachment (friendship loyalty vs. escape)",
+    "- Somatization through spider phobia",
+    "- Mistrust in authority figures and difficulty asserting boundaries"
+  ],
+  "emotions": [
+    "Shame linked to repeated aggression and social devaluation",
+    "Anxiety and hypervigilance in the school setting",
+    "Sadness and internalized loneliness",
+    "Ambivalence toward change and emotional rupture",
+    "Inhibited anger and suppressed self-expression"
+  ],
+  "limiting_beliefs": [
+    "- \"If I defend myself, I'll be punished.\"",
+    "- \"Adults don't protect me.\"",
+    "- \"If I leave this school, I'll lose the only person who cares.\"",
+    "- \"I'm not allowed to be afraid.\"",
+    "- \"Being kind means staying quiet.\""
+  ],
+  "therapeutic_goals": [
+    "- Reinstate a sense of emotional and physical safety",
+    "- Normalize fear and encourage emotional expression",
+    "- Break the association between kindness and passivity",
+    "- Support assertiveness in conflictual situations",
+    "- Desensitize phobic anxiety through symbolic and narrative exposure",
+    "- Rebuild trust in adult protective figures"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Introduce an emotional vocabulary game to encourage safe expression of fear, anger, and sadness",
+      "- Implement nightly safe-space visualizations to regulate bedtime anxiety",
+      "- Reassure him through structured conversations reinforcing adult availability and belief",
+      "- Initiate creative drawing to externalize fear (e.g., \"what fear looks like\" exercise)",
+      "- Hypnosis session recommendation: bedtime story-based hypnosis for calming fear responses",
+      "Tags: #NightSafety #ChildFearRelief #TrustInAdults",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Weekly role-play scenarios to explore assertiveness in response to injustice or teasing",
+      "- EMDR or bilateral tapping focused on peer aggression scenes",
+      "- Begin phobia desensitization through storytelling involving heroic characters overcoming spider-related fears",
+      "- Reframe the concept of kindness to include boundary-setting and protection",
+      "- Hypnosis session recommendation: playful metaphor-based hypnosis to face spiders and social fear",
+      "Tags: #PhobiaDesensitization #PlayfulConfidence #SymbolicSafety",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Family-therapist joint feedback loop to restore systemic trust",
+      "- School intervention plan involving supportive teacher(s) and neutral mediators",
+      "- Gradual restructuring of self-image around internal resilience and social value",
+      "- Hypnosis session recommendation: deeper symbolic work to reinforce identity and courage",
+      "Tags: #SelfTrust #InnerResilience #EmotionalSecurity"
+    ]
+  },
+  "motivational_closure": "You're not small. You're growing bigger inside every day. And your voice, even quiet, can change the rules around you. You don't need to be loud to be strong. You just need to stay true.",
+  "tags": [
+    "NightSafety",
+    "ChildFearRelief",
+    "TrustInAdults",
+    "PhobiaDesensitization",
+    "PlayfulConfidence",
+    "SymbolicSafety",
+    "SelfTrust",
+    "InnerResilience",
+    "EmotionalSecurity",
+    "SchoolBullying",
+    "FearOfAbandonment",
+    "SymbolicPhobia",
+    "EmotionalSafety",
+    "AssertiveKindness",
+    "AdultMistrust",
+    "SomaticFear",
+    "PeerLoyaltyConflict"
+  ]
+}

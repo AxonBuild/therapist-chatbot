@@ -1,0 +1,81 @@
+{
+  "case_id": "Clinical_Case_22",
+  "age": "40",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient exhibits intense emotional hypersensitivity, particularly in the early stages of romantic relationships. She demonstrates a recurring pattern of emotional dependency, fear of abandonment, and difficulty tolerating uncertainty or silence. Her emotional regulation is externally dependent, with a chronic need for reassurance and clarity. She oscillates between idealization and devaluation, showing distress when communication is inconsistent. There is also a tendency to perceive the partner's ambivalence as a personal threat. Psychosomatic symptoms such as renal tension are triggered by emotional overload. The patient shows insight into her emotional patterns, but struggles to implement internal safety anchors.",
+  "main_issues": [
+    "- Hyperreactivity to uncertainty and perceived emotional distance",
+    "- Emotional dependency and need for external validation",
+    "- Difficulty setting boundaries in ambiguous relationships",
+    "- Psychosomatic symptoms triggered by emotional overload (renal tension)",
+    "- Internal conflict between the desire for intimacy and fear of vulnerability"
+  ],
+  "emotions": [
+    "Fear",
+    "Longing",
+    "Shame",
+    "Emotional confusion",
+    "Frustration",
+    "Vulnerability"
+  ],
+  "limiting_beliefs": [
+    "- 'If I don't get constant signals of affection, it means I'm being used.'",
+    "- 'If I express my needs, I will be rejected.'",
+    "- 'Strong emotions mean I'm weak or broken.'",
+    "- 'I'm not capable of protecting myself in love.'"
+  ],
+  "therapeutic_goals": [
+    "- Stabilize emotional regulation through internal anchoring",
+    "- Reframe dependency patterns as adaptive survival mechanisms",
+    "- Establish relational boundaries and self-protection strategies",
+    "- Address psychosomatic pain as a somatic marker of emotional overwhelm",
+    "- Repair early emotional injuries and integrate unresolved attachment wounds"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Grounding techniques during emotional surges (e.g., breath + physical anchoring)",
+      "- Internal dialogue journaling: \"What do I know vs. what do I fear?\"",
+      "- Emotional detachment practice before sending messages (pause protocol)",
+      "- Hypnosis session recommendation: installation of emotional safety and dissociation from external dependency",
+      "Tags: #EmotionalSafety #DependencyRelief #BoundaryAnchoring",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Psychoeducation on attachment and dependency schemas",
+      "- Structured self-soothing rituals during separation periods",
+      "- \"Relational clarity\" communication scripts to reduce ambiguity",
+      "- Hypnosis session recommendation: inner reparenting and romantic detachment reprogramming",
+      "Tags: #InnerReparenting #RomanticBoundaries #ClarityInAttachment",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- EMDR sessions focused on memory of early abandonment and adolescent violence",
+      "- Reintegration of emotional self-worth independent of relational feedback",
+      "- Hypnosis session recommendation: rebuilding inner stability and symbolic restoration of intuitive trust",
+      "Tags: #EmotionalAutonomy #IntuitiveTrust #SelfWorthRebuilding"
+    ]
+  },
+  "motivational_closure": "You are not too much. You are simply someone who has learned to feel deeply. And those feelings, once grounded, can become your greatest strength.",
+  "tags": [
+    "EmotionalSafety",
+    "DependencyRelief",
+    "BoundaryAnchoring",
+    "InnerReparenting",
+    "RomanticBoundaries",
+    "ClarityInAttachment",
+    "EmotionalAutonomy",
+    "IntuitiveTrust",
+    "SelfWorthRebuilding",
+    "EmotionalHypersensitivity",
+    "FearOfAbandonment",
+    "DependencyPatterns",
+    "AmbivalentAttachment",
+    "SomaticAnxiety",
+    "IntrusiveThoughts",
+    "RomanticBoundaries",
+    "InnerSecurity"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "case_id": "Clinical_case_75",
+  "age": "44",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with a complex interplay of unresolved grief, frustration over ongoing health management, and relational conflicts. Following a traumatic event related to her mother's suicide, she has experienced recurring episodes of emotional detachment, feelings of disconnection from life, and pervasive loneliness. Additionally, ongoing struggles with medical treatment for weight management have exacerbated feelings of inadequacy and lack of control. The patient also reports difficulties maintaining social connections and forming new relationships, further contributing to her sense of isolation.",
+  "main_issues": [
+    "- Emotional detachment and disconnection from life following mother's suicide",
+    "- Persistent feelings of loneliness and unfulfillment",
+    "- Frustration and disillusionment with weight management treatment",
+    "- Conflictual relationship with daughter and ex-partner",
+    "- Lack of meaningful social connections and failed attempts at forming new bonds"
+  ],
+  "emotions": [
+    "Loneliness",
+    "Frustration",
+    "Emotional numbness",
+    "Guilt",
+    "Desperation"
+  ],
+  "limiting_beliefs": [
+    "- \"I am not capable of maintaining meaningful connections.\"",
+    "- \"I am unworthy of receiving support and love.\"",
+    "- \"My life is stagnant and unchangeable.\"",
+    "- \"If I reach out, I will be rejected.\""
+  ],
+  "therapeutic_goals": [
+    "- Process unresolved grief and reframe the loss of her mother",
+    "- Re-establish a sense of connection and purpose in life",
+    "- Develop emotional resilience against feelings of inadequacy",
+    "- Explore new ways to foster social connections and rebuild confidence",
+    "- Work through relational conflicts with daughter and ex-partner"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Hypnosis session focused on reconnecting with life and emotional grounding",
+      "- Daily journaling to externalize frustration and foster emotional awareness",
+      "- Mindfulness techniques to anchor in the present moment"
+    ],
+    "intermediate": [
+      "- Guided imagery sessions to rebuild confidence in social settings",
+      "- Emotional release exercises to reduce emotional numbness",
+      "- Hypnosis session focused on self-compassion and re-establishing a sense of self-worth"
+    ],
+    "long_term": [
+      "- Gradual exposure to new social activities to foster connections",
+      "- Assertiveness training to address conflict with daughter and ex-partner",
+      "- Ongoing self-reflection to reinforce personal growth"
+    ]
+  },
+  "motivational_closure": "You may feel as though life has disconnected you from your sense of self, but every moment is an opportunity to reconnect, to find your own voice, and to rediscover what brings you joy. Each step forward is a step toward reclaiming your life.",
+  "tags": [
+    "GriefProcessing",
+    "EmotionalGrounding",
+    "SelfWorth",
+    "SocialReconnection",
+    "ConflictResolution",
+    "Loneliness",
+    "LifeRebuilding"
+  ]
+}

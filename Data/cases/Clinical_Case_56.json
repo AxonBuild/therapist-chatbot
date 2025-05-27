@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_Case_56",
+  "age": "19",
+  "gender_identity": "woman presents with a complex pattern of emotional hypervigilance, rooted in unstable family relationships characterized by chronic conflict with her mother and repeated disappointments with her father. A pervasive sense of betrayal has led to a state of constant emotional vigilance, marked by mistrust and defensive withdrawal. This heightened alertness is particularly pronounced at night, resulting in sleep disturbances and a persistent inability to fully relax. The grandmother represents a rare source of validation and emotional containment. The primary therapeutic objective is to deactivate nighttime hypervigilance and restore a sense of inner safety conducive to restful sleep.",
+  "summary": "(RAG Format)\nThis 19-year-old woman presents with a complex pattern of emotional hypervigilance, rooted in unstable family relationships characterized by chronic conflict with her mother and repeated disappointments with her father. A pervasive sense of betrayal has led to a state of constant emotional vigilance, marked by mistrust and defensive withdrawal. This heightened alertness is particularly pronounced at night, resulting in sleep disturbances and a persistent inability to fully relax. The grandmother represents a rare source of validation and emotional containment. The primary therapeutic objective is to deactivate nighttime hypervigilance and restore a sense of inner safety conducive to restful sleep.",
+  "main_issues": [
+    "- Chronic family conflict (mother, father) with emotional manipulation and double discourse",
+    "- Emotional hypervigilance and defensive detachment",
+    "- Sleep disturbances characterized by mental hyperactivity and bodily tension",
+    "- Exhaustion due to the emotional load of family dynamics and internship demands",
+    "- Longing for sincere emotional connection and validation (grandmother as a central figure)"
+  ],
+  "emotions": [
+    "Disappointment",
+    "Suppressed anger",
+    "Hurt pride",
+    "Sense of injustice",
+    "Latent anxiety",
+    "Psychological exhaustion"
+  ],
+  "limiting_beliefs": [
+    "- \"I have to defend myself alone.\"",
+    "- \"You can't trust anyone, even those you love.\"",
+    "- \"If I let my guard down, I'll get hurt.\"",
+    "- \"I'm seen as a problem, not as a person.\""
+  ],
+  "therapeutic_goals": [
+    "- Deactivate emotional hypervigilance at night",
+    "- Reconnect with bodily sensations to facilitate sleep",
+    "- Establish emotional boundaries between family dynamics and inner safety",
+    "- Normalize the need for rest and self-compassion without guilt",
+    "- Create symbolic inner spaces for relaxation and protection"
+  ],
+  "solutions": {
+    "immediate": [
+      "- \"Reverse body scan\" exercise before sleep (top to bottom, then bottom to top)",
+      "- Emotional separation ritual: write down anger or frustrations in a notebook, then close it each evening",
+      "- \"Silent\" breathing exercise: inhale for 4 counts, hold for 2, exhale for 6, with a hand placed on the chest",
+      "- Self-anchoring visualization: create a safe, non-judgmental space (e.g., grandmother's blanket, summer bed)"
+    ],
+    "intermediate": [
+      "- Family dialogue rewriting session to reframe the emotional charge of hurtful words",
+      "- Emotional remediation exercise: imagine what she wished her father had said instead",
+      "- Creation of a symbolic \"personal space\" as a mental refuge before sleep",
+      "- Audio therapy: soothing repetitive voice (hypnosis or guided meditation) to deactivate ruminative thinking"
+    ],
+    "long_term": [
+      "- Immersive therapeutic hypnosis theme: Emotional Hypervigilance and Sleep Restoration",
+      "- Releasing tension linked to parental expectations",
+      "- Establishing an inner protective boundary",
+      "- Reconnecting with the body to separate sleep from toxic family interactions"
+    ]
+  },
+  "motivational_closure": "You don't have to carry the weight of what your parents failed to give you into your sleep. Your body already knows how to rest. Sometimes, it just needs to breathe... far from words, blame, and expectations. Just you, at peace, in the silence of your inner room.",
+  "tags": [
+    "Hypervigilance",
+    "SleepDisturbance",
+    "FamilyConflict",
+    "EmotionalExhaustion",
+    "InnerSafety",
+    "Restoration"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "case_id": "Clinical_Case_15",
+  "age": "28",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThis patient presents with chronic somatic discomfort and heightened stress linked to unresolved trauma and vagal nerve dysregulation. She reports a constant state of nervous system overactivation and an inability to feel safe or grounded. Recently, she successfully quit smoking with the help of laser therapy, indicating openness to alternative therapeutic approaches. She demonstrates gradual progress in regaining autonomy, managing appointments, and reducing driving anxiety. Cognitive insight is emerging regarding the emotional origins of her physical symptoms.",
+  "main_issues": [
+    "- Hyperactivation of the nervous system and difficulty in achieving calm",
+    "- Vagal nerve dysfunction leading to heightened physiological stress",
+    "- Chronic somatic pain linked to unresolved trauma",
+    "- Nicotine addiction (now in early withdrawal phase)",
+    "- Difficulty accessing internal safety and emotional regulation"
+  ],
+  "emotions": [
+    "Tension",
+    "Fear",
+    "Exhaustion",
+    "Cautious optimism"
+  ],
+  "limiting_beliefs": [
+    "- 'I can't relax unless I control everything.'",
+    "- 'My body is always in danger.'",
+    "- 'I am fragile and overwhelmed.'"
+  ],
+  "therapeutic_goals": [
+    "- Restore vagal tone and somatic calm",
+    "- Build internal safety anchors",
+    "- Support smoking cessation with emotional regulation tools",
+    "- Address trauma-linked pain through somatic therapies",
+    "- Empower with self-trust and resilience practices"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Daily vagal toning exercises (gargling, humming, cold exposure)",
+      "- Breathing techniques to downregulate sympathetic overdrive",
+      "- Positive reinforcement tracking for smoke-free days",
+      "- Hypnosis session recommendation: guided vagal re-regulation and safe inner reconnection",
+      "Tags: #VagalToning #AnxietyRelief #SmokingCessation",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Body scan and interoception exercises to rebuild somatic safety",
+      "- Emotional labeling for symptom deconstruction (\"This is fear, not danger.\")",
+      "- Ongoing support for trauma-informed somatic reprogramming",
+      "- Hypnosis session recommendation: trauma-informed body trust and emotional regulation",
+      "Tags: #BodyAwareness #TraumaHealing #SomaticSafety",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Integration of pain and trauma work with gentle embodiment practices",
+      "- Hypnosis session recommendation: long-form embodied resilience and identity restoration",
+      "Tags: #EmbodiedResilience #HealingIntegration #InnerSafety"
+    ]
+  },
+  "motivational_closure": "Every breath you take without fear is a return to your true self. You are not broken. You are learning to listen to your body's wisdom.",
+  "tags": [
+    "VagalToning",
+    "AnxietyRelief",
+    "SmokingCessation",
+    "BodyAwareness",
+    "TraumaHealing",
+    "SomaticSafety",
+    "EmbodiedResilience",
+    "HealingIntegration",
+    "InnerSafety",
+    "ChronicStress",
+    "VagalDysregulation",
+    "SomaticPain",
+    "TraumaHistory",
+    "NicotineWithdrawal",
+    "AnxietyRegulation",
+    "BodyAwareness",
+    "SelfRegulation"
+  ]
+}

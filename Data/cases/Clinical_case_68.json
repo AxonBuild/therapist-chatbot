@@ -1,0 +1,46 @@
+{
+  "case_id": "Clinical_case_68",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with heightened anxiety, recurring nightmares, and intense emotional duality. She reports feeling simultaneously angry and deeply saddened, with persistent feelings of vulnerability and indecision. Additionally, she experiences anticipatory anxiety related to social interactions and daily activities, leading to avoidance behaviors and internal conflict. Her current emotional distress is exacerbated by unresolved trauma, with dualistic feelings towards family members - oscillating between wanting to reconnect and desiring to cut ties.",
+  "main_issues": [
+    "- Persistent emotional duality involving family connections.",
+    "- Recurring nightmares and sleep disturbances.",
+    "- Intense anxiety before social interactions and appointments.",
+    "- Conflict between rational thoughts and emotional responses.",
+    "- Fear of losing control and being overwhelmed by emotional triggers."
+  ],
+  "emotions": [
+    "Anxiety",
+    "Anger",
+    "Sadness",
+    "Fear",
+    "Guilt"
+  ],
+  "limiting_beliefs": [
+    "- 'I can't trust my own decisions.'",
+    "- 'If I feel conflicted, it means I'm weak or indecisive.'",
+    "- 'I must resolve all my emotions before I can feel at peace.'"
+  ],
+  "therapeutic_goals": [
+    "- Address unresolved emotional conflicts related to family connections.",
+    "- Reduce anticipatory anxiety through grounding techniques and cognitive reframing.",
+    "- Implement relaxation strategies to manage nightmares and improve sleep quality.",
+    "- Encourage self-compassion to alleviate guilt linked to perceived indecision.",
+    "- Empower the patient to identify and assert personal boundaries without guilt."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You have the strength to hold two truths - to feel both anger and sadness, to desire connection and yet need distance. Trust in your ability to navigate these dualities with compassion, clarity, and confidence.",
+  "tags": [
+    "Anxiety",
+    "EmotionalDuality",
+    "FamilyConflict",
+    "SelfTrust",
+    "EmotionalRelease",
+    "Grounding"
+  ]
+}

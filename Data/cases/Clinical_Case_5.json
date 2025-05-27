@@ -1,0 +1,76 @@
+{
+  "case_id": "Clinical_Case_5",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThis woman, currently facing significant professional and personal challenges, presents with emotional exhaustion related to her work environment and a lack of fulfillment in her career path. Despite possessing various qualifications, she feels undervalued and uncertain about future professional directions. Additionally, she is experiencing emotional detachment in her romantic relationship, characterized by stability but a lack of deeper connection. There is also a lingering sense of injustice related to perceived workplace harassment and unaddressed boundaries, leading to frustration and internal conflict.",
+  "main_issues": [
+    "- Persistent emotional detachment in the romantic relationship",
+    "- Unresolved professional dissatisfaction and lack of career direction",
+    "- Persistent feelings of injustice regarding workplace boundaries",
+    "- Emotional exhaustion and fear of stagnation",
+    "- Uncertainty about future financial security and career transition"
+  ],
+  "emotions": [
+    "Frustration",
+    "Emotional detachment",
+    "Injustice",
+    "Uncertainty",
+    "Resentment"
+  ],
+  "limiting_beliefs": [
+    "- 'I am not capable of achieving more professionally.'",
+    "- 'If I stand up for myself, I will lose everything.'",
+    "- 'I should settle for what I have because it's safer.'",
+    "- 'If I express my needs, I will be seen as difficult or ungrateful.'"
+  ],
+  "therapeutic_goals": [
+    "- Reconnect with personal values to clarify professional direction",
+    "- Re-establish emotional boundaries with the partner while maintaining stability",
+    "- Address unresolved workplace injustices through assertiveness training",
+    "- Enhance emotional communication and vulnerability in the romantic relationship",
+    "- Develop a structured plan for financial and career transition"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Weekly journaling to identify specific workplace triggers and emotional responses",
+      "- Initiate brief, structured conversations with the partner focused on emotional sharing",
+      "- Hypnosis session recommendation: emotional grounding and self-validation",
+      "Tags: #WorkplaceBoundaries #EmotionalDetachment #SelfValidation",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Develop a career exploration exercise: assess existing qualifications and explore new paths",
+      "- Assertiveness training to navigate workplace dynamics effectively",
+      "- Hypnosis session recommendation: future visioning and emotional anchoring",
+      "Tags: #CareerTransition #AssertivenessTraining #EmotionalAnchoring",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Ongoing therapy to address deeper emotional detachment in the romantic relationship",
+      "- Construct a personal narrative to integrate past workplace experiences and foster resilience",
+      "- Hypnosis session recommendation: reinforcing personal power and emotional clarity",
+      "Tags: #PersonalPower #EmotionalClarity #RelationshipAnchoring"
+    ]
+  },
+  "motivational_closure": "You are not merely existing; you are evolving. Each step forward, whether small or significant, is a declaration of your strength and readiness to redefine what fulfillment means for you.",
+  "tags": [
+    "WorkplaceBoundaries",
+    "EmotionalDetachment",
+    "SelfValidation",
+    "CareerTransition",
+    "AssertivenessTraining",
+    "EmotionalAnchoring",
+    "PersonalPower",
+    "EmotionalClarity",
+    "RelationshipAnchoring",
+    "EmotionalDetachment",
+    "CareerTransition",
+    "RelationshipAnchoring",
+    "Assertiveness",
+    "WorkplaceBoundaries",
+    "SelfEmpowerment"
+  ]
+}

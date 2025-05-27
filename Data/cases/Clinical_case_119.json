@@ -1,0 +1,44 @@
+{
+  "case_id": "Clinical_case_119",
+  "age": "12",
+  "gender_identity": "Boy (Second Case)",
+  "summary": "(RAG Format)\nThe patient, a 12-year-old boy, presents with emotional distress associated with school transitions, separation anxiety, and feelings of vulnerability. He reports increased emotional sensitivity during school transitions, notably when his older sister was no longer present to provide social support. He also expresses internal conflict related to his mother's new partner, feeling as though he is betraying his biological father by accepting the new figure in his life. The emotional responses are characterized by feelings of rejection, perceived isolation, and a sense of being out of place in the school setting.",
+  "main_issues": [
+    "- Separation anxiety related to familial changes and school transitions",
+    "- Perceived isolation following the transition to secondary school",
+    "- Internal conflict regarding loyalty to father vs. acceptance of stepfather",
+    "- Loss of social support from older sister, increasing social vulnerability",
+    "- Low self-confidence and difficulties expressing emotional needs"
+  ],
+  "emotions": [
+    "Anxiety",
+    "Guilt",
+    "Fear of rejection",
+    "Confusion",
+    "Sadness"
+  ],
+  "limiting_beliefs": [
+    "- 'If I accept my stepfather, I am betraying my father'",
+    "- 'If I don't fit in at school, it means there's something wrong with me'",
+    "- 'I must hide my feelings to avoid conflict'"
+  ],
+  "therapeutic_goals": [
+    "- Normalize emotional responses to family restructuring and school transitions",
+    "- Reduce feelings of guilt and conflicting loyalties within the family",
+    "- Establish emotional boundaries to prevent emotional exhaustion",
+    "- Reframe school transitions as opportunities for personal growth and self-discovery"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are allowed to feel all your feelings. You are allowed to love and be loved by all the important people in your life. You are strong, valuable, and perfectly capable of navigating these changes with courage and confidence.",
+  "tags": [
+    "EmotionalSecurity",
+    "SelfAcceptance",
+    "GuiltRelease",
+    "SocialAdjustment",
+    "FamilyDynamics"
+  ]
+}

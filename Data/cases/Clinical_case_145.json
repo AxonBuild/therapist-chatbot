@@ -1,0 +1,47 @@
+{
+  "case_id": "Clinical_case_145",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with profound emotional distress following a series of traumatic reproductive losses over the past two years. She has experienced four pregnancy losses, including a life-threatening ectopic pregnancy and a medically advised termination under misleading circumstances. Additionally, she reports chronic guilt, unresolved grief, and persistent emotional instability exacerbated by familial conflict and emotional neglect from her partner. She also describes ongoing verbal abuse from her mother-in-law, contributing to her sense of isolation and lack of support.",
+  "main_issues": [
+    "- Intense guilt and self-blame following termination of a pregnancy that was not confirmed as trisomic",
+    "- Recurrent reproductive losses leading to feelings of helplessness and bodily betrayal",
+    "- Chronic emotional distress from unresolved trauma and near-death experience during ectopic pregnancy",
+    "- Verbal abuse and emotional manipulation from mother-in-law, with passive response from partner",
+    "- Emotional detachment and dissociation as coping mechanisms for overwhelming grief and trauma"
+  ],
+  "emotions": [
+    "Guilt",
+    "Helplessness",
+    "Grief",
+    "Resentment",
+    "Emotional numbness"
+  ],
+  "limiting_beliefs": [
+    "- 'If I had done more, the baby would still be alive.'",
+    "- 'My body has failed me.'",
+    "- 'I am unworthy of support or love during this time.'",
+    "- 'If I confront my mother-in-law, I will lose my partner.'"
+  ],
+  "therapeutic_goals": [
+    "- Address and process the guilt associated with the termination and loss of the child",
+    "- Facilitate emotional release related to near-death experience and traumatic pregnancy outcomes",
+    "- Support the development of assertive communication with her partner regarding mother-in-law's behavior",
+    "- Assist in recognizing and validating her own emotional needs amidst relational neglect",
+    "- Reinforce self-compassion and self-worth, independent of reproductive outcomes"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Your worth is not defined by what you have lost, nor by how others have treated you. You are more than these experiences — you are a resilient, courageous individual who has faced immense challenges. Now is the time to reclaim your story, to let go of what is not yours to carry, and to step forward with compassion and strength.",
+  "tags": [
+    "GriefProcessing",
+    "SelfForgiveness",
+    "ReproductiveTrauma",
+    "BoundarySetting",
+    "EmotionalResilience",
+    "AssertivenessTraining"
+  ]
+}

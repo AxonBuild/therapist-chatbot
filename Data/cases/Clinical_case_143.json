@@ -1,0 +1,47 @@
+{
+  "case_id": "Clinical_case_143",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with significant difficulties in maintaining emotional flexibility and managing interpersonal relationships. She reports a tendency toward emotional rigidity, self-criticism, and heightened sensitivity to perceived criticism. There is a pattern of aggressive or defensive reactions in communication, coupled with a history of unresolved familial conflict, particularly with her father. Her upbringing was marked by verbal and psychological abuse, leading to a strong inclination toward perfectionism and a tendency to avoid conflict by fleeing situations.",
+  "main_issues": [
+    "- Difficulty in maintaining emotional flexibility and managing interpersonal relationships",
+    "- Chronic self-criticism and heightened sensitivity to perceived criticism",
+    "- Persistent feelings of anger and unresolved resentment toward her father",
+    "- A history of verbal and psychological abuse during childhood and adolescence",
+    "- Tendency to avoid conflict by disengaging or fleeing from challenging situations"
+  ],
+  "emotions": [
+    "Anger",
+    "Resentment",
+    "Self-blame",
+    "Emotional rigidity",
+    "Fear of rejection"
+  ],
+  "limiting_beliefs": [
+    "- 'If I let my guard down, people will take advantage of me.'",
+    "- 'I must maintain control to avoid being hurt.'",
+    "- 'If I am not perfect, I am unworthy of love and respect.'",
+    "- 'Leaving a situation is the only way to protect myself.'"
+  ],
+  "therapeutic_goals": [
+    "- Assist in identifying the roots of emotional rigidity and self-critical tendencies",
+    "- Encourage exploration of alternative conflict resolution strategies without resorting to avoidance",
+    "- Facilitate a safe space to express and process anger toward her father without self-censorship",
+    "- Support the development of healthier self-talk to counteract long-standing critical inner dialogue",
+    "- Empower the patient to build healthier, more balanced relationships based on mutual respect and boundaries"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are not defined by what was said to you or done to you in the past. You are capable of creating new narratives, setting boundaries, and responding to life from a place of calm and self-respect. Every time you choose to stay present and assert your worth, you are reclaiming your power and reshaping your future.",
+  "tags": [
+    "EmotionalFlexibility",
+    "SelfCompassion",
+    "ConflictResolution",
+    "Assertiveness",
+    "InnerStrength",
+    "BoundarySetting"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "case_id": "Clinical_case_130",
+  "age": "63",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 63-year-old woman presents with longstanding emotional wounds related to maternal rejection and invalidation. Despite cognitive awareness of her mother's limitations in providing emotional support, she continues to seek validation from someone incapable of giving it, leading to repeated feelings of disappointment, frustration, and unresolved anger. The patient expresses a cycle of reactivation of past wounds each time she interacts with her mother, reinforcing her sense of being unworthy of love and emotional presence. Additionally, there are significant existential reflections on self-worth, the nature of reality, and finding meaning amidst perceived emptiness and emotional neglect.",
+  "main_issues": [
+    "- Ongoing pursuit of maternal validation despite repeated emotional rejection.",
+    "- Chronic emotional deprivation linked to perceived maternal incapacity for empathy.",
+    "- Reinforcement of unworthiness and self-blame due to unresolved childhood wounds.",
+    "- Existential reflections on meaning, self-worth, and the nature of reality.",
+    "- Difficulty distinguishing between cognitive understanding and emotional integration of insights.",
+    "- Suppression of anger to maintain familial peace, resulting in internalized frustration."
+  ],
+  "emotions": [
+    "Frustration",
+    "Anger",
+    "Emotional deprivation",
+    "Shame",
+    "Existential anxiety",
+    "Disillusionment"
+  ],
+  "limiting_beliefs": [
+    "- If my mother cannot love me, then I am not worthy of love.",
+    "- I must keep trying to gain her approval, even if it hurts me.",
+    "- Feeling anger is wrong - I must suppress it to maintain peace.",
+    "- If I express my pain, it will only reinforce my weakness."
+  ],
+  "therapeutic_goals": [
+    "- Validate and process feelings of maternal rejection and emotional neglect.",
+    "- Support differentiation between mother's limitations and patient's worthiness of love.",
+    "- Encourage healthy emotional expression of anger in a safe, structured setting.",
+    "- Facilitate existential exploration to find personal meaning beyond familial roles.",
+    "- Develop grounding techniques to reduce reactivity during maternal interactions.",
+    "- Implement strategies for emotional self-validation and boundary setting."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You don't need to keep seeking what your mother cannot give. You are more than her absence. Today, you can begin to fill that void with your own light - one step, one breath, one moment of self-love at a time.",
+  "tags": [
+    "EmotionalRejection",
+    "MaternalWounds",
+    "AngerRelease",
+    "SelfValidation",
+    "ExistentialReflection",
+    "SelfLoveAnchoring"
+  ]
+}

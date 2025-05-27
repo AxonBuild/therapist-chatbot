@@ -1,0 +1,66 @@
+{
+  "case_id": "Clinical_case_140",
+  "age": "29",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 29-year-old woman presents with a history of significant weight fluctuations linked to multiple factors including a failed sleeve gastrectomy a decade ago, postpartum complications, and a recent diagnosis of ankylosing spondylitis (SPA). Despite being advised to commence a bi-weekly injection treatment for SPA, she expresses apprehension and resistance, focusing instead on weight loss as a potential alternative solution. She reports a profound disconnect between self-care and body acceptance, citing a tendency to neglect her own needs while prioritizing her family. Her narrative reveals underlying emotional exhaustion, self-neglect, and a lingering sense of illegitimacy in her suffering.",
+  "main_issues": [
+    "- Failed sleeve gastrectomy with unresolved weight issues.",
+    "- Fear of SPA treatment due to perceived risks and intensive monitoring.",
+    "- Emotional disconnection and self-neglect despite evident care for others.",
+    "- Postpartum trauma and unresolved physical pain linked to SPA diagnosis.",
+    "- Desire for a third child juxtaposed with fears regarding postoperative risks."
+  ],
+  "emotions": [
+    "Fear",
+    "Anxiety",
+    "Emotional exhaustion",
+    "Self-neglect",
+    "Uncertainty"
+  ],
+  "limiting_beliefs": [
+    "- \"If I lose weight, my illness will resolve.\"",
+    "- \"I don't deserve to take care of myself.\"",
+    "- \"If I focus on myself, I'm neglecting my family.\"",
+    "- \"My body is a burden.\""
+  ],
+  "therapeutic_goals": [
+    "- Support emotional processing related to the failed sleeve and postpartum trauma.",
+    "- Develop a balanced self-care routine to address self-neglect.",
+    "- Reframe beliefs around body image, health, and self-worth.",
+    "- Introduce coping strategies for SPA treatment-related anxiety.",
+    "- Explore underlying resistance to medical intervention."
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Daily journaling practice to externalize fears around SPA treatment and self-neglect.",
+      "- Hypnosis session to reinforce the connection between self-worth and self-care.",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Guided body imagery to reconnect with physical self and ease body-related resentment.",
+      "- Structured cognitive exercises to challenge limiting beliefs regarding illness and body.",
+      "- Hypnosis session targeting fear of medical procedures and postoperative risks.",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Psychotherapy to address persistent self-neglect and self-disqualification patterns.",
+      "- Sensorimotor techniques to alleviate physical tension associated with SPA.",
+      "- Hypnosis session to integrate a new sense of body acceptance and self-compassion."
+    ]
+  },
+  "motivational_closure": "Your body has been through so much, and yet it is still here, still capable of healing. You don't have to prove your worth by enduring more pain. You deserve to feel better, to feel lighter, and to feel connected to yourself in ways you might not have imagined yet.",
+  "tags": [
+    "SelfWorth",
+    "SelfCare",
+    "AnxietySoothing",
+    "BodyConnection",
+    "FearRelease",
+    "MedicalAnxiety",
+    "BodyAcceptance",
+    "SelfCompassion",
+    "ChronicIllnessCoping"
+  ]
+}

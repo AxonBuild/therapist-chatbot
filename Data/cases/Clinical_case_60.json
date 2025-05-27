@@ -1,0 +1,57 @@
+{
+  "case_id": "Clinical_case_60",
+  "age": "21",
+  "gender_identity": "woman presents with ongoing emotional dysregulation, pervasive anxiety, and intrusive thoughts related to a past traumatic event. ",
+  "summary": "(RAG Format)\n\nThis 21-year-old woman presents with ongoing emotional dysregulation, pervasive anxiety, and intrusive thoughts related to a past traumatic event. \nDespite reported progress in her ability to manage social interactions and resume certain activities, she continues to exhibit signs of hypervigilance, \nparanoia regarding potential surveillance by her father, and difficulties in processing past trauma. \nShe has experienced episodes of derealization and heightened stress related to perceived invasions of her personal space.",
+  "main_issues": [
+    "- Persistent anxiety and paranoia related to perceived surveillance by her father",
+    "- Emotional numbness and dissociation when recalling traumatic events",
+    "- Intrusive thoughts regarding potential monitoring (microphones, cameras) in her living space",
+    "- Fluctuations in self-confidence and self-efficacy, with some reported positive progress in social interactions",
+    "- Difficulty in consolidating recent achievements and internalizing positive changes"
+  ],
+  "emotions": [
+    "Hypervigilance and paranoia in her living space, particularly regarding potential surveillance by her father",
+    "Emotional blunting and detachment during trauma recall",
+    "Persistent bodily tension, particularly in the abdomen, with sensations of nausea and tightness",
+    "Difficulty distinguishing between perceived and actual threats, leading to compulsive checking behaviors",
+    "Ambivalence regarding personal progress; partial recognition of achievements but minimization of positive changes"
+  ],
+  "limiting_beliefs": [
+    "- 'I am not safe in my own home.'",
+    "- 'If I let my guard down, he will find a way to control me.'",
+    "- 'I cannot trust my own perceptions; I might miss something important.'",
+    "- 'Even if I achieve something, it doesn't count because I still feel unsafe.'"
+  ],
+  "therapeutic_goals": [
+    "- Facilitate a sense of safety and control within her own living space",
+    "- Decrease paranoia and hypervigilance through grounding techniques and reality testing",
+    "- Encourage the consolidation of positive experiences to counterbalance trauma-related narratives",
+    "- Develop emotional awareness and differentiation to reduce dissociation during trauma recall",
+    "- Establish a clear boundary between her past experiences with her father and her present reality"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Daily grounding exercises to re-establish a sense of physical and emotional safety",
+      "- Reality testing exercise to differentiate between perceived surveillance and actual evidence of monitoring",
+      "- Introduction of a sensory calming routine before sleep to reduce hypervigilance"
+    ],
+    "intermediate": [
+      "- Guided visualization: Creating a protective boundary within her living space",
+      "- Emotional processing through expressive writing to externalize intrusive thoughts and fears",
+      "- Structured cognitive reframing to challenge limiting beliefs about safety and surveillance"
+    ],
+    "long_term": []
+  },
+  "motivational_closure": "",
+  "tags": [
+    "Hypervigilance",
+    "Paranoia",
+    "EmotionalSafety",
+    "IntrusiveThoughts",
+    "Dissociation",
+    "Control",
+    "BoundarySetting",
+    "TrustIssues"
+  ]
+}

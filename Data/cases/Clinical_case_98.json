@@ -1,0 +1,58 @@
+{
+  "case_id": "Clinical_case_98",
+  "age": "13",
+  "gender_identity": "girl presents with feelings of social exclusion and perceived rejection, particularly in school settings. She reports recurrent experiences of feeling invisible or overlooked by peers, both currently and in earlier childhood. Despite efforts to integrate socially, she continues to perceive herself as 'unknown' or 'unseen' among her peers, leading to feelings of frustration and sadness. Additionally, she describes a sense of emotional maturity that further alienates her from her age group, as she feels more attuned to adult conversations and reflections than to typical adolescent interactions.",
+  "summary": "(RAG Format)\nThis 13-year-old girl presents with feelings of social exclusion and perceived rejection, particularly in school settings. She reports recurrent experiences of feeling invisible or overlooked by peers, both currently and in earlier childhood. Despite efforts to integrate socially, she continues to perceive herself as 'unknown' or 'unseen' among her peers, leading to feelings of frustration and sadness. Additionally, she describes a sense of emotional maturity that further alienates her from her age group, as she feels more attuned to adult conversations and reflections than to typical adolescent interactions.",
+  "main_issues": [
+    "- Persistent feelings of rejection and social exclusion in school settings.",
+    "- Frustration over being perceived as 'unknown' despite efforts to socialize.",
+    "- Emotional maturity that creates a perceived gap between herself and her peers.",
+    "- Difficulties in navigating peer relationships due to feeling 'out of sync.'",
+    "- Residual sadness related to past experiences of being overlooked or dismissed."
+  ],
+  "emotions": [
+    "Sadness due to feeling unseen or unacknowledged by peers.",
+    "Frustration with herself for not being able to 'fit in' despite efforts.",
+    "Confusion about her identity, feeling 'mature' but wanting peer acceptance.",
+    "Resentment toward peers for not recognizing her attempts to connect.",
+    "Loneliness stemming from a perceived lack of connection and belonging."
+  ],
+  "limiting_beliefs": [
+    "- \"If they don't notice me, it means I don't matter.\"",
+    "- \"Being more mature makes me different in a bad way.\"",
+    "- \"If I don't fit in, it's because something is wrong with me.\"",
+    "- \"I have to change myself to be seen and accepted.\""
+  ],
+  "therapeutic_goals": [
+    "- Develop strategies to navigate feelings of rejection without internalizing them.",
+    "- Encourage self-acceptance and affirmation of her emotional maturity as a strength.",
+    "- Enhance social skills to foster deeper connections with peers.",
+    "- Reframe experiences of 'being overlooked' as opportunities for self-growth.",
+    "- Introduce relaxation and grounding techniques to manage social anxiety."
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to manage acute feelings of exclusion or invisibility.",
+      "- Affirmation techniques to reinforce self-worth independent of peer validation.",
+      "- Journaling to externalize thoughts and reframe negative self-talk."
+    ],
+    "intermediate": [
+      "- Social skills training to enhance communication and assertiveness in peer interactions.",
+      "- Role-playing exercises to practice initiating and maintaining conversations.",
+      "- Creative expression (art, writing) to explore and process feelings of rejection."
+    ],
+    "long_term": [
+      "- Immersive hypnosis theme: Reclaiming Inner Confidence - Finding My Voice.",
+      "- Visualization exercises to reinforce a sense of self-worth and presence.",
+      "- Peer group support to foster a sense of belonging and shared experiences."
+    ]
+  },
+  "motivational_closure": "You have a unique and powerful voice, even if some people haven't heard it yet. It's okay to feel different - sometimes, being different is what makes you unforgettable. Your maturity and insight are strengths that can help you connect deeply and authentically with those who truly see you. Keep showing up as you are - you deserve to be seen, heard, and valued.",
+  "tags": [
+    "SocialAnxiety",
+    "SelfWorth",
+    "PeerConnections",
+    "EmotionalMaturity",
+    "FindingMyVoice"
+  ]
+}

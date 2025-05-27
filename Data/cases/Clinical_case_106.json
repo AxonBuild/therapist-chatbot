@@ -1,0 +1,58 @@
+{
+  "case_id": "Clinical_case_106",
+  "age": "55",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 55-year-old woman who presents with persistent emotional tension surrounding financial and familial dynamics, particularly with her sister and mother. The central issue involves a long-standing financial disagreement regarding a debt that the sister received from their mother. Despite the patient being financially stable, the emotional charge around the perceived inequity remains intense. This tension is exacerbated by the mother's ongoing financial support to the sister and perceived emotional favoritism. The patient struggles to let go of the resentment, oscillating between a desire for justice and a reluctance to engage in conflict.",
+  "main_issues": [
+    "- Persistent emotional resentment regarding financial inequity within the family.",
+    "- Perceived emotional favoritism from the mother towards the sister.",
+    "- Difficulty in asserting financial boundaries without escalating conflict.",
+    "- Repetitive rumination on the financial debt and its implications.",
+    "- Emotional distress tied to childhood instances of perceived neglect."
+  ],
+  "emotions": [
+    "Resentment",
+    "Frustration",
+    "Emotional exhaustion",
+    "Anxiety about future conflict",
+    "Guilt over perceived inability to let go"
+  ],
+  "limiting_beliefs": [
+    "- 'If I let go, it means I accept the injustice.'",
+    "- 'I don't deserve to be treated as less important than my sister.'",
+    "- 'If I assert myself, I will be perceived as greedy or petty.'",
+    "- 'My feelings don't matter as much as maintaining family harmony.'"
+  ],
+  "therapeutic_goals": [
+    "- Process unresolved resentment regarding the debt without exacerbating conflict.",
+    "- Establish emotional boundaries with the sister while maintaining self-respect.",
+    "- Reframe financial narratives to reduce emotional charge.",
+    "- Facilitate self-compassion and emotional release techniques."
+  ],
+  "solutions": {
+    "immediate": [
+      "- Grounding techniques to reduce emotional reactivity during family interactions.",
+      "- Journaling exercise: 'What does justice mean to me without financial compensation?'",
+      "- Hypnosis session recommendation: Releasing resentment and embracing self-worth."
+    ],
+    "intermediate": [
+      "- Guided conversation templates to address the debt issue without escalating conflict.",
+      "- Structured relaxation exercises to release bodily tension associated with financial stress.",
+      "- Hypnosis session recommendation: Reprogramming financial beliefs and letting go of past grievances."
+    ],
+    "long_term": [
+      "- Rebuilding self-worth independent of financial equity.",
+      "- Mindful communication techniques to maintain emotional boundaries with family.",
+      "- Hypnosis session recommendation: Closure and acceptance of unresolved debts."
+    ]
+  },
+  "motivational_closure": "You are more than what was given or withheld. You are not defined by debts, but by your own worth and the peace you choose to create.",
+  "tags": [
+    "FinancialResentment",
+    "FamilyDynamics",
+    "EmotionalClosure",
+    "LettingGo",
+    "SelfWorth",
+    "Boundaries"
+  ]
+}

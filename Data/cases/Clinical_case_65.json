@@ -1,0 +1,46 @@
+{
+  "case_id": "Clinical_case_65",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with pervasive feelings of loss, sadness, and disconnection following a significant bereavement. She reports recurrent intrusive thoughts about the deceased, oscillating between intense longing and feelings of emptiness. Despite attempting to engage in daily activities, she experiences a persistent sense of joylessness and emotional numbness. Her self-report suggests difficulties reconciling the desire to move forward with the perceived sense of leaving the deceased behind, manifesting as a conflict between acceptance and ongoing attachment to the past.",
+  "main_issues": [
+    "- Persistent grief and longing for the deceased.",
+    "- Emotional numbness and disconnection from daily life.",
+    "- Struggle to find meaning and joy in the present.",
+    "- Conflict between moving forward and perceived abandonment of the deceased.",
+    "- Avoidance of situations that evoke memories of the loss."
+  ],
+  "emotions": [
+    "Grief",
+    "Sadness",
+    "Emptiness",
+    "Guilt",
+    "Emotional Disorientation"
+  ],
+  "limiting_beliefs": [
+    "- 'If I move forward, I am betraying the memory of the deceased.'",
+    "- 'I don't deserve to feel joy while they are gone.'",
+    "- 'If I let go, I will lose them forever.'"
+  ],
+  "therapeutic_goals": [
+    "- Normalize and validate the grieving process as a natural response to loss.",
+    "- Encourage reconnection with present experiences to foster a sense of continuity.",
+    "- Implement grounding techniques to reduce emotional numbness and anchor in the present.",
+    "- Introduce cognitive reframing to resolve perceived conflicts between moving forward and honoring the deceased.",
+    "- Facilitate a symbolic integration of the deceased's memory in her current life."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Your loved one remains a part of you, woven into the fabric of your life. It is not a betrayal to seek joy and fulfillment - it is a way to carry them forward with you. You are allowed to live, to feel, and to embrace life once again.",
+  "tags": [
+    "Grief",
+    "Loss",
+    "EmotionalNumbness",
+    "GuiltRelease",
+    "LifeAfterLoss",
+    "FindingJoy"
+  ]
+}

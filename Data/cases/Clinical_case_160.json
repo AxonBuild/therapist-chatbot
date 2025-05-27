@@ -1,0 +1,59 @@
+{
+  "case_id": "Clinical_case_160",
+  "age": "45",
+  "gender_identity": "Man (Alcohol and Addiction)",
+  "summary": "(RAG Format)\nThe patient is a 45-year-old man experiencing difficulties with alcohol consumption, characterized by ritualistic drinking behaviors and difficulty managing consumption at home. He reports using alcohol as a coping mechanism while engaging in leisure activities such as watching Netflix or playing video games. The patient has successfully reduced his intake from 4-5 glasses per evening to approximately 2, facilitated by structured drinking rituals and the implementation of specific behavioral strategies such as changing the type of glass to disrupt habitual associations. Additionally, the patient expresses underlying feelings of inadequacy and a persistent belief of 'not being enough,' which may contribute to his reliance on alcohol as an emotional escape.",
+  "main_issues": [
+    "- Alcohol consumption as a coping mechanism for emotional distress",
+    "- Difficulty breaking ritualistic drinking patterns",
+    "- Underlying feelings of inadequacy and self-doubt",
+    "- Use of alcohol to self-soothe during solitary activities",
+    "- Resistance to acknowledging emotional vulnerability"
+  ],
+  "emotions": [
+    "Shame",
+    "Guilt",
+    "Inadequacy",
+    "Emotional numbness",
+    "Frustration"
+  ],
+  "limiting_beliefs": [
+    "- 'I am not enough, so I drink to feel better.'",
+    "- 'If I don't follow my rituals, I will lose control.'",
+    "- 'I need alcohol to relax and feel normal.'",
+    "- 'If I don't reward myself, I am depriving myself.'"
+  ],
+  "therapeutic_goals": [
+    "- Develop alternative coping strategies to reduce alcohol dependency",
+    "- Reframe the concept of reward to disconnect from alcohol",
+    "- Normalize feelings of inadequacy and explore self-worth independent of drinking",
+    "- Implement behavioral cues to disrupt ritualistic drinking patterns",
+    "- Foster self-compassion and acceptance to counter feelings of guilt and shame"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Replace wine glasses with small, non-decorative glasses to disrupt habitual associations",
+      "- Implement the 'two glasses of water' rule between alcoholic beverages",
+      "- Hypnosis session recommendation: Emotional Reset and Self-Compassion"
+    ],
+    "intermediate": [
+      "- Explore alternative coping strategies for leisure time (e.g., non-alcoholic rituals)",
+      "- Guided visualization to process feelings of inadequacy and emotional void",
+      "- Develop a structured plan for reducing alcohol consumption incrementally"
+    ],
+    "long_term": [
+      "- Address deeper emotional triggers linked to feelings of inadequacy",
+      "- Implement daily affirmations to reinforce self-worth",
+      "- Create a support network to maintain accountability during recovery"
+    ]
+  },
+  "motivational_closure": "You are not defined by your habits or your past. Each day offers a chance to make a different choice, to prioritize your well-being and to redefine what it means to feel in control. You deserve to feel grounded, whole, and empowered in your own skin.",
+  "tags": [
+    "AlcoholReduction",
+    "EmotionalCoping",
+    "SelfWorth",
+    "AddictionRecovery",
+    "BehavioralModification",
+    "SelfCompassion"
+  ]
+}

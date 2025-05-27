@@ -1,0 +1,66 @@
+{
+  "case_id": "Clinical_case_153",
+  "age": "28",
+  "gender_identity": "Man",
+  "summary": "(RAG Format)\nThe patient presents with a fluctuating smoking pattern, ranging from 6 to 16 cigarettes per day. The disparity in consumption is linked to situational factors such as social settings, boredom, and perceived availability. Despite the inconsistency, the patient demonstrates occasional self-awareness regarding his smoking behavior, particularly during situations where smoking is not possible (e.g., long flights). Emotional triggers include boredom, frustration, and routine. He expresses a desire to regain control over his habits and to establish a more structured daily routine.",
+  "main_issues": [
+    "- Inconsistent smoking patterns with significant fluctuations in daily consumption",
+    "- Heightened smoking during boredom or idle periods",
+    "- Perceived lack of structure and routine contributing to increased smoking",
+    "- Emotional triggers linked to frustration and lack of control",
+    "- Difficulty establishing a stable routine for exercise and relaxation"
+  ],
+  "emotions": [
+    "Frustration",
+    "Boredom",
+    "Restlessness",
+    "Ambivalence",
+    "Lack of motivation"
+  ],
+  "limiting_beliefs": [
+    "- \"I need a cigarette to cope with boredom.\"",
+    "- \"If I have the option, I might as well smoke.\"",
+    "- \"A few cigarettes won't make a difference.\"",
+    "- \"I can't stick to a routine.\""
+  ],
+  "therapeutic_goals": [
+    "- Increase self-awareness regarding smoking triggers and patterns",
+    "- Develop a structured daily routine to reduce idle smoking periods",
+    "- Implement grounding techniques to manage frustration without smoking",
+    "- Encourage alternative coping mechanisms during periods of boredom",
+    "- Establish a sustainable exercise routine to release tension and reduce cravings"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Grounding exercises to manage cravings during idle moments",
+      "- Guided relaxation to reduce tension without smoking",
+      "- Hypnosis session recommendation: detaching from the urge to smoke in moments of boredom",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Structured journaling to identify smoking patterns and triggers",
+      "- Daily exercise routine to release pent-up frustration and tension",
+      "- Mindful breathing techniques to counteract cravings",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Develop a comprehensive daily routine incorporating physical activity",
+      "- Establish a self-soothing routine to manage stress without smoking",
+      "- Hypnosis session recommendation: reinforcing a smoke-free identity and internal motivation"
+    ]
+  },
+  "motivational_closure": "",
+  "tags": [
+    "SmokingPatterns",
+    "RoutineEstablishment",
+    "BoredomManagement",
+    "FrustrationRelease",
+    "SelfEmpowerment",
+    "HabitAwareness",
+    "StructuredRoutine",
+    "MindfulBreathing"
+  ]
+}

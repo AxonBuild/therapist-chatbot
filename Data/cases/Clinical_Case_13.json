@@ -1,0 +1,81 @@
+{
+  "case_id": "Clinical_Case_13",
+  "age": "68",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 68-year-old woman presenting with long-standing emotional fatigue and disrupted circadian rhythm. She reports a significant decrease in morning anxiety since the last session, but experiences persistent difficulty finding motivation to get out of bed. Her emotional state is strongly impacted by her relationship with her partner's daughter, whom she describes as manipulative and controlling. The patient feels emotionally invalidated in the relationship, which reinforces a sense of injustice and helplessness. Despite some improvements in anxiety, there remains a lack of daily structure, compounded by unresolved family dynamics and physical complaints related to sleep, gastric issues, and chronic tension.",
+  "main_issues": [
+    "- Loss of motivation and meaning in daily life",
+    "- Sleep-wake cycle dysregulation (inverted rhythm)",
+    "- Chronic emotional fatigue and resignation",
+    "- Tensions caused by the stepdaughter's influence",
+    "- Feelings of injustice and emotional neglect",
+    "- Somatic complaints (gastrointestinal tension, disrupted sleep)"
+  ],
+  "emotions": [
+    "Frustration",
+    "Injustice",
+    "Exhaustion",
+    "Sadness",
+    "Resignation"
+  ],
+  "limiting_beliefs": [
+    "- 'I no longer have a place.'",
+    "- 'Nothing will change.'",
+    "- 'I'm invisible in this family.'",
+    "- 'I can't escape this imbalance.'"
+  ],
+  "therapeutic_goals": [
+    "- Reinstate a healthy and motivating sleep-wake cycle",
+    "- Rebuild a sense of legitimacy in her role and presence",
+    "- Reduce emotional reactivity linked to the stepdaughter",
+    "- Reinforce autonomy and emotional boundaries",
+    "- Restore a sense of self-worth beyond the relational imbalance"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Validate fatigue and emotional saturation",
+      "- Introduce gentle morning rituals: light exposure, breathing techniques",
+      "- Reduce phone exposure at night to aid in sleep rhythm restoration",
+      "- Hypnosis session recommendation: morning activation and digestive calm",
+      "Tags: #SleepRestoration #MorningFatigue #GastroEmotionalRelief",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Schedule intentional personal activities (outside partner's circle)",
+      "- Psychoeducation on step-family dynamics and psychological boundaries",
+      "- EMDR sessions targeting the relationship with the stepdaughter",
+      "- Hypnosis session recommendation: emotional boundaries and symbolic legitimacy recovery",
+      "Tags: #StepFamilyStress #EmotionalBoundaries #InnerValidation",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Deep cognitive restructuring on self-worth and role recognition",
+      "- Sleep protocol based on chronobiological anchors and motivational cues",
+      "- Hypnosis session recommendation: long-term rhythm repair and identity consolidation",
+      "Tags: #ChronobiologicalHealing #IdentityAnchoring #DailyStructure"
+    ]
+  },
+  "motivational_closure": "This journey is not about pleasing others, but about giving yourself the right to breathe again, at your pace, in your space. By reclaiming your rhythm, you also reclaim your voice. You're allowed to matter again.",
+  "tags": [
+    "SleepRestoration",
+    "MorningFatigue",
+    "GastroEmotionalRelief",
+    "StepFamilyStress",
+    "EmotionalBoundaries",
+    "InnerValidation",
+    "ChronobiologicalHealing",
+    "IdentityAnchoring",
+    "DailyStructure",
+    "EmotionalFatigue",
+    "SleepPatternDisturbance",
+    "FamilyConflict",
+    "StepParentingStress",
+    "LackOfRecognition",
+    "Guilt",
+    "SomaticComplaints",
+    "DailyRhythmRestoration"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "case_id": "Clinical_Case_44",
+  "age": "57",
+  "gender_identity": "woman, currently on medical leave, presents with intense post-bereavement guilt following the loss of her mother. Despite her relentless involvement in her mother's care, she now blames herself for not doing enough, reactivating a deeply ingrained pattern of hyper-responsibility. Her anger is also directed at the healthcare system, perceived as negligent and abusive, echoing past experiences of domination and control from a previous violent relationship. Chronic mental fatigue and emotional overload are evident, exacerbated by unresolved emotional fusion with her mother and a profound sense of powerlessness.",
+  "summary": "(RAG Format)\nThis 57-year-old woman, currently on medical leave, presents with intense post-bereavement guilt following the loss of her mother. Despite her relentless involvement in her mother's care, she now blames herself for not doing enough, reactivating a deeply ingrained pattern of hyper-responsibility. Her anger is also directed at the healthcare system, perceived as negligent and abusive, echoing past experiences of domination and control from a previous violent relationship. Chronic mental fatigue and emotional overload are evident, exacerbated by unresolved emotional fusion with her mother and a profound sense of powerlessness.",
+  "main_issues": [
+    "- Intense post-bereavement guilt and self-blame",
+    "- Hyper-responsibility and sacrificial beliefs",
+    "- Institutional anger and distrust towards the medical system",
+    "- Emotional overload and chronic mental fatigue",
+    "- Reactivation of control and domination trauma from a past abusive relationship"
+  ],
+  "emotions": [
+    "Guilt",
+    "Anger",
+    "Powerlessness",
+    "Sadness",
+    "Disgust",
+    "Distrust",
+    "Weariness"
+  ],
+  "limiting_beliefs": [
+    "- 'If I don't do everything, others fail or disappear.'",
+    "- 'Others are negligent; I'm the only one who can truly care.'",
+    "- 'Love is proven through total sacrifice.'",
+    "- 'Structures meant to protect become places of danger.'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe guilt as misplaced responsibility and integrate systemic perspective",
+    "- Reduce emotional fusion with the mother and restore personal boundaries",
+    "- Dissociate anger from self-blame and externalize it safely",
+    "- Anchor self-compassion without sacrificing personal needs",
+    "- Reinforce a sense of inner safety despite institutional failures"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Guided breathing with visualization of the mother in a safe, peaceful place",
+      "- Directed cathartic writing: 'Letter to my mother' expressing unspoken emotions",
+      "- 'I am not guilty of...' exercise: objective reframing of actions and responsibilities"
+    ],
+    "intermediate": [
+      "- Progressive work on dismantling sacrificial beliefs ('I must do it all to be loved')",
+      "- 'Acts of presence' journal: documenting all actions taken for her mother to counter self-blame",
+      "- Emotional body scan practice to detect emotional overload signals"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Releasing Guilt and Reconnecting with Inner Peace",
+      "- Dissociating self-blame from systemic failures",
+      "- Reintegrating the mother as a peaceful, comforting presence",
+      "- Anchoring a sense of internal calm, away from sacrificial patterns"
+    ]
+  },
+  "motivational_closure": "You were there until the very end—more than most people would have been. It's not the fault of a loving daughter if a system fails. Now, it's time to give yourself what you never dared to ask for: peace.",
+  "tags": [
+    "PostBereavementGuilt",
+    "EmotionalRelease",
+    "SelfCompassion",
+    "InstitutionalAnger",
+    "InnerSafety",
+    "EmotionalBoundaries"
+  ]
+}

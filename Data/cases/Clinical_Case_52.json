@@ -1,0 +1,60 @@
+{
+  "case_id": "Clinical_Case_52",
+  "age": "39",
+  "gender_identity": "woman presents with a profound sense of existential frustration stemming from the perceived deviation of her life path. Despite a strong inclination toward creative and communicative endeavors (photography, event planning), she feels trapped in a path imposed by others. This conflict between her authentic desires and imposed expectations has led to self-censorship, inner infantilization, and chronic social discomfort. She experiences intense fear of judgment, particularly from male or authoritative figures, and an internalized sense of guilt for wanting to assert herself.",
+  "summary": "(RAG Format)\nThis 39-year-old woman presents with a profound sense of existential frustration stemming from the perceived deviation of her life path. Despite a strong inclination toward creative and communicative endeavors (photography, event planning), she feels trapped in a path imposed by others. This conflict between her authentic desires and imposed expectations has led to self-censorship, inner infantilization, and chronic social discomfort. She experiences intense fear of judgment, particularly from male or authoritative figures, and an internalized sense of guilt for wanting to assert herself.",
+  "main_issues": [
+    "- Existential frustration linked to unchosen professional path",
+    "- Hyper-adaptation to expected image, fear of judgment",
+    "- Social discomfort, self-censorship in the presence of authority figures",
+    "- Nostalgia and regret for unfulfilled youthful dreams",
+    "- Affective ambivalence regarding her partner, parents, and life decisions"
+  ],
+  "emotions": [
+    "Frustration (unexpressed desires)",
+    "Guilt (linked to professional choices and familial expectations)",
+    "Fear of judgment and exposure",
+    "Regret and nostalgia for untaken paths",
+    "Affective ambivalence (conflict between desire and obligation)"
+  ],
+  "limiting_beliefs": [
+    "- \"I must please to be loved.\"",
+    "- \"I don't deserve success unless I suffer for it.\"",
+    "- \"If I express myself, I'll be judged or rejected.\"",
+    "- \"Doing what I love means betraying others or taking up too much space.\""
+  ],
+  "therapeutic_goals": [
+    "- Reconnect with authentic desires without self-censorship",
+    "- Develop assertive communication to reduce fear of judgment",
+    "- Normalize self-expression as a legitimate need, not a betrayal",
+    "- Reframe unchosen paths as learning experiences rather than failures",
+    "- Integrate past creative dreams into the present without guilt"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Verbalization of discomfort: \"I feel uneasy, but I'll say it anyway.\"",
+      "- Morning anchoring ritual: hand on heart, slow breathing, anchoring phrase: \"Today, I can listen to my true desires.\"",
+      "- Daily \"I feel / I say\" practice to reinforce self-expression"
+    ],
+    "intermediate": [
+      "- Guided review of past choices: letter to the 15-year-old self, validating her dreams and choices",
+      "- Inner dialogue exercise: conversation between the \"frustrated child\" and the \"wise adult\" self",
+      "- Therapy based on values: clarifying current aspirations, desired legacy, and self-image"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Reclaiming Authentic Self and Voice",
+      "- Dissociating from external expectations",
+      "- Reintegrating repressed desires and dreams",
+      "- Restoring internal permission to express and create freely"
+    ]
+  },
+  "motivational_closure": "Each time you dare to say what you feel, you build a bridge between who you were and who you are becoming. You didn't miss your life—you are reclaiming it.",
+  "tags": [
+    "SelfExpression",
+    "LifePathReclamation",
+    "EmotionalFreedom",
+    "AuthenticSelf",
+    "VoiceRestoration",
+    "SelfValidation"
+  ]
+}

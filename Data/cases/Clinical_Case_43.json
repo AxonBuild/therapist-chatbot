@@ -1,0 +1,60 @@
+{
+  "case_id": "Clinical_Case_43",
+  "age": "40",
+  "gender_identity": "woman working in the restaurant industry presents with agoraphobia combined with obsessive-compulsive features. She experiences intense fear of being trapped or unable to escape in specific contexts such as highways, beauty treatments, and restaurants. Intrusive thoughts of losing control are frequent, leading to significant anticipatory anxiety and active avoidance. Panic attacks began at age 25 and became emotionally anchored to a highway experience, remaining unresolved. Cumulative traumas, including her father's sudden death, her brother's severe stroke, and her mother's cancer, have compounded her emotional and mental burden. She feels trapped in a role of hyper-responsibility as the family 'pillar,' struggling to manage her own emotional collapse while maintaining control for others.",
+  "summary": "(RAG Format)\nThis 40-year-old woman working in the restaurant industry presents with agoraphobia combined with obsessive-compulsive features. She experiences intense fear of being trapped or unable to escape in specific contexts such as highways, beauty treatments, and restaurants. Intrusive thoughts of losing control are frequent, leading to significant anticipatory anxiety and active avoidance. Panic attacks began at age 25 and became emotionally anchored to a highway experience, remaining unresolved. Cumulative traumas, including her father's sudden death, her brother's severe stroke, and her mother's cancer, have compounded her emotional and mental burden. She feels trapped in a role of hyper-responsibility as the family 'pillar,' struggling to manage her own emotional collapse while maintaining control for others.",
+  "main_issues": [
+    "- Agoraphobia with obsessive-compulsive components (fear of being trapped, impulse phobia)",
+    "- Panic disorder with somatic symptoms (spasmophilia, dizziness, hyperventilation)",
+    "- Cumulative trauma with unresolved emotional anchors (highway, father's death, brother's stroke)",
+    "- Emotional exhaustion due to the 'family pillar' role and hyper-responsibility",
+    "- Repeatedly disappointing therapeutic experiences leading to self-blame and frustration"
+  ],
+  "emotions": [
+    "Fear of losing control",
+    "Guilt for not being able to let go",
+    "Emotional fatigue and exhaustion",
+    "Anger mixed with resignation",
+    "Silent shame for not being able to relax despite continuous effort"
+  ],
+  "limiting_beliefs": [
+    "- 'I have to hold it together for everyone.'",
+    "- 'If I let go, everything will fall apart.'",
+    "- 'I'm too tense for this to work on me.'",
+    "- 'The problem is me.'"
+  ],
+  "therapeutic_goals": [
+    "- Reduce panic response and emotional reactivity to perceived 'trapping' situations",
+    "- Reframe the highway memory as a context that no longer holds power over her",
+    "- Re-anchor a sense of internal safety even in uncontrollable contexts",
+    "- Establish boundaries between her responsibilities and her personal needs",
+    "- Normalize the need for self-compassion without reinforcing guilt"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Conscious breathing with sensory anchoring (visual, tactile, auditory cues)",
+      "- Emotional journal to assess anxiety levels morning and evening",
+      "- Gradual reintroduction to avoided contexts with controlled exposure techniques"
+    ],
+    "intermediate": [
+      "- Cognitive restructuring of control beliefs ('I can manage discomfort without controlling everything')",
+      "- Visualization exercises with escape options to diffuse rigid mental scenarios",
+      "- Developing a 'Safe Space' visualization for use during panic episodes"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Releasing Control and Anchoring Inner Safety",
+      "- Dissociate intrusive thoughts from emotional response",
+      "- Reframe the highway as a symbol of fluidity and inner trust",
+      "- Install a calm anchor for real-life use when anxiety arises"
+    ]
+  },
+  "motivational_closure": "You were never incapable of letting go. You simply learned too well how to hold it all together. Now, little by little, you're going to learn how to set down the weight you never chose to carry alone.",
+  "tags": [
+    "Agoraphobia",
+    "PanicDisorder",
+    "Hypervigilance",
+    "EmotionalExhaustion",
+    "ControlAnxiety",
+    "InnerSafety"
+  ]
+}

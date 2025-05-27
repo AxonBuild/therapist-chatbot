@@ -1,0 +1,61 @@
+{
+  "case_id": "Clinical_Case_51",
+  "age": "14",
+  "gender_identity": "boy exhibits emotional hyperreactivity to perceived injustices or interruptions, particularly when engaging in preferred activities such as gaming or reading. Intense expressions of frustration and anger, including aggressive verbalizations ('I want to kill you'), suggest internalized, unprocessed anger that he struggles to verbalize constructively. Conflicted sibling dynamics further exacerbate feelings of powerlessness and infantilization. The recent announcement of his parents' divorce appears to have triggered a state of shock rather than direct anger, indicating possible emotional dissociation.",
+  "summary": "(RAG Format)\nThis 14-year-old boy exhibits emotional hyperreactivity to perceived injustices or interruptions, particularly when engaging in preferred activities such as gaming or reading. Intense expressions of frustration and anger, including aggressive verbalizations ('I want to kill you'), suggest internalized, unprocessed anger that he struggles to verbalize constructively. Conflicted sibling dynamics further exacerbate feelings of powerlessness and infantilization. The recent announcement of his parents' divorce appears to have triggered a state of shock rather than direct anger, indicating possible emotional dissociation.",
+  "main_issues": [
+    "- Intense frustration and anger when activities are interrupted",
+    "- Repressed anger with explosive expressions ('I want to break everything')",
+    "- Sibling rivalry and affective ambivalence with his sister",
+    "- Emotional dissociation and habituation to conflict",
+    "- Emotional block linked to the parental divorce announcement"
+  ],
+  "emotions": [
+    "Frustration (over interrupted activities)",
+    "Anger (internalized and explosive)",
+    "Disappointment (loss of control over his environment)",
+    "Shock (parental divorce announcement)",
+    "Ambivalence (desire for connection vs. reactive anger)"
+  ],
+  "limiting_beliefs": [
+    "- \"If I'm stopped, I'm not respected.\"",
+    "- \"They prevent me from doing what I love, so I must defend myself.\"",
+    "- \"I have to fight for my place.\"",
+    "- \"Adults make decisions for me, and I am powerless.\"",
+    "- \"I am often misunderstood.\""
+  ],
+  "therapeutic_goals": [
+    "- Decrease emotional reactivity to perceived injustices and interruptions",
+    "- Facilitate emotional expression beyond anger and frustration",
+    "- Develop self-soothing techniques to manage explosive impulses",
+    "- Normalize mixed feelings towards parents and siblings without guilt",
+    "- Anchor a sense of inner control despite external interruptions"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Verbalization exercise: 'I feel ___ because ___' to name emotions during frustration",
+      "- 3-minute conscious breathing ritual when strong emotions arise",
+      "- Emotional rights sheet: validate feelings without reinforcing explosive reactions"
+    ],
+    "intermediate": [
+      "- Structured dialogue with sister: share what hurts and what helps, with a mediator present",
+      "- Exercise to deconstruct perceived injustice: identify underlying intentions behind 'no' responses",
+      "- 'Traffic light' emotion journal: red = explosion, orange = irritation, green = calm - track intensity and triggers"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Emotional Regulation and Inner Control",
+      "- Transforming frustration into verbal expression",
+      "- Reconnecting with inner calm and emotional boundaries",
+      "- Establishing a safe internal space to decompress when feeling overwhelmed"
+    ]
+  },
+  "motivational_closure": "You don't need to break everything to be heard. You already have the strength to turn your anger into a message, your frustration into direction, and your surprise into understanding. You're learning to remain yourself, even when interrupted.",
+  "tags": [
+    "EmotionalRegulation",
+    "FrustrationManagement",
+    "SiblingRivalry",
+    "EmotionalDissociation",
+    "InnerControl",
+    "AdolescentAnger"
+  ]
+}

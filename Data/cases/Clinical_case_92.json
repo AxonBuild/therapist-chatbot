@@ -1,0 +1,46 @@
+{
+  "case_id": "Clinical_case_92",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with persistent emotional distress and intrusive thoughts related to the third pregnancy and delivery, marked by unresolved guilt, fear, and physical tension. She describes lingering sensations of tingling in the legs, which began after witnessing her mother's decline and death. There is also a recurring sense of self-blame associated with perceived responsibility for her elevated blood pressure during pregnancy, which led to a medically induced delivery. Despite a successful outcome, she continues to harbor unresolved guilt and exhibits signs of a phobia of impulse, fearing she may have inadvertently caused harm.",
+  "main_issues": [
+    "- Intrusive thoughts and self-blame associated with pregnancy complications.",
+    "- Physical tension and tingling in the legs, perceived as psychosomatic.",
+    "- Persistent guilt over the preterm delivery and perceived lack of control.",
+    "- Recurring images of causing harm or making a catastrophic mistake.",
+    "- Fear of judgment and self-reproach for not taking better care during pregnancy."
+  ],
+  "emotions": [
+    "Guilt",
+    "Fear",
+    "Anxiety",
+    "Self-blame",
+    "Frustration"
+  ],
+  "limiting_beliefs": [
+    "- 'I could have prevented this if I had been more careful.'",
+    "- 'It's my fault my baby was born prematurely.'",
+    "- 'I can't trust my own judgment.'"
+  ],
+  "therapeutic_goals": [
+    "- Process and release the unresolved guilt related to the pregnancy and delivery.",
+    "- Normalize the presence of intrusive thoughts and dissociate them from reality.",
+    "- Implement grounding techniques to manage physical sensations of tingling and tension.",
+    "- Encourage cognitive reframing to shift from self-blame to self-compassion.",
+    "- Validate her capacity to care for herself and her child effectively."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You did the best you could with the information and resources you had. Your body and your mind carried you through a challenging time, and now it is time to release the guilt and reclaim your sense of peace. You are deserving of self-compassion and understanding.",
+  "tags": [
+    "PhobiaOfImpulse",
+    "SelfBlame",
+    "PregnancyTrauma",
+    "GuiltRelease",
+    "AnxietyRelief",
+    "SelfCompassion"
+  ]
+}

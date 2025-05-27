@@ -1,0 +1,78 @@
+{
+  "case_id": "Clinical_Case_4",
+  "age": "28",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 28-year-old woman presenting with emotional overload and difficulty regulating her emotional responses. She reports a significant increase in irritability and emotional reactivity, primarily triggered by perceived lack of support from her partner and the stress of balancing work, motherhood, and personal expectations. Her emotional state is compounded by unresolved grief from a previous pregnancy loss and the traumatic experience of a high-risk pregnancy resulting in severe physical and emotional exhaustion. Despite maintaining a functional facade at work, she experiences emotional outbursts at home, particularly toward her partner, and struggles to decompress after intense emotional spikes.",
+  "main_issues": [
+    "- Emotional dysregulation and irritability",
+    "- Unresolved grief from pregnancy loss",
+    "- High-risk pregnancy aftermath and emotional exhaustion",
+    "- Conflict with partner regarding emotional support",
+    "- Work-life balance strain and perceived loss of control",
+    "- Persistent guilt and self-blame regarding her reactions"
+  ],
+  "emotions": [
+    "Frustration",
+    "Guilt",
+    "Exhaustion",
+    "Resentment",
+    "Anxiety",
+    "Impatience"
+  ],
+  "limiting_beliefs": [
+    "- 'I should be able to handle everything on my own.'",
+    "- 'If I lose control, I am failing as a mother.'",
+    "- 'My husband should be able to meet all my emotional needs.'",
+    "- 'I am not allowed to express anger.'"
+  ],
+  "therapeutic_goals": [
+    "- Develop emotional regulation strategies to manage irritability",
+    "- Process grief from previous pregnancy loss",
+    "- Reframe expectations around motherhood and self-compassion",
+    "- Address unresolved anger and its impact on partner relationship",
+    "- Re-establish a sense of autonomy and internal validation"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Normalize the emotional overload and validate feelings of exhaustion",
+      "- Implement immediate grounding techniques for emotional regulation",
+      "- Recommend a short hypnosis session focused on releasing pent-up anger and frustration",
+      "Tags: #EmotionalRegulation #AngerRelease #GuiltRelief",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Psychoeducation on grief processing and emotional cycles",
+      "- Introduce structured decompression routines post-work",
+      "- Hypnosis session recommendation: Grief processing and emotional release",
+      "Tags: #GriefProcessing #EmotionalReset #SelfCompassion",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Explore underlying beliefs around control, motherhood, and self-worth",
+      "- Long-term hypnosis protocol focused on inner validation and anger expression",
+      "- Tags: #InnerValidation #AngerExpression #IdentityConsolidation"
+    ]
+  },
+  "motivational_closure": "This path is not about achieving perfection but about reclaiming your right to feel and express without fear of judgment. Your emotional reactions are valid, and by exploring their roots, you will learn to navigate them with compassion and self-acceptance.",
+  "tags": [
+    "EmotionalRegulation",
+    "AngerRelease",
+    "GuiltRelief",
+    "GriefProcessing",
+    "EmotionalReset",
+    "SelfCompassion",
+    "InnerValidation",
+    "AngerExpression",
+    "IdentityConsolidation",
+    "EmotionalOverload",
+    "GriefProcessing",
+    "AngerManagement",
+    "WorkLifeBalance",
+    "GuiltRelief",
+    "SelfCompassion",
+    "EmotionalBoundaries"
+  ]
+}

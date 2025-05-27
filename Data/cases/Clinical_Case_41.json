@@ -1,0 +1,62 @@
+{
+  "case_id": "Clinical_Case_41",
+  "age": "55",
+  "gender_identity": "business owner presents with evening eating disorders characterized by emotional snacking and compulsive eating episodes. The main triggers appear to be evening isolation and accumulated mental fatigue from a day filled with high demands and low recognition. There is a clear link between feelings of guilt and the need for control, leading to an internalized sense of 'unworthiness' after eating. His perfectionist tendencies, inherited from a demanding family environment, drive his constant pursuit of excellence, at the expense of his emotional well-being.",
+  "summary": "(RAG Format)\nThis 55-year-old business owner presents with evening eating disorders characterized by emotional snacking and compulsive eating episodes. The main triggers appear to be evening isolation and accumulated mental fatigue from a day filled with high demands and low recognition. There is a clear link between feelings of guilt and the need for control, leading to an internalized sense of 'unworthiness' after eating. His perfectionist tendencies, inherited from a demanding family environment, drive his constant pursuit of excellence, at the expense of his emotional well-being.",
+  "main_issues": [
+    "- Evening eating disorders (emotional snacking, compulsive eating)",
+    "- Mental exhaustion and cognitive overload from work responsibilities",
+    "- Perfectionist thinking and overcontrol patterns",
+    "- Emotional repression masked by rationalization and control",
+    "- Diffuse guilt linked to unmet self-imposed standards",
+    "- Persistent sense of loneliness and intellectual disconnection"
+  ],
+  "emotions": [
+    "Frustration",
+    "Mental fatigue",
+    "Repressed anger",
+    "Guilt and self-blame",
+    "Doubt and self-questioning",
+    "Sense of purposelessness"
+  ],
+  "limiting_beliefs": [
+    "- \"I must be flawless to earn my place.\"",
+    "- \"If I don't do it myself, it will be done poorly.\"",
+    "- \"Being sensitive means being weak.\"",
+    "- \"You can't succeed without suffering.\""
+  ],
+  "therapeutic_goals": [
+    "- Reduce emotional eating and reframe food as nourishment, not a compensatory tool",
+    "- Re-anchor self-worth outside of performance and productivity",
+    "- Develop self-compassion and internal validation rituals",
+    "- Normalize rest and downtime without self-reproach",
+    "- Facilitate safe emotional expression without overcontrol"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Emotional transition ritual between work and evening: shower + 3 minutes of cardiac coherence breathing",
+      "- Journal of emotional 'saturations' at the end of each day",
+      "- Emotional rescue box: weighted blanket, comforting scent, positive voice recording"
+    ],
+    "intermediate": [
+      "- Reconditioning self-worth: daily list of '3 things I did well today'",
+      "- Restructuring the day to include emotional rewards (exercise, chosen solitude, sensory relaxation)",
+      "- Reducing control schemas through cognitive reframing: 'I can do enough without doing it all.'"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Releasing the Need for Perfection and Finding Inner Peace",
+      "- Dissociating self-worth from constant achievement",
+      "- Anchoring a sense of internal calm despite external pressures",
+      "- Transforming guilt into self-compassion and gentle acceptance"
+    ]
+  },
+  "motivational_closure": "What if excellence no longer meant achieving everything, but daring sometimes to do nothing at all? To dare being human—even when no box is checked. Your value is not measured in results, but in presence. And you are here.",
+  "tags": [
+    "EmotionalEating",
+    "Perfectionism",
+    "SelfCompassion",
+    "MentalFatigue",
+    "EveningRitual",
+    "EmotionalRelease"
+  ]
+}

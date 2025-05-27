@@ -1,0 +1,66 @@
+{
+  "case_id": "Clinical_case_141",
+  "age": "54",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 54-year-old woman presents with a cyclical pattern of alcohol consumption linked to emotional distress, particularly during periods of heightened anxiety or perceived relational instability. Despite her awareness of the impact on her well-being, she struggles to cease consumption, experiencing intense internal conflict and feelings of self-blame.",
+  "main_issues": [
+    "- Episodic alcohol consumption linked to emotional distress and social settings.",
+    "- Persistent sense of insecurity regarding her former partner's return.",
+    "- Latent anxiety stemming from past trauma, including a violent assault witnessed in her home.",
+    "- Residual effects of past anorexia and bulimia, particularly linked to body image.",
+    "- Emotional disconnection following a pattern of relational instability."
+  ],
+  "emotions": [
+    "Anxiety",
+    "Insecurity",
+    "Guilt",
+    "Fear",
+    "Emotional disconnection"
+  ],
+  "limiting_beliefs": [
+    "- \"I can't say no to alcohol without feeling like I'm missing out.\"",
+    "- \"If I don't drink, I won't fit in.\"",
+    "- \"My past defines my present.\"",
+    "- \"If I stop controlling, everything will fall apart.\""
+  ],
+  "therapeutic_goals": [
+    "- Establish healthier emotional regulation strategies to replace alcohol consumption.",
+    "- Process unresolved trauma linked to the violent assault incident.",
+    "- Develop coping mechanisms to address the return of the former partner.",
+    "- Address residual body image concerns stemming from past anorexia/bulimia.",
+    "- Reconnect with self beyond relational roles and past traumas."
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Daily emotional check-in journal to monitor triggers for alcohol consumption.",
+      "- Hypnosis session to soothe underlying anxiety and reinforce self-regulation.",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Guided imagery exercises to reframe past traumas and establish inner safety.",
+      "- Structured plan to limit alcohol availability and substitute calming rituals.",
+      "- Hypnosis session focused on body image reconciliation and emotional release.",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Sensorimotor therapy to reconnect with physical self and mitigate emotional reactivity.",
+      "- Psychotherapy sessions addressing self-worth and relational boundaries.",
+      "- Hypnosis session to reinforce emotional sovereignty and detachment from past roles."
+    ]
+  },
+  "motivational_closure": "You are not defined by your past, nor by the substances you've leaned on. You have the power to reclaim your life, to choose peace over chaos, and to find a sense of calm that is not reliant on anything outside of yourself.",
+  "tags": [
+    "EmotionalRegulation",
+    "SelfControl",
+    "AnxietySoothing",
+    "BodyImage",
+    "TraumaRelease",
+    "EmotionalProcessing",
+    "EmotionalSovereignty",
+    "SelfWorth",
+    "Detachment"
+  ]
+}

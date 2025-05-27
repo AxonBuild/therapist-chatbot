@@ -1,0 +1,59 @@
+{
+  "case_id": "Clinical_Case_58",
+  "age": "48",
+  "gender_identity": "woman suffers from situational phobia with agoraphobic features, particularly in unavoidable enclosed environments such as MRI machines, highways, and medical settings. Her fear is not rooted in the situations themselves but in the inability to escape them, which triggers intense physiological panic reactions. This symbolic agoraphobia is further reinforced by deep anticipatory guilt related to her maternal role, and early life experiences marked by the loss of emotional safety. A chronic inner tension persists between her desire to enjoy life with her husband and the overwhelming fear of losing control.",
+  "summary": "(RAG Format)\nThis 48-year-old woman suffers from situational phobia with agoraphobic features, particularly in unavoidable enclosed environments such as MRI machines, highways, and medical settings. Her fear is not rooted in the situations themselves but in the inability to escape them, which triggers intense physiological panic reactions. This symbolic agoraphobia is further reinforced by deep anticipatory guilt related to her maternal role, and early life experiences marked by the loss of emotional safety. A chronic inner tension persists between her desire to enjoy life with her husband and the overwhelming fear of losing control.",
+  "main_issues": [
+    "- Symbolic agoraphobia centered on being trapped (MRI, highways, medical settings)",
+    "- Panic responses without conscious fear, linked to a loss of control",
+    "- Over-control and anticipatory guilt related to maternal responsibilities",
+    "- Loss of carefree emotional state due to early familial losses",
+    "- Ambivalence around joy, constantly interrupted by anticipated threat"
+  ],
+  "emotions": [
+    "Panic anxiety",
+    "Guilt",
+    "Ambivalence (joy vs fear)",
+    "Inner tension",
+    "Sadness from inability to relax",
+    "Frustration"
+  ],
+  "limiting_beliefs": [
+    "- \"I must handle everything to protect others.\"",
+    "- \"If I don't control, danger may arise.\"",
+    "- \"I can't afford to be carefree.\""
+  ],
+  "therapeutic_goals": [
+    "- Deactivate panic anchors linked to symbolic loss of escape",
+    "- Reprogram the bodily experience of safety in closed environments",
+    "- Reframe anticipatory guilt related to motherhood",
+    "- Create emotional rituals for secure separation",
+    "- Restore the capacity to experience lightness without guilt"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Soothing visualization before entering a closed space (e.g., locating exit points)",
+      "- '3-3-3' sensory grounding technique to reconnect to the present moment",
+      "- Box breathing to reduce physiological arousal"
+    ],
+    "intermediate": [
+      "- Heart coherence practices before anxiety-inducing events",
+      "- Imaginal exposure therapy for MRI/highway scenarios",
+      "- Secure separation rituals (e.g., notes to daughters, departure routines)"
+    ],
+    "long_term": [
+      "- Hypnotic reprogramming of internal safety responses",
+      "- Therapeutic work on motherhood and letting go (Phase 3 parenting)",
+      "- Mourning of the carefree self and intentional cultivation of daily lightness"
+    ]
+  },
+  "motivational_closure": "You won't always be able to control the roads... but you can always learn to create a refuge within yourself, an inner space that nothing can lock down. Even when everything feels closed, you can breathe.",
+  "tags": [
+    "Agoraphobia",
+    "PanicDisorder",
+    "MaternalGuilt",
+    "SymbolicControl",
+    "InnerSafety",
+    "HypnoticReprogramming"
+  ]
+}

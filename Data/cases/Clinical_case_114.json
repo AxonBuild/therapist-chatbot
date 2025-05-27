@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_case_114",
+  "age": "31",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with intense survivor guilt and emotional overload following the death of her brother, who struggled with substance abuse and mental health issues. She experiences persistent feelings of responsibility, anger toward medical professionals, and regret about decisions made before her brother's death. Her emotional responses are marked by unresolved grief, self-blame, and somatic symptoms (tremors, chest tightness). Despite rational awareness that she is not responsible, her emotional memory continues to loop through the moments leading up to the death.",
+  "main_issues": [
+    "- Survivor guilt and responsibility for the brother's fate",
+    "- Anger toward psychiatric professionals and the system",
+    "- Difficulty integrating grief due to unresolved emotional ruptures",
+    "- Self-blame for perceived failure to protect and support",
+    "- Somatic anxiety responses (hand tremors, tension)"
+  ],
+  "emotions": [
+    "Guilt",
+    "Sadness",
+    "Anger",
+    "Helplessness",
+    "Longing"
+  ],
+  "limiting_beliefs": [
+    "- If I had acted differently, he would still be alive.",
+    "- I failed my brother when he needed me most.",
+    "- My intuition was right, but I betrayed it.",
+    "- I am not allowed to forgive myself."
+  ],
+  "therapeutic_goals": [
+    "- Desensitize the emotional memory of her brother's death and hospitalization events",
+    "- Heal the rupture of self-trust linked to ignoring her intuition",
+    "- Release anger towards medical professionals while reclaiming internal peace",
+    "- Integrate grief into a compassionate narrative, removing self-blame",
+    "- Restore emotional regulation and somatic calmness"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Emergency grounding techniques during emotional flashbacks",
+      "- Affirmations: 'I honor my love; I am not responsible for the outcome.'",
+      "- Safe space visualizations for emotional release",
+      "- Hypnosis session recommendation: immediate soothing and guilt suspension"
+    ],
+    "intermediate": [
+      "- EMDR focused on pivotal trauma moments (hospitalization, final conversation)",
+      "- Reframing the role of a sibling versus a savior",
+      "- Letters to the brother (unsent) to express unspoken emotions",
+      "- Hypnosis session recommendation: forgiveness integration and compassionate grief expression"
+    ],
+    "long_term": [
+      "- Integration therapy to rebuild internal self-trust",
+      "- Meaning reconstruction work to anchor grief within personal resilience",
+      "- Hypnosis session recommendation: identity and peace rebuilding through narrative healing"
+    ]
+  },
+  "motivational_closure": "You did not fail; you loved. Love was not enough to save him—but it is enough to save you now. You are allowed to heal.",
+  "tags": [
+    "SurvivorGuilt",
+    "TraumaticGrief",
+    "SelfBlame",
+    "SiblingLoss",
+    "EmotionalOverload",
+    "PTSDSymptoms",
+    "ForgivenessPath",
+    "SomaticRegulation"
+  ]
+}

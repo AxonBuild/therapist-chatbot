@@ -1,0 +1,81 @@
+{
+  "case_id": "Clinical_Case_6",
+  "age": "57",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 57-year-old woman experiencing depressive symptoms, low motivation, and physical discomfort. She is currently under antidepressant medication but expresses chronic fatigue, low interest in work, and difficulties engaging in health routines. She is also managing post-sleeve reflux symptoms, pain related to disc compression and tendinopathy, and recurrent psychosomatic discomfort. Her emotional state is burdened by relational grief linked to long-distance separation from her partner and residual shame from past romantic experiences. She demonstrates insight into her condition but struggles to maintain emotional momentum for recovery.",
+  "main_issues": [
+    "- Functional depressive symptoms despite antidepressant treatment",
+    "- Chronic physical pain (disc compression, tendinopathy, reflux)",
+    "- Disengagement from professional goals (CV, job search)",
+    "- Body image dissatisfaction and residual shame after previous relationship",
+    "- Emotional grief related to separation and loneliness"
+  ],
+  "emotions": [
+    "Sadness",
+    "Fatigue",
+    "Frustration",
+    "Discouragement",
+    "Shame",
+    "Low self-worth"
+  ],
+  "limiting_beliefs": [
+    "- \"My appearance defines how I'm treated.\"",
+    "- \"It's too late to change things.\"",
+    "- \"No one really sees what I'm going through.\"",
+    "- \"If I let go, I'll collapse.\""
+  ],
+  "therapeutic_goals": [
+    "- Support depressive symptom regulation through behavioral activation",
+    "- Restore body trust and image with gentle physical engagement",
+    "- Desensitize the emotional residue from the past relationship (verbal violence)",
+    "- Reignite professional motivation through manageable steps",
+    "- Reinforce inner stability during periods of separation"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Mood tracking and gentle scheduling (1 self-care + 1 task/day)",
+      "- Encourage short physical activity (e.g. 10-min walks, low-resistance pilates)",
+      "- Normalize emotional depletion in long-distance relationships",
+      "- Hypnosis session recommendation: restoring internal energy and self-worth connection",
+      "Tags: #DepressiveRelief #SelfCareRecovery #SelfWorthBoost",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Body image exposure work (mirror rituals + self-nurturing language)",
+      "- Start CV update in micro-steps (title, summary only)",
+      "- Detox from emotional comparison and reinstallation of personal worth",
+      "- Hypnosis session recommendation: body peace and resilience after relational wounds",
+      "Tags: #BodyAcceptance #RomanticRecovery #ResilienceWork",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- EMDR session targeting verbal abuse flashbacks and abandonment fears",
+      "- Couple's emotional coaching if desired to explore long-distance dynamics",
+      "- Hypnosis session recommendation: long-form script to anchor stability and rebuild positive identity",
+      "Tags: #SelfReconstruction #PostTraumaStability #EmotionalResilience"
+    ]
+  },
+  "motivational_closure": "Even in fatigue, even in grief, even in slow days — your worth remains. It is time to rebuild not what others see, but how you see yourself.",
+  "tags": [
+    "DepressiveRelief",
+    "SelfCareRecovery",
+    "SelfWorthBoost",
+    "BodyAcceptance",
+    "RomanticRecovery",
+    "ResilienceWork",
+    "SelfReconstruction",
+    "PostTraumaStability",
+    "EmotionalResilience",
+    "LowMood",
+    "PostSleeveSurgery",
+    "BodyImage",
+    "EmotionalFatigue",
+    "FunctionalDepression",
+    "ChronicPain",
+    "RomanticGrief",
+    "SelfWorthHealing"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "case_id": "Clinical_case_162",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with pronounced financial stress and existential distress following the unexpected job loss of her partner, Antoine, and the denial of a significant financial compensation they were relying on. This unexpected financial setback has intensified her underlying feelings of insecurity, helplessness, and fear of the future. \n\n    Additionally, the patient expresses frustration and confusion after a challenging social interaction in a professional context, where her values and beliefs were indirectly questioned. This experience exacerbated her sense of disconnection, self-doubt, and perceived inadequacy.\n\n    Furthermore, the patient reports deep existential despair and hopelessness linked to reproductive trauma, including multiple late-term terminations and the perceived loss of maternal identity. She describes moments of suicidal ideation and an intense desire for escape, feeling as though she is trapped in a life without direction or purpose.",
+  "main_issues": [
+    "- Acute financial stress and perceived loss of stability following partner's job loss.",
+    "- Reproductive trauma and unresolved grief around past terminations and infertility.",
+    "- Existential despair and occasional suicidal ideation linked to perceived life stagnation.",
+    "- Emotional disconnection and self-doubt following a value-challenging social interaction.",
+    "- Increased tension and emotional withdrawal within the couple dynamic."
+  ],
+  "emotions": [
+    "Anxiety",
+    "Despair",
+    "Hopelessness",
+    "Guilt",
+    "Frustration"
+  ],
+  "limiting_beliefs": [
+    "- 'If I can't provide financial stability, I am a failure.'",
+    "- 'I don't deserve to feel joy while everything is falling apart.'",
+    "- 'If I let go, I will lose everything.'",
+    "- 'I am not worthy of being a mother if I cannot provide security.'"
+  ],
+  "therapeutic_goals": [
+    "- Normalize and validate the emotional impact of financial stress and existential uncertainty.",
+    "- Implement grounding techniques to reduce emotional overwhelm and anchor in the present.",
+    "- Reframe the concept of stability to include emotional and relational aspects, not solely financial.",
+    "- Introduce cognitive restructuring to challenge catastrophic thinking and restore a sense of agency.",
+    "- Facilitate a safe space to explore unresolved reproductive grief and perceived loss of maternal identity."
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to alleviate acute stress and create a sense of internal safety.",
+      "- Guided visualization to foster a sense of grounding amidst perceived chaos.",
+      "- Hypnosis session recommendation: Releasing financial fear and reclaiming internal stability."
+    ],
+    "intermediate": [
+      "- Structured journaling to explore unresolved feelings of inadequacy and self-blame.",
+      "- Cognitive reframing exercises to challenge beliefs about worth and financial security.",
+      "- Hypnosis session recommendation: Embracing life while navigating uncertainty."
+    ],
+    "long_term": [
+      "- Therapeutic exploration of unresolved reproductive grief to facilitate emotional integration.",
+      "- Developing daily rituals to anchor in present connections and foster a renewed sense of purpose.",
+      "- Hypnosis session recommendation: Reconnecting with self-worth and finding inner stability amidst external uncertainty."
+    ]
+  },
+  "motivational_closure": "Your worth is not defined by financial stability or perceived losses. You have the right to feel, to grieve, to hope, and to rebuild, one step at a time. Your strength lies not in what you have, but in who you are.",
+  "tags": [
+    "FinancialStress",
+    "ExistentialDespair",
+    "ReproductiveGrief",
+    "GuiltRelease",
+    "FindingHope",
+    "EmotionalStability"
+  ]
+}

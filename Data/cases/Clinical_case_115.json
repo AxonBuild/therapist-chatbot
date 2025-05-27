@@ -1,0 +1,45 @@
+{
+  "case_id": "Clinical_case_115",
+  "age": "25",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient, a 25-year-old woman, presents with intense feelings of isolation and emotional disconnection following a recent miscarriage. She expresses profound grief exacerbated by her sister's imminent childbirth and the pervasive presence of pregnancies in her social circle. Despite attempts to cope, she reports withdrawing from social interactions, feeling increasingly alone in her sadness, and struggling with the contrast between her personal loss and the joyful events surrounding her. Additionally, she describes unresolved anger and resentment toward her partner, whom she perceives as emotionally absent.",
+  "main_issues": [
+    "- Complicated grief following a recent miscarriage",
+    "- Emotional isolation and withdrawal from support systems",
+    "- Intense envy and resentment toward pregnant women, including her sister",
+    "- Anger toward emotionally distant partner",
+    "- Struggles with self-worth and a sense of inadequacy as a woman and potential mother"
+  ],
+  "emotions": [
+    "Grief",
+    "Isolation",
+    "Resentment",
+    "Anger",
+    "Emptiness"
+  ],
+  "limiting_beliefs": [
+    "- 'If I am not pregnant, I am not a complete woman'",
+    "- 'My sadness is a burden to others'",
+    "- 'If I move on, I am forgetting my baby'"
+  ],
+  "therapeutic_goals": [
+    "- Validate and process the grief associated with the miscarriage",
+    "- Encourage emotional reconnection and communication with her partner",
+    "- Facilitate the release of resentment toward her sister and other pregnant women",
+    "- Develop self-compassion to counteract feelings of inadequacy",
+    "- Support the creation of a personal grieving ritual to honor her loss"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Your loss is not a reflection of your worth, nor does it diminish your capacity to be loved. Allow yourself to grieve, to feel, and to heal. You are not alone - your story matters, your pain is valid, and your heart has the strength to rebuild, one day at a time.",
+  "tags": [
+    "GriefProcessing",
+    "SelfCompassion",
+    "LettingGo",
+    "EmotionalHealing",
+    "Acceptance"
+  ]
+}

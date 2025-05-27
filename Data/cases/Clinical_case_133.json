@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_case_133",
+  "age": "63",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 63-year-old woman presents with unresolved emotional conflict surrounding her husband's lack of support during a prolonged family conflict. Despite attempting to set boundaries regarding contact with her in-laws, she reports ongoing feelings of betrayal and a profound loss of trust after her husband allowed his father into their home against her explicit wishes. Additionally, she struggles with feelings of guilt and ambiguity about maintaining or severing connections with certain family members, particularly her brother-in-law, as upcoming family events create pressure to reconcile. The therapeutic focus is currently centered on processing feelings of betrayal, addressing residual anger, and re-establishing a sense of emotional security.",
+  "main_issues": [
+    "- Persistent feelings of betrayal and loss of trust after her husband disregarded her boundaries regarding his father.",
+    "- Emotional conflict surrounding her perceived responsibility to maintain familial connections for the sake of her husband.",
+    "- Resentment linked to longstanding patterns of emotional neglect and invalidation by her husband's family.",
+    "- Emotional disconnection and avoidance in response to anticipated family gatherings.",
+    "- Ongoing struggle to assert and maintain boundaries while managing guilt and perceived obligations."
+  ],
+  "emotions": [
+    "Betrayal",
+    "Guilt",
+    "Resentment",
+    "Emotional suppression",
+    "Fear of conflict"
+  ],
+  "limiting_beliefs": [
+    "- \"If I express my boundaries, I am causing conflict.\"",
+    "- \"If I refuse to attend family events, I am depriving my husband.\"",
+    "- \"My feelings are less important than maintaining familial harmony.\"",
+    "- \"If I assert myself, I will be seen as difficult or unforgiving.\""
+  ],
+  "therapeutic_goals": [
+    "- Facilitate emotional processing of betrayal and loss of trust in the marital relationship.",
+    "- Develop assertive communication strategies to reinforce boundaries without self-blame.",
+    "- Support the grieving process for lost familial connections while redefining personal priorities.",
+    "- Implement grounding techniques to manage anticipatory anxiety surrounding family events.",
+    "- Encourage self-compassion and validation of her emotional experiences as legitimate and necessary."
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Breathing exercises to ground and self-soothe during discussions involving family dynamics.",
+      "- Journaling to articulate unresolved anger and to clarify personal needs moving forward.",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Cognitive restructuring to challenge self-blame and reframe narratives of guilt.",
+      "- Visualization exercises to practice setting and maintaining emotional boundaries.",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- EMDR sessions to process residual trauma linked to family events and relational betrayals.",
+      "- Hypnosis to integrate self-compassion and reinforce a sense of internal safety amidst familial tension.",
+      "- Ongoing psychotherapy to restructure relational dynamics and rebuild trust in the marital relationship."
+    ]
+  },
+  "motivational_closure": "You have the right to protect your peace and assert your needs, even when others do not understand. Each time you honor your boundaries, you reclaim your voice and your power - step by step, you are moving closer to a life where your feelings matter.",
+  "tags": [
+    "BetrayalProcessing",
+    "BoundarySetting",
+    "SelfCompassion",
+    "TrustRebuilding",
+    "EmotionalProcessing",
+    "FamilialDynamics",
+    "GuiltRelease"
+  ]
+}

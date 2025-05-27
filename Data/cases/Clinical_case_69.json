@@ -1,0 +1,55 @@
+{
+  "case_id": "Clinical_case_69",
+  "age": "75",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 75-year-old woman experiencing significant stress related to her role as president of a volunteer organization. She describes ongoing conflicts with a volunteer who has become increasingly unreliable and assertive, challenging her authority and creating tension within the group. Additionally, the patient struggles with feelings of fear and insecurity regarding the potential departure of the volunteer, who she perceives as valuable despite ongoing conflicts. The patient also reports frustration and resentment toward higher organizational structures that she feels are dismissive of her concerns, proposing impractical solutions such as large virtual meetings that undermine her sense of control and authority.",
+  "main_issues": [
+    "- Conflict with a volunteer challenging her authority and reliability",
+    "- Fear of losing a valuable team member despite ongoing tensions",
+    "- Frustration with higher organizational structures perceived as dismissive",
+    "- Emotional exhaustion linked to ongoing interpersonal conflicts",
+    "- Unresolved feelings of betrayal related to past miscommunications"
+  ],
+  "emotions": [
+    "Frustration",
+    "Fear",
+    "Resentment",
+    "Anxiety",
+    "Emotional fatigue"
+  ],
+  "limiting_beliefs": [
+    "\"If I assert my boundaries, I will lose valuable people.\"",
+    "\"If I don't comply with higher-ups, I risk conflict and backlash.\"",
+    "\"I must maintain control to prevent chaos in the organization.\""
+  ],
+  "therapeutic_goals": [
+    "- Develop assertiveness strategies to address conflicts without fear of loss",
+    "- Reframe fear of confrontation to prevent self-silencing",
+    "- Process feelings of betrayal and resentment toward the volunteer",
+    "- Establish healthier boundaries in her role as president",
+    "- Reduce emotional exhaustion through self-care and stress management techniques"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing and grounding exercises to release tension during moments of conflict",
+      "- Hypnosis session recommendation: emotional detachment and boundary reinforcement"
+    ],
+    "intermediate": [
+      "- Hypnosis session: processing fear of conflict and establishing assertiveness",
+      "- Structured conflict resolution strategies to address ongoing volunteer issues"
+    ],
+    "long_term": [
+      "- Hypnosis session: releasing residual resentment and focusing on leadership resilience",
+      "- Rebuilding a sense of personal authority without overextending emotionally"
+    ]
+  },
+  "motivational_closure": "You are allowed to set boundaries and protect your peace. Your worth is not defined by the approval of others, but by the integrity with which you lead.",
+  "tags": [
+    "ConflictResolution",
+    "LeadershipStress",
+    "EmotionalDetachment",
+    "BoundarySetting",
+    "Assertiveness",
+    "VolunteerManagement"
+  ]
+}

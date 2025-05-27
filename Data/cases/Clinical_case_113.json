@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_case_113",
+  "age": "55",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with pervasive feelings of failure as a mother, compounded by a history of domestic violence with her ex-husband, marked by psychological manipulation and episodes of physical aggression. Despite having left the abusive relationship, she continues to struggle with self-blame for choosing a violent partner and perceives herself as a failed parent. The patient also exhibits signs of emotional dependency and difficulty setting boundaries with her adult children.",
+  "main_issues": [
+    "- Persistent self-blame for choosing a violent partner",
+    "- Emotional dependency and guilt towards her children",
+    "- History of psychological manipulation and verbal/physical abuse",
+    "- Residual emotional trauma from the abusive relationship",
+    "- Difficulty asserting boundaries and reclaiming self-worth"
+  ],
+  "emotions": [
+    "Guilt",
+    "Shame",
+    "Fear",
+    "Anger",
+    "Sadness"
+  ],
+  "limiting_beliefs": [
+    "- I failed as a mother because I chose the wrong partner.",
+    "- My children's struggles are my fault.",
+    "- I am not worthy of respect or love.",
+    "- I deserved the abuse because I allowed it."
+  ],
+  "therapeutic_goals": [
+    "- Restructure self-blame to acknowledge external factors in the abusive relationship",
+    "- Establish boundaries with adult children without guilt",
+    "- Integrate past traumatic experiences through narrative therapy",
+    "- Strengthen self-worth and assertiveness",
+    "- Develop coping strategies for emotional regulation and conflict management"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Grounding exercises during emotional flashbacks",
+      "- Affirmations: 'I am not responsible for another adult's behavior.'",
+      "- Breathing techniques to release built-up tension",
+      "- Guided visualization focused on releasing guilt and self-blame"
+    ],
+    "intermediate": [
+      "- Structured journaling to reframe limiting beliefs",
+      "- Boundaries work with children to reduce emotional dependency",
+      "- Assertiveness training to reinforce self-worth",
+      "- Hypnosis session: Reclaiming self-respect and establishing emotional boundaries"
+    ],
+    "long_term": [
+      "- Integration therapy to anchor new beliefs and self-perception",
+      "- Monthly follow-ups for deeper trauma processing",
+      "- Narrative therapy to reconstruct personal identity post-abuse",
+      "- Hypnosis session: Letting go of self-blame and embracing self-forgiveness"
+    ]
+  },
+  "motivational_closure": "You are more than the choices you made when you were hurting. You are not responsible for another person's cruelty. Now is the time to reclaim your voice, assert your boundaries, and forgive yourself for the past.",
+  "tags": [
+    "SelfForgiveness",
+    "EmotionalBoundarySetting",
+    "TraumaRecovery",
+    "ReclaimingSelfWorth",
+    "AssertivenessTraining",
+    "EmotionalResilience",
+    "LettingGoOfBlame"
+  ]
+}

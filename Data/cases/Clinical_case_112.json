@@ -1,0 +1,64 @@
+{
+  "case_id": "Clinical_case_112",
+  "age": "60",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with intense feelings of rejection and loss, primarily related to her daughter, who has severed contact and blocked her communication. The patient feels deeply hurt by the perceived abandonment and is struggling with the absence of her grandchildren, whom she used to see regularly. Additionally, the patient is haunted by memories of past betrayals involving her ex-husband and his mother, leading to persistent feelings of injustice, manipulation, and exclusion.",
+  "main_issues": [
+    "- Severed contact with daughter and grandchildren leading to emotional isolation",
+    "- Persistent feelings of rejection and abandonment",
+    "- Recurrent memories of manipulation and betrayal by her ex-husband and his family",
+    "- Difficulty processing the perceived injustice and unfair treatment",
+    "- Struggle to assert her needs and communicate boundaries effectively"
+  ],
+  "emotions": [
+    "Sadness",
+    "Rejection",
+    "Anger",
+    "Injustice",
+    "Helplessness"
+  ],
+  "limiting_beliefs": [
+    "- I am not worthy of my daughter's love.",
+    "- My grandchildren will forget me.",
+    "- I am powerless to change the situation.",
+    "- Everyone sides with my ex-husband; I am always the outsider."
+  ],
+  "therapeutic_goals": [
+    "- Process the emotional pain of rejection and perceived abandonment",
+    "- Reframe limiting beliefs about self-worth and perceived unworthiness",
+    "- Develop coping strategies to manage feelings of injustice and betrayal",
+    "- Establish emotional boundaries to protect self without escalating conflict",
+    "- Cultivate inner calm and self-compassion to mitigate emotional distress"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to release tension and ground emotional distress",
+      "- Affirmations: 'My worth is not defined by others' actions.'",
+      "- Writing a letter to her daughter without sending it to release accumulated emotions",
+      "- Guided visualization for reconnecting with inner calm amidst conflict"
+    ],
+    "intermediate": [
+      "- Narrative journaling to reframe the sense of rejection and find self-empowerment",
+      "- Assertiveness training to communicate boundaries with the daughter and ex-husband",
+      "- Self-compassion exercises to alleviate self-blame and cultivate inner support",
+      "- Hypnosis session: Releasing the past and reclaiming emotional space"
+    ],
+    "long_term": [
+      "- Integration therapy to anchor new self-perceptions and inner resilience",
+      "- Monthly follow-ups to address lingering emotional wounds and reinforce boundaries",
+      "- Community support group for grandparent estrangement to reduce isolation",
+      "- Hypnosis session: Forgiving self and others, embracing new beginnings"
+    ]
+  },
+  "motivational_closure": "You are not defined by the actions of others. You are still here, still standing, still deserving of love and respect. You can reclaim your voice, find your center, and hold space for your own healing.",
+  "tags": [
+    "RejectionRecovery",
+    "BoundarySetting",
+    "EmotionalResilience",
+    "SelfWorth",
+    "LettingGo",
+    "ForgivenessPath",
+    "InnerCalm",
+    "FamilyConflict"
+  ]
+}

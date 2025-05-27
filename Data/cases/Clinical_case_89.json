@@ -1,0 +1,46 @@
+{
+  "case_id": "Clinical_case_89",
+  "age": "25",
+  "gender_identity": "stepson, resulting in physical altercations. Additionally, he serves as an informal caregiver to his ailing mother, which compounds his stress levels.",
+  "summary": "(RAG Format)\nThe patient presents with significant emotional distress stemming from childhood and adolescent traumas. He reports persistent anxiety, emotional instability, and unresolved anger, which he attributes to parental neglect, a narcissistic and violent father, and an emotionally absent mother. Currently, he is experiencing acute relational stress, characterized by escalating conflicts with his 25-year-old stepson, resulting in physical altercations. Additionally, he serves as an informal caregiver to his ailing mother, which compounds his stress levels.",
+  "main_issues": [
+    "- Unresolved childhood trauma and emotional neglect.",
+    "- History of physical and emotional abuse by the father.",
+    "- Current relational conflict with a violent stepson.",
+    "- Role strain as an informal caregiver to his mother.",
+    "- Persistent feelings of inadequacy and anger."
+  ],
+  "emotions": [
+    "Anger",
+    "Resentment",
+    "Fear",
+    "Inadequacy",
+    "Emotional instability"
+  ],
+  "limiting_beliefs": [
+    "- 'I was never good enough for my father.'",
+    "- 'If I assert myself, conflict will escalate.'",
+    "- 'I am responsible for keeping the peace, even if it means enduring abuse.'"
+  ],
+  "therapeutic_goals": [
+    "- Address unresolved childhood trauma through structured emotional processing.",
+    "- Establish boundaries with the stepson to reduce physical and emotional aggression.",
+    "- Support the patient in setting limits as a caregiver to mitigate emotional exhaustion.",
+    "- Introduce grounding techniques to manage acute anxiety and emotional volatility.",
+    "- Implement cognitive restructuring to challenge feelings of inadequacy and reinforce self-worth."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You have survived circumstances that would have broken many, and that is a testament to your resilience. Now is the time to release what no longer serves you, reclaim your voice, and build a life where you feel safe, valued, and respected.",
+  "tags": [
+    "TraumaRelease",
+    "EmotionalNeglect",
+    "AngerManagement",
+    "SelfWorth",
+    "CaregiverStress",
+    "AssertivenessTraining"
+  ]
+}

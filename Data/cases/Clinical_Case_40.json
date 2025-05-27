@@ -1,0 +1,62 @@
+{
+  "case_id": "Clinical_Case_40",
+  "age": "38",
+  "gender_identity": "woman, working as a banker, presents with chronic hypervigilance entrenched in a constant state of professional tension, resulting in somatic effects such as digestive disorders and eating blocks. Her anxiety has evolved into a generalized anxiety disorder with persistent mental rumination, loss of pleasure, and a restrictive, anxiety-driven eating disorder. A toxic work environment characterized by manipulation, devaluation, and betrayal has heightened her feelings of illegitimacy and powerlessness. There is a progressive loss of self-confidence and disengagement, accompanied by feelings of being trapped in a context where her body remains on high alert.",
+  "summary": "(RAG Format)\nThis 38-year-old woman, working as a banker, presents with chronic hypervigilance entrenched in a constant state of professional tension, resulting in somatic effects such as digestive disorders and eating blocks. Her anxiety has evolved into a generalized anxiety disorder with persistent mental rumination, loss of pleasure, and a restrictive, anxiety-driven eating disorder. A toxic work environment characterized by manipulation, devaluation, and betrayal has heightened her feelings of illegitimacy and powerlessness. There is a progressive loss of self-confidence and disengagement, accompanied by feelings of being trapped in a context where her body remains on high alert.",
+  "main_issues": [
+    "- Chronic hypervigilance and somatic tension",
+    "- Generalized anxiety disorder with persistent rumination",
+    "- Restrictive, anxiety-driven eating disorder (ED)",
+    "- Toxic work environment causing psychological strain",
+    "- Feelings of illegitimacy and loss of self-confidence",
+    "- Emotional and physical exhaustion with fear of breakdown"
+  ],
+  "emotions": [
+    "Intense anxiety",
+    "Self-disgust and frustration",
+    "Shame in social eating contexts",
+    "Repressed anger and helplessness",
+    "Sadness linked to loss of pleasure and disconnection"
+  ],
+  "limiting_beliefs": [
+    "- 'If I don't anticipate everything, I lose control.'",
+    "- 'I have to hold on, even if it destroys me.'",
+    "- 'It's not up to me to fall apart.'",
+    "- 'I'm a burden when I express my needs.'",
+    "- 'If I show my weaknesses, I lose legitimacy.'"
+  ],
+  "therapeutic_goals": [
+    "- Reduce hypervigilance and decrease somatic tension",
+    "- Reframe eating as a source of nourishment rather than a control mechanism",
+    "- Normalize the need for emotional release without reinforcing guilt",
+    "- Anchor self-compassion as a foundation for self-worth",
+    "- Establish emotional boundaries and redefine professional identity"
+  ],
+  "solutions": {
+    "immediate": [
+      "- 3-minute cardiac coherence breathing before meals to reduce physiological tension",
+      "- 'Food permission' exercise: 'It's okay if I don't finish everything. My goal is to feel at peace.'",
+      "- Visual grounding exercise: a comforting, safe place visualized before each meal to reduce anticipatory anxiety"
+    ],
+    "intermediate": [
+      "- Food experience journal: track emotions and physical sensations before, during, and after meals",
+      "- Compassionate self-dialogue: reframing 'I'm annoying' as 'I'm struggling to find peace, and that's okay.'",
+      "- Weekly exposure to minor unpredictability to challenge control schemas (e.g., lunch without planning the menu)"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Releasing Hypervigilance and Reconnecting with Inner Safety",
+      "- Dissociating the workplace context from bodily tension",
+      "- Reintegrating the pleasure of eating without overcontrol",
+      "- Establishing a calm inner anchor to ground the mind and body"
+    ]
+  },
+  "motivational_closure": "You are not difficult. You are a brave woman adapting to a situation that is hurting you. Every small bite you accept, every breath you take, is already a victory against the system that oppresses you. You have the right to reclaim peace—one meal at a time.",
+  "tags": [
+    "ChronicHypervigilance",
+    "EatingDisorder",
+    "WorkplaceStress",
+    "SelfCompassion",
+    "InnerSafety",
+    "EmotionalRelease"
+  ]
+}

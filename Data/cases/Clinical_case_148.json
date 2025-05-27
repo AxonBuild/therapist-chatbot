@@ -1,0 +1,47 @@
+{
+  "case_id": "Clinical_case_148",
+  "age": "17",
+  "gender_identity": "athlete who reports a significant decline in energy levels and emotional detachment since engaging in restrictive eating behaviors. She identifies a perceived failure in her recent competition, leading to intense feelings of self-blame and a heightened sense of external pressure from her coach and family. Despite recognizing the impact of her eating habits on her performance, she struggles to disengage from the cycle of control and guilt associated with food and body image.",
+  "summary": "(RAG Format)\nThe patient is a 17-year-old athlete who reports a significant decline in energy levels and emotional detachment since engaging in restrictive eating behaviors. She identifies a perceived failure in her recent competition, leading to intense feelings of self-blame and a heightened sense of external pressure from her coach and family. Despite recognizing the impact of her eating habits on her performance, she struggles to disengage from the cycle of control and guilt associated with food and body image.",
+  "main_issues": [
+    "- Persistent feelings of self-blame and inadequacy following competition",
+    "- Emotional detachment as a defense mechanism against perceived criticism",
+    "- Internalized guilt reinforced by coach and parental feedback",
+    "- Increased fatigue and loss of energy linked to restrictive eating",
+    "- Difficulty reconciling personal identity with athletic performance"
+  ],
+  "emotions": [
+    "Shame",
+    "Guilt",
+    "Fear of judgment",
+    "Emotional numbness",
+    "Frustration"
+  ],
+  "limiting_beliefs": [
+    "- 'If I fail, it means I am not good enough.'",
+    "- 'I must control my food intake to maintain performance.'",
+    "- 'Acknowledging my emotional needs is a sign of weakness.'",
+    "- 'If others criticize me, it must be true.'"
+  ],
+  "therapeutic_goals": [
+    "- Reduce self-blame and reframe perceived failures as learning opportunities",
+    "- Encourage reconnection with emotional states without judgment",
+    "- Support balanced communication with her coach and family regarding performance expectations",
+    "- Promote healthy coping mechanisms to manage competition-related stress",
+    "- Strengthen her sense of self-worth independently of athletic achievements"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Your worth is not defined by a single performance, nor by the opinions of others. You are allowed to rest, to feel, and to grow. Every step forward, even if it feels small, is a step toward reclaiming your power and redefining your story.",
+  "tags": [
+    "EmotionalRegulation",
+    "SelfWorth",
+    "AthletePressure",
+    "CompetitionStress",
+    "BodyAwareness",
+    "ResilienceBuilding"
+  ]
+}

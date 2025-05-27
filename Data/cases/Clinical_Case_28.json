@@ -1,0 +1,81 @@
+{
+  "case_id": "Clinical_Case_28",
+  "age": "51",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThis 51-year-old woman presents with an invisible emotional exhaustion despite visible efforts and success in health-related goals (10 kg weight loss, regular physiotherapy, structured self-discipline). She expresses persistent self-judgment, dissatisfaction, and guilt over feeling emotionally overwhelmed despite a \"good life.\" Sleep is disturbed, and intrusive thoughts dominate her nights. She minimizes her needs and internalizes others' expectations, leading to isolation and shame when receiving no emotional reciprocity. Emotional suppression, self-disqualification, and somatized anxiety are central features. She exhibits fear of aging, self-sabotaging perfectionism, and an unresolved sense of illegitimacy in her suffering.",
+  "main_issues": [
+    "- Dissociation between physical progress and emotional well-being",
+    "- Intense guilt over \"not having the right to suffer\"",
+    "- Inability to receive emotional support and self-invalidation",
+    "- Hyperadaptation to social roles with invisibilization of internal distress",
+    "- Fear of aging, relational rejection, and personal devaluation",
+    "- Internal pressure to \"never show weakness,\" even in therapy"
+  ],
+  "emotions": [
+    "Guilt",
+    "Emotional fatigue",
+    "Shame",
+    "Frustration",
+    "Sadness",
+    "Fear"
+  ],
+  "limiting_beliefs": [
+    "- \"I don't have the right to suffer when I have so much.\"",
+    "- \"My pain is less legitimate than others'.\"",
+    "- \"If I speak, I complain - and I hate that.\"",
+    "- \"I'm never good enough, no matter what I achieve.\""
+  ],
+  "therapeutic_goals": [
+    "- Normalize emotional legitimacy and deconstruct toxic comparison",
+    "- Restore self-worth independent of performance and appearance",
+    "- Support emotional reintegration after long-term suppression",
+    "- Address hypersensitivity and reduce cognitive overactivation",
+    "- Reconnect with authentic self beyond roles of mother, wife, caretaker"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Daily emotional check-in journal: \"Today I felt... and it's valid.\"",
+      "- Hypnosis session recommendation: induction to validate inner emotional experience and soothe guilt",
+      "Tags: #EmotionalLegitimacy #SelfValidation #GuiltRelief",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Structured safe conversation with trusted support (guided framework)",
+      "- Identification of internalized expectations vs authentic needs",
+      "- Gradual disconnection from emotionally one-sided relationships",
+      "- Hypnosis session recommendation: symbolic body-emotion reconciliation and identity anchoring",
+      "Tags: #BodyEmotionReconnection #SelfAnchoring #ChronicFatigueRelief",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Sensorimotor work to reconnect with embodied confidence",
+      "- Psychotherapy on core schema: guilt linked to self-neglect and maternal modeling",
+      "- Personalized ritual for releasing emotional invisibility",
+      "- Hypnosis session recommendation: long-form self-worth restoration and emotional sovereignty",
+      "Tags: #EmotionalSovereignty #SelfWorthHealing #InvisibilityRelease"
+    ]
+  },
+  "motivational_closure": "You are not a burden. You're not exaggerating. You're a woman who has held too much for too long - in silence. And now it's time to breathe with your truth, and let it live.",
+  "tags": [
+    "EmotionalLegitimacy",
+    "SelfValidation",
+    "GuiltRelief",
+    "BodyEmotionReconnection",
+    "SelfAnchoring",
+    "ChronicFatigueRelief",
+    "EmotionalSovereignty",
+    "SelfWorthHealing",
+    "InvisibilityRelease",
+    "ChronicGuilt",
+    "EmotionalSuppression",
+    "SelfWorth",
+    "Hyperadaptation",
+    "BodyEmotionSplit",
+    "EmotionalLegitimacy",
+    "SomaticAnxiety",
+    "SilentSuffering"
+  ]
+}

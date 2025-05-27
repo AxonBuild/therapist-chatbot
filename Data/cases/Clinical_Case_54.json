@@ -1,0 +1,60 @@
+{
+  "case_id": "Clinical_Case_54",
+  "age": "39",
+  "gender_identity": "woman presents with a panic disorder with obsessive components, predominantly centered around fear of death, illness, and loss of bodily control. Her postpartum anxiety, which was not initially identified, evolved into a maternal impulse phobia characterized by fears of being unable to protect her children. The anxiety is reinforced by somatic hypervigilance and traumatic memories, particularly linked to a traumatic hospitalization abroad and violent incidents witnessed in her past. An internal conflict persists between her desire to protect her children and her inability to let go, generating chronic emotional overload.",
+  "summary": "(RAG Format)\nThis 39-year-old woman presents with a panic disorder with obsessive components, predominantly centered around fear of death, illness, and loss of bodily control. Her postpartum anxiety, which was not initially identified, evolved into a maternal impulse phobia characterized by fears of being unable to protect her children. The anxiety is reinforced by somatic hypervigilance and traumatic memories, particularly linked to a traumatic hospitalization abroad and violent incidents witnessed in her past. An internal conflict persists between her desire to protect her children and her inability to let go, generating chronic emotional overload.",
+  "main_issues": [
+    "- Panic disorder with maternal impulse phobia and obsessive thoughts of harm",
+    "- Bodily hypervigilance, somatization (abdominal pain, tightness)",
+    "- Unresolved traumatic memories (hospitalization, domestic violence, violent deaths)",
+    "- Maternal loneliness and mental overload in the early postpartum period",
+    "- Transgenerational transmission of maternal anxiety and overcontrol"
+  ],
+  "emotions": [
+    "Fear (of death, illness, abandonment)",
+    "Anticipatory anxiety and obsessive thoughts",
+    "Powerlessness and hyper-emotionality",
+    "Guilt and self-blame",
+    "Suppressed sadness and internalized anger"
+  ],
+  "limiting_beliefs": [
+    "- \"I must control everything to prevent bad things from happening.\"",
+    "- \"I'm alone in protecting my children.\"",
+    "- \"If I relax, something terrible will happen.\"",
+    "- \"I'm vulnerable in a dangerous world.\""
+  ],
+  "therapeutic_goals": [
+    "- Reduce somatic hypervigilance and obsessive thoughts of harm",
+    "- Reframe catastrophic thinking into a more grounded perspective",
+    "- Re-establish a sense of internal safety and bodily trust",
+    "- Facilitate emotional separation between self and children",
+    "- Normalize maternal imperfection and emotional validation"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Body scan (5 minutes) and 4-7-8 breathing technique to deactivate somatic alert",
+      "- Safety anchoring visualization: calm, smiling children in a safe environment",
+      "- Emotional emergency card: calming phrases + acupressure point activation (9C point)"
+    ],
+    "intermediate": [
+      "- Therapeutic writing: letters to oneself from a serene, empowered mother perspective",
+      "- Catastrophic anticipation journal with post-experience verification",
+      "- Desensitization of bodily trauma through EFT or light EMDR sessions"
+    ],
+    "long_term": [
+      "- Immersive hypnosis theme: Maternal Safety and Inner Trust",
+      "- Dissociating fear responses from bodily sensations",
+      "- Integrating a stable image of children's safety even in her absence",
+      "- Reclaiming internal safety and grounding in the present moment"
+    ]
+  },
+  "motivational_closure": "You don't have to control everything to love. Your love is already a powerful protection. Learn to lean on that trust: your children don't need you to be perfect, but present... and at peace.",
+  "tags": [
+    "PanicDisorder",
+    "Hypervigilance",
+    "MaternalSafety",
+    "BodilyTrust",
+    "TraumaProcessing",
+    "EmotionalSeparation"
+  ]
+}

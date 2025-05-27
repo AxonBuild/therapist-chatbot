@@ -1,0 +1,47 @@
+{
+  "case_id": "Clinical_case_149",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with increased emotional detachment following a period of intense relational stress. She reports a heightened tolerance for emotional urgency, having developed a tendency to emotionally withdraw and abandon situations rather than confront them. Additionally, she is navigating a complex relationship with a man she considers emotionally unavailable, resulting in fluctuating self-worth and a persistent pattern of questioning her own emotional boundaries.",
+  "main_issues": [
+    "- Emotional detachment and numbing as coping mechanisms",
+    "- Inconsistent boundaries in interpersonal relationships",
+    "- Persistent attraction to emotionally unavailable partners",
+    "- Confusion between intellectual admiration and emotional connection",
+    "- Lingering emotional manipulation by her father, affecting current relationships"
+  ],
+  "emotions": [
+    "Confusion",
+    "Frustration",
+    "Resentment",
+    "Emotional numbness",
+    "Ambivalence"
+  ],
+  "limiting_beliefs": [
+    "- 'I must maintain control by suppressing my emotions.'",
+    "- 'Emotional availability is a weakness.'",
+    "- 'If I set boundaries, I will lose the relationship.'",
+    "- 'If someone returns to me, it means they value me.'"
+  ],
+  "therapeutic_goals": [
+    "- Re-establish healthy emotional boundaries without self-blame",
+    "- Differentiate between intellectual attraction and emotional connection",
+    "- Encourage assertive communication without self-abandonment",
+    "- Address residual emotional manipulation from her father to foster autonomy",
+    "- Support the processing of unresolved relational patterns to reduce emotional numbing"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are not defined by those who cannot see your worth. Your value is not contingent upon their presence or absence. Reclaim your voice, honor your boundaries, and choose yourself — not out of fear, but out of love for the person you are becoming.",
+  "tags": [
+    "EmotionalDetachment",
+    "BoundarySetting",
+    "AssertivenessTraining",
+    "EmotionalReconnection",
+    "SelfWorth",
+    "ManipulationRecovery"
+  ]
+}

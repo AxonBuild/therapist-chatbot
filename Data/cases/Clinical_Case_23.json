@@ -1,0 +1,81 @@
+{
+  "case_id": "Clinical_Case_23",
+  "age": "74",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient, a 74-year-old woman, experienced an unexplained nocturnal fall on January 7, leading to facial trauma, bruises, and a period of confusion. Despite thorough medical evaluation including blood tests, imaging, and consultations, no clear etiology was confirmed. Current hypotheses suggest a vagal malaise or potential medication error (double intake of migraine medication), worsened by chronic hypotension and anemia. The patient remains emotionally shaken and physically weakened by the event. Post-event symptoms included transient nausea, disorientation, and a profound fatigue which continues to impair her daily function. She is undergoing regular hematologic monitoring and adjusting to a new baseline of reduced energy.",
+  "main_issues": [
+    "- Unexplained traumatic fall during the night with no recollection",
+    "- Hypotension and iron deficiency with persistent fatigue",
+    "- Suspected medication error or side effects",
+    "- Anxiety and fear associated with sleep and nighttime safety",
+    "- Emotional aftershock and reduced confidence in bodily autonomy"
+  ],
+  "emotions": [
+    "Confusion",
+    "Fear",
+    "Vulnerability",
+    "Frustration",
+    "Emotional exhaustion"
+  ],
+  "limiting_beliefs": [
+    "- 'My body is no longer reliable.'",
+    "- 'I can no longer trust myself at night.'",
+    "- 'I am losing control over my autonomy.'",
+    "- 'I must constantly be vigilant or something bad will happen again.'"
+  ],
+  "therapeutic_goals": [
+    "- Reestablish a sense of physical and emotional safety during nighttime",
+    "- Restore trust in bodily cues and internal regulation",
+    "- Reduce emotional hypersensitivity and prevent rumination",
+    "- Integrate the fall experience without anticipatory fear",
+    "- Enhance recovery confidence and reinforce identity beyond medical vulnerability"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Install a safe nighttime routine with grounding techniques",
+      "- Introduce calming rituals and gentle breathing practices",
+      "- Normalize fatigue and reassure about the body's recovery capacity",
+      "- Hypnosis session recommendation: nighttime reassurance and physiological calm",
+      "Tags: #NightSafety #RecoveryFatigue #SleepAnxiety",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Reinforce therapeutic alliance and explore the emotional trace left by the fall",
+      "- Encourage expression through journaling or voice notes to integrate the shock",
+      "- Provide psychoeducation about medication, treatment side effects, and fatigue recovery",
+      "- Hypnosis session recommendation: integration of trauma memory and symbolic recovery path",
+      "Tags: #TraumaIntegration #HealingSymbolism #MedicationConfidence",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Hypnosis work around regaining inner trust and bodily sovereignty",
+      "- Use therapeutic metaphors to transform the perception of vulnerability into resilience",
+      "- Gradually rebuild autonomy and engagement with meaningful activities",
+      "- Hypnosis session recommendation: identity repair beyond frailty and affirmation of self-trust",
+      "Tags: #BodilySovereignty #AutonomyRestoration #ResilienceBuilding"
+    ]
+  },
+  "motivational_closure": "Despite the suddenness and fear of the fall, your body has shown its remarkable ability to protect and recover. Every day, even through fatigue, your presence and clarity grow. This path is not one of fragility, but of rediscovery. You are reclaiming safety not only in your home, but within yourself. Step by step, confidence will return—not in what has been, but in who you are becoming.",
+  "tags": [
+    "NightSafety",
+    "RecoveryFatigue",
+    "SleepAnxiety",
+    "TraumaIntegration",
+    "HealingSymbolism",
+    "MedicationConfidence",
+    "BodilySovereignty",
+    "AutonomyRestoration",
+    "ResilienceBuilding",
+    "PostTraumaticFatigue",
+    "SleepAnxiety",
+    "BodilyTrust",
+    "RecoverySupport",
+    "NighttimeFear",
+    "MedicalVulnerability",
+    "ResiliencePath",
+    "SymbolicHealing"
+  ]
+}

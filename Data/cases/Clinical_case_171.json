@@ -1,0 +1,57 @@
+{
+  "case_id": "Clinical_case_171",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with persistent fears of impulse control loss, characterized by intrusive, obsessive thoughts of harming loved ones. These thoughts emerged approximately a year and a half ago and have intensified following stressors related to her son's health. She reports heightened physiological symptoms such as eye twitching and sleep disturbances, indicating elevated anxiety levels. The patient acknowledges the irrational nature of these thoughts but feels overwhelmed by their intensity, contributing to emotional exhaustion.",
+  "main_issues": [
+    "- Obsessive intrusive thoughts of harming loved ones.",
+    "- Heightened anxiety with physiological symptoms (eye twitching, sleep disturbances).",
+    "- Perceived loss of control over impulses, leading to emotional exhaustion.",
+    "- Difficulty distinguishing between fear-driven thoughts and genuine desires.",
+    "- Increased stress levels related to her son's medical situation and financial pressures."
+  ],
+  "emotions": [
+    "Anxiety",
+    "Fear",
+    "Emotional Exhaustion",
+    "Guilt",
+    "Confusion"
+  ],
+  "limiting_beliefs": [
+    "- 'If I keep thinking about it, it must mean I want to do it.'",
+    "- 'I can't trust myself around my loved ones.'",
+    "- 'I am losing control over my mind.'"
+  ],
+  "therapeutic_goals": [
+    "- Normalize the experience of intrusive thoughts and distinguish them from genuine desires.",
+    "- Implement grounding techniques to reduce physiological symptoms of anxiety.",
+    "- Develop cognitive restructuring to address catastrophic thinking patterns.",
+    "- Reframe obsessive thoughts as fear-driven rather than desire-driven."
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to manage acute anxiety episodes.",
+      "- Grounding techniques to prevent escalation of intrusive thoughts.",
+      "- Hypnosis session recommendation: Releasing fear-driven impulses and restoring emotional calm."
+    ],
+    "intermediate": [
+      "- Cognitive-behavioral exercises to differentiate fear-based thoughts from genuine impulses.",
+      "- Journaling to externalize and rationalize intrusive thoughts.",
+      "- Hypnosis session recommendation: Reframing the fear circuit and reducing obsessive focus."
+    ],
+    "long_term": [
+      "- Therapeutic exploration of underlying fears related to losing control.",
+      "- Strategies to manage chronic stressors, including financial and familial pressures.",
+      "- Hypnosis session recommendation: Reinforcing trust in self-control and emotional regulation."
+    ]
+  },
+  "motivational_closure": "Your mind may be flooded with fears, but these thoughts do not define your intentions. You are not losing control - you are gaining awareness. With each breath, you are reclaiming your ability to calm your mind and trust yourself again.",
+  "tags": [
+    "IntrusiveThoughts",
+    "ImpulseControl",
+    "AnxietyManagement",
+    "EmotionalExhaustion",
+    "FearRelease",
+    "TrustInSelf"
+  ]
+}

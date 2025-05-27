@@ -1,0 +1,66 @@
+{
+  "case_id": "Clinical_case_156",
+  "age": "38",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with chronic emotional exhaustion, heightened stress, and unresolved tension related to multiple life stressors, including workplace conflicts, family responsibilities, and financial uncertainties. She expresses feelings of being overwhelmed and trapped in a cycle of constant problem-solving, with limited time for emotional recovery. Recurrent somatic symptoms, including headaches and vertigo, have emerged, potentially linked to accumulated stress and emotional overload.",
+  "main_issues": [
+    "- Chronic stress and emotional exhaustion",
+    "- Financial and professional instability",
+    "- Difficulty maintaining work-life balance",
+    "- Feelings of entrapment in problem-solving mode",
+    "- Recurrent somatic symptoms (headaches, vertigo)"
+  ],
+  "emotions": [
+    "Overwhelm",
+    "Anxiety",
+    "Frustration",
+    "Guilt",
+    "Emotional exhaustion"
+  ],
+  "limiting_beliefs": [
+    "- \"I must handle everything alone.\"",
+    "- \"If I stop, everything will fall apart.\"",
+    "- \"I am responsible for everyone's well-being.\"",
+    "- \"Taking a break means failing.\""
+  ],
+  "therapeutic_goals": [
+    "- Establish boundaries to reduce emotional overload",
+    "- Implement stress-reduction techniques to alleviate somatic symptoms",
+    "- Facilitate emotional processing through grounding exercises",
+    "- Encourage detachment from unsolvable problems",
+    "- Develop strategies for sustainable work-life balance"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Grounding techniques for acute stress relief",
+      "- Guided relaxation sessions to release muscle tension",
+      "- Hypnosis session recommendation: Stress release and mental decluttering",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Processing of unresolved workplace conflicts through targeted EMDR",
+      "- Structured time management to reduce overwhelm",
+      "- Internal dialogue exercises to reframe limiting beliefs",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Creation of a safe mental space for emotional recovery",
+      "- Development of sustainable coping strategies for work-life balance",
+      "- Hypnosis session recommendation: Establishing a protective emotional boundary"
+    ]
+  },
+  "motivational_closure": "",
+  "tags": [
+    "ChronicStress",
+    "EmotionalExhaustion",
+    "WorkLifeBalance",
+    "StressRelief",
+    "GroundingTechniques",
+    "EmotionalBoundaries",
+    "SomaticProcessing",
+    "MentalDecluttering"
+  ]
+}

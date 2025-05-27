@@ -1,0 +1,46 @@
+{
+  "case_id": "Clinical_case_151",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with unresolved emotional distress related to genetic testing experiences, feelings of being disregarded by medical professionals, and a persistent sense of being overlooked in familial dynamics. She expresses a recurring pattern of self-blame and self-violence in her efforts to assert herself. She has a teenage daughter who is currently undergoing therapy, and a husband who is minimally engaged in the therapeutic process.",
+  "main_issues": [
+    "- Persistent feelings of being disregarded by medical and familial figures",
+    "- Difficulty asserting her needs without feeling guilty",
+    "- Recurrent self-blame and internalized frustration",
+    "- Challenges in engaging her husband in the therapeutic process",
+    "- Concerns about her daughter's therapeutic progress and emotional well-being"
+  ],
+  "emotions": [
+    "Frustration",
+    "Guilt",
+    "Resentment",
+    "Hope",
+    "Self-blame"
+  ],
+  "limiting_beliefs": [
+    "- 'I must handle everything on my own.'",
+    "- 'My needs are less important than others.'",
+    "- 'If I assert myself, I will be seen as aggressive or unreasonable.'"
+  ],
+  "therapeutic_goals": [
+    "- Strengthen self-assertion without guilt or self-violence",
+    "- Encourage healthy communication with her husband regarding family dynamics",
+    "- Support her in setting boundaries with medical professionals",
+    "- Assist in the processing of past medical encounters to reduce emotional distress",
+    "- Foster emotional regulation techniques to manage frustration and resentment"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Your voice matters. Your needs are valid. With each step, you are reclaiming your space and your right to be seen and heard — not as an afterthought, but as a priority.",
+  "tags": [
+    "Empowerment",
+    "SelfAssertion",
+    "FamilyCommunication",
+    "Resilience",
+    "EmotionalProcessing",
+    "ReclaimingAgency"
+  ]
+}

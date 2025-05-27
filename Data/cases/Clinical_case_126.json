@@ -1,0 +1,50 @@
+{
+  "case_id": "Clinical_case_126",
+  "age": "42",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 42-year-old woman presents with significant emotional distress related to her relationship dynamics, financial instability, and compulsive spending. She reports unresolved tension in her marriage, characterized by a lack of physical affection and emotional disconnection. Her partner, described as asexual and emotionally distant, contributes to her ongoing feelings of loneliness, frustration, and dissatisfaction. Additionally, the patient displays compulsive shopping behavior as a coping mechanism to alleviate feelings of emptiness and boredom. She expresses frustration regarding her career limitations due to health issues and an unfulfilled desire to pursue a more fulfilling career path, such as floristry. The current living situation is also marked by financial stress and perceived neglect from her partner, exacerbating her sense of isolation and disconnection.",
+  "main_issues": [
+    "- Chronic dissatisfaction in her marriage, with unmet emotional and physical needs.",
+    "- Compulsive spending as a coping mechanism for emotional emptiness.",
+    "- Feelings of stagnation and missed opportunities in her career due to health limitations.",
+    "- Financial instability exacerbated by compulsive shopping and lack of financial support from her partner.",
+    "- Frustration with partner's fixation on morbidity and funeral services, contributing to emotional disconnect.",
+    "- Lack of emotional validation and affection, leading to feelings of neglect and loneliness."
+  ],
+  "emotions": [
+    "Frustration",
+    "Loneliness",
+    "Emotional emptiness",
+    "Anxiety",
+    "Resentment",
+    "Financial stress"
+  ],
+  "limiting_beliefs": [
+    "- I am not deserving of affection or tenderness.",
+    "- I must buy things to feel better, even if it creates financial stress.",
+    "- I will always be stuck in a stagnant, unfulfilling career.",
+    "- If I express my needs, I will only push her further away."
+  ],
+  "therapeutic_goals": [
+    "- Address compulsive spending as a maladaptive coping mechanism.",
+    "- Encourage open communication regarding unmet emotional and physical needs in her marriage.",
+    "- Support the exploration of alternative career paths aligned with her interests and physical capacities.",
+    "- Implement grounding and self-soothing techniques to reduce compulsive urges and impulsive spending.",
+    "- Facilitate a structured dialogue around relationship boundaries and potential alternatives to meet her needs.",
+    "- Develop strategies for emotional self-validation and establishing a sense of worth independent of external validation."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are not defined by what you own or what others give you. You have the power to reclaim your sense of self, to make choices that align with your true desires, and to create a life that nourishes your soul.",
+  "tags": [
+    "CompulsiveSpending",
+    "RelationshipDynamics",
+    "EmotionalValidation",
+    "SelfEmpowerment",
+    "FinancialResilience",
+    "EmotionalAutonomy"
+  ]
+}

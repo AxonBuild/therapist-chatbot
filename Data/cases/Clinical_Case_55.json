@@ -1,0 +1,60 @@
+{
+  "case_id": "Clinical_Case_55",
+  "age": "38",
+  "gender_identity": "educational assistant presents with severe post-traumatic anxiety linked to multiple pathological pregnancies (ectopic, molar pregnancy, blighted ovum). Her somatic anxiety is characterized by panic peaks triggered by bodily sensations such as tingling, which immediately evoke catastrophic thoughts of death. She struggles with a sense of diffuse guilt regarding uncarried pregnancies, compounded by a profound loss of bodily trust. Her trauma is further reinforced by a particularly distressing post-operative experience where she was informed that she had narrowly escaped death.",
+  "summary": "(RAG Format)\nThis 38-year-old educational assistant presents with severe post-traumatic anxiety linked to multiple pathological pregnancies (ectopic, molar pregnancy, blighted ovum). Her somatic anxiety is characterized by panic peaks triggered by bodily sensations such as tingling, which immediately evoke catastrophic thoughts of death. She struggles with a sense of diffuse guilt regarding uncarried pregnancies, compounded by a profound loss of bodily trust. Her trauma is further reinforced by a particularly distressing post-operative experience where she was informed that she had narrowly escaped death.",
+  "main_issues": [
+    "- Intense somatic anxiety triggered by physical sensations (tingling, chest tightness)",
+    "- Active traumatic memory from ectopic pregnancy and post-operative awakening",
+    "- Diffuse guilt and self-blame regarding pregnancy losses",
+    "- Emotional overadaptation to avoid burdening others with her grief",
+    "- Loss of bodily trust and fear of missing critical physical signals"
+  ],
+  "emotions": [
+    "Physiological anxiety (tachycardia, chest tightness)",
+    "Acute fear of dying, panic responses",
+    "Underlying anger towards her body and perceived injustice",
+    "Suppressed sadness and internalized guilt",
+    "Sense of existential injustice and emotional exhaustion"
+  ],
+  "limiting_beliefs": [
+    "- \"I can't trust my body.\"",
+    "- \"If I don't control everything, I'll fall apart.\"",
+    "- \"What I went through wasn't that bad compared to others.\"",
+    "- \"If I feel the pain, I'm weak.\""
+  ],
+  "therapeutic_goals": [
+    "- Deactivate somatic anxiety responses to physical sensations",
+    "- Restore bodily trust and a sense of internal safety",
+    "- Normalize emotional responses without self-invalidation",
+    "- Integrate past trauma without overidentifying with it",
+    "- Anchor resilience as a core aspect of self-perception"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Guided coherent breathing exercise (5/5, 3 minutes) with a grounding anchor",
+      "- Internal emotional validation dialogue: \"What I went through was real. My feelings are valid.\"",
+      "- Crisis sheet for tracking symptoms, thoughts, actions taken, and post-action reflections"
+    ],
+    "intermediate": [
+      "- Cognitive restructuring of limiting beliefs regarding bodily sensations and resilience",
+      "- Emotional journaling exercise: processing each pregnancy, integrating forgiveness and self-compassion",
+      "- EMDR sessions targeting traumatic memories (surgical awakening, wait before surgery, harsh medical statements)"
+    ],
+    "long_term": [
+      "- Immersive hypnosis theme: Bodily Reconnection and Somatic Safety",
+      "- Releasing traumatic tension from body memories",
+      "- Reframing pain as an indicator of life, not danger",
+      "- Dissociating somatic anxiety from catastrophic anticipation"
+    ]
+  },
+  "motivational_closure": "You stood when your body could have fallen. Today, it's time not only to survive in your body, but to return to it as a friend. Your story doesn't define you - your ability to transform it will.",
+  "tags": [
+    "PTSD",
+    "SomaticAnxiety",
+    "BodilyReconnection",
+    "EmotionalResilience",
+    "TraumaProcessing",
+    "SafetyAnchor"
+  ]
+}

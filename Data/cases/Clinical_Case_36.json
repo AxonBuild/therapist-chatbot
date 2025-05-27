@@ -1,0 +1,84 @@
+{
+  "case_id": "Clinical_Case_36",
+  "age": "49",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient, a 49-year-old woman, presents a complex emotional profile shaped by early trauma, unresolved guilt related to past abortions, and a recurring pattern of affective dependency in romantic relationships. She reports a lifelong tendency to engage in relationships with unavailable men, often older and married, in what appears to be an unconscious attempt to be 'chosen' and to prove her worth. This behavioral pattern is likely linked to childhood experiences, including early maternal absence and perceived favoritism toward her younger brother. Additionally, the patient exhibits performance-related anxiety and somatic manifestations (tachycardia, intrusive thoughts), and signs of dissociation surrounding a past non-consensual sexual experience. She remains cognitively aware of her self-sabotaging mechanisms but feels unable to break free from them. Her emotional states fluctuate between guilt, shame, and a compulsive need for validation, especially when abandoned. Despite notable insight and resilience, she appears trapped in a loop of emotional reenactment and relational insecurity.",
+  "main_issues": [
+    "- Emotional trauma linked to abortions, particularly one with intense guilt",
+    "- Repetitive relationships with unavailable men",
+    "- Dissociation linked to early sexual trauma",
+    "- Performance-related anxiety and emotional collapse under pressure",
+    "- Self-worth dependent on being desired or chosen",
+    "- Difficulty regulating stress despite intellectual insight"
+  ],
+  "emotions": [
+    "Guilt and shame surrounding past choices",
+    "Fear of rejection and abandonment",
+    "Internalized anger and self-blame",
+    "Anxiety linked to performance and relational uncertainty",
+    "Emotional confusion and dependency"
+  ],
+  "limiting_beliefs": [
+    "- \"If I'm not chosen, I'm worthless.\"",
+    "- \"I must control others' desire for me to feel safe.\"",
+    "- \"I can't fully trust emotional stability.\"",
+    "- \"If I let go, I will collapse emotionally.\"",
+    "- \"My trauma wasn't real because I wasn't physically forced.\""
+  ],
+  "therapeutic_goals": [
+    "- Desensitize trauma linked to abortion and early sexual experiences",
+    "- Reduce compulsive relational dependency",
+    "- Reinforce emotional autonomy and internal validation",
+    "- Break the reenactment loop in romantic patterns",
+    "- Build physiological and cognitive tools to manage anxiety",
+    "- Reconnect with body safety and self-worth"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Grounding exercises and cardiac coherence during stress peaks",
+      "- Reframing guilt-laden thoughts with therapeutic dialogue",
+      "- Hypnosis session recommendation: short calming induction with focus on self-acceptance",
+      "Tags: #GuiltRelief #EmotionalStability #HeartCalm",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- EMDR or hypnotherapy to address dissociation and body-memory",
+      "- Analysis of relational scripts and fantasy of being chosen",
+      "- Self-assertiveness work and boundary restoration",
+      "- Hypnosis session recommendation: exploration of internalized scripts around rejection and worth",
+      "Tags: #RelationalRepair #SelfValidation #EmotionalBoundaries",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Somatic therapy to integrate trauma and restore body trust",
+      "- Long-term support to stabilize attachment system",
+      "- Narrative repair around abortion and reparenting needs",
+      "- Hypnosis session recommendation: symbolic closure around abortion, self-reparenting, emotional sovereignty",
+      "Tags: #AbortionTraumaHealing #SymbolicClosure #Reparenting #EmotionalAutonomy"
+    ]
+  },
+  "motivational_closure": "You've already made the hardest step—breaking the cycle. Healing is not linear, but every insight you gain, every small act of self-respect, and every emotional truth you reclaim is a powerful act of transformation. Your story does not end with what others failed to give you—it begins with what you are now able to give yourself.",
+  "tags": [
+    "GuiltRelief",
+    "EmotionalStability",
+    "HeartCalm",
+    "RelationalRepair",
+    "SelfValidation",
+    "EmotionalBoundaries",
+    "AbortionTraumaHealing",
+    "SymbolicClosure",
+    "Reparenting",
+    "EmotionalAutonomy",
+    "AbortionGuilt",
+    "EmotionalReenactment",
+    "TraumaDissociation",
+    "SelfWorthRepair",
+    "FearOfRejection",
+    "SomaticAnxiety",
+    "AttachmentHealing",
+    "RelationalLoop"
+  ]
+}

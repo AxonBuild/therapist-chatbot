@@ -1,0 +1,58 @@
+{
+  "case_id": "Clinical_case_104",
+  "age": "40",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 40-year-old woman presenting with pervasive feelings of loneliness, emotional neglect, and unresolved resentment stemming from a past toxic relationship characterized by manipulation and emotional isolation. She describes intense episodes of emotional distress linked to a sense of unimportance and abandonment, which manifest through obsessive ruminations, compulsive phone checking, and disrupted eating habits. She also experiences a recurring sensation of emptiness, exacerbated by painful memories of being left alone in a foreign country while her partner engaged in infidelity. The patient struggles to make sense of these experiences and expresses a profound sense of emotional disorientation.",
+  "main_issues": [
+    "- Emotional void and intense loneliness linked to past emotional neglect.",
+    "- Persistent sense of unimportance and self-blame in romantic relationships.",
+    "- Obsessive rumination and compulsive phone checking during emotional distress.",
+    "- Painful recollections of past abandonment and infidelity.",
+    "- Inability to regulate emotions effectively, leading to emotional overwhelm."
+  ],
+  "emotions": [
+    "Loneliness",
+    "Resentment",
+    "Emotional exhaustion",
+    "Guilt",
+    "Emotional confusion"
+  ],
+  "limiting_beliefs": [
+    "- 'I am not important enough to be valued.'",
+    "- 'If I assert myself, I will be seen as a burden.'",
+    "- 'My emotions are too much and will push others away.'",
+    "- 'If I let go of control, I will be abandoned.'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe experiences of emotional neglect to foster self-validation.",
+    "- Develop strategies to reduce obsessive ruminations and compulsive checking behaviors.",
+    "- Establish internal emotional anchors to mitigate feelings of loneliness.",
+    "- Facilitate emotional release linked to past abandonment without self-blame."
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing and grounding exercises to disrupt obsessive thought patterns.",
+      "- Journaling prompt: 'What would it look like to validate my own worth?'",
+      "- Hypnosis session recommendation: Emotional release and reconnection to inner self."
+    ],
+    "intermediate": [
+      "- Structured dialogue exercises to reframe past experiences of abandonment.",
+      "- Emotional detachment techniques to reduce compulsive checking behaviors.",
+      "- Hypnosis session recommendation: Releasing emotional debris and embracing self-soothing."
+    ],
+    "long_term": [
+      "- Reconstructing self-worth through inner validation.",
+      "- Developing emotional resilience to prevent future relational enmeshment.",
+      "- Hypnosis session recommendation: Identity consolidation and self-reclamation."
+    ]
+  },
+  "motivational_closure": "You are not defined by who stayed or who left. You are not defined by the silence you receive. You are defined by the strength within to reclaim your own voice, your own worth, and your own life.",
+  "tags": [
+    "EmotionalNeglect",
+    "Loneliness",
+    "SelfWorth",
+    "EmotionalRelease",
+    "SelfReclamation",
+    "RelationalBoundaries"
+  ]
+}

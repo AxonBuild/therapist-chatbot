@@ -1,0 +1,47 @@
+{
+  "case_id": "Clinical_case_163",
+  "age": "33",
+  "gender_identity": "Female",
+  "summary": "(RAG Format)\nThe patient presents with a complex emotional history involving a major depressive episode at age 20, postpartum emotional instability following the birth of her second child, and unresolved familial conflicts. She reports intense anxiety, emotional exhaustion, and significant stress, particularly exacerbated by the recent loss of her grandfather. Additionally, she describes feelings of guilt and self-blame for leaving her mother in a potentially unsafe situation with her emotionally abusive stepfather. Health-related anxiety is also present due to a genetic blood clotting disorder discovered prior to her second pregnancy, leading to heightened fears surrounding her health and that of her children.",
+  "main_issues": [
+    "- Postpartum emotional instability and heightened anxiety following the birth of her second child.",
+    "- Unresolved guilt and self-blame for distancing herself from her mother while leaving her with an emotionally abusive partner.",
+    "- Health-related anxiety stemming from a genetic blood clotting disorder (Factor V Leiden mutation) and fears during pregnancy.",
+    "- Intense emotional distress and grief following the recent loss of her grandfather.",
+    "- Persistent emotional reactivity to perceived criticism, possibly linked to her stepfather's past verbal abuse."
+  ],
+  "emotions": [
+    "Anxiety",
+    "Guilt",
+    "Grief",
+    "Emotional Exhaustion",
+    "Fear",
+    "Resentment"
+  ],
+  "limiting_beliefs": [
+    "- 'If I distance myself from my stepfather, I am abandoning my mother.'",
+    "- 'If I relax, something bad will happen to my health.'",
+    "- 'I am responsible for keeping everyone safe, even at the expense of my own well-being.'",
+    "- 'If I move forward, I am betraying the memory of my grandfather.'"
+  ],
+  "therapeutic_goals": [
+    "- Normalize and validate the postpartum emotional instability as a natural response to accumulated stress.",
+    "- Facilitate the processing of unresolved guilt related to her mother and her perceived role as protector.",
+    "- Address health-related anxiety and challenge catastrophic thinking related to her genetic disorder.",
+    "- Support the patient in grieving the loss of her grandfather and exploring the impact of re-encountering her stepfather.",
+    "- Develop emotional regulation techniques to manage stress and prevent emotional overload."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You have carried the weight of responsibility and self-blame for too long, believing that you must manage everything alone. It is time to release the burden of past traumas and embrace the present with renewed strength and clarity. You are allowed to take care of yourself without feeling guilty - you are deserving of peace and emotional stability.",
+  "tags": [
+    "PostpartumAnxiety",
+    "GriefProcessing",
+    "HealthAnxiety",
+    "EmotionalExhaustion",
+    "FamilyConflict"
+  ]
+}

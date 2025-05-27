@@ -1,0 +1,55 @@
+{
+  "case_id": "Clinical_case_157",
+  "age": "34",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 34-year-old woman struggling with recurring patterns in romantic relationships. She reports a tendency to be drawn to unattainable or emotionally unavailable partners, while disregarding those who are more emotionally present. Despite her desire for a stable and fulfilling relationship, she expresses a conflict between her attraction to emotionally distant men and her recognition of healthier relationship dynamics. She has a complex familial background involving a concealed paternity revelation in her early adulthood, leading to unresolved issues regarding paternal validation and emotional attachment. Professionally, she is navigating the challenges of working in a highly competitive real estate market, using work as a distraction from emotional distress.",
+  "main_issues": [
+    "- Attraction to emotionally unavailable or unattainable partners",
+    "- Difficulty connecting with emotionally available men due to lack of attraction",
+    "- Unresolved emotional dynamics related to paternal figures and familial secrecy",
+    "- Emotional detachment and self-sabotaging behavior in relationships",
+    "- Use of work as a coping mechanism to avoid emotional processing"
+  ],
+  "emotions": [
+    "Frustration",
+    "Confusion",
+    "Loneliness",
+    "Self-doubt",
+    "Emotional detachment"
+  ],
+  "limiting_beliefs": [
+    "\"If I connect with someone emotionally, I will lose control.\"",
+    "\"If he is available and kind, I won't feel excited.\"",
+    "\"If I let myself be loved, I will be abandoned.\""
+  ],
+  "therapeutic_goals": [
+    "- Explore and reframe limiting beliefs related to attraction and emotional availability",
+    "- Develop healthier patterns of emotional connection and assertive communication",
+    "- Process unresolved feelings around paternal figures and familial secrecy",
+    "- Establish emotional regulation techniques to reduce impulsive or self-sabotaging behavior",
+    "- Encourage a balanced approach to work-life dynamics to prevent emotional avoidance"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Guided journaling to identify patterns in attraction and emotional avoidance",
+      "- Hypnosis session recommendation: releasing attachment to emotionally distant partners and opening to healthier connections"
+    ],
+    "intermediate": [
+      "- Hypnosis session: processing paternal dynamics and unresolved family secrets",
+      "- Cognitive restructuring to challenge limiting beliefs about love and attraction"
+    ],
+    "long_term": [
+      "- Hypnosis session: cultivating self-worth and emotional stability without external validation",
+      "- Building assertiveness and self-advocacy in romantic contexts to foster healthier relationships"
+    ]
+  },
+  "motivational_closure": "You are worthy of love that is both thrilling and safe. It is possible to connect with someone who truly sees and values you, without sacrificing your sense of self. Your journey toward emotional healing begins with choosing what nourishes your soul rather than what perpetuates old wounds.",
+  "tags": [
+    "RelationshipPatterns",
+    "EmotionalDetachment",
+    "PaternalWounds",
+    "SelfWorth",
+    "AttractionDynamics",
+    "EmotionalHealing"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "case_id": "Clinical_case_81",
+  "age": "43",
+  "gender_identity": "Man",
+  "summary": "(RAG Format)\nThe patient is a 43-year-old man experiencing emotional exhaustion and financial strain stemming from ongoing business challenges and complex partnership dynamics. He describes feeling trapped in a cycle of constant pressure to sustain cash flow, resulting in heightened anxiety and persistent feelings of guilt over perceived failures in business management. The patient also struggles with delegating responsibilities to his associate, feeling the need to control all aspects of the business despite lacking the capacity to do so effectively. Additionally, he recounts a significant period of anger expression, characterized by explosive outbursts and suppressed frustration, leading to intense guilt and a sense of self-blame.",
+  "main_issues": [
+    "- Persistent financial strain due to cash flow management challenges",
+    "- Inability to delegate effectively due to trust issues with business partners",
+    "- Emotional exhaustion linked to constant overwork and perceived responsibility",
+    "- Explosive anger outbursts followed by intense guilt and self-blame",
+    "- Unresolved feelings of inadequacy and self-doubt regarding business outcomes"
+  ],
+  "emotions": [
+    "Anxiety",
+    "Guilt",
+    "Anger",
+    "Frustration",
+    "Emotional exhaustion",
+    "Self-blame"
+  ],
+  "limiting_beliefs": [
+    "\"If I don't control everything, everything will fall apart.\"",
+    "\"It's my fault if the business fails.\"",
+    "\"Expressing anger means losing control and respect.\""
+  ],
+  "therapeutic_goals": [
+    "- Develop healthy anger expression techniques to prevent explosive outbursts",
+    "- Reframe guilt narratives to reduce self-blame and increase self-compassion",
+    "- Establish boundaries to prevent overwork and promote work-life balance",
+    "- Implement strategies for delegating responsibilities effectively",
+    "- Cultivate emotional resilience to cope with financial pressure"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Grounding and centering exercises to diffuse anger in the moment",
+      "- Hypnosis session recommendation: symbolic release of guilt associated with business setbacks"
+    ],
+    "intermediate": [
+      "- Hypnosis session: processing suppressed anger and transforming it into constructive assertiveness",
+      "- Cognitive restructuring exercises to challenge self-blame and foster self-compassion"
+    ],
+    "long_term": [
+      "- Hypnosis session: reprogramming limiting beliefs around control and responsibility",
+      "- Developing a sustainable work-life balance plan to prevent burnout"
+    ]
+  },
+  "motivational_closure": "Your worth is not defined by the cash flow. You have the right to rest, to delegate, and to trust yourself without carrying the entire burden alone. Each step toward balance is a step toward inner strength.",
+  "tags": [
+    "GuiltProcessing",
+    "AngerManagement",
+    "Delegation",
+    "EmotionalResilience",
+    "SelfCompassion",
+    "WorkLifeBalance"
+  ]
+}

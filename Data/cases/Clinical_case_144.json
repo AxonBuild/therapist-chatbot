@@ -1,0 +1,47 @@
+{
+  "case_id": "Clinical_case_144",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient is experiencing emotional instability and uncertainty regarding his work situation following a period of medical concerns and perceived threats to his health. He expresses a sense of internal conflict about whether to continue working or take extended leave, as suggested by his wife. Despite having completed two EMDR sessions, he still reports feelings of unresolved stress and emotional ambivalence, compounded by uncertainty regarding his health diagnosis.",
+  "main_issues": [
+    "- Emotional instability related to uncertainty around medical diagnosis",
+    "- Internal conflict regarding work resumption versus taking extended leave",
+    "- Lingering emotional stress despite initial EMDR interventions",
+    "- Perceived pressure from partner to make a decision about work",
+    "- Difficulty processing potential health-related threats and implications"
+  ],
+  "emotions": [
+    "Uncertainty",
+    "Anxiety",
+    "Frustration",
+    "Conflict",
+    "Emotional fatigue"
+  ],
+  "limiting_beliefs": [
+    "- 'If I stop working, it means I am weak.'",
+    "- 'If I push through, I might worsen my condition.'",
+    "- 'I should know what to do, but I don't.'",
+    "- 'If I take leave, I am letting my family down.'"
+  ],
+  "therapeutic_goals": [
+    "- Address and reframe feelings of self-blame and perceived weakness associated with taking a break",
+    "- Encourage balanced decision-making regarding work based on health needs rather than perceived obligations",
+    "- Support the patient in processing uncertainty around medical diagnosis to reduce anticipatory anxiety",
+    "- Assist in identifying and validating emotional responses to potential health outcomes",
+    "- Facilitate greater emotional regulation through grounding and centering techniques"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Your worth is not defined by your productivity. Choosing to prioritize your health is not a sign of weakness, but a declaration of self-respect. You have the strength to navigate this uncertainty, to make choices rooted in what you need — not just what others expect of you.",
+  "tags": [
+    "HealthAnxiety",
+    "WorkLifeBalance",
+    "EmotionalRegulation",
+    "DecisionMaking",
+    "SelfCompassion",
+    "ResilienceBuilding"
+  ]
+}

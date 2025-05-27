@@ -1,0 +1,60 @@
+{
+  "case_id": "Clinical_case_61",
+  "age": "43",
+  "gender_identity": "man currently employed in a CDI position expresses a desire for a change in professional direction after securing a real estate investment. ",
+  "summary": "(RAG Format)\n\nThis 43-year-old man currently employed in a CDI position expresses a desire for a change in professional direction after securing a real estate investment. \nHe is in a phase of transition, considering options for career shifts while maintaining financial stability. \nHe reports a recent emotionally impactful breakup that led to a period of introspection and withdrawal. \nWhile he engages in hobbies such as buying and reselling Pokémon cards and exploring AI-generated products, \nhe acknowledges that these activities serve as distractions from deeper emotional processing.",
+  "main_issues": [
+    "- Emotional withdrawal and avoidance following a recent breakup",
+    "- Focus on material and financial projects as a coping mechanism",
+    "- Difficulty envisioning a new romantic relationship due to past emotional wounds",
+    "- Increased control over financial and material aspects to compensate for perceived emotional instability",
+    "- Potential unresolved emotions related to the breakup, minimized through busywork and hobbies"
+  ],
+  "emotions": [
+    "Emotional detachment as a defense mechanism",
+    "Fear of vulnerability in new relationships",
+    "Emotional fatigue masked by constant activity",
+    "Subtle frustration at lack of direction, masked by focus on material goals",
+    "Subconscious sadness related to the perceived failure of the last relationship"
+  ],
+  "limiting_beliefs": [
+    "- 'I am better off alone; relationships are too complicated.'",
+    "- 'If I keep busy, I won't feel the void.'",
+    "- 'I must maintain control over my finances to feel secure.'",
+    "- 'Emotions are distractions from real goals.'"
+  ],
+  "therapeutic_goals": [
+    "- Encourage emotional expression regarding the recent breakup in a structured, non-threatening way",
+    "- Reduce reliance on material and financial projects as a coping mechanism",
+    "- Normalize vulnerability as a necessary component of future relationships",
+    "- Explore the potential for finding balance between financial security and emotional openness",
+    "- Develop a sense of inner security that is not solely reliant on external projects"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Daily journaling to identify recurring thoughts related to the breakup",
+      "- Short, structured breathing exercises to connect with present emotions",
+      "- Emotional inventory to assess the impact of the breakup on self-perception"
+    ],
+    "intermediate": [
+      "- Visualization exercise: 'The Room of Closure' - where the client can safely confront lingering emotions related to the breakup",
+      "- Cognitive restructuring around the belief that 'being alone is safer'",
+      "- Exploration of potential new activities that do not involve financial gain"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Releasing Control and Embracing Emotional Freedom",
+      "- Dissociate the self-worth from financial projects",
+      "- Install a sense of inner stability that is not reliant on material control",
+      "- Reframe vulnerability as a source of strength and potential connection"
+    ]
+  },
+  "motivational_closure": "You have carried the weight of emotional detachment for long enough. \nNow, step by step, you will learn to trust the space within - a space that is safe, steady, and open to new connections. \nYou are not defined by what you accumulate or control, but by the depth of what you feel and express.",
+  "tags": [
+    "EmotionalWithdrawal",
+    "ControlRelease",
+    "EmotionalFreedom",
+    "InnerSecurity",
+    "RelationshipClosure",
+    "Vulnerability"
+  ]
+}

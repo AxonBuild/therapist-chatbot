@@ -1,0 +1,76 @@
+{
+  "case_id": "Clinical_Case_27",
+  "age": "55",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 55-year-old woman experiencing significant emotional distress related to unresolved family conflict following her mother's death. She is actively involved in legal and administrative battles to protect her father's interests, facing obstacles from the judiciary and family members, especially her brother. These difficulties have stirred intense feelings of injustice, guilt, and resentment, preventing her from progressing through the grieving process for her mother. Somatic symptoms such as throat tightness and chest pressure are recurrent, pointing to psychosomatic stress responses. Despite being emotionally overwhelmed, the patient continues to fight for what she perceives as justice, while simultaneously struggling with the complexity of her mixed emotions toward her deceased mother.",
+  "main_issues": [
+    "- Ongoing legal and emotional conflict related to family inheritance and guardianship",
+    "- Unprocessed grief linked to perceived betrayal by the mother",
+    "- Feelings of powerlessness and administrative fatigue",
+    "- Somatic symptoms: throat tightness and chest constriction",
+    "- Emotional ambivalence: love, resentment, guilt"
+  ],
+  "emotions": [
+    "Anger",
+    "Powerlessness",
+    "Sadness",
+    "Guilt",
+    "Resentment",
+    "Emotional exhaustion"
+  ],
+  "limiting_beliefs": [
+    "- \"I can't move forward until justice is done\"",
+    "- \"I must fight alone to protect my father\"",
+    "- \"I shouldn't feel anger toward my mother\""
+  ],
+  "therapeutic_goals": [
+    "- Allow space for grieving beyond the administrative struggle",
+    "- Reduce somatic distress linked to emotional overload",
+    "- Dissociate justice from personal healing",
+    "- Accept emotional ambivalence without guilt"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Guided breathing and grounding exercises for sleep and crisis",
+      "- Hypnosis session recommendation: somatic anchoring and symbolic relief of throat pressure",
+      "Tags: #SomaticRelease #ThroatTension #CrisisCalm",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Emotional decompression via hypnosis focused on symbolic release (parental betrayal, injustice)",
+      "- Body-mind integration work to soften psychosomatic tension",
+      "- Hypnosis session recommendation: symbolic closure with maternal figure and partial forgiveness without erasing pain",
+      "Tags: #ParentalBetrayal #SymbolicClosure #EmotionalAmbivalence",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Reconciling grief and justice via progressive detachment from external control",
+      "- Exploration of identity beyond the 'fighter' role",
+      "- Hypnosis session recommendation: emotional individuation and restoration of inner legitimacy",
+      "Tags: #GriefProcessing #JusticeFatigue #EmotionalIndividuation"
+    ]
+  },
+  "motivational_closure": "You are not defined by the battles you fight. What makes you strong is not the victory, but the courage to breathe between each round. Healing does not require a court's decision — it starts the moment you give yourself permission to rest.",
+  "tags": [
+    "SomaticRelease",
+    "ThroatTension",
+    "CrisisCalm",
+    "ParentalBetrayal",
+    "SymbolicClosure",
+    "EmotionalAmbivalence",
+    "GriefProcessing",
+    "JusticeFatigue",
+    "EmotionalIndividuation",
+    "EmotionalAmbivalence",
+    "SomaticRelease",
+    "ParentalBetrayal",
+    "GriefHealing",
+    "SymbolicClosure",
+    "JusticeFatigue",
+    "ThroatBlock",
+    "EmotionalExhaustion"
+  ]
+}

@@ -1,30 +1,29 @@
-import json
 import os
+import pandas as pd
 from typing import Dict, List, Any, Optional, Tuple
 
 class ScriptLoader:
-    """Handles script selection based on symptoms and user profile"""
+    """Handles script selection based on symptoms and user profile using pandas"""
     
-    def __init__(self, json_path=None):
-        """Initialize with path to JSON file containing script data"""
-        if not json_path:
-            # Default path
+    def __init__(self, csv_path=None):
+        """Initialize with path to CSV file containing script data"""
+        if not csv_path:
+            # Use the default CSV path
             current_dir = os.path.dirname(os.path.abspath(__file__))
-            json_path = os.path.join(current_dir, "Scripts_Summary_Table_V1.json")
+            csv_path = os.path.join(current_dir, "Scripts_Summary_Table_V1.csv")
         
-        self.json_path = json_path
-        self.scripts_data = self._load_scripts()
+        self.csv_path = csv_path
+        self.df = self._load_scripts()
     
-    def _load_scripts(self) -> List[Dict[str, Any]]:
-        """Load and parse the scripts JSON file"""
+    def _load_scripts(self) -> pd.DataFrame:
+        """Load script data from CSV file"""
         try:
-            with open(self.json_path, 'r', encoding='utf-8') as f:
-                scripts = json.load(f)
-            print(f"Loaded {len(scripts)} scripts from {self.json_path}")
-            return scripts
+            df = pd.read_csv(self.csv_path)
+            print(f"Loaded {len(df)} scripts from {self.csv_path}")
+            return df
         except Exception as e:
             print(f"Error loading scripts: {e}")
-            return []
+            return pd.DataFrame()
     
     def find_matching_script(self, symptoms: List[str], user_profile: Dict[str, str]) -> Tuple[Optional[Dict[str, Any]], int]:
         """
@@ -37,7 +36,7 @@ class ScriptLoader:
         Returns:
             Tuple of (script dictionary or None, match score)
         """
-        if not self.scripts_data:
+        if self.df.empty:
             return None, 0
             
         # Extract profile information
@@ -64,70 +63,67 @@ class ScriptLoader:
         }
         target_population = population_mapping.get(age_group, None)
         
-        # Calculate match scores for each script
-        best_match = None
-        best_score = -1
+        # Create a copy of the dataframe to add scoring column
+        scored_df = self.df.copy()
+        scored_df['match_score'] = 0
         
-        for script in self.scripts_data:
-            score = 0
+        # Score based on symptoms matching keywords
+        for symptom in symptoms:
+            symptom_lower = symptom.lower()
+            # Check for keyword matches
+            scored_df['match_score'] += scored_df['Trigger Keywords'].fillna('').str.lower().apply(
+                lambda keywords: 3 if any(kw.strip() in symptom_lower or symptom_lower in kw.strip() 
+                                      for kw in keywords.split(',') if kw.strip()) else 0
+            )
             
-            # Check keyword matches
-            trigger_keywords = []
-            if "Trigger Keywords" in script:
-                trigger_keywords = [kw.strip().lower() for kw in script["Trigger Keywords"].split(",")]
-                
-            for symptom in symptoms:
-                symptom_lower = symptom.lower()
-                # Exact match or partial match in trigger keywords
-                for keyword in trigger_keywords:
-                    if keyword in symptom_lower or symptom_lower in keyword:
-                        score += 3
-                        break
-            
-            # Check tag matches
-            tags = []
-            if "Tags" in script:
-                # Split tags by '#' and remove empty entries
-                tags_str = script["Tags"].replace("#", " ")
-                tags = [tag.strip().lower() for tag in tags_str.split() if tag.strip()]
-                
-            for symptom in symptoms:
-                symptom_lower = symptom.lower()
-                for tag in tags:
-                    if tag in symptom_lower or symptom_lower in tag:
-                        score += 2
-                        break
-            
-            # Level match (high priority)
-            if target_level and script.get("Level") == target_level:
-                score += 5
-            
-            # Population match (high priority)
-            if target_population and script.get("Target Population") == target_population or "Adult" in script.get("Target Population", ""):
-                score += 5
-                
-            # Update best match if we found a better score
-            if score > best_score:
-                best_score = score
-                best_match = script
+            # Check for tag matches
+            scored_df['match_score'] += scored_df['Tags'].fillna('').str.lower().apply(
+                lambda tags: 2 if any(tag.replace('#', '').strip() in symptom_lower or 
+                                   symptom_lower in tag.replace('#', '').strip() 
+                                   for tag in tags.split() if tag.strip()) else 0
+            )
         
-        if best_match:
-            print(f"Selected script: {best_match.get('New Title')} (Score: {best_score})")
-        else:
+        # Level match (high priority)
+        if target_level:
+            scored_df.loc[scored_df['Level'] == target_level, 'match_score'] += 5
+        
+        # Population match (high priority)
+        if target_population:
+            scored_df.loc[scored_df['Target Population'] == target_population, 'match_score'] += 5
+        
+        # Sort by score and get the best match
+        scored_df = scored_df.sort_values('match_score', ascending=False)
+        
+        if scored_df.empty or scored_df.iloc[0]['match_score'] <= 0:
             print("No matching script found")
-            
+            return None, 0
+        
+        # Get the best match
+        best_match = scored_df.iloc[0].to_dict()
+        best_score = int(best_match.get('match_score', 0))
+        
+        print(f"Selected script: {best_match.get('New Title')} (Score: {best_score})")
+        
         return best_match, best_score
     
     def get_script_content(self, script_id: str) -> str:
         """Get script content based on ID or filename"""
+        if self.df.empty:
+            return f"Script not found: {script_id}"
+            
         # Find the matching script
         script = None
-        for s in self.scripts_data:
-            if s.get("Filename") == script_id or s.get("Script ID") == script_id:
-                script = s
-                break
+        if 'Filename' in self.df.columns:
+            matches = self.df[self.df['Filename'] == script_id]
+            if not matches.empty:
+                script = matches.iloc[0].to_dict()
+                
+        if script is None and 'Script ID' in self.df.columns:
+            matches = self.df[self.df['Script ID'] == script_id]
+            if not matches.empty:
+                script = matches.iloc[0].to_dict()
         
-        if not script:
+        if script is None:
             return f"Script not found: {script_id}"
         
         # Generate content from metadata since we don't have the actual content files

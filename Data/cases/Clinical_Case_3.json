@@ -1,0 +1,79 @@
+{
+  "case_id": "Clinical_Case_3",
+  "age": "45",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 45-year-old woman presenting with pervasive self-judgment and unresolved feelings of shame related to past perceived inadequacies. She reports experiencing intrusive memories and flashbacks of situations where she felt inadequate or judged by others, primarily linked to her perceived lack of structure and cleanliness during adolescence. These memories are exacerbated by her current attempts to maintain a strict standard of order and control in her life, particularly as a mother and wife. Despite her conscious efforts to dissociate from her childhood patterns, she continues to feel haunted by lingering feelings of shame, self-blame, and unworthiness.",
+  "main_issues": [
+    "- Persistent self-judgment and inner criticism",
+    "- Intrusive flashbacks related to perceived inadequacies",
+    "- Difficulty reconciling past self with present self-image",
+    "- Conflict between current self-expectations and unresolved past experiences",
+    "- Emotional distress regarding perceived lack of structure and order",
+    "- Residual feelings of shame and self-blame from childhood experiences"
+  ],
+  "emotions": [
+    "Shame",
+    "Guilt",
+    "Anxiety",
+    "Self-criticism",
+    "Frustration",
+    "Sadness"
+  ],
+  "limiting_beliefs": [
+    "- 'I must always maintain control to be worthy.'",
+    "- 'If I am not perfect, I am failing.'",
+    "- 'My past defines who I am now.'",
+    "- 'I cannot forgive myself for past mistakes.'"
+  ],
+  "therapeutic_goals": [
+    "- Develop self-compassion and reduce self-judgment",
+    "- Reframe past experiences with a more balanced perspective",
+    "- Integrate self-forgiveness and acceptance practices",
+    "- Normalize emotional responses to past perceived 'failures'",
+    "- Establish a healthier self-narrative that distinguishes past and present self"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Validate the ongoing emotional tension and normalize the inner critic's voice",
+      "- Introduce grounding techniques for emotional regulation during flashbacks",
+      "- Recommend a short hypnosis session focused on releasing self-judgment and reinforcing self-compassion",
+      "Tags: #EmotionalRegulation #SelfCompassion #ShameRelease",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Establish routines that promote self-forgiveness and positive self-talk",
+      "- Practice cognitive restructuring techniques to reframe past perceived failures",
+      "- Hypnosis session recommendation: Reconnecting with the inner child to release residual shame",
+      "Tags: #InnerChildHealing #SelfAcceptance #Forgiveness",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Develop deeper cognitive restructuring around self-worth and self-image",
+      "- Implement a long-term protocol for reinforcing boundaries between past and present",
+      "- Hypnosis session recommendation: Anchoring self-worth and releasing past emotional residue",
+      "Tags: #SelfWorth #EmotionalRelease #IdentityAnchoring"
+    ]
+  },
+  "motivational_closure": "This journey is not about erasing the past, but about integrating it with compassion. Every step forward is a chance to reframe old narratives and reclaim your right to self-acceptance.",
+  "tags": [
+    "EmotionalRegulation",
+    "SelfCompassion",
+    "ShameRelease",
+    "InnerChildHealing",
+    "SelfAcceptance",
+    "Forgiveness",
+    "SelfWorth",
+    "EmotionalRelease",
+    "IdentityAnchoring",
+    "SelfCompassion",
+    "ShameRelease",
+    "EmotionalRegulation",
+    "SelfForgiveness",
+    "InnerChild",
+    "Boundaries",
+    "SelfWorth"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "case_id": "Clinical_case_173",
+  "age": "16",
+  "gender_identity": "male",
+  "summary": "(RAG Format)\nThe patient presents with difficulties in social interactions, marked by emotional ambivalence towards peers. He describes feeling a sense of rejection when interacting with different groups of friends, experiencing a conflicting response of attachment and aversion depending on the context. Additionally, the patient reports challenges in academic motivation, often avoiding schoolwork to engage in video games such as Elden Rings and GTA. Despite identifying his lack of motivation as a core issue, he expresses uncertainty about the underlying causes.\n\nThe patient also exhibits a tendency to dissociate from emotional stimuli, expressing that his emotional responses are inconsistent and unpredictable. He questions his own emotional reactions, indicating potential confusion regarding his social identity and peer dynamics.",
+  "main_issues": [
+    "- Emotional ambivalence towards peers, characterized by feelings of rejection and attachment",
+    "- Difficulty identifying underlying emotions and their triggers",
+    "- Academic disengagement and avoidance behaviors",
+    "- Excessive gaming as a coping mechanism for stress",
+    "- Confusion regarding social identity and peer dynamics"
+  ],
+  "emotions": [
+    "Emotional confusion",
+    "Sense of rejection",
+    "Avoidance",
+    "Emotional detachment",
+    "Frustration"
+  ],
+  "limiting_beliefs": [
+    "- \"I can't connect with people without feeling rejected.\"",
+    "- \"My emotions don't make sense.\"",
+    "- \"If I engage emotionally, I risk being hurt.\"",
+    "- \"I am better off avoiding people to avoid rejection.\""
+  ],
+  "therapeutic_goals": [
+    "- Assist the patient in identifying and labeling emotions accurately",
+    "- Explore underlying causes of emotional ambivalence and rejection sensitivity",
+    "- Develop strategies for academic engagement and time management",
+    "- Address avoidance behaviors linked to gaming",
+    "- Encourage self-reflection to clarify social identity and peer interactions"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Introduce grounding techniques to manage emotional confusion",
+      "- Assign a reflective journaling exercise to explore emotional responses to peers",
+      "- Hypnosis session recommendation: Enhancing self-awareness and emotional clarity"
+    ],
+    "intermediate": [
+      "- Develop cognitive strategies for identifying and managing rejection sensitivity",
+      "- Establish a structured schedule to balance gaming and academic responsibilities",
+      "- Facilitate role-playing exercises to practice assertive communication in social settings"
+    ],
+    "long_term": [
+      "- Integrate social skills training to foster more consistent peer interactions",
+      "- Promote therapeutic exploration of emotional patterns and identity formation",
+      "- Hypnosis session recommendation: Strengthening self-esteem and social confidence"
+    ]
+  },
+  "motivational_closure": "",
+  "tags": [
+    "EmotionalAmbivalence",
+    "SocialIdentity",
+    "RejectionSensitivity",
+    "GamingAvoidance",
+    "EmotionalAwareness",
+    "PeerDynamics",
+    "SelfEsteem"
+  ]
+}

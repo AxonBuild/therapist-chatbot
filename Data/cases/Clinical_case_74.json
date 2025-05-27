@@ -1,0 +1,61 @@
+{
+  "case_id": "Clinical_case_74",
+  "age": "60",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with persistent anxiety related to financial instability, unresolved grief from past family dynamics, and avoidance behaviors associated with driving on the highway. Despite experiencing financial challenges, she maintains a strong sense of resilience but struggles with lingering fears of solitude and feelings of being trapped in repetitive life patterns. Recent EMDR sessions have revealed underlying fears linked to childhood abandonment and a tendency to minimize her own needs in favor of others.",
+  "main_issues": [
+    "- Persistent avoidance of highway driving due to traumatic past experiences",
+    "- Anxiety around financial instability and feelings of not having achieved enough",
+    "- Guilt and self-blame related to perceived inadequacies",
+    "- Fear of solitude and being emotionally abandoned",
+    "- Resentment towards family members for perceived neglect and lack of support"
+  ],
+  "emotions": [
+    "Anxiety",
+    "Guilt",
+    "Frustration",
+    "Emotional detachment",
+    "Fear of solitude",
+    "Resentment"
+  ],
+  "limiting_beliefs": [
+    "- \"I am not capable of managing on my own.\"",
+    "- \"If I take a risk, I will fail.\"",
+    "- \"I must always put others before myself.\"",
+    "- \"My needs are less important than others'.\""
+  ],
+  "therapeutic_goals": [
+    "- Reduce highway driving avoidance and associated anxiety",
+    "- Reinforce financial self-worth and feelings of personal accomplishment",
+    "- Reprocess childhood abandonment and feelings of neglect",
+    "- Develop strategies for embracing solitude without emotional distress",
+    "- Establish emotional boundaries with family members"
+  ],
+  "solutions": {
+    "immediate": [
+      "- EMDR session targeting the highway incident involving her son",
+      "- Hypnosis session recommendation: Releasing the fear of solitude and reclaiming personal space",
+      "- Grounding techniques for reducing emotional reactivity"
+    ],
+    "intermediate": [
+      "- Ongoing EMDR to address unresolved childhood neglect and abandonment",
+      "- Visualization of safe, controlled highway driving to reduce avoidance",
+      "- Hypnosis session recommendation: Establishing inner security and self-reliance"
+    ],
+    "long_term": [
+      "- Assertiveness training to set boundaries with family members",
+      "- Gradual exposure therapy for highway driving with supportive imagery",
+      "- Ongoing self-compassion exercises to release guilt and self-blame"
+    ]
+  },
+  "motivational_closure": "Your past may have taught you to minimize your needs, but today, you are free to choose your own path. The road ahead is yours to navigate, and each step you take is a step toward reclaiming your own voice and embracing a life that feels fully yours.",
+  "tags": [
+    "DrivingAnxiety",
+    "FinancialResilience",
+    "EmotionalBoundaries",
+    "SelfCompassion",
+    "AbandonmentHealing",
+    "Assertiveness",
+    "HighwayFear"
+  ]
+}

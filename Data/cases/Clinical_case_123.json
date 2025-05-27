@@ -1,0 +1,44 @@
+{
+  "case_id": "Clinical_case_123",
+  "age": "29",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThe patient, a 29-year-old woman, presents with a background of heightened anxiety characterized by anticipatory fear of experiencing panic attacks, particularly in public or social settings such as restaurants. She reports a pattern of emotional fluctuations exacerbated by physical health concerns, including fatigue, nausea, and perceived hormonal changes. A recent holiday experience highlighted her apprehension towards engaging in activities like skiing, which she associates with discomfort and unfamiliarity. Despite prior therapeutic interventions, the residual fear of experiencing panic remains present, though less intense.",
+  "main_issues": [
+    "- Anticipatory anxiety regarding potential panic attacks in public settings",
+    "- Physical symptoms (fatigue, nausea) exacerbating emotional distress",
+    "- Increased sensitivity to perceived bodily sensations (e.g., tension, nausea)",
+    "- Resistance to engaging in previously avoided activities (e.g., skiing)",
+    "- Residual fear of panic despite prior interventions"
+  ],
+  "emotions": [
+    "Anxiety",
+    "Apprehension",
+    "Fear of recurrence",
+    "Frustration",
+    "Avoidance"
+  ],
+  "limiting_beliefs": [
+    "- 'If I feel anxious, I will lose control'",
+    "- 'If I avoid certain activities, I am safer'",
+    "- 'My physical symptoms mean something is wrong with me'"
+  ],
+  "therapeutic_goals": [
+    "- Desensitize residual anxiety related to anticipatory fear",
+    "- Reframe physical symptoms as temporary and non-threatening",
+    "- Install a calming emotional anchor to counteract anxiety spikes",
+    "- Gradually reintroduce previously avoided activities in a controlled manner"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are not defined by the moments of fear you've experienced. Each breath you take is a reminder that you are here, strong and capable of moving forward. The waves of anxiety may come, but they will always pass - and you remain steady, grounded, and whole.",
+  "tags": [
+    "EmotionalResilience",
+    "AnxietyReduction",
+    "InnerCalm",
+    "Grounding",
+    "EmotionalStability"
+  ]
+}

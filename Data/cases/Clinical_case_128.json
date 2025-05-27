@@ -1,0 +1,50 @@
+{
+  "case_id": "Clinical_case_128",
+  "age": "44",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 44-year-old woman presents with chronic emotional stress related to her daughter's behavioral issues, her husband's controlling behavior, and persistent feelings of powerlessness and frustration. The patient is dealing with complex family dynamics, including her daughter's health issues, her husband's dismissive and controlling communication, and her own sense of being undermined as a mother. Additionally, she experiences emotional exhaustion, frequent feelings of being disrespected and minimized, and a pervasive sense of losing control over her life and autonomy. Her daughter's manipulative behavior and mirroring of her father's toxic patterns exacerbate the patient's emotional turmoil, leading to increased stress, emotional depletion, and a sense of entrapment.",
+  "main_issues": [
+    "- Feeling disrespected and minimized by her husband, leading to a sense of powerlessness.",
+    "- Ongoing emotional manipulation by her daughter, mirroring her father's behaviors.",
+    "- Struggles with setting boundaries and maintaining authority as a mother.",
+    "- Persistent emotional exhaustion from managing conflicting family dynamics.",
+    "- Feelings of being trapped in her current living situation and financial dependency.",
+    "- Emotional numbing and avoidance to cope with increasing stress levels."
+  ],
+  "emotions": [
+    "Frustration",
+    "Powerlessness",
+    "Anger",
+    "Exhaustion",
+    "Emotional disconnection",
+    "Anxiety"
+  ],
+  "limiting_beliefs": [
+    "- I am a bad mother because my daughter disrespects me.",
+    "- If I stand up for myself, I will only make things worse.",
+    "- I don't deserve respect - even from my own family.",
+    "- My husband is right - I am incapable and weak."
+  ],
+  "therapeutic_goals": [
+    "- Empower the patient to set and maintain emotional boundaries with her husband and daughter.",
+    "- Facilitate emotional expression of anger and frustration in a safe, controlled manner.",
+    "- Support her in reclaiming her sense of self-worth and maternal authority.",
+    "- Encourage self-compassion and self-validation amidst feelings of inadequacy.",
+    "- Implement grounding techniques to reduce emotional reactivity and prevent burnout.",
+    "- Develop a strategy for creating physical and emotional distance from toxic influences."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are not powerless - you are a woman capable of reclaiming her voice, her boundaries, and her sense of self. Today, you begin to anchor yourself in your own truth, free from the control and manipulation of others.",
+  "tags": [
+    "EmotionalBoundaries",
+    "SelfWorthRestoration",
+    "EmotionalDetachment",
+    "FamilyDynamics",
+    "Empowerment",
+    "StressRelief"
+  ]
+}

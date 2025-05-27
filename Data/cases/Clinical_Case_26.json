@@ -1,0 +1,81 @@
+{
+  "case_id": "Clinical_Case_26",
+  "age": "54",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 54-year-old woman presenting with emotional exhaustion and relational confusion following a conflict with her partner on her birthday. The episode revealed longstanding relational ambivalence, difficulty expressing needs, and a recurring sense of injustice and rejection. She oscillates between deep emotional attachment and doubts about the legitimacy of the relationship. She reports disrupted sleep, fatigue, and difficulty resuming physical activity since returning from a trip abroad. Despite positive moments in the relationship, the conflict reactivated vulnerability tied to past wounds, including feelings of devaluation and lack of self-prioritization.",
+  "main_issues": [
+    "- Emotional exhaustion following conflict with her partner",
+    "- Feelings of injustice, exclusion, and unspoken emotional needs",
+    "- Hyperadaptation and difficulty setting relational boundaries",
+    "- Sleep difficulties and physical fatigue since returning from vacation",
+    "- Unresolved emotional patterns linked to past school humiliation and paternal violence",
+    "- Difficulty maintaining assertiveness and identity in romantic relationships"
+  ],
+  "emotions": [
+    "Hurt",
+    "Sadness",
+    "Anger",
+    "Emotional fatigue",
+    "Confusion"
+  ],
+  "limiting_beliefs": [
+    "- 'If I speak up, I risk being rejected.'",
+    "- 'I have to adapt to maintain peace.'",
+    "- 'My needs come second to others' comfort.'",
+    "- 'I'm responsible for how others feel.'"
+  ],
+  "therapeutic_goals": [
+    "- Process the emotional pain linked to the birthday incident and feelings of rejection",
+    "- Reinforce assertiveness and self-prioritization in romantic interactions",
+    "- Reestablish restorative sleep and physical energy through rhythm recalibration",
+    "- Heal emotional traces of shame and injustice from early school experiences",
+    "- Explore the ambivalence of the current relationship and clarify personal needs"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Emotional self-validation exercises (journal prompts: \"What hurt me and why?\")",
+      "- Evening decompression rituals to assist with sleep onset (body scan, slow breathing)",
+      "- Identify 'invisible rules' of adaptation: when do I cancel myself for others?",
+      "- Hypnosis session recommendation: immediate calming induction for rejection pain and self-validation",
+      "Tags: #RejectionHealing #SelfValidation #SleepSupport",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Guided conversation framework to express needs without guilt",
+      "- Gentle reintegration of physical activity (low-intensity walks, embodied movement)",
+      "- EMDR processing on key events: school humiliation, paternal authority, partner's perceived withdrawal",
+      "- Hypnosis session recommendation: repair of emotional boundaries and inner value recognition",
+      "Tags: #BoundaryRepair #AssertivenessTraining #ShameRelease",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Couple therapy orientation: working with invisible contracts and emotional legitimacy",
+      "- Rewriting inner narratives: from self-blame to self-respect",
+      "- Hypnosis session recommendation: emotional autonomy and identity grounding in relationships",
+      "Tags: #EmotionalAutonomy #SelfRespect #RelationalStability"
+    ]
+  },
+  "motivational_closure": "You are not too much. You are not selfish. You are simply learning that love also means daring to exist — fully, gently, clearly.",
+  "tags": [
+    "RejectionHealing",
+    "SelfValidation",
+    "SleepSupport",
+    "BoundaryRepair",
+    "AssertivenessTraining",
+    "ShameRelease",
+    "EmotionalAutonomy",
+    "SelfRespect",
+    "RelationalStability",
+    "CoupleConflict",
+    "EmotionalOverload",
+    "GuiltAndRejection",
+    "Hyperadaptation",
+    "SleepDisruption",
+    "AmbivalentAttachment",
+    "SelfAssertion",
+    "EmotionalBoundaries"
+  ]
+}

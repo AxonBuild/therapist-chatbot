@@ -1,0 +1,64 @@
+{
+  "case_id": "Clinical_case_107",
+  "age": "54",
+  "gender_identity": "Woman (Second Case)",
+  "summary": "(RAG Format)\nThe patient presents with significant health anxiety triggered by a conversation with her mother about impending loss and death. Since that exchange, she has become hyper-focused on bodily sensations, perceiving every discomfort as a potential sign of serious illness. She experiences obsessive thoughts around health, with frequent catastrophizing and an inability to distract herself from these thoughts. Additionally, she engages in evening smoking as a means of coping, exacerbating her health-related fears.",
+  "main_issues": [
+    "- Health anxiety and obsessive thoughts about serious illness",
+    "- Fear of impending death and loss triggered by maternal conversation",
+    "- Increased focus on bodily sensations and perceived symptoms",
+    "- Emotional suppression and avoidance of verbalizing fears",
+    "- Reliance on evening smoking as a coping mechanism"
+  ],
+  "emotions": [
+    "Fear",
+    "Anxiety",
+    "Obsessive Thinking",
+    "Sadness",
+    "Hypervigilance"
+  ],
+  "limiting_beliefs": [
+    "- If I don't monitor every sensation, I might miss a serious illness.",
+    "- I am responsible for keeping my family calm, so I must hide my fears.",
+    "- If I am feeling weak or unwell, it means something is terribly wrong.",
+    "- My health is fragile, and I must constantly be on alert."
+  ],
+  "therapeutic_goals": [
+    "- Reduce health-focused obsessions and catastrophic thinking",
+    "- Implement grounding techniques to manage intrusive thoughts",
+    "- Encourage emotional expression through journaling or verbalization",
+    "- Reframe limiting beliefs around bodily sensations and health",
+    "- Develop healthier coping mechanisms to replace evening smoking"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to reduce panic and refocus on the present moment",
+      "- Affirmations: 'Not every sensation is a sign of illness.'",
+      "- Journaling to externalize intrusive thoughts and reduce mental looping",
+      "- Grounding techniques: 'Name 5 things you can see, 4 things you can hear, 3 things you can touch...'"
+    ],
+    "intermediate": [
+      "- Develop a structured worry log to document and challenge catastrophic thoughts",
+      "- Introduce self-compassion exercises to address self-blame and fear of illness",
+      "- Assertive communication training to verbalize fears instead of internalizing them",
+      "- Hypnosis session: Releasing health-related fears and reinforcing inner calm"
+    ],
+    "long_term": [
+      "- Therapy to address underlying fears of loss and mortality",
+      "- Monthly follow-ups to assess progress in reducing health obsessions",
+      "- Integration of relaxation techniques to maintain emotional stability",
+      "- Hypnosis session: Trusting the body's natural capacity to heal and function"
+    ]
+  },
+  "motivational_closure": "You are stronger and more resilient than your fears. Your body is capable, and your mind can learn to let go of constant vigilance. Each step toward self-soothing and emotional expression is a step toward reclaiming your peace and confidence.",
+  "tags": [
+    "HealthAnxiety",
+    "IntrusiveThoughts",
+    "SelfCompassion",
+    "GroundingTechniques",
+    "EmotionalExpression",
+    "CalmMind",
+    "TrustingTheBody",
+    "FearRelease"
+  ]
+}

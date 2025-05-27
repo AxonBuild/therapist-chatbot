@@ -1,0 +1,57 @@
+{
+  "case_id": "Clinical_case_170",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with chronic feelings of frustration, resentment, and emotional exhaustion related to her partner's dismissive and irresponsible behavior. She reports recurrent conflicts over financial issues, accusations of blame, and perceived manipulation. Despite her increasing detachment, she oscillates between indifference and irritation, indicating unresolved emotional attachment. The patient also expresses a sense of entrapment due to shared financial assets and family obligations, contributing to her sense of being 'stuck' in the relationship.",
+  "main_issues": [
+    "- Emotional exhaustion from ongoing conflicts.",
+    "- Resentment towards perceived manipulation and blame.",
+    "- Emotional ambivalence between detachment and irritation.",
+    "- Sense of entrapment due to financial dependencies.",
+    "- Difficulty asserting boundaries and expressing needs clearly."
+  ],
+  "emotions": [
+    "Resentment",
+    "Frustration",
+    "Emotional exhaustion",
+    "Ambivalence",
+    "Guilt"
+  ],
+  "limiting_beliefs": [
+    "- 'If I speak up, I will only make things worse.'",
+    "- 'It's my fault he acts this way.'",
+    "- 'Leaving would mean failing.'"
+  ],
+  "therapeutic_goals": [
+    "- Empower the patient to establish and assert boundaries.",
+    "- Reduce emotional reactivity and foster self-soothing techniques.",
+    "- Reframe self-blame and promote self-compassion.",
+    "- Explore pathways to regain a sense of autonomy and self-determination."
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to calm acute emotional responses.",
+      "- Grounding techniques to manage intense irritation and prevent emotional escalation.",
+      "- Hypnosis session recommendation: Releasing emotional entanglements and regaining clarity."
+    ],
+    "intermediate": [
+      "- Assertiveness training to practice setting and maintaining boundaries.",
+      "- Journaling exercises to identify patterns of blame and self-criticism.",
+      "- Hypnosis session recommendation: Reclaiming personal power and releasing the need to justify oneself."
+    ],
+    "long_term": [
+      "- Exploring potential financial independence strategies to reduce dependency.",
+      "- Therapeutic exploration of unresolved feelings of guilt and anger.",
+      "- Hypnosis session recommendation: Restoring self-worth and embracing autonomy."
+    ]
+  },
+  "motivational_closure": "You are not defined by the chaos around you. You have the right to assert your needs and to seek a life where your voice is heard and your boundaries are respected. Embrace the strength to reclaim your autonomy - it is not too late to rewrite your narrative.",
+  "tags": [
+    "EmotionalExhaustion",
+    "Boundaries",
+    "Assertiveness",
+    "SelfWorth",
+    "ResentmentRelease",
+    "PersonalEmpowerment"
+  ]
+}

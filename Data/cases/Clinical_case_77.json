@@ -1,0 +1,59 @@
+{
+  "case_id": "Clinical_case_77",
+  "age": "19",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with recurrent patterns of emotional fusion and obsessional thinking related to romantic connections. A recent encounter with a former love interest has triggered heightened emotional responses, including fixation and intrusive thoughts. She expresses concern about falling back into old patterns of dependency and losing herself in the relationship. The situation is further complicated by the potential emotional unavailability of the partner, who is in the army and may be absent for extended periods.",
+  "main_issues": [
+    "- Obsessional thinking and emotional fusion with new romantic interest",
+    "- Fear of repeating past patterns of dependency",
+    "- Difficulty maintaining emotional boundaries",
+    "- Insecurity and self-doubt regarding self-worth in relationships",
+    "- Anxiety about potential abandonment and emotional inconsistency due to partner's military commitments"
+  ],
+  "emotions": [
+    "Obsession",
+    "Anxiety",
+    "Emotional vulnerability",
+    "Fear of abandonment",
+    "Emotional confusion"
+  ],
+  "limiting_beliefs": [
+    "- \"If I don't maintain the connection, I will be forgotten.\"",
+    "- \"I am not enough to keep someone's interest.\"",
+    "- \"If I don't fuse emotionally, the relationship will fail.\"",
+    "- \"I always fall too fast and get hurt.\""
+  ],
+  "therapeutic_goals": [
+    "- Develop strategies to manage obsessive thinking and emotional fusion",
+    "- Establish clear emotional boundaries and self-regulation techniques",
+    "- Reframe negative self-beliefs regarding relationships and self-worth",
+    "- Explore methods to maintain self-identity within romantic connections",
+    "- Prepare for potential emotional challenges related to partner's military commitments"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Hypnosis session focused on grounding and emotional detachment",
+      "- Daily journaling to externalize obsessive thoughts and fears",
+      "- Breathing techniques for calming intrusive thoughts and reducing anxiety"
+    ],
+    "intermediate": [
+      "- Visualization exercises to maintain emotional autonomy",
+      "- Self-compassion techniques to reinforce self-worth independently of relationships",
+      "- Hypnosis session focused on releasing attachment and fostering inner security"
+    ],
+    "long_term": [
+      "- Continued work on establishing emotional boundaries",
+      "- Exploration of past attachment patterns to prevent emotional fusion",
+      "- Assertiveness training to express needs without dependency or fear of rejection"
+    ]
+  },
+  "motivational_closure": "You have the power to define your emotional space and maintain your own identity, regardless of who enters or exits your life. Each connection can be a stepping stone to understanding yourself better, without losing yourself in the process.",
+  "tags": [
+    "EmotionalBoundaries",
+    "AttachmentHealing",
+    "ObsessiveThinking",
+    "SelfWorth",
+    "Detachment",
+    "RelationshipAnxiety"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "case_id": "Clinical_Case_14",
+  "age": "73",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThis patient exhibits significant ambivalence in a romantic relationship. She fluctuates between contemplation and action, feeling ashamed of her emotional dependence and fearing solitude. She experiences anticipatory anxiety during separations and has low self-worth. Despite insight into the relationship's instability, she struggles to detach due to fear of emptiness and a lack of internal validation.",
+  "main_issues": [
+    "- Emotional ambivalence (wanting to leave but waiting for an external reason)",
+    "- Subtle emotional dependence and projection of decision-making onto the partner",
+    "- Persistent sense of failure and shame over not \"changing\"",
+    "- Hypervigilance and anticipatory anxiety when apart from the partner",
+    "- Fear of the emotional void after a breakup",
+    "- Difficulty initiating personal projects independently of the relationship"
+  ],
+  "emotions": [
+    "Shame",
+    "Anxiety",
+    "Frustration",
+    "Loneliness",
+    "Doubt",
+    "Ambivalence"
+  ],
+  "limiting_beliefs": [
+    "- 'I'm not capable of leaving.'",
+    "- 'I need external proof to make a decision.'",
+    "- 'If I'm alone, I'll fall apart.'",
+    "- 'I'm not worthy enough to be chosen.'"
+  ],
+  "therapeutic_goals": [
+    "- Restore internal emotional confidence",
+    "- Reduce affective hypervigilance",
+    "- Enable separation without guilt",
+    "- Strengthen self-worth and intrinsic value",
+    "- Shift focus from relationship-centric to self-centric projects"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- 3/6 Breathing for anxiety regulation",
+      "- Thought experiment: \"What if I didn't wait for a reason to leave?\"",
+      "- Writing a fictional breakup letter to reclaim decision power",
+      "- Hypnosis session recommendation: calming inner void and reframing shame",
+      "Tags: #ShameRelief #DecisionAutonomy #InnerVoidHealing",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Join social activities with mixed-gender environments",
+      "- Cognitive restructuring: \"My worth is not defined by someone else's presence\"",
+      "- Gradual exposure to chosen solitude",
+      "- Hypnosis session recommendation: emotional reprogramming and independent anchoring",
+      "Tags: #EmotionalReprogramming #SelfAnchoring #RelationalDetachment",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Longitudinal tracking of self-initiated actions and identity reinforcement",
+      "- Hypnosis session recommendation: integration of emotional autonomy and long-term stability",
+      "Tags: #SelfWorthIntegration #AutonomyStability #EmotionalResilience"
+    ]
+  },
+  "motivational_closure": "You don't need them to mess up in order to make a decision. You have the right to choose what's best for you, without waiting for permission from fate.",
+  "tags": [
+    "ShameRelief",
+    "DecisionAutonomy",
+    "InnerVoidHealing",
+    "EmotionalReprogramming",
+    "SelfAnchoring",
+    "RelationalDetachment",
+    "SelfWorthIntegration",
+    "AutonomyStability",
+    "EmotionalResilience",
+    "EmotionalDependence",
+    "Shame",
+    "Hypervigilance",
+    "FearOfAbandonment",
+    "EmotionalAmbivalence",
+    "LowSelfEsteem",
+    "RelationalAutonomy",
+    "InnerStability"
+  ]
+}

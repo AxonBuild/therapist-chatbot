@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_Case_38",
+  "age": "36",
+  "gender_identity": "woman presents with chronic sleep-onset insomnia, characterized by an average sleep latency exceeding 90 minutes. Cognitive hyperarousal at bedtime is marked by ruminations and anticipatory thoughts regarding future scenarios, creating a self-reinforcing cycle of wakefulness. She carries a high mental load related to work and family life, maintaining a rigid belief that failure to sleep will 'ruin the next day.' The bed has become associated with sleep struggle, reinforcing the perception that sleep is a test she must pass. Despite the pronounced cognitive activity, she lacks emotional or physical calming rituals to ease the transition from wakefulness to sleep.",
+  "summary": "(RAG Format)\nThis 36-year-old woman presents with chronic sleep-onset insomnia, characterized by an average sleep latency exceeding 90 minutes. Cognitive hyperarousal at bedtime is marked by ruminations and anticipatory thoughts regarding future scenarios, creating a self-reinforcing cycle of wakefulness. She carries a high mental load related to work and family life, maintaining a rigid belief that failure to sleep will 'ruin the next day.' The bed has become associated with sleep struggle, reinforcing the perception that sleep is a test she must pass. Despite the pronounced cognitive activity, she lacks emotional or physical calming rituals to ease the transition from wakefulness to sleep.",
+  "main_issues": [
+    "- Chronic sleep-onset insomnia (average latency > 90 minutes)",
+    "- Cognitive hyperarousal at bedtime with rumination and mental overactivity",
+    "- High mental load related to work and family responsibilities",
+    "- Negative conditioning: bed = sleep struggle and failure",
+    "- Absence of calming evening rituals",
+    "- High sensitivity to nocturnal stimuli (sounds, light, internal tension)"
+  ],
+  "emotions": [
+    "Frustration and irritability",
+    "Anticipatory anxiety regarding sleep and next day performance",
+    "Guilt for not 'succeeding in sleeping'",
+    "Sense of failure",
+    "Physical tension localized in the epigastric area and trapezius"
+  ],
+  "limiting_beliefs": [
+    "- 'If I don't sleep, I'll ruin my day tomorrow.'",
+    "- 'I must control my sleep.'",
+    "- 'Falling asleep is a test I must pass.'"
+  ],
+  "therapeutic_goals": [
+    "- Reduce cognitive hyperarousal and reframe sleep as a natural, non-pressured state",
+    "- Recondition the bed as a safe, neutral space rather than a place of struggle",
+    "- Develop calming evening rituals to ease the transition to sleep",
+    "- Introduce sensory and emotional anchors to lower arousal levels",
+    "- Reframe sleep-related beliefs to reduce anticipatory anxiety"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Cognitive offloading exercise: write intrusive thoughts in a notebook before bed",
+      "- Transition ritual: 30 minutes of dim light + calming, non-digital activity",
+      "- 4-7-8 breathing technique to slow the heart rate and activate parasympathetic relaxation",
+      "- Body scan focused on tension zones (jaw, solar plexus, shoulders)",
+      "- Practice allowing wakefulness without resistance: 'It's okay to be awake right now.'"
+    ],
+    "intermediate": [
+      "- Bed reconditioning: only stay in bed if sleepy. If not, get up for 10 minutes, then return",
+      "- 'Paradoxical intention': consciously say 'I will stay awake' to reduce pressure to sleep",
+      "- Visualization of a safe haven associated with relaxation and safety",
+      "- White noise or binaural sounds to reduce auditory hypervigilance"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Reframing Sleep as a State of Natural Release",
+      "- Dissociating bed from sleep struggle and reframing it as a safe space",
+      "- Anchoring a calming word to signal the mind and body to release tension",
+      "- Establishing a ritual of internal release before sleep to 'leave the day behind'"
+    ]
+  },
+  "motivational_closure": "You don't have to chase sleep. You don't have to fight for it. It's not something to be won or lost—it's a place to return to. A place where you already belong.",
+  "tags": [
+    "SleepDisorder",
+    "Insomnia",
+    "NightAwakenings",
+    "Hyperarousal",
+    "InternalSafety",
+    "EveningRituals"
+  ]
+}

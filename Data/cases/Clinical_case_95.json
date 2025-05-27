@@ -1,0 +1,46 @@
+{
+  "case_id": "Clinical_case_95",
+  "age": "67",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThe patient is a 67-year-old woman presenting with heightened emotional fragility, particularly in response to the decline and eventual death of her mother. She expresses concerns about her own cognitive health, fearing she may develop Alzheimer's disease despite reassurances to the contrary. Her mother was diagnosed with a dementia of the Alzheimer type (DTA), not Alzheimer's itself, but the patient remains fixated on the possibility of inheriting a similar condition. Additionally, she reports fluctuating emotional states, characterized by moments of intense sadness and apathy, followed by periods of relative stability. She expresses guilt over past conflicts with her mother and apprehension about becoming a burden to her own daughter.",
+  "main_issues": [
+    "- Fear of developing Alzheimer's or other cognitive decline",
+    "- Emotional volatility and fluctuating mood states",
+    "- Residual guilt and unresolved emotions toward deceased mother",
+    "- Apprehension about future dependency and burden on daughter",
+    "- Distorted perception of physical and psychological fragility"
+  ],
+  "emotions": [
+    "Fear",
+    "Guilt",
+    "Sadness",
+    "Uncertainty",
+    "Resignation"
+  ],
+  "limiting_beliefs": [
+    "- 'I am becoming fragile like my mother.'",
+    "- 'If I lose my memory, I will be a burden.'",
+    "- 'My mother's fate will be mine.'"
+  ],
+  "therapeutic_goals": [
+    "- Alleviate fear of cognitive decline through psychoeducation and cognitive restructuring.",
+    "- Validate and reprocess residual guilt related to the mother's decline.",
+    "- Anchor positive self-perception to counteract perceived fragility.",
+    "- Encourage self-compassion and acceptance of emotional fluctuations.",
+    "- Implement relaxation techniques to manage anticipatory anxiety."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are not your mother's fate. The path you walk is your own, shaped by your choices and your strength. Each day, you can choose to honor your well-being, to connect with the present, and to anchor yourself in the stability of who you truly are.",
+  "tags": [
+    "FearOfAging",
+    "CognitiveDecline",
+    "ResidualGuilt",
+    "EmotionalStability",
+    "FamilyConflict",
+    "SelfCompassion"
+  ]
+}

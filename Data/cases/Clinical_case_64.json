@@ -1,0 +1,44 @@
+{
+  "case_id": "Clinical_case_64",
+  "age": "62",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient, a 62-year-old woman, presents with heightened emotional sensitivity and a strong reactivity to interpersonal conflict, particularly in situations involving perceived aggression or hostility. She describes feeling overwhelmed by the intensity of others' actions, particularly when they display aggressive or confrontational behavior. She recounts a recent incident involving a road rage altercation, during which she felt simultaneously vulnerable and defensive, struggling to regulate her emotional response to the perceived threat.",
+  "main_issues": [
+    "- Emotional reactivity to perceived aggression or conflict",
+    "- Increased sensitivity to confrontational behavior",
+    "- Difficulty in emotional regulation following conflictual encounters",
+    "- Sense of vulnerability and helplessness in high-tension situations",
+    "- Avoidance of urban settings due to perceived emotional overstimulation"
+  ],
+  "emotions": [
+    "Frustration",
+    "Fear",
+    "Anxiety",
+    "Resentment",
+    "Overwhelm"
+  ],
+  "limiting_beliefs": [
+    "- 'If I react, I am weak'",
+    "- 'If I avoid conflict, I am safer'",
+    "- 'People are inherently aggressive and unpredictable'"
+  ],
+  "therapeutic_goals": [
+    "- Develop grounding techniques to manage emotional reactivity",
+    "- Reframe aggressive encounters as external and unrelated to personal worth",
+    "- Establish emotional boundaries to mitigate the impact of external conflicts",
+    "- Introduce visualization exercises to restore a sense of inner calm"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are the calm within the storm. External conflicts may swirl around you, but your inner sanctuary remains untouched. You are strong, grounded, and at peace - no matter what arises.",
+  "tags": [
+    "EmotionalGrounding",
+    "ConflictNeutrality",
+    "InnerCalm",
+    "EmotionalDetachment",
+    "SelfWorth"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "case_id": "Clinical_Case_17",
+  "age": "38",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThis patient presents with chronic anxiety centered on protecting her children, particularly her daughter, from imagined threats. Although no objective evidence supports her fears, intrusive thoughts and catastrophic interpretations dominate her emotional responses. Episodes of hypervigilance are intensified by fatigue and stress, leading to compulsive questioning of her daughter and emotional flooding. She oscillates between moments of affection and disconnection with her partner, and often questions her own maternal capacity. Her internal conflict stems from unresolved personal trauma, emotional projections, and an overwhelming sense of responsibility.",
+  "main_issues": [
+    "- Hypervigilance and projection of danger onto benign family situations",
+    "- Fear of failing as a mother and harming her child through inaction",
+    "- Difficulty trusting her partner despite no rational cause for suspicion",
+    "- Guilt following obsessive questioning and emotional invasion of her daughter",
+    "- Emotional confusion between intuition and anxiety-driven thinking"
+  ],
+  "emotions": [
+    "Fear",
+    "Guilt",
+    "Exhaustion",
+    "Sadness",
+    "Doubt",
+    "Helplessness"
+  ],
+  "limiting_beliefs": [
+    "- 'If I'm not constantly vigilant, something terrible will happen.'",
+    "- 'I am responsible for every sign of distress in my child.'",
+    "- 'If I suspect someone, it must mean something is wrong.'",
+    "- 'My anxiety means I'm a bad mother.'"
+  ],
+  "therapeutic_goals": [
+    "- Desensitize traumatic networks linked to maternal guilt and protection",
+    "- Separate emotional intuition from irrational anxiety-based thoughts",
+    "- Restore trust in her partner and reality-based perception",
+    "- Reduce emotional invasiveness in the parent-child relationship",
+    "- Reconnect with maternal self-worth and emotional resilience"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Reality-checking technique: list facts vs. fears after each spike in anxiety",
+      "- Soothing affirmation practice: \"My fear is not the same as truth\"",
+      "- Post-episode journaling to externalize anxiety spirals",
+      "- Hypnosis session recommendation: install a symbolic guardian and calm maternal projections",
+      "Tags: #MaternalGuilt #Hypervigilance #SymbolicSafety",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Psychoeducation about child development to reduce over-interpretation",
+      "- Reconditioning of maternal reflexes through self-compassion training",
+      "- Anchored conversation rituals to reinforce couple safety",
+      "- Hypnosis session recommendation: emotional separation between fear and reality-based care",
+      "Tags: #MaternalResilience #AnxietySeparation #PartnerTrust",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Guided meditations on emotional security and self-forgiveness",
+      "- EMDR protocols to address deep-rooted fears of transmission of trauma",
+      "- Hypnosis session recommendation: identity restoration as a confident, caring mother",
+      "Tags: #MotherhoodConfidence #EmotionalRepair #TraumaDesensitization"
+    ]
+  },
+  "motivational_closure": "You don't have to earn your right to be a good mother. Beneath the fear, there is already love. And love is enough to begin again.",
+  "tags": [
+    "MaternalGuilt",
+    "Hypervigilance",
+    "SymbolicSafety",
+    "MaternalResilience",
+    "AnxietySeparation",
+    "PartnerTrust",
+    "MotherhoodConfidence",
+    "EmotionalRepair",
+    "TraumaDesensitization",
+    "MaternalAnxiety",
+    "Hypervigilance",
+    "FearOfFailure",
+    "IntrusiveThoughts",
+    "EmotionalOverload",
+    "TrustRepair",
+    "SymbolicProtection",
+    "GuiltRelief"
+  ]
+}

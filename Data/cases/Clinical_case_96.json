@@ -1,0 +1,44 @@
+{
+  "case_id": "Clinical_case_96",
+  "age": "24",
+  "gender_identity": "man",
+  "summary": "(RAG Format)\nThe patient is a 24-year-old man presenting with residual emotional distress linked to a past cancer diagnosis. During the session, he expressed difficulty in identifying specific emotional responses to the initial diagnosis, noting that much of the experience feels like a blur. He recalls feeling more impacted by moments of isolation at the hospital rather than the diagnosis itself. He exhibits a tendency to minimize the emotional impact of the event, framing it as 'just another chapter,' despite acknowledging residual emotional discomfort. The session aimed to explore emotional imprints left by these memories and identify potential unprocessed experiences.",
+  "main_issues": [
+    "- Difficulty in emotionally processing the cancer diagnosis",
+    "- Residual discomfort linked to memories of isolation at the hospital",
+    "- Tendency to minimize emotional impact as a coping mechanism",
+    "- Ambivalence about the lasting effects of the past experience"
+  ],
+  "emotions": [
+    "Avoidance",
+    "Detachment",
+    "Frustration",
+    "Ambivalence",
+    "Resignation"
+  ],
+  "limiting_beliefs": [
+    "- 'The past is over; I shouldn't feel anything now.'",
+    "- 'I need to move on and forget about it.'",
+    "- 'It wasn't a big deal; I'm fine now.'"
+  ],
+  "therapeutic_goals": [
+    "- Facilitate the processing of residual emotional imprints from the cancer diagnosis.",
+    "- Address avoidance tendencies and validate unresolved emotions.",
+    "- Normalize the presence of lingering emotional responses and provide a safe space for expression.",
+    "- Develop coping strategies for emotional regulation during future triggers."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You cannot change the past, but you can change the way it lives within you. Each memory is an opportunity to reconnect with your strength and resilience. You are not defined by what happened, but by how you choose to move forward.",
+  "tags": [
+    "CancerSurvivor",
+    "EmotionalProcessing",
+    "HospitalExperience",
+    "EmotionalDetachment",
+    "LifeAfterCancer",
+    "VulnerabilityAcceptance"
+  ]
+}

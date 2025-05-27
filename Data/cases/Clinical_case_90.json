@@ -1,0 +1,46 @@
+{
+  "case_id": "Clinical_case_90",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with pervasive feelings of disorientation, emptiness, and unresolved grief following a significant loss. She reports experiencing episodic emotional instability, fluctuating between intense longing and emotional numbness. Despite maintaining daily routines involving work and family, she is unable to reconnect with a sense of well-being. Her self-report suggests internal conflict between moving forward and feeling as though she is abandoning the deceased, manifesting as a perceived barrier to experiencing joy or fulfillment.",
+  "main_issues": [
+    "- Persistent sense of loss and emptiness.",
+    "- Difficulty finding joy or fulfillment in daily life.",
+    "- Conflict between moving forward and perceived disloyalty to the deceased.",
+    "- Emotional disorientation and fluctuations in mood.",
+    "- Avoidance of memories associated with the deceased."
+  ],
+  "emotions": [
+    "Grief",
+    "Emptiness",
+    "Sadness",
+    "Emotional Numbness",
+    "Guilt"
+  ],
+  "limiting_beliefs": [
+    "- 'If I move forward, I am betraying the memory of the deceased.'",
+    "- 'I don't deserve to feel happiness after such a loss.'",
+    "- 'If I let go, I will lose them forever.'"
+  ],
+  "therapeutic_goals": [
+    "- Normalize the grieving process and validate the patient's emotional responses.",
+    "- Encourage present-focused awareness to foster a sense of continuity.",
+    "- Introduce grounding techniques to manage emotional disorientation.",
+    "- Utilize cognitive reframing to address perceived disloyalty versus moving forward.",
+    "- Facilitate the symbolic integration of the deceased's memory within her current life."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Moving forward does not mean letting go - it means carrying the memory of your loved one forward in new ways. You are allowed to feel happiness, to rebuild, and to find a sense of well-being while keeping their presence alive within you.",
+  "tags": [
+    "Grief",
+    "Loss",
+    "EmotionalDisorientation",
+    "GuiltRelease",
+    "LifeAfterLoss",
+    "ReconnectingWithJoy"
+  ]
+}

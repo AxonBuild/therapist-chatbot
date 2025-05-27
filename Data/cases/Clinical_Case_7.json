@@ -1,0 +1,81 @@
+{
+  "case_id": "Clinical_Case_7",
+  "age": "32",
+  "gender_identity": "man is currently experiencing significant emotional distress linked to a traumatic event involving a fatal accident and subsequent police intervention. He expresses feelings of confusion, lingering guilt, and emotional disorientation, particularly surrounding the chaotic aftermath of the accident and the police encounter. While he reports some progress in processing the trauma, there is still a notable presence of panic, confusion, and emotional numbness during recollection of the event. Additionally, he struggles with a sense of isolation due to the lack of familial support and ongoing uncertainty regarding the legal outcome, which further exacerbates his emotional instability.",
+  "summary": "(RAG Format)\nThis 32-year-old man is currently experiencing significant emotional distress linked to a traumatic event involving a fatal accident and subsequent police intervention. He expresses feelings of confusion, lingering guilt, and emotional disorientation, particularly surrounding the chaotic aftermath of the accident and the police encounter. While he reports some progress in processing the trauma, there is still a notable presence of panic, confusion, and emotional numbness during recollection of the event. Additionally, he struggles with a sense of isolation due to the lack of familial support and ongoing uncertainty regarding the legal outcome, which further exacerbates his emotional instability.",
+  "main_issues": [
+    ":",
+    "- Persistent confusion and emotional disorientation surrounding the accident and police intervention",
+    "- Emotional numbness and difficulty in processing traumatic memories",
+    "- Lingering guilt and self-blame related to the incident",
+    "- Anxiety regarding the pending legal outcome and its impact on his work stability",
+    "- Sense of isolation and lack of familial support during this period",
+    "- Emotional fatigue due to sustained psychological tension and ongoing legal uncertainty"
+  ],
+  "emotions": [
+    ":",
+    "Confusion",
+    "Panic",
+    "Emotional numbness",
+    "Guilt",
+    "Fear of legal repercussions",
+    "Emotional exhaustion"
+  ],
+  "limiting_beliefs": [
+    ":",
+    "- \"I am responsible for what happened.\"",
+    "- \"If I let go of the guilt, I am a bad person.\"",
+    "- \"I don't deserve to be understood or supported.\"",
+    "- \"If I don't stay alert, something worse will happen.\""
+  ],
+  "therapeutic_goals": [
+    ":",
+    "- Clarify emotional confusion and integrate fragmented traumatic memories",
+    "- Reduce panic and anxiety responses related to the police encounter",
+    "- Alleviate self-blame and release internalized guilt",
+    "- Re-establish a sense of safety and emotional grounding",
+    "- Reconnect with emotional resources and self-support strategies",
+    "- Reinforce emotional autonomy and self-acceptance during legal uncertainty"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Grounding techniques to reduce confusion and panic",
+      "- Psychoeducation on trauma responses and emotional disorientation",
+      "- Hypnosis session recommendation: anchoring techniques to stabilize emotional responses during police recollection",
+      "Tags: #EmotionalGrounding #TraumaProcessing #PanicReduction #PoliceIntervention"
+    ],
+    "intermediate": [
+      "- EMDR to process fragmented memories of the accident and the police encounter",
+      "- Narrative restructuring to reframe guilt and reduce self-blame",
+      "- Hypnosis session recommendation: symbolic detachment from the traumatic event and emotional reconstruction",
+      "Tags: #EMDR #SymbolicDetachment #GuiltRelease #EmotionalReintegration"
+    ],
+    "long_term": [
+      "- Continued EMDR or IFS for emotional stabilization and self-forgiveness",
+      "- Hypnosis work to cultivate self-compassion and internal safety during legal uncertainty",
+      "- Hypnosis session recommendation: Reclaiming personal power and emotional autonomy",
+      "Tags: #SelfForgiveness #EmotionalAutonomy #InnerStrength #LegalUncertainty"
+    ]
+  },
+  "motivational_closure": ":\nYou are not defined by what happened, but by how you choose to heal from it. Each step toward emotional clarity is a step toward reclaiming your life. The process is not about erasing the past but about finding your own strength within it.",
+  "tags": [
+    "EmotionalGrounding",
+    "TraumaProcessing",
+    "PanicReduction",
+    "PoliceIntervention",
+    "EMDR",
+    "SymbolicDetachment",
+    "GuiltRelease",
+    "EmotionalReintegration",
+    "SelfForgiveness",
+    "EmotionalAutonomy",
+    "InnerStrength",
+    "LegalUncertainty",
+    "TraumaProcessing",
+    "EmotionalGrounding",
+    "SelfForgiveness",
+    "PoliceIntervention",
+    "EmotionalStabilization",
+    "LegalUncertainty"
+  ]
+}

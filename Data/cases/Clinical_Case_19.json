@@ -1,0 +1,79 @@
+{
+  "case_id": "Clinical_Case_19",
+  "age": "68",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 68-year-old woman presenting with long-standing emotional fatigue and disrupted circadian rhythm. She reports a significant decrease in morning anxiety since the last session, but continues to struggle with motivation to get out of bed. Her emotional state is impacted by unresolved tensions with her partner's daughter, whom she perceives as manipulative and controlling. This dynamic reinforces a sense of injustice, emotional invisibility, and disempowerment in the household. Additional complaints include sleep disruption, gastric tension, and low energy, all of which contribute to her experience of chronic exhaustion.",
+  "main_issues": [
+    "- Persistent emotional fatigue and lack of daily motivation",
+    "- Dysregulated sleep-wake rhythm with morning avoidance",
+    "- Feelings of injustice and relational imbalance within the family dynamic",
+    "- Psychological impact of stepfamily tensions",
+    "- Somatic complaints: digestive discomfort, low energy, disrupted sleep"
+  ],
+  "emotions": [
+    "Frustration",
+    "Exhaustion",
+    "Sadness",
+    "Injustice",
+    "Resignation"
+  ],
+  "limiting_beliefs": [
+    "- 'I no longer have a place.'",
+    "- 'Nothing will change.'",
+    "- 'I'm invisible in this family.'",
+    "- 'I can't escape this imbalance.'"
+  ],
+  "therapeutic_goals": [
+    "- Reinstate a healthy circadian rhythm and morning activation pattern",
+    "- Restore emotional legitimacy and recognition within her environment",
+    "- Desensitize stepdaughter-related emotional triggers",
+    "- Anchor emotional autonomy and resilience regardless of others' behaviors",
+    "- Normalize and soothe psychosomatic manifestations"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Gentle morning exposure rituals (light, breath, movement)",
+      "- Evening wind-down protocol for digestion and circadian regulation",
+      "- Reframe morning fatigue as a protective pause, not failure",
+      "- Hypnosis session recommendation: restoring motivation and internal place",
+      "Tags: #MorningActivation #SomaticRelief #InvisibleIdentity",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Psychoeducation on stepfamily dynamics and emotional neutrality strategies",
+      "- Emotionally meaningful rituals: journaling, music, or creative expression",
+      "- Hypnosis session recommendation: reconnection with symbolic legitimacy and emotional grounding",
+      "Tags: #StepFamilyHealing #EmotionalRebalancing #InnerGrounding",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Narrative restructuring around personal role and value",
+      "- Identity repair protocols anchored in morning rituals",
+      "- Hypnosis session recommendation: reclaiming personal rhythm and role anchoring in the family system",
+      "Tags: #ChronobiologicalHealing #RoleIntegration #EmotionalResilience"
+    ]
+  },
+  "motivational_closure": "The way you wake up each day is not a failure. It is an invitation. An invitation to return to yourself, your rhythm, your place. You are not invisible—you are reclaiming the space that was always yours to begin with.",
+  "tags": [
+    "MorningActivation",
+    "SomaticRelief",
+    "InvisibleIdentity",
+    "StepFamilyHealing",
+    "EmotionalRebalancing",
+    "InnerGrounding",
+    "ChronobiologicalHealing",
+    "RoleIntegration",
+    "EmotionalResilience",
+    "EmotionalFatigue",
+    "SleepPatternDisturbance",
+    "FamilyConflict",
+    "StepParentingStress",
+    "LackOfRecognition",
+    "SomaticComplaints",
+    "InvisibleRole",
+    "MorningRituals"
+  ]
+}

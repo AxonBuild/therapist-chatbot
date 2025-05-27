@@ -1,0 +1,44 @@
+{
+  "case_id": "Clinical_case_122",
+  "age": "44",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient, a 44-year-old woman, presents with heightened emotional distress linked to perceived disrespect and incompetence in her professional environment. She reports frustration and exhaustion due to her perceived need to overcompensate for the inadequacies of her colleagues. A strong pattern of perfectionism and fear of judgment is evident, stemming from childhood experiences where academic achievement was strongly emphasized by her mother. She recalls a specific memory of submitting a blank exam paper in sixth grade, a gesture of rebellion that was met with severe criticism from her mother. This memory remains emotionally charged and appears to underlie her current frustration and sense of over-responsibility.",
+  "main_issues": [
+    "- Perfectionism linked to fear of judgment and criticism",
+    "- Sense of over-responsibility in professional tasks",
+    "- Emotional distress when colleagues do not meet her standards",
+    "- Frustration when personal efforts go unrecognized or undervalued",
+    "- Residual anger and rebellion linked to childhood experiences"
+  ],
+  "emotions": [
+    "Frustration",
+    "Resentment",
+    "Fear of judgment",
+    "Sense of inadequacy",
+    "Underlying anger and rebellion"
+  ],
+  "limiting_beliefs": [
+    "- 'If I do not perform perfectly, I will be criticized'",
+    "- 'If I don't overcompensate, things will fall apart'",
+    "- 'My worth is based on how well I perform'"
+  ],
+  "therapeutic_goals": [
+    "- Reduce over-responsibility and perfectionistic tendencies",
+    "- Reframe childhood experiences of criticism to diminish current impact",
+    "- Establish boundaries in the workplace to prevent emotional exhaustion",
+    "- Develop emotional regulation techniques to manage frustration"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are more than your achievements. Your worth is not defined by the work you produce or the mistakes you make. Every effort is enough. You are enough - just as you are.",
+  "tags": [
+    "PerfectionismRelease",
+    "EmotionalBoundaries",
+    "SelfAcceptance",
+    "FrustrationManagement",
+    "SelfWorth"
+  ]
+}

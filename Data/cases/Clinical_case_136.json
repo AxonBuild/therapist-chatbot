@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_case_136",
+  "age": "42",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 42-year-old woman presents with persistent frustration and emotional disconnection in her marital relationship, characterized by a lack of communication and perceived neglect from her partner. Additionally, she experiences residual trauma and hypervigilance related to a past car accident involving a garbage truck. She reports intense avoidance of similar vehicles and intrusive thoughts when encountering such trucks in her daily environment. Her narrative reveals unmet emotional needs, difficulty asserting boundaries, and a lingering sense of injustice regarding the accident and her partner's emotional availability.",
+  "main_issues": [
+    "- Marital disconnection due to lack of communication and emotional neglect.",
+    "- Residual trauma and hypervigilance related to a car accident involving a garbage truck.",
+    "- Difficulty asserting emotional needs without feeling guilty or demanding.",
+    "- Emotional suppression to maintain family harmony.",
+    "- Persistent avoidance of reminders linked to the accident, including garbage trucks and the driver."
+  ],
+  "emotions": [
+    "Frustration",
+    "Emotional disconnection",
+    "Resentment",
+    "Hypervigilance",
+    "Anxiety"
+  ],
+  "limiting_beliefs": [
+    "- \"If I express my needs, I'm being demanding.\"",
+    "- \"If he really loved me, he would know what I need without me saying it.\"",
+    "- \"I can't let go of the past because it still affects me daily.\"",
+    "- \"My well-being is less important than maintaining family peace.\""
+  ],
+  "therapeutic_goals": [
+    "- Support emotional processing of residual trauma linked to the accident to reduce hypervigilance and anxiety.",
+    "- Develop assertive communication techniques to express needs without guilt.",
+    "- Reframe cognitive distortions around self-worth and perceived neglect in the marital relationship.",
+    "- Implement grounding exercises to manage emotional responses when encountering reminders of the accident.",
+    "- Explore unresolved emotional patterns related to perceived injustice and lack of closure."
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Breathing exercises to reduce anxiety when encountering garbage trucks or other reminders of the accident.",
+      "- Journaling to process feelings of frustration and identify unmet needs in the marital relationship.",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Cognitive restructuring to challenge beliefs around self-worth and perceived neglect in the marriage.",
+      "- Visualization techniques to reduce the intensity of traumatic reminders linked to the accident.",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Psychotherapy to address chronic resentment and emotional disconnection in the marriage.",
+      "- Hypnosis session to integrate emotional resilience and reduce the impact of traumatic reminders.",
+      "- Assertiveness training to enhance communication and boundary-setting skills."
+    ]
+  },
+  "motivational_closure": "You deserve to be heard, to be valued, and to feel safe in your own life. Each step you take toward reclaiming your voice and your sense of safety is a step toward healing - and you are capable of that.",
+  "tags": [
+    "Assertiveness",
+    "EmotionalResilience",
+    "AnxietyRelief",
+    "TraumaProcessing",
+    "MaritalCommunication",
+    "BoundarySetting",
+    "EmotionalHealing"
+  ]
+}

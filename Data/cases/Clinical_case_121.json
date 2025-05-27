@@ -1,0 +1,44 @@
+{
+  "case_id": "Clinical_case_121",
+  "age": "40",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient, a 40-year-old woman, presents with persistent feelings of powerlessness linked to unfulfilled expectations in close relationships. She describes a recurring dynamic where she perceives her partners, both her ex-husband and her current partner Andrea, as emotionally distant and less invested in family life. Despite her efforts to maintain control and manage household responsibilities, she feels unsupported and unseen. The emotional pattern is marked by an internal conflict between her desire for connection and her frustration over unmet expectations. This sense of powerlessness extends to her perceived inability to influence her partner's behavior and her son's experiences, further intensifying her distress.",
+  "main_issues": [
+    "- Feelings of powerlessness in close relationships",
+    "- Perceived emotional neglect from partner and ex-husband",
+    "- Frustration over unmet expectations and lack of reciprocity",
+    "- Conflict between desire for connection and need for control",
+    "- Residual emotional impact from perceived neglect during son's early years"
+  ],
+  "emotions": [
+    "Frustration",
+    "Powerlessness",
+    "Resentment",
+    "Confusion",
+    "Unresolved grief"
+  ],
+  "limiting_beliefs": [
+    "- 'If I don't control everything, things will fall apart'",
+    "- 'If they don't show up, it means I am not important'",
+    "- 'My needs will always be secondary to others'"
+  ],
+  "therapeutic_goals": [
+    "- Reduce emotional reactivity to perceived neglect or lack of support",
+    "- Reframe expectations to align with current relational dynamics",
+    "- Establish emotional boundaries to prevent emotional exhaustion",
+    "- Facilitate emotional processing of unmet needs from the past"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are enough, regardless of who shows up or doesn't. Your worth is not determined by others' actions or inactions. You are whole, capable, and deserving of inner peace - just as you are.",
+  "tags": [
+    "PowerlessnessRelease",
+    "EmotionalAutonomy",
+    "SelfWorth",
+    "Boundaries",
+    "ExpectationManagement"
+  ]
+}

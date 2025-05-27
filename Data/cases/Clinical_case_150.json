@@ -1,0 +1,47 @@
+{
+  "case_id": "Clinical_case_150",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with significant emotional distress related to academic evaluation and a perceived lack of emotional regulation. She reports feeling emotionally blocked, unable to express or release emotions, despite previously being a highly emotive person. She exhibits heightened sensitivity to criticism, particularly from a specific professor, and expresses intense fear of re-experiencing the perceived judgment in upcoming encounters. Additionally, she reports a pattern of self-blame and internalized frustration, coupled with a struggle to assert her needs without feeling guilty or inadequate.",
+  "main_issues": [
+    "- Emotional blockage and inability to release emotions",
+    "- Heightened sensitivity to perceived criticism and judgment",
+    "- Fear of upcoming academic evaluations with a specific professor",
+    "- Persistent self-blame and internalized frustration",
+    "- Challenges in managing performance pressure and self-expectations"
+  ],
+  "emotions": [
+    "Fear",
+    "Shame",
+    "Frustration",
+    "Self-blame",
+    "Helplessness"
+  ],
+  "limiting_beliefs": [
+    "- 'I am not good enough to succeed.'",
+    "- 'If I fail, it confirms my worthlessness.'",
+    "- 'If I show emotion, it means I am weak.'",
+    "- 'I must keep everything inside to maintain control.'"
+  ],
+  "therapeutic_goals": [
+    "- Facilitate emotional release through safe and structured expression techniques",
+    "- Reframe self-blame into self-compassion and self-validation",
+    "- Reduce anticipatory anxiety related to academic evaluation",
+    "- Encourage constructive self-talk to counter negative self-beliefs",
+    "- Strengthen emotional resilience to criticism and perceived judgment"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are more than the words others use to define you. You are the sum of your efforts, your strengths, and your courage to keep moving forward. In every moment, you have the power to rewrite the narrative — to choose compassion over criticism, and self-belief over self-doubt.",
+  "tags": [
+    "EmotionalRelease",
+    "SelfCompassion",
+    "AcademicPressure",
+    "JudgmentResilience",
+    "InnerStrength",
+    "ConfidenceBuilding"
+  ]
+}

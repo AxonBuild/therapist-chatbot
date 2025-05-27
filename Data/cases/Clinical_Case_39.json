@@ -1,0 +1,60 @@
+{
+  "case_id": "Clinical_Case_39",
+  "age": "41",
+  "gender_identity": "woman presents with sleep disturbances characterized by frequent night awakenings (4 to 6 times per night) and difficulty falling back asleep. Her sleep is disrupted by latent nocturnal hypervigilance, often triggered by minor noises or intrusive thoughts. She experiences anticipatory anxiety regarding potential awakenings, creating a self-reinforcing cycle of sleep-related anxiety. A high mental load and rumination about the next day's tasks during the night further exacerbate her sleep difficulties, leading to chronic daytime fatigue, irritability, and self-blame. Her background includes a family environment where rest was undervalued, ingraining a belief that she must always remain vigilant.",
+  "summary": "(RAG Format)\nThis 41-year-old woman presents with sleep disturbances characterized by frequent night awakenings (4 to 6 times per night) and difficulty falling back asleep. Her sleep is disrupted by latent nocturnal hypervigilance, often triggered by minor noises or intrusive thoughts. She experiences anticipatory anxiety regarding potential awakenings, creating a self-reinforcing cycle of sleep-related anxiety. A high mental load and rumination about the next day's tasks during the night further exacerbate her sleep difficulties, leading to chronic daytime fatigue, irritability, and self-blame. Her background includes a family environment where rest was undervalued, ingraining a belief that she must always remain vigilant.",
+  "main_issues": [
+    "- Sleep disorder with frequent night awakenings",
+    "- Nocturnal hypervigilance triggered by minor stimuli and thoughts",
+    "- Anticipatory anxiety regarding awakenings",
+    "- High mental load with nocturnal rumination about tasks and responsibilities",
+    "- Chronic fatigue, irritability, and daytime cognitive fog",
+    "- Internalized belief: 'If I rest, things will fall apart.'"
+  ],
+  "emotions": [
+    "Anticipatory anxiety",
+    "Helplessness and frustration",
+    "Guilt about unproductive days",
+    "Fear of losing control at night",
+    "Shame for not being able to 'switch off'"
+  ],
+  "limiting_beliefs": [
+    "- 'If I sleep deeply, I might miss something important.'",
+    "- 'I always need to be ready to respond, even at night.'",
+    "- 'I'm weak if I rest too much.'"
+  ],
+  "therapeutic_goals": [
+    "- Decrease anticipatory anxiety and nocturnal hypervigilance",
+    "- Reframe sleep as a safe, protective space rather than a vulnerable state",
+    "- Anchor a sense of inner safety and control during night awakenings",
+    "- Normalize the need for sleep without reinforcing guilt",
+    "- Develop a new nighttime ritual that signals safety and calm"
+  ],
+  "solutions": {
+    "immediate": [
+      "- '4-7-8' breathing exercise upon awakening to soothe the nervous system",
+      "- Grounding mantra: 'I am safe. Everything can wait until tomorrow.'",
+      "- Get out of bed after 20 minutes of active wakefulness to avoid conditioning the bed as a place of struggle"
+    ],
+    "intermediate": [
+      "- Sleep reconditioning through sensory anchoring (scent, texture, sound)",
+      "- Night awakening journal with kind, pressure-free self-observation",
+      "- Cognitive restructuring: 'Deep sleep is my best protection.'"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Reclaiming Night as a Space of Safety and Release",
+      "- Dissociate nocturnal hypervigilance from sleep anxiety",
+      "- Anchor a sense of protection and internal calm during night awakenings",
+      "- Visualize a trusted inner guardian to 'stand watch' during the night, allowing the mind to rest"
+    ]
+  },
+  "motivational_closure": "And what if tonight, for the first time in a long while, you allowed the night to take care of you... As if your body already knew how to rest... and your mind could finally lay down its arms.",
+  "tags": [
+    "SleepDisorder",
+    "NightAwakenings",
+    "Hypervigilance",
+    "InternalSafety",
+    "EmotionalRelease",
+    "Restoration"
+  ]
+}

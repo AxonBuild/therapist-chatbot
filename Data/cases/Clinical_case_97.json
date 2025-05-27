@@ -1,0 +1,43 @@
+{
+  "case_id": "Clinical_case_97",
+  "age": "58",
+  "gender_identity": "man",
+  "summary": "(RAG Format)\nThe patient is a 58-year-old man experiencing significant emotional turmoil following the suspension of his driving license. He reports a heightened sense of frustration and a perceived loss of autonomy, compounded by logistical difficulties impacting his work. Additionally, he expresses unresolved grief over the recent passing of his father, manifesting as recurrent episodes of crying and intrusive memories. Persistent ruminations around his father's death and an internal conflict between maintaining composure and allowing emotional release are evident.",
+  "main_issues": [
+    "- Loss of driving license leading to logistical complications",
+    "- Unresolved grief and emotional flooding related to father's passing",
+    "- Internal conflict between suppression and emotional release",
+    "- Financial and logistical stress impacting daily routines"
+  ],
+  "emotions": [
+    "Frustration",
+    "Grief",
+    "Helplessness",
+    "Anxiety",
+    "Guilt"
+  ],
+  "limiting_beliefs": [
+    "- 'I must stay strong and composed.'",
+    "- 'If I let go, I'll lose control.'",
+    "- 'I can't move forward without my father.'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe the loss of autonomy as a temporary challenge.",
+    "- Facilitate grief processing through safe emotional release.",
+    "- Anchor emotional regulation techniques to counter frustration.",
+    "- Encourage healthy logistical adaptations to mitigate stress."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Each day presents a new opportunity to reclaim your sense of direction. You are not defined by what you've lost but by how you choose to move forward. Your strength lies not in suppressing emotions, but in allowing them to guide you to a place of renewed balance.",
+  "tags": [
+    "GriefProcessing",
+    "EmotionalRelease",
+    "LossOfAutonomy",
+    "ReclaimingControl",
+    "EmotionalResilience"
+  ]
+}

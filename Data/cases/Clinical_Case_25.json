@@ -1,0 +1,80 @@
+{
+  "case_id": "Clinical_Case_25",
+  "age": "17",
+  "gender_identity": "Girl",
+  "summary": "(RAG Format)\nThe patient is a 17-year-old adolescent exhibiting emotional instability, stress linked to academic demands, recurrent sleep disturbances, and somatic symptoms such as fatigue, scratching behavior, and diffuse physical discomfort. Her emotional fluctuations are influenced by academic expectations, social relationships, family tensions, and self-imposed performance standards. She oscillates between periods of disengagement and intense self-criticism, demonstrating low frustration tolerance, hidden anxiety, and challenges in self-soothing.",
+  "main_issues": [
+    "- Academic stress with guilt about underperformance",
+    "- Emotional lability with alternating disengagement and frustration",
+    "- Sleep disturbances (frequent awakenings, non-restorative sleep)",
+    "- Psychosomatic expressions of anxiety (scratching, fatigue)",
+    "- Family tensions (perceived criticism, emotional unmet needs)"
+  ],
+  "emotions": [
+    "Anxiety",
+    "Guilt",
+    "Irritability",
+    "Sadness",
+    "Helplessness"
+  ],
+  "limiting_beliefs": [
+    "- 'If I don't perform well, I'm a disappointment.'",
+    "- 'Others' expectations define my worth.'",
+    "- 'If I show vulnerability, I am weak.'",
+    "- 'I must sacrifice my needs to maintain connection.'"
+  ],
+  "therapeutic_goals": [
+    "- Stabilize emotional regulation and reduce self-critical spirals",
+    "- Normalize academic performance pressures and self-expectations",
+    "- Improve sleep quality and reduce anxiety-related somatic symptoms",
+    "- Rebuild self-worth independent of external validation",
+    "- Strengthen emotional resilience in family and peer relationships"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Sleep hygiene protocols and grounding techniques before bedtime",
+      "- Normalization of emotional fluctuations (journal tracking)",
+      "- Affirmations: \"I am worthy beyond grades or performance.\"",
+      "- Hypnosis session recommendation: calming imagery to soothe night-time anxiety and internal tension",
+      "Tags: #SleepSupport #AcademicStress #SelfSoothing",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Cognitive restructuring of academic stress beliefs",
+      "- Development of emotional expression tools (safe conversations)",
+      "- Structured support routines with peers and trusted adults",
+      "- Hypnosis session recommendation: symbolic visualization of internal safe space and emotional containment",
+      "Tags: #InnerSafety #StressRelief #EmotionalRegulation",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Emotional resilience training through visualization and future-self anchoring",
+      "- Longitudinal reinforcement of self-trust and adaptive coping strategies",
+      "- Hypnosis session recommendation: integration of self-worth beyond performance and identity grounding",
+      "Tags: #ResilienceBuilding #SelfTrust #PerformanceDeconditioning"
+    ]
+  },
+  "motivational_closure": "You are not defined by perfect days or flawless grades. You are defined by your courage to keep going, your softness, your strength. You are already enough.",
+  "tags": [
+    "SleepSupport",
+    "AcademicStress",
+    "SelfSoothing",
+    "InnerSafety",
+    "StressRelief",
+    "EmotionalRegulation",
+    "ResilienceBuilding",
+    "SelfTrust",
+    "PerformanceDeconditioning",
+    "AdolescentStress",
+    "EmotionalLability",
+    "AcademicPressure",
+    "SleepDisturbance",
+    "PsychosomaticSymptoms",
+    "SelfEsteemChallenges",
+    "InnerSafety",
+    "SelfSoothing"
+  ]
+}

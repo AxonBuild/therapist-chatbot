@@ -1,0 +1,46 @@
+{
+  "case_id": "Clinical_case_91",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with significant anticipatory anxiety surrounding her son's upcoming vaccination. She describes a heightened state of emotional reactivity, characterized by persistent fears related to vaccine safety and potential adverse reactions. These fears are compounded by a personal history of familial health issues, specifically her mother's and sister's experiences with medical conditions potentially linked to past vaccinations. Additionally, she reports feeling overwhelmed by the responsibility of convincing her son to comply with the vaccination schedule, despite her own unresolved fears.",
+  "main_issues": [
+    "- Anticipatory anxiety related to her son's vaccination and potential side effects.",
+    "- Persistent fears linked to past family medical issues associated with vaccinations.",
+    "- Difficulty managing personal fears while attempting to reassure her son.",
+    "- Internal conflict between perceived parental responsibility and personal aversion to vaccinations.",
+    "- Feelings of powerlessness and lack of control over her son's health outcomes."
+  ],
+  "emotions": [
+    "Anxiety",
+    "Fear",
+    "Overwhelm",
+    "Helplessness",
+    "Guilt"
+  ],
+  "limiting_beliefs": [
+    "- 'If something goes wrong with the vaccine, it will be my fault.'",
+    "- 'I can't reassure my son when I don't believe it's safe myself.'",
+    "- 'I must always protect my children, even if it means ignoring my own feelings.'"
+  ],
+  "therapeutic_goals": [
+    "- Alleviate anticipatory anxiety surrounding the vaccination through grounding techniques.",
+    "- Challenge and reframe beliefs about personal responsibility for her son's health outcomes.",
+    "- Encourage open communication with her son while validating her own fears.",
+    "- Develop strategies to separate her own unresolved fears from present-day realities.",
+    "- Implement self-soothing techniques to reduce emotional reactivity."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are doing the best you can to protect your son and yourself. You are allowed to feel fear while still making the right choices for his well-being. Trust in your strength to navigate these moments with calm and confidence.",
+  "tags": [
+    "VaccinationAnxiety",
+    "ParentalGuilt",
+    "HealthAnxiety",
+    "SelfTrust",
+    "CalmAnchor",
+    "EmotionalRegulation"
+  ]
+}

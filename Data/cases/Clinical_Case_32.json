@@ -1,0 +1,78 @@
+{
+  "case_id": "Clinical_Case_32",
+  "age": "33",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with recurrent anxiety and panic attacks, particularly during travel and in relation to her children. Her symptoms include somatic tension, acute fear responses, and a persistent sense of vulnerability when separated from her children. She exhibits emotional associations between the fear of death, loss (notably of her grandfather), and her role as a mother. She expresses a strong ambivalence between the need for autonomy and an overwhelming sense of responsibility and fear of separation.",
+  "main_issues": [
+    "- Persistent anxiety and fear of death triggered by travel situations",
+    "- Emotional flashbacks linked to her child's vulnerability and a previous traumatic experience at the beach",
+    "- Overidentification with the maternal role and difficulty allowing emotional separation",
+    "- Grief and emotional longing linked to the loss of her grandfather",
+    "- Chronic emotional overload and lack of space for emotional recovery"
+  ],
+  "emotions": [
+    "Fear (of death, separation, harm to her children)",
+    "Guilt",
+    "Overwhelm",
+    "Sadness (linked to past loss)",
+    "Emotional confusion"
+  ],
+  "limiting_beliefs": [
+    "- \"I cannot leave my children, something bad will happen.\"",
+    "- \"If I am not in control, I am putting others at risk.\"",
+    "- \"There is no space for me to feel safe.\"",
+    "- \"I must always be alert or I will fail to protect.\""
+  ],
+  "therapeutic_goals": [
+    "- Desensitize panic triggers linked to travel and separation",
+    "- Support emotional grieving linked to the grandfather's death",
+    "- Restore a sense of safety when away from children",
+    "- Re-anchor present-moment safety through somatic regulation",
+    "- Build emotional autonomy and resilience"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Use of grounding techniques when panic symptoms arise",
+      "- Emotional containment exercises (e.g., safe place visualization)",
+      "- Hypnosis session recommendation: grounding and emotional separation from panic",
+      "Tags: #PanicRelief #MaternalAnxiety #SafeVisualization",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Desensitization of traumatic memory via EMDR or hypnotic regression",
+      "- Integration of attachment repair through internal dialogue",
+      "- Hypnosis session recommendation: grief support and symbolic re-link to the grandfather",
+      "Tags: #GriefHealing #AncestralAnchor #EmotionalSupport",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Develop secure inner imagery to replace hypervigilance (e.g., symbolic resource like the grandfather)",
+      "- Exploration of emotional differentiation in maternal identity",
+      "- Hypnosis session recommendation: creation of a protective inner space and resilience identity",
+      "Tags: #EmotionalResilience #InnerSafety #MaternalBalance"
+    ]
+  },
+  "motivational_closure": "The pain you feel does not define your strength — it is a reflection of how deeply you love. Each breath you take is a step toward reclaiming your own space, not apart from those you care for, but alongside them. Your ability to trust again begins with the belief that you are already enough.",
+  "tags": [
+    "PanicRelief",
+    "MaternalAnxiety",
+    "SafeVisualization",
+    "GriefHealing",
+    "AncestralAnchor",
+    "EmotionalSupport",
+    "EmotionalResilience",
+    "InnerSafety",
+    "MaternalBalance",
+    "MaternalAnxiety",
+    "PanicTriggers",
+    "GriefIntegration",
+    "Hypervigilance",
+    "EmotionalAutonomy",
+    "SafeSeparation",
+    "SomaticSafety",
+    "SymbolicAnchoring"
+  ]
+}

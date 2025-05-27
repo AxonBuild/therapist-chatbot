@@ -1,0 +1,84 @@
+{
+  "case_id": "Clinical_Case_30",
+  "age": "46",
+  "gender_identity": "Man",
+  "summary": "(RAG Format)\nThis 46-year-old man is currently navigating a significant transitional period post-divorce. He demonstrates high emotional awareness, a strong paternal commitment, and a desire to break free from dysfunctional family patterns, particularly those rooted in paternal alcohol abuse and emotional neglect. Despite maintaining professional stability and engaging in a promising new romantic relationship, he experiences emotional fatigue, unresolved grief, and recurring conflict with his sister surrounding financial inheritance and fairness. The patient also expresses a continued emotional attachment to his ex-wife, as well as concerns about the psychological wellbeing of his children during the separation. His current therapeutic motivation centers on ensuring he does not replicate past familial traumas, emotionally supporting his children, and maintaining integrity in his evolving identity as a separated father.",
+  "main_issues": [
+    "- Persistent emotional attachment to ex-wife despite separation",
+    "- Difficulty detaching from the symbolic structure of the nuclear family",
+    "- Emotional vulnerability around his children's reactions to the divorce",
+    "- Complex conflict with his sister regarding inheritance and perceived injustice",
+    "- Fear of reproducing paternal behavioral patterns (alcohol, neglect, manipulation)",
+    "- Mental overload and fatigue, particularly in parenting and administrative burdens"
+  ],
+  "emotions": [
+    "Emotional fatigue",
+    "Sadness",
+    "Frustration",
+    "Fear of injustice",
+    "Grief",
+    "Loyalty conflicts",
+    "Determination"
+  ],
+  "limiting_beliefs": [
+    "- 'I must fix what my parents broke.'",
+    "- 'If I'm not present all the time, I fail as a father.'",
+    "- 'Expressing my vulnerability is dangerous.'",
+    "- 'My emotional needs are secondary.'"
+  ],
+  "therapeutic_goals": [
+    "- Restore emotional clarity and post-divorce stability",
+    "- Empower assertiveness and emotional boundaries",
+    "- Prevent over-identification with the paternal role and family loyalty conflicts",
+    "- Support healthy detachment from unresolved family dynamics",
+    "- Release emotional pressure related to his children's reactions",
+    "- Reduce emotional charge linked to conflict with his sister"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Grounding techniques for emotional clarity during family conflict",
+      "- Psychoeducation on manipulation and emotional guilt",
+      "- Somatic check-ins to detect overload",
+      "- Hypnosis session recommendation: anchoring techniques to reduce emotional pressure and parental overwhelm",
+      "Tags: #ParentingFatigue #EmotionalClarity #SomaticRelief",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- EMDR on familial loyalty trauma and injustice from sister",
+      "- Narrative restructuring around paternal role",
+      "- Couple therapy check-ins to explore expectations in the new relationship",
+      "- Hypnosis session recommendation: symbolic detachment from family legacy and redefinition of father identity",
+      "Tags: #SymbolicDetachment #FatherIdentity #FamilyLegacyHealing",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Inner child healing protocol (in relation to paternal wounds)",
+      "- Ongoing EMDR or IFS to stabilize family-of-origin dynamics",
+      "- Hypnosis work on emotional identity post-divorce and symbolic detachment from ex-wife",
+      "- Hypnosis session recommendation: rebuilding personal authority and safe emotional grounding",
+      "Tags: #PostDivorceStability #InnerAuthority #EmotionalGrounding"
+    ]
+  },
+  "motivational_closure": "You are not your father, nor your past. You are already transforming by choosing presence, clarity, and emotional truth. Every step you take toward emotional autonomy creates a legacy of healing your children will inherit.",
+  "tags": [
+    "ParentingFatigue",
+    "EmotionalClarity",
+    "SomaticRelief",
+    "SymbolicDetachment",
+    "FatherIdentity",
+    "FamilyLegacyHealing",
+    "PostDivorceStability",
+    "InnerAuthority",
+    "EmotionalGrounding",
+    "PostDivorceStability",
+    "FatherhoodHealing",
+    "FamilyConflict",
+    "EmotionalInheritance",
+    "TransgenerationalRepair",
+    "EmotionalGrounding",
+    "SymbolicDetachment"
+  ]
+}

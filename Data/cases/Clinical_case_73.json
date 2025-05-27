@@ -1,0 +1,59 @@
+{
+  "case_id": "Clinical_case_73",
+  "age": "60",
+  "gender_identity": "Woman (Unemployment, Incest, Loss of Desire)",
+  "summary": "(RAG Format)\nThe patient is a 60-year-old woman presenting with a pervasive sense of apathy and lack of desire, both professionally and emotionally, following a four-month period of unemployment. She reports a history of sexual abuse by her father during childhood, spanning approximately 4-5 years, including inappropriate touching and caressing. The patient has limited familial support, with her mother remaining in denial and her sisters exhibiting varying degrees of acknowledgment and avoidance. Additionally, she describes unresolved trauma related to her ex-husband's infidelity, leading to feelings of abandonment and emotional numbness. Despite engaging in past therapy, including sessions with Dr. Michoud and a brief trial of EMDR, she reports feeling stuck and unable to process these experiences effectively.",
+  "main_issues": [
+    "- Emotional apathy and lack of desire in multiple life areas",
+    "- Unresolved trauma from childhood incest",
+    "- Feelings of abandonment linked to ex-husband's infidelity",
+    "- Estrangement and lack of familial support",
+    "- Disconnection from bodily sensations and sexual desire"
+  ],
+  "emotions": [
+    "Guilt",
+    "Shame",
+    "Emotional numbness",
+    "Resentment",
+    "Grief"
+  ],
+  "limiting_beliefs": [
+    "- 'I am unworthy of feeling pleasure or desire.'",
+    "- 'My past defines my present; I cannot move forward.'",
+    "- 'I am responsible for maintaining family harmony, even at my own expense.'",
+    "- 'I must protect myself from being hurt again by remaining emotionally distant.'"
+  ],
+  "therapeutic_goals": [
+    "- Address unresolved trauma from incest to release emotional suppression",
+    "- Reframe self-blame and feelings of unworthiness related to abuse",
+    "- Develop strategies to process abandonment linked to ex-husband's infidelity",
+    "- Explore safe ways to reconnect with bodily sensations and restore sexual desire",
+    "- Establish boundaries with family members to protect emotional well-being"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises and grounding techniques to manage emotional overwhelm",
+      "- Hypnosis session recommendation: Reclaiming Self-Worth and Emotional Reset",
+      "- Journaling prompts to externalize thoughts and emotions surrounding familial betrayal"
+    ],
+    "intermediate": [
+      "- EMDR targeting childhood incest to process and release trauma",
+      "- Visualization exercises to reframe abandonment by ex-husband",
+      "- Progressive relaxation techniques to reconnect with bodily sensations"
+    ],
+    "long_term": [
+      "- Develop routines to foster self-compassion and self-acceptance",
+      "- Continue exploring intimacy and desire through guided imagery",
+      "- Establish boundaries with family to reduce emotional drain and prevent retraumatization"
+    ]
+  },
+  "motivational_closure": "You are not defined by what was done to you. Your worth is inherent, and you have the right to reclaim your life, your desires, and your sense of self. Step by step, you can rebuild trust in yourself and in the world around you.",
+  "tags": [
+    "TraumaRelease",
+    "SelfWorth",
+    "EmotionalHealing",
+    "FamilyBoundaries",
+    "DesireReconnection",
+    "AbandonmentRecovery"
+  ]
+}

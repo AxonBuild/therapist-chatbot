@@ -1,0 +1,59 @@
+{
+  "case_id": "Clinical_case_161",
+  "age": "45",
+  "gender_identity": "Woman (Unemployment)",
+  "summary": "(RAG Format)\nThe patient is a 45-year-old woman who is currently facing unemployment after a difficult work environment. She describes feelings of guilt, frustration, and self-doubt following interactions with colleagues and management, particularly regarding her decision to leave her job. The patient expresses a sense of emotional exhaustion and confusion over perceived rejection by a former colleague (Christine), as well as unresolved emotions surrounding previous discussions about her desire to have a child. Additionally, she questions her self-worth in the context of work, feeling dismissed and invalidated by colleagues and struggling to navigate feelings of shame and resentment.",
+  "main_issues": [
+    "- Guilt and self-doubt related to unemployment and perceived rejection",
+    "- Emotional exhaustion from toxic work interactions",
+    "- Unresolved feelings surrounding decision to have a child",
+    "- Difficulty asserting boundaries with colleagues",
+    "- Fear of future financial instability and uncertainty about career direction"
+  ],
+  "emotions": [
+    "Guilt",
+    "Shame",
+    "Resentment",
+    "Frustration",
+    "Uncertainty"
+  ],
+  "limiting_beliefs": [
+    "- 'If I express my true needs, I will lose connections.'",
+    "- 'I must always justify my actions to others.'",
+    "- 'My worth is tied to my job status.'",
+    "- 'I do not deserve to rest; I must constantly prove my value.'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe the experience of unemployment as a period of transition, not failure",
+    "- Develop assertiveness techniques to manage future work interactions",
+    "- Explore unresolved feelings surrounding the desire to have a child",
+    "- Reinforce self-worth independent of professional identity",
+    "- Implement grounding techniques to reduce emotional overwhelm"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to reduce emotional distress",
+      "- Journaling to process feelings of rejection and self-doubt",
+      "- Hypnosis session recommendation: Emotional Reset and Self-Worth Anchoring"
+    ],
+    "intermediate": [
+      "- Explore potential career paths aligned with personal values",
+      "- Communication strategies to navigate difficult conversations",
+      "- Guided visualization to release resentment towards former colleagues"
+    ],
+    "long_term": [
+      "- Develop routines to maintain self-esteem during job search",
+      "- Foster a support network to reduce feelings of isolation",
+      "- Establish financial planning resources to alleviate financial anxiety"
+    ]
+  },
+  "motivational_closure": "You are not defined by your job title or current circumstances. You have the right to rest, to reset, and to find new directions without apology. Your worth is inherent, and your journey is still unfolding.",
+  "tags": [
+    "SelfWorth",
+    "CareerTransition",
+    "EmotionalRelease",
+    "BoundarySetting",
+    "FinancialAnxiety",
+    "ResentmentProcessing"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "case_id": "Clinical_case_164",
+  "age": "52",
+  "gender_identity": "Male",
+  "summary": "(RAG Format)\nThe patient presents with a history of trauma related to air travel, including a past incident involving a near-crash landing, as well as a recurring nightmare of an aircraft accident. Despite his attempts to confront his fear by engaging in parachuting, he continues to experience heightened anxiety when flying, particularly when accompanied by family members. Additionally, he reports unresolved distress related to the near-loss of his first child during childbirth, which was marked by intense fear and medical uncertainty. More recently, a health scare involving a suspected cancer diagnosis exacerbated his existing anxiety and hypervigilance. The patient also describes feelings of isolation and frustration in his work as a self-employed artist, expressing a desire for greater connection and structure in his professional life.",
+  "main_issues": [
+    "- Persistent fear of flying linked to a traumatic flight experience and recurring nightmares.",
+    "- Unresolved emotional distress related to the near-loss of his first child during childbirth.",
+    "- Residual anxiety and hypervigilance stemming from a recent medical scare involving suspected cancer.",
+    "- Feelings of isolation and professional frustration as a self-employed artist.",
+    "- Emotional exhaustion related to managing multiple traumatic experiences without sufficient emotional processing."
+  ],
+  "emotions": [
+    "Fear",
+    "Anxiety",
+    "Guilt",
+    "Emotional Exhaustion",
+    "Isolation",
+    "Hypervigilance"
+  ],
+  "limiting_beliefs": [
+    "- 'If I express my fears, I will appear weak.'",
+    "- 'If I fly, I am putting my family at risk.'",
+    "- 'If I don't manage everything alone, I am failing as a father and a provider.'",
+    "- 'I must stay constantly vigilant to prevent something bad from happening.'"
+  ],
+  "therapeutic_goals": [
+    "- Normalize the experience of trauma-related nightmares and reduce their emotional impact.",
+    "- Facilitate the processing of unresolved trauma related to his first child's birth complications.",
+    "- Implement stress-reduction techniques to manage health-related hypervigilance and anxiety.",
+    "- Address the residual emotional impact of the health scare and reduce catastrophic thinking.",
+    "- Support the patient in restructuring his work-life balance to foster greater connection and emotional stability."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You have carried the weight of fear and responsibility for too long, believing that you must manage everything alone. It is time to release the burden of past traumas and embrace the present with renewed strength and clarity. You are not defined by the events that have happened - you are free to redefine your life on your own terms.",
+  "tags": [
+    "FearOfFlying",
+    "TraumaProcessing",
+    "HealthAnxiety",
+    "WorkLifeBalance",
+    "EmotionalExhaustion"
+  ]
+}

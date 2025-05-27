@@ -1,0 +1,47 @@
+{
+  "case_id": "Clinical_case_146",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with a sense of renewed motivation and positive progress after a period of self-reflection and engagement in activities he enjoys, such as working on motorcycle projects and taking on freelance consulting work. However, he also expresses uncertainty regarding financial management and the logistics of transitioning to self-employment. Additionally, he reports relying on his girlfriend for financial support to pursue a personal goal, which raises concerns about autonomy and financial independence.",
+  "main_issues": [
+    "- Uncertainty about financial management in the context of self-employment",
+    "- Reliance on financial support from his girlfriend, impacting self-esteem",
+    "- Difficulty structuring freelance work and managing client contracts",
+    "- Lack of confidence in handling financial responsibilities as an entrepreneur",
+    "- Ambivalence about pursuing a personal goal (motorcycle purchase) despite financial strain"
+  ],
+  "emotions": [
+    "Motivation",
+    "Uncertainty",
+    "Financial insecurity",
+    "Frustration",
+    "Hope"
+  ],
+  "limiting_beliefs": [
+    "- 'I can't manage finances well enough to run my own business.'",
+    "- 'Asking for financial help makes me less capable.'",
+    "- 'If I can't afford it myself, I shouldn't pursue it.'",
+    "- 'Taking risks financially is irresponsible.'"
+  ],
+  "therapeutic_goals": [
+    "- Increase financial literacy to build confidence in managing self-employment income",
+    "- Support the development of assertive communication regarding financial boundaries with his girlfriend",
+    "- Assist in structuring freelance work to ensure stable income and contract clarity",
+    "- Encourage self-reflection on motivations for purchasing the motorcycle and its impact on financial stability",
+    "- Strengthen a sense of personal autonomy and self-reliance in financial decision-making"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Your ability to navigate financial uncertainty is not a reflection of your worth. Each step you take toward understanding your financial landscape is a step toward greater autonomy and self-confidence. You have the skills to build the life you want — one decision, one contract, one opportunity at a time.",
+  "tags": [
+    "FinancialConfidence",
+    "EntrepreneurialGrowth",
+    "Assertiveness",
+    "SelfReliance",
+    "Autonomy",
+    "GoalSetting"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "case_id": "Clinical_case_167",
+  "age": "37",
+  "gender_identity": "Male and 36-year-old Female",
+  "summary": "(RAG Format)\nThe couple presents with significant relational strain characterized by perceived role confusion, conflicting expectations, and difficulties in aligning personal desires with relational dynamics. The male partner expresses a sense of disorientation in navigating sudden responsibilities and perceived expectations from his partner, while the female partner struggles with feelings of unmet emotional needs and efforts to maintain relational harmony. Both partners oscillate between asserting personal desires and accommodating the perceived expectations of the other, resulting in emotional dissonance, frustration, and communication breakdowns.",
+  "main_issues": [
+    "- Perceived role confusion and responsibility overload within the relationship.",
+    "- Conflicting expectations around emotional support and relational responsibilities.",
+    "- Difficulty balancing personal autonomy with relational harmony.",
+    "- Emotional dissonance leading to communication breakdowns.",
+    "- Oscillation between asserting personal desires and accommodating the partner."
+  ],
+  "emotions": [
+    "Confusion",
+    "Frustration",
+    "Guilt",
+    "Emotional Exhaustion",
+    "Fear of Rejection"
+  ],
+  "limiting_beliefs": [
+    "- 'If I assert my needs, I will hurt my partner.'",
+    "- 'I am not capable of fulfilling my partner's expectations.'",
+    "- 'If I ask for space, it means I don't care.'",
+    "- 'If I compromise, I am losing my identity.'"
+  ],
+  "therapeutic_goals": [
+    "- Normalize the experience of relational strain as a transitional phase of adjustment.",
+    "- Encourage open communication to clarify individual needs and shared expectations.",
+    "- Implement grounding techniques to reduce emotional reactivity during conflicts.",
+    "- Develop strategies to assert personal boundaries without compromising relational integrity.",
+    "- Support the integration of personal autonomy with relational commitment."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are allowed to express your needs without fear of losing each other. By embracing both your personal desires and your shared commitments, you can find a balanced path forward - one where both of you feel seen, heard, and valued.",
+  "tags": [
+    "RelationshipDynamics",
+    "EmotionalBalance",
+    "BoundarySetting",
+    "Communication",
+    "RelationalAutonomy"
+  ]
+}

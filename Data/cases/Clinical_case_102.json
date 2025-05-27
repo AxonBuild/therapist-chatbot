@@ -1,0 +1,58 @@
+{
+  "case_id": "Clinical_case_102",
+  "age": "37",
+  "gender_identity": "woman presents with a complex emotional state marked by interpersonal betrayal, ongoing familial conflict, and workplace toxicity. She reports significant emotional distress stemming from a recent conflict involving a trusted friend who was employed in her workplace and subsequently undermined her reputation. Additionally, she experiences residual emotional tension with her father and a profound sense of betrayal by close relatives. Her narrative reveals patterns of self-blame, over-responsibility, and a heightened sense of vulnerability in her social and professional interactions.",
+  "summary": "(RAG Format)\nThis 37-year-old woman presents with a complex emotional state marked by interpersonal betrayal, ongoing familial conflict, and workplace toxicity. She reports significant emotional distress stemming from a recent conflict involving a trusted friend who was employed in her workplace and subsequently undermined her reputation. Additionally, she experiences residual emotional tension with her father and a profound sense of betrayal by close relatives. Her narrative reveals patterns of self-blame, over-responsibility, and a heightened sense of vulnerability in her social and professional interactions.",
+  "main_issues": [
+    "- Emotional distress related to perceived betrayal by a close friend in the workplace.",
+    "- Residual conflict with father, marked by a lack of paternal connection and ongoing tension.",
+    "- Self-blame and over-responsibility for the workplace dynamics and fallout.",
+    "- Feelings of social isolation and mistrust towards others.",
+    "- Recurrent self-questioning regarding her worth and intentions."
+  ],
+  "emotions": [
+    "Resentment and anger towards her friend for betrayal and manipulation.",
+    "Guilt for having introduced a toxic element into her workplace.",
+    "Confusion and frustration regarding family dynamics and perceived injustice.",
+    "Anxiety and hypervigilance in social and professional settings.",
+    "Underlying sadness and self-doubt regarding her perceived role in the conflicts."
+  ],
+  "limiting_beliefs": [
+    "- \"I should have seen it coming; it's my fault.\"",
+    "- \"If I let people in, they will hurt me.\"",
+    "- \"I can't trust my own judgment.\"",
+    "- \"I have to justify my choices to others.\""
+  ],
+  "therapeutic_goals": [
+    "- Reframe self-blame and establish realistic boundaries regarding responsibility.",
+    "- Foster assertiveness in setting limits with family and colleagues.",
+    "- Develop strategies to rebuild trust selectively and cautiously.",
+    "- Restore self-confidence and mitigate the impact of perceived betrayals.",
+    "- Implement grounding techniques to manage anxiety and emotional flooding."
+  ],
+  "solutions": {
+    "immediate": [
+      "- Grounding exercises to regulate acute stress responses.",
+      "- Cognitive restructuring exercise to address feelings of guilt and self-blame.",
+      "- Short-term journaling to externalize and process recent conflicts."
+    ],
+    "intermediate": [
+      "- Assertiveness training focusing on communication with family members.",
+      "- Exploration of relational patterns in friendships to identify potential red flags.",
+      "- EMDR sessions targeting emotional betrayals and unresolved familial conflicts."
+    ],
+    "long_term": [
+      "- Immersive hypnosis theme: Rebuilding Trust and Reclaiming Personal Space.",
+      "- Visualization exercises to reframe self-perception and release resentment.",
+      "- Continued emotional regulation training to stabilize interpersonal boundaries."
+    ]
+  },
+  "motivational_closure": "Despite the storms that have surrounded you, you remain grounded. Now is the time to redefine your boundaries, to protect your space without closing yourself off from the possibility of healthy connections. You are more than the betrayals you've faced - you are the strength that has carried you through them.",
+  "tags": [
+    "TrustRebuilding",
+    "BetrayalProcessing",
+    "SelfEmpowerment",
+    "EmotionalBoundaries",
+    "ResilienceRecovery"
+  ]
+}

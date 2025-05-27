@@ -1,0 +1,65 @@
+{
+  "case_id": "Clinical_case_154",
+  "age": null,
+  "gender_identity": null,
+  "summary": "(RAG Format)\nThe patient presents with inconsistent smoking patterns, with consumption ranging from 6 to 15 cigarettes per day. The increase in consumption appears to be linked to social events, alcohol use, and specific emotional states. There is a noted awareness of the smoking pattern, with the patient occasionally reflecting on the need to reduce intake, indicating potential readiness for change. Emotional triggers and stressors may contribute to increased consumption during specific periods.",
+  "main_issues": [
+    "- Inconsistent smoking patterns with significant fluctuation in daily consumption",
+    "- Increased smoking during social events and alcohol consumption",
+    "- Occasional awareness of smoking behavior and desire to reduce intake",
+    "- Potential emotional triggers linked to increased consumption",
+    "- Risk of habitual reinforcement in social contexts"
+  ],
+  "emotions": [
+    "Frustration",
+    "Guilt",
+    "Restlessness",
+    "Ambivalence",
+    "Momentary awareness"
+  ],
+  "limiting_beliefs": [
+    "- \"I need a cigarette to relax.\"",
+    "- \"Everyone else is smoking; I might as well join.\"",
+    "- \"I can quit whenever I want.\"",
+    "- \"A few more cigarettes won't make a difference.\""
+  ],
+  "therapeutic_goals": [
+    "- Increase self-awareness regarding smoking triggers and consumption patterns",
+    "- Develop strategies to manage social and emotional triggers without smoking",
+    "- Implement grounding techniques to reduce impulsive smoking",
+    "- Reframe limiting beliefs around smoking and perceived relaxation",
+    "- Encourage progressive reduction in daily cigarette consumption"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Grounding exercises to manage cravings during social events",
+      "- Brief mindfulness techniques to reduce impulsive smoking",
+      "- Hypnosis session recommendation: anchoring relaxation without smoking",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Identification of key smoking triggers and development of alternative coping strategies",
+      "- Structured journaling to track smoking patterns and identify emotional triggers",
+      "- Internal dialogue exercises to reframe perceived need for cigarettes",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Establish a daily routine to reduce smoking dependency",
+      "- Implement relaxation techniques as an alternative to smoking",
+      "- Hypnosis session recommendation: solidifying a smoke-free self-image"
+    ]
+  },
+  "motivational_closure": "",
+  "tags": [
+    "SmokingPatterns",
+    "HabitAwareness",
+    "TriggerIdentification",
+    "RelaxationWithoutSmoking",
+    "SelfEmpowerment",
+    "EmotionalTriggers",
+    "MindfulReduction"
+  ]
+}

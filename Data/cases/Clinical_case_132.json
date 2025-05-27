@@ -1,0 +1,50 @@
+{
+  "case_id": "Clinical_case_132",
+  "age": "20",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 20-year-old woman presents with unresolved grief related to the loss of her grandmother, which occurred 11 years ago when she was 12. She expresses difficulty processing the loss, with persistent feelings of guilt, injustice, and sadness. The emotions are compounded by a sense of unfairness toward her sister, who had the opportunity to say goodbye, while she did not. The patient demonstrates heightened stress reactivity and a tendency to suppress emotions, leading to unresolved emotional distress and cognitive overactivation. She expresses shame in feeling these intense emotions, which further inhibits her ability to process them fully.",
+  "main_issues": [
+    "- Unresolved grief linked to the grandmother's death.",
+    "- Persistent guilt and self-blame for not being present at the moment of death.",
+    "- Feelings of injustice and resentment toward her sister.",
+    "- Suppression of emotional expression, leading to internalized distress.",
+    "- Hyperactivation of stress responses when recalling the traumatic event.",
+    "- Shame in admitting the intensity of her emotional reactions."
+  ],
+  "emotions": [
+    "Guilt",
+    "Sadness",
+    "Shame",
+    "Resentment",
+    "Emotional suppression",
+    "Stress and anxiety"
+  ],
+  "limiting_beliefs": [
+    "- I should have been there to say goodbye.",
+    "- My feelings are not valid because I wasn't there.",
+    "- If I express my sadness, I am weak.",
+    "- My sister had the right to grieve, not me."
+  ],
+  "therapeutic_goals": [
+    "- Address and validate unresolved grief surrounding the grandmother's death.",
+    "- Encourage healthy emotional expression and dismantle guilt patterns.",
+    "- Facilitate release of resentment toward the sister.",
+    "- Reconnect with the memory of the grandmother in a healing context.",
+    "- Reduce stress activation when recalling the event.",
+    "- Normalize the legitimacy of her emotional experience."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Your grief is valid, and so are the emotions that come with it. It's not about what you missed but what you still carry. You have the right to grieve, to feel, and to heal. Today, you give yourself permission to honor your pain and let it transform.",
+  "tags": [
+    "GriefProcessing",
+    "EmotionalRelease",
+    "SelfForgiveness",
+    "IdentityAnchoring",
+    "EmotionalLegitimacy",
+    "StressReduction"
+  ]
+}

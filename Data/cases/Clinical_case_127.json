@@ -1,0 +1,50 @@
+{
+  "case_id": "Clinical_case_127",
+  "age": "15",
+  "gender_identity": "girl",
+  "summary": "(RAG Format)\nThis 15-year-old girl presents with pervasive emotional distress characterized by anxiety, frustration, and feelings of being misunderstood. She is struggling with body image issues related to weight and is currently being evaluated for potential bariatric surgery, though she expresses ambivalence and a desire to delay the procedure. Family dynamics are marked by tension, particularly regarding her father's restrictive attitudes toward food and her mother's conflicting approaches. The patient reports heightened anxiety surrounding academic pressures, particularly with public speaking and school presentations, and also experiences significant emotional reactivity and a sense of powerlessness within the family structure.",
+  "main_issues": [
+    "- Persistent anxiety related to body image and potential bariatric surgery.",
+    "- Conflicting family dynamics regarding food, weight, and parental expectations.",
+    "- Emotional reactivity and difficulty managing anger and frustration.",
+    "- Ambivalence and avoidance regarding medical decisions and their implications.",
+    "- Feelings of being controlled and restricted by her father.",
+    "- Emotional disconnection from her own body and physical sensations."
+  ],
+  "emotions": [
+    "Anxiety",
+    "Frustration",
+    "Ambivalence",
+    "Shame",
+    "Emotional detachment",
+    "Injustice"
+  ],
+  "limiting_beliefs": [
+    "- My father controls what I can eat, and I have no say in it.",
+    "- I must hide my true feelings to avoid conflict.",
+    "- My weight defines me, and everyone judges me because of it.",
+    "- I don't deserve to enjoy food or to feel good in my body."
+  ],
+  "therapeutic_goals": [
+    "- Facilitate emotional processing regarding body image and potential surgery.",
+    "- Encourage open communication about her feelings toward her father's restrictive behavior.",
+    "- Develop self-soothing techniques to manage emotional reactivity and anxiety.",
+    "- Explore her sense of identity beyond her body and weight.",
+    "- Support the development of assertiveness and self-expression in family dynamics.",
+    "- Implement grounding techniques to help her reconnect with her physical self."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Your body is not your enemy - it is a part of you that deserves care, respect, and compassion. Today, you can begin to reclaim your sense of self, beyond what others say or think. You have the power to choose how you respond, how you feel, and how you define yourself.",
+  "tags": [
+    "BodyImage",
+    "EmotionalRegulation",
+    "AnxietyReduction",
+    "FamilyDynamics",
+    "SelfWorth",
+    "FoodRelationship"
+  ]
+}

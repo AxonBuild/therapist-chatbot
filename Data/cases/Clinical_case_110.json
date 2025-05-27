@@ -1,0 +1,64 @@
+{
+  "case_id": "Clinical_case_110",
+  "age": "35",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with severe emotional distress related to recent revelations about her ex-partner's continued violent behavior. She has learned that he has been involved in further violent incidents since their separation, which has intensified her feelings of betrayal, self-blame, and fear for her child's safety. The patient struggles with maintaining boundaries while feeling pressured to keep the father in the child's life despite his violent tendencies. She expresses conflicting emotions of guilt, fear, and self-doubt, and acknowledges feeling emotionally exhausted from the ongoing conflict and manipulation.",
+  "main_issues": [
+    "- Guilt and self-blame for maintaining contact with a violent ex-partner",
+    "- Fear for her child's safety and well-being",
+    "- Emotional exhaustion from continued manipulation and conflict",
+    "- Difficulty accepting that the father may not be a safe presence for the child",
+    "- Struggles with setting and maintaining boundaries effectively"
+  ],
+  "emotions": [
+    "Guilt",
+    "Fear",
+    "Anger",
+    "Confusion",
+    "Sadness"
+  ],
+  "limiting_beliefs": [
+    "- I am a bad mother if I prevent my child from seeing her father.",
+    "- If I cut contact, I am responsible for the consequences.",
+    "- I should have known he was dangerous from the start.",
+    "- It's my fault that he continues to hurt people."
+  ],
+  "therapeutic_goals": [
+    "- Reframe limiting beliefs around guilt and responsibility",
+    "- Establish boundaries to protect herself and her child without feeling guilt",
+    "- Implement safety planning and assertive communication techniques",
+    "- Explore the impact of past trauma and current manipulation on self-esteem",
+    "- Empower the patient to recognize her rights to safety and emotional stability"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to ground and reduce emotional overwhelm",
+      "- Affirmations: 'I am not responsible for his actions.'",
+      "- Creating a safety plan for potential encounters with the ex-partner",
+      "- Visualization exercise: Envisioning a protective barrier between herself and the ex-partner"
+    ],
+    "intermediate": [
+      "- Assertiveness training to establish clear communication boundaries",
+      "- Narrative journaling to process conflicting emotions around safety and guilt",
+      "- Self-compassion exercises to counteract self-blame",
+      "- Hypnosis session: Reclaiming personal power and self-worth"
+    ],
+    "long_term": [
+      "- Therapy to explore the roots of guilt and the need to 'fix' others",
+      "- Monthly follow-ups to assess boundary maintenance and emotional stability",
+      "- Support group for survivors of domestic violence to reduce isolation",
+      "- Hypnosis session: Letting go of guilt and embracing a life without fear"
+    ]
+  },
+  "motivational_closure": "You are not responsible for his actions or his choices. You have the right to protect yourself and your child from harm, and you deserve a life free from fear and manipulation. Your strength lies in setting boundaries, prioritizing safety, and embracing self-compassion as you move forward.",
+  "tags": [
+    "SafetyBoundaries",
+    "GuiltRelease",
+    "EmotionalResilience",
+    "SelfProtection",
+    "Empowerment",
+    "LettingGo",
+    "SurvivorStrength",
+    "SelfWorth"
+  ]
+}

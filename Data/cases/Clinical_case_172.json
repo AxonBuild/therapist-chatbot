@@ -1,0 +1,60 @@
+{
+  "case_id": "Clinical_case_172",
+  "age": "68",
+  "gender_identity": "female",
+  "summary": "(RAG Format)\nThe patient presents with complex family dynamics involving her ex-husband and their two daughters, Margot and Ninon. Following a contentious separation, the patient took legal action to secure visitation rights for her daughters, attempting to maintain a connection between them and their father. Despite her efforts, the father remained emotionally distant, leading to lasting emotional repercussions, particularly for Margot, the elder daughter.\n\nMargot exhibits signs of fractured identity and unresolved abandonment, repeatedly seeking validation from her father despite recurrent disappointments. This has manifested in her adult life through unstable romantic relationships and a pattern of seeking control to mitigate feelings of rejection. Ninon, the younger daughter, appears more stable, having developed a more consistent identity and emotional resilience.\n\nThe patient also demonstrates signs of emotional depletion and self-neglect, having dedicated herself to her daughters' well-being while minimizing her own needs. She expresses frustration regarding her perceived invisibility and the lack of acknowledgment for her efforts as a single mother.",
+  "main_issues": [
+    "- Emotional distress related to the ex-husband's emotional absence and perceived rejection",
+    "- Identity fracture and abandonment issues in elder daughter Margot",
+    "- Emotional self-neglect and exhaustion in the patient",
+    "- Control-seeking behaviors as a coping mechanism for perceived rejection",
+    "- Persistent feelings of inadequacy and lack of recognition"
+  ],
+  "emotions": [
+    "Frustration",
+    "Emotional exhaustion",
+    "Sense of invisibility",
+    "Unresolved anger",
+    "Emotional neglect"
+  ],
+  "limiting_beliefs": [
+    "- \"I am invisible despite all I do.\"",
+    "- \"My sacrifices go unnoticed.\"",
+    "- \"If I assert myself, I will be rejected.\"",
+    "- \"It is my fault if my daughters struggle emotionally.\""
+  ],
+  "therapeutic_goals": [
+    "- Encourage the patient to recognize and assert her own needs",
+    "- Validate the patient's emotional efforts and sacrifices",
+    "- Support Margot in addressing unresolved paternal rejection",
+    "- Assist the patient in releasing control-seeking behaviors",
+    "- Foster self-compassion and self-recognition"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Grounding techniques to manage feelings of frustration and invisibility",
+      "- Journaling to explore unresolved emotions regarding the father's absence",
+      "- Hypnosis session recommendation: Reclaiming self-worth and visibility"
+    ],
+    "intermediate": [
+      "- Develop assertiveness techniques to express needs without guilt",
+      "- Facilitate structured conversations between Margot and her mother to address paternal abandonment",
+      "- Implement self-care routines to mitigate emotional exhaustion"
+    ],
+    "long_term": [
+      "- Establish a support network to prevent emotional isolation",
+      "- Encourage Margot to seek therapeutic support for identity reconstruction",
+      "- Hypnosis session recommendation: Healing the inner child and releasing the need for external validation"
+    ]
+  },
+  "motivational_closure": "",
+  "tags": [
+    "FamilyDynamics",
+    "EmotionalNeglect",
+    "SelfWorth",
+    "IdentityFracture",
+    "ParentalAbsence",
+    "ControlSeeking",
+    "SelfCompassion"
+  ]
+}

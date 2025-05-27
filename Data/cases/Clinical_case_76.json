@@ -1,0 +1,60 @@
+{
+  "case_id": "Clinical_case_76",
+  "age": "33",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with heightened emotional reactivity, feelings of inadequacy, and difficulty managing interpersonal conflicts. She experiences intense stress when placed under evaluation or perceived judgment, particularly in educational and work settings. Episodes of emotional overwhelm are triggered by perceived injustices and criticism, leading to uncontrollable crying and withdrawal. Additionally, she reports ongoing financial stress related to her ex-partner's failure to pay child support and the impact on her autonomy.",
+  "main_issues": [
+    "- Emotional reactivity to perceived judgment and criticism",
+    "- Intense feelings of inadequacy and fear of failure in training setting",
+    "- Unresolved financial and emotional conflict with ex-partner",
+    "- Persistent stress around child custody and financial stability",
+    "- Difficulty asserting boundaries and maintaining emotional regulation"
+  ],
+  "emotions": [
+    "Anxiety",
+    "Frustration",
+    "Guilt",
+    "Emotional vulnerability",
+    "Anger and resentment"
+  ],
+  "limiting_beliefs": [
+    "- \"I am not capable of handling stress effectively.\"",
+    "- \"I always fail under pressure.\"",
+    "- \"I am financially powerless.\"",
+    "- \"If I stand up for myself, I will be attacked or rejected.\""
+  ],
+  "therapeutic_goals": [
+    "- Develop assertiveness skills to manage conflicts with ex-partner",
+    "- Strengthen self-regulation techniques for emotional overwhelm",
+    "- Reframe negative self-beliefs around failure and inadequacy",
+    "- Explore grounding techniques to reduce anxiety in training settings",
+    "- Establish financial boundaries and negotiation strategies"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Hypnosis session focused on calming the emotional response to criticism",
+      "- Daily journaling to externalize frustration and clarify personal boundaries",
+      "- Breathing techniques for managing stress in training and examination settings"
+    ],
+    "intermediate": [
+      "- Assertiveness training to effectively communicate needs to ex-partner",
+      "- Visualization exercises to increase self-confidence and emotional grounding",
+      "- Hypnosis session focused on releasing the fear of failure and reclaiming self-worth"
+    ],
+    "long_term": [
+      "- Ongoing financial coaching to establish autonomy and reduce dependence",
+      "- Social skills training to handle conflict without emotional escalation",
+      "- Continued work on emotional regulation and stress tolerance in group settings"
+    ]
+  },
+  "motivational_closure": "You may feel overwhelmed by the demands placed upon you, but each step forward is a step toward reclaiming your power. Every moment of perceived failure is an opportunity to learn, adapt, and grow stronger in your own skin.",
+  "tags": [
+    "EmotionalRegulation",
+    "Assertiveness",
+    "FinancialEmpowerment",
+    "SelfWorth",
+    "StressReduction",
+    "ConflictResolution",
+    "CalmingTechniques"
+  ]
+}

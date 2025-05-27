@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_Case_1",
+  "age": "24",
+  "gender_identity": "Transgender Man",
+  "summary": "(RAG Format)\nThe patient is a 24-year-old transgender man experiencing severe anxiety symptoms, attention difficulties, and existential disorientation. A recent panic attack has heightened his fear of bodily sensations, reinforcing a state of hypervigilance. He reports a sense of being trapped in his parental home, which he perceives as emotionally regressive and stressful. In addition, his relationship with a depressive partner who recently attempted suicide has intensified feelings of helplessness and guilt. Unresolved family dynamics and a lack of clear professional direction contribute to his existential crisis and sense of being 'stuck'.",
+  "main_issues": [
+    "- Severe anxiety symptoms with hypervigilance",
+    "- Attention difficulties / potential ADHD",
+    "- Dysfunctional family background with unresolved conflicts",
+    "- Unstable and emotionally taxing relationship",
+    "- Existential crisis with perceived lack of direction",
+    "- Depersonalization and derealization symptoms"
+  ],
+  "emotions": [
+    "Fear", "sadness", "shame", "guilt", "repressed anger", "emotional disconnection"
+  ],
+  "limiting_beliefs": [
+    "'I can't move forward.'",
+    "'I don't deserve better.'",
+    "'I'm a burden to others.'",
+    "'I'm different, unfit, out of sync.'",
+    "'If I feel this, it means I'm going to die or go crazy.'"
+  ],
+  "therapeutic_goals": [
+    "- Stabilize emotional reactivity and reduce panic symptoms",
+    "- Develop emotional regulation strategies",
+    "- Reframe limiting beliefs and restore a sense of agency",
+    "- Address unresolved family dynamics and emotional disconnection",
+    "- Re-establish daily structure and routines to reduce existential disorientation"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Grounding body scan exercise to reduce hypervigilance",
+      "- Cardiac coherence practice 3x/day",
+      "- Daily journal to externalize and label emotions",
+      "- Stop compulsive online searches (set specific time limits)",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Neuropsychological assessment for potential ADHD",
+      "- Targeted EMDR therapy for panic attack, partner's suicide attempt, and mother relationship",
+      "- Psychoeducation on panic attacks and ADHD",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Regular hypnosis to deactivate automatic fear responses and restore embodied presence",
+      "- Therapeutic work on parental relationships to release old patterns",
+      "- Establishing a structured daily rhythm: fixed schedules, micro-routines"
+    ]
+  },
+  "motivational_closure": "You are not broken. You are overwhelmed. And this overload, we're going to lighten it step by step. Even if today you're watching life from the outside, we can find a way back in. Your suffering is real, but it's not a sentence. It's a call to care for yourself differently, deeply, humanly.",
+  "tags": [
+    "AnxietyReduction",
+    "Hypervigilance",
+    "PanicAttackRelief",
+    "EmotionalGrounding",
+    "ADHDManagement",
+    "ExistentialCrisis"
+  ]
+}

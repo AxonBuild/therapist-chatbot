@@ -1,0 +1,78 @@
+{
+  "case_id": "Clinical_Case_2",
+  "age": "33",
+  "gender_identity": "Man",
+  "summary": "(RAG Format)\nThe patient is a 33-year-old man presenting with residual guilt and emotional distress linked to past infidelity and unresolved feelings toward his ex-wife. He reports ongoing emotional attachment to his ex-wife, which is complicated by the fact that he is now in a committed relationship with a male partner. Despite feeling more aligned sexually and emotionally with his current partner, he experiences intrusive memories and feelings of shame regarding his past behaviors, particularly during his ex-wife's hospitalization. He describes a period of compulsive sexual behavior and difficulty reconciling his actions with his current values, which has led to self-blame and a sense of internal conflict.",
+  "main_issues": [
+    "- Persistent guilt and self-blame related to infidelity",
+    "- Emotional attachment to ex-wife despite current relationship",
+    "- Compulsive sexual behavior during ex-wife's hospitalization",
+    "- Conflict between past compulsions and current self-image",
+    "- Feelings of shame regarding perceived addiction-like behavior",
+    "- Difficulty processing complex emotions around sexuality and fidelity"
+  ],
+  "emotions": [
+    "Guilt",
+    "Shame",
+    "Anxiety",
+    "Regret",
+    "Emotional conflict",
+    "Confusion"
+  ],
+  "limiting_beliefs": [
+    "- 'I am a bad person for what I did.'",
+    "- 'I can't forgive myself for betraying her.'",
+    "- 'If I was truly committed, I wouldn't have acted this way.'",
+    "- 'My past behavior defines who I am now.'"
+  ],
+  "therapeutic_goals": [
+    "- Develop self-compassion and reduce self-blame",
+    "- Reframe past compulsive behaviors with a more balanced perspective",
+    "- Integrate self-forgiveness and acceptance practices",
+    "- Explore underlying emotional triggers linked to compulsive behavior",
+    "- Re-establish a healthier self-narrative that distinguishes past from present"
+  ],
+  "solutions": {
+    "immediate": [
+      "**",
+      "- Validate ongoing emotional tension and normalize feelings of guilt",
+      "- Introduce grounding techniques for managing intrusive memories",
+      "- Recommend a hypnosis session focused on releasing shame and reinforcing self-compassion",
+      "Tags: #EmotionalRegulation #ShameRelease #GuiltProcessing",
+      "**"
+    ],
+    "intermediate": [
+      "**",
+      "- Establish routines that promote self-forgiveness and emotional processing",
+      "- Practice cognitive restructuring techniques to reframe past perceived failures",
+      "- Hypnosis session recommendation: Reconnecting with the present self and releasing residual guilt",
+      "Tags: #SelfForgiveness #EmotionalReset #PresentMomentAnchoring",
+      "**"
+    ],
+    "long_term": [
+      "**",
+      "- Develop deeper cognitive restructuring around self-worth and self-image",
+      "- Implement a long-term protocol for reinforcing boundaries between past and present",
+      "- Hypnosis session recommendation: Anchoring self-worth and releasing emotional residue from the past",
+      "Tags: #SelfWorth #EmotionalRelease #IdentityConsolidation"
+    ]
+  },
+  "motivational_closure": "This journey is not about erasing the past, but about integrating it with compassion. Every step forward is a chance to reframe old narratives and reclaim your right to self-acceptance.",
+  "tags": [
+    "EmotionalRegulation",
+    "ShameRelease",
+    "GuiltProcessing",
+    "SelfForgiveness",
+    "EmotionalReset",
+    "PresentMomentAnchoring",
+    "SelfWorth",
+    "EmotionalRelease",
+    "IdentityConsolidation",
+    "GuiltProcessing",
+    "ShameRelease",
+    "EmotionalRegulation",
+    "SelfForgiveness",
+    "IdentityAnchoring",
+    "EmotionalReset"
+  ]
+}

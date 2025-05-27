@@ -1,0 +1,64 @@
+{
+  "case_id": "Clinical_case_88",
+  "age": "48",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 48-year-old woman presenting with significant emotional distress linked to perceived family rejection, a recent birthday experience that exacerbated feelings of being unimportant and dismissed, and unresolved emotional attachment to a past partner (). She expresses a persistent sense of emotional neglect and a heightened sensitivity to perceived slights, particularly within familial and romantic contexts.",
+  "main_issues": [
+    "- Persistent feelings of rejection and emotional neglect within the family",
+    "- Ongoing emotional attachment to a past partner () despite knowing the relationship was manipulative",
+    "- Difficulty regulating emotional intensity during triggering events",
+    "- Overanalysis of familial interactions leading to emotional overwhelm",
+    "- Fear of engaging in new relationships due to past emotional injuries",
+    "- Sense of unworthiness and tendency to self-blame in social interactions"
+  ],
+  "emotions": [
+    "Rejection",
+    "Sadness",
+    "Anger",
+    "Confusion",
+    "Anxiety",
+    "Loneliness"
+  ],
+  "limiting_beliefs": [
+    "- 'If I express my needs, I will be dismissed.'",
+    "- 'I am not worthy of being prioritized.'",
+    "- 'If I let people in, they will hurt me.'",
+    "- 'I am always the one making efforts and receiving nothing in return.'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe the perceived rejection within the family to prevent emotional escalation",
+    "- Develop self-soothing techniques for emotional intensity regulation",
+    "- Encourage the release of emotional attachment to  through closure rituals",
+    "- Promote self-validation and assertiveness in expressing needs",
+    "- Foster healthy boundaries and self-awareness in potential new relationships"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing techniques and grounding exercises for emotional intensity",
+      "- Journaling: 'What I feel is valid and does not define my worth'",
+      "- Structured self-talk to reframe perceived rejection as a miscommunication",
+      "- Hypnosis session recommendation: Emotional Reset and Boundary Reinforcement"
+    ],
+    "intermediate": [
+      "- Construct a letter to  (not sent) to process unresolved feelings",
+      "- Reconnect with trusted friends for emotional support",
+      "- Practice daily affirmations to reinforce self-worth and acceptance",
+      "- Hypnosis session recommendation: Releasing Emotional Attachments"
+    ],
+    "long_term": [
+      "- Guided Visualization or guided visualization to desensitize rejection triggers",
+      "- Build a self-validation ritual to counteract self-blame",
+      "- Develop a clear vision of relational boundaries and desired connections",
+      "- Hypnosis session recommendation: Empowerment and Self-Assertion"
+    ]
+  },
+  "motivational_closure": "You are allowed to feel what you feel. You are learning to honor your needs without apology, and to choose connections that respect your worth and boundaries.",
+  "tags": [
+    "RejectionProcessing",
+    "EmotionalReset",
+    "BoundaryReinforcement",
+    "SelfWorth",
+    "EmotionalClarity",
+    "AttachmentHealing"
+  ]
+}

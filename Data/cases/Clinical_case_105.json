@@ -1,0 +1,58 @@
+{
+  "case_id": "Clinical_case_105",
+  "age": "55",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient is a 55-year-old woman presenting with significant emotional and physical distress related to familial tensions, ongoing financial dynamics with her sister, and unresolved concerns regarding her son and his partner. She feels emotionally isolated, caught between her desire to maintain familial ties and her frustration over perceived financial manipulation and emotional imbalance. Additionally, she is experiencing chronic physical pain, exacerbated by stress and ongoing familial conflicts.",
+  "main_issues": [
+    "- Emotional exhaustion due to unresolved familial conflicts and financial disagreements.",
+    "- Feelings of being financially exploited by her sister.",
+    "- Strained relationship with her son's partner, leading to feelings of helplessness and frustration.",
+    "- Chronic physical pain potentially exacerbated by emotional tension.",
+    "- Difficulty establishing emotional boundaries with family members while maintaining self-respect."
+  ],
+  "emotions": [
+    "Frustration",
+    "Helplessness",
+    "Resentment",
+    "Guilt",
+    "Emotional isolation"
+  ],
+  "limiting_beliefs": [
+    "- 'If I don't maintain these relationships, I will be completely alone.'",
+    "- 'If I assert my boundaries, I will be perceived as ungrateful or selfish.'",
+    "- 'I must always pay or compensate to maintain family harmony.'",
+    "- 'Expressing my anger means I am a bad person.'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe financial interactions with her sister to establish healthier boundaries.",
+    "- Develop coping mechanisms to manage feelings of frustration and resentment.",
+    "- Support emotional processing related to her son's partner's criticism and perceived manipulation.",
+    "- Incorporate relaxation techniques to alleviate physical tension linked to emotional stress."
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises and grounding techniques during stressful interactions.",
+      "- Journaling exercise: 'What would financial freedom look like emotionally for me?'",
+      "- Hypnosis session recommendation: Emotional release and establishing personal boundaries."
+    ],
+    "intermediate": [
+      "- Structured communication templates to express financial boundaries assertively.",
+      "- Physical relaxation exercises to alleviate somatic tension related to frustration.",
+      "- Hypnosis session recommendation: Releasing family-related guilt and self-assertion."
+    ],
+    "long_term": [
+      "- Building self-worth independent of familial financial dynamics.",
+      "- Creating a personal support network to reduce emotional isolation.",
+      "- Hypnosis session recommendation: Reconciliation with personal values and family dynamics."
+    ]
+  },
+  "motivational_closure": "You are not obligated to sacrifice your well-being to maintain family ties. You deserve to establish boundaries that honor your worth, without guilt and without fear.",
+  "tags": [
+    "FamilyBoundaries",
+    "FinancialManipulation",
+    "EmotionalRelease",
+    "SelfAssertion",
+    "PainRelief",
+    "EmotionalIsolation"
+  ]
+}

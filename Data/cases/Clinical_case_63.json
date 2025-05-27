@@ -1,0 +1,65 @@
+{
+  "case_id": "Clinical_case_63",
+  "age": "65",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with persistent ambivalence regarding her current romantic relationship. She experiences conflicting emotions of liberation and fear of loneliness when imagining life without her partner. While she feels a sense of freedom when considering a life without him, she simultaneously fears the absence of affection and companionship. She also expresses a sense of loss over the diminished connection with her grandchildren, which she previously used as a source of emotional fulfillment. There is notable self-blame for having neglected her family ties to maintain her relationship.",
+  "main_issues": [
+    "- Ambivalence about the current romantic relationship: desire for freedom vs. fear of loneliness",
+    "- Loss of connection with grandchildren and feelings of guilt",
+    "- Fear of being alone and not having another companion",
+    "- Difficulty breaking free from established habits and emotional dependence",
+    "- Sense of regret over prioritizing the partner over family connections"
+  ],
+  "emotions": [
+    "Ambivalence",
+    "Fear",
+    "Guilt",
+    "Regret",
+    "Confusion",
+    "Sadness"
+  ],
+  "limiting_beliefs": [
+    "- If I leave, I will be completely alone and unlovable.",
+    "- I am responsible for maintaining connection even if it hurts me.",
+    "- My needs are secondary to those of my partner and family.",
+    "- I cannot find fulfillment without someone to depend on emotionally."
+  ],
+  "therapeutic_goals": [
+    "- Explore underlying fears of loneliness and dependency.",
+    "- Reframe limiting beliefs regarding self-worth and independence.",
+    "- Identify and reinforce personal strengths unrelated to the current partner.",
+    "- Reconnect with sources of joy and fulfillment outside the relationship.",
+    "- Develop strategies for setting emotional boundaries while maintaining connections with family."
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to manage moments of anxiety related to separation.",
+      "- Journaling exercise: 'What would my life look like without him?' - Exploring both fears and potential freedoms.",
+      "- Affirmations: 'I can find joy and connection even when alone.'",
+      "- Visualization exercise: Imagining a fulfilling day focused solely on personal interests and family connections."
+    ],
+    "intermediate": [
+      "- Structured weekly planning to reconnect with grandchildren and family members.",
+      "- Therapy session focused on exploring the impact of emotional dependency on self-esteem.",
+      "- Hypnosis session: Releasing attachment to the partner and reclaiming personal space.",
+      "- Assertive communication training to express needs without guilt."
+    ],
+    "long_term": [
+      "- Therapeutic exploration of childhood patterns of emotional dependence.",
+      "- Monthly follow-ups to track progress in asserting independence and emotional self-sufficiency.",
+      "- Hypnosis session: Reconnecting with inner strength and reinforcing self-worth.",
+      "- Establishing new routines and hobbies to replace the emotional focus on the partner."
+    ]
+  },
+  "motivational_closure": "You have the right to prioritize your own well-being and reclaim your sense of self. Your value is not dependent on maintaining a relationship, but rather on how authentically you live and connect with those who genuinely support you.",
+  "tags": [
+    "EmotionalDependency",
+    "SelfWorth",
+    "FamilyReconnection",
+    "Independence",
+    "FearOfLoneliness",
+    "EmotionalLiberation",
+    "SelfEmpowerment",
+    "LifeAfterSeparation"
+  ]
+}

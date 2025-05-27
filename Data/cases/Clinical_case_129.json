@@ -1,0 +1,50 @@
+{
+  "case_id": "Clinical_case_129",
+  "age": "60",
+  "gender_identity": "woman",
+  "summary": "(RAG Format)\nThis 60-year-old woman presents with significant emotional exhaustion related to the imminent loss of her father, who has been diagnosed with terminal pancreatic cancer with liver metastases. The patient is managing his care remotely while grappling with unresolved childhood dynamics, particularly feelings of neglect and abandonment due to her father's past self-centered behaviors. She expresses a sense of duty to support her father while feeling emotionally unprepared to face his decline and impending death. Concurrently, she experiences a profound disconnect from her own emotional responses, reporting numbness, difficulty crying, and pervasive fatigue. Additionally, she has distanced herself from her mother, further compounding her sense of isolation and emotional overload.",
+  "main_issues": [
+    "- Emotional detachment and numbness in response to father's impending death.",
+    "- Resurfacing of childhood wounds linked to father's past neglect and self-centered choices.",
+    "- Feeling of obligation to care for father despite unresolved anger and resentment.",
+    "- Emotional exhaustion from managing father's care remotely.",
+    "- Difficulty accessing and expressing emotions, particularly grief and sadness.",
+    "- Fear of witnessing father's physical decline and the unpredictability of the dying process."
+  ],
+  "emotions": [
+    "Exhaustion",
+    "Guilt",
+    "Resentment",
+    "Fear",
+    "Emotional detachment",
+    "Grief"
+  ],
+  "limiting_beliefs": [
+    "- I must be present for my father, even if it drains me.",
+    "- I don't have the right to feel angry at him now that he's dying.",
+    "- If I cry, it means I am weak.",
+    "- My father's choices were my responsibility to fix."
+  ],
+  "therapeutic_goals": [
+    "- Facilitate emotional processing of impending loss and unresolved paternal dynamics.",
+    "- Encourage emotional expression, particularly grief and resentment, in a safe therapeutic space.",
+    "- Support the patient in setting healthy boundaries around caregiving to prevent burnout.",
+    "- Explore the impact of her father's self-centered behavior on her sense of self-worth and emotional stability.",
+    "- Implement grounding and self-soothing techniques to manage anticipatory grief and emotional overload.",
+    "- Reconnect with her emotional responses and encourage healthy emotional release."
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "Your father's choices do not define your worth. You have the right to grieve, to feel anger, and to protect your emotional space. Today, you honor your emotions without judgment, allowing them to flow through you without the need to fix or suppress them.",
+  "tags": [
+    "AnticipatoryGrief",
+    "EmotionalProcessing",
+    "CaregiverExhaustion",
+    "UnresolvedAnger",
+    "SelfCompassion",
+    "EmotionalBoundaries"
+  ]
+}

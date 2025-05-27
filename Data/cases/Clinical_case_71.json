@@ -1,0 +1,59 @@
+{
+  "case_id": "Clinical_case_71",
+  "age": "66",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with a complex dynamic involving emotional isolation, perceived neglect, and a conflict between remaining in a long-term relationship and seeking personal autonomy.",
+  "main_issues": [
+    "- Emotional isolation and perceived neglect",
+    "- Frustration toward partner's self-centered behavior",
+    "- Longing for emotional connection and recognition",
+    "- Conflict between autonomy and maintaining the relationship",
+    "- Fear of loneliness and uncertainty about the future"
+  ],
+  "emotions": [
+    "Abandonment",
+    "Frustration",
+    "Emotional longing",
+    "Anxiety about the future",
+    "Ambivalence regarding autonomy"
+  ],
+  "limiting_beliefs": [
+    "- \"If I leave, I will be completely alone.\"",
+    "- \"My needs are less important than his.\"",
+    "- \"I am too old to start over.\"",
+    "- \"If I stay, I will lose myself completely.\""
+  ],
+  "therapeutic_goals": [
+    "- Reinforce emotional autonomy",
+    "- Address fear of loneliness",
+    "- Establish personal boundaries",
+    "- Facilitate emotional expression and recognition",
+    "- Explore life beyond the current relationship"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Grounding exercises to manage anxiety",
+      "- Emotional journaling to externalize frustration",
+      "- Hypnosis session recommendation: Release of emotional attachment to partner's validation"
+    ],
+    "intermediate": [
+      "- Exploration of autonomy through symbolic imagery (hypnosis)",
+      "- Guided visualization of a future self living independently",
+      "- Hypnosis session recommendation: Reclaiming personal power and choice"
+    ],
+    "long_term": [
+      "- Reinforcement of new identity separate from the partner",
+      "- Development of a support network outside the relationship",
+      "- Hypnosis session recommendation: Embracing life transitions and finding new purpose"
+    ]
+  },
+  "motivational_closure": "Your life is not defined by the weight of the past but by the steps you take forward. The choice to prioritize your own happiness is an act of courage. You are worthy of a life that feels like your own.",
+  "tags": [
+    "EmotionalAutonomy",
+    "Loneliness",
+    "LifeTransitions",
+    "PersonalEmpowerment",
+    "ReleaseAttachment",
+    "ReclaimPower"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "case_id": "Clinical_Case_10",
+  "age": "42",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient, a 42-year-old woman, is currently experiencing emotional turmoil related to multiple stressors. She recently purchased a house that is causing significant frustration due to unresolved construction and regulatory issues. There is a sense of injustice and powerlessness regarding denied permits and inconsistent regulations, intensifying feelings of frustration and perceived unfairness.\n\nIn addition to these environmental stressors, the patient is also navigating the emotional aftermath of her father's death. She has been involved in sorting and clearing his belongings, a process that has proven to be emotionally taxing. Certain personal items, such as watches and glasses, have triggered intense emotional responses, while other items, such as furniture, have been easier to part with by donating them to a close friend.\n\nShe expresses a mix of anger and sadness towards her father, recalling that he passed away harboring unresolved resentment and bitterness. She notes a sense of irony in his ashes being placed in an urn that he did not choose, as a symbolic reflection of the unfulfilled closure in their relationship. Additionally, she struggles with maintaining emotional connection with her partner amidst these stressors, feeling emotionally drained and disconnected.",
+  "main_issues": [
+    "- Intense frustration regarding house purchase and regulatory barriers",
+    "- Emotional exhaustion from clearing father's belongings",
+    "- Conflictual feelings towards deceased father (anger, unresolved grief)",
+    "- Disconnection from partner and challenges in emotional intimacy",
+    "- Persistent rumination over unresolved conflicts and perceived injustices"
+  ],
+  "emotions": [
+    "Frustration",
+    "Resentment",
+    "Emotional fatigue",
+    "Unresolved grief",
+    "Anxiety regarding regulatory conflicts",
+    "Guilt and ambivalence over father's unresolved anger"
+  ],
+  "limiting_beliefs": [
+    "- 'I must keep fighting to be heard and respected.'",
+    "- 'My father's unresolved anger is a reflection of me.'",
+    "- 'I am powerless against external systems and regulations.'",
+    "- 'I can't let go of the past without feeling guilty.'",
+    "- 'If I don't resolve every conflict, I am failing in some way.'"
+  ],
+  "therapeutic_goals": [
+    "- Develop strategies to cope with external stressors without internalizing blame",
+    "- Reframe unresolved conflict with father as a separate entity from her self-worth",
+    "- Foster emotional connection with partner amidst ongoing stress",
+    "- Practice self-compassion to alleviate guilt over unresolved familial dynamics",
+    "- Establish emotional boundaries to prevent further burnout and fatigue"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Implement grounding techniques to manage frustration and anxiety during regulatory disputes",
+      "- Practice emotional release techniques when encountering personal items linked to father",
+      "- Hypnosis session recommendation: Releasing resentment towards unresolved familial conflicts"
+    ],
+    "intermediate": [
+      "- Explore unresolved familial dynamics in therapy to process feelings of guilt and anger",
+      "- Develop communication strategies to express emotional needs to partner without guilt",
+      "- Hypnosis session recommendation: Emotional detachment from external conflicts and embracing inner peace"
+    ],
+    "long_term": [
+      "- Cultivate emotional boundaries to prevent burnout and emotional depletion",
+      "- Reframe self-worth independently of external validation and family approval",
+      "- Hypnosis session recommendation: Reclaiming self-worth amidst external stressors"
+    ]
+  },
+  "motivational_closure": "You have the power to release the burdens that are not yours to carry. Every day, as you practice letting go, you are choosing to reclaim your emotional freedom. You are more than the conflicts around you - you are the calm amidst the storm. You are enough, and you are allowed to find peace even amidst chaos.",
+  "tags": [
+    "FamilyConflict",
+    "Resentment",
+    "GriefProcessing",
+    "EmotionalBoundaries",
+    "LettingGo",
+    "EmotionalFatigue",
+    "ReclaimingSelfWorth"
+  ]
+}

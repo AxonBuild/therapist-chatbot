@@ -1,0 +1,63 @@
+{
+  "case_id": "Clinical_Case_49",
+  "age": "44",
+  "gender_identity": "woman presents with persistent sleep disturbances and multifactorial chronic fatigue. She experiences difficulty falling asleep, even with antidepressant treatment, and occasionally uses Tarax, which induces sedation but does not restore her energy. Her mental load is exceptionally high as a single mother with no external support, caring for a young child and a dependent mother. This context fuels a deep sense of loneliness, a latent conflict with her emotionally immature mother, and an underlying depressive state that remains largely unspoken.",
+  "summary": "(RAG Format)\nThis 44-year-old woman presents with persistent sleep disturbances and multifactorial chronic fatigue. She experiences difficulty falling asleep, even with antidepressant treatment, and occasionally uses Tarax, which induces sedation but does not restore her energy. Her mental load is exceptionally high as a single mother with no external support, caring for a young child and a dependent mother. This context fuels a deep sense of loneliness, a latent conflict with her emotionally immature mother, and an underlying depressive state that remains largely unspoken.",
+  "main_issues": [
+    "- Sleep onset difficulties and non-restorative rest",
+    "- Mental overload from single parenthood and caregiving responsibilities",
+    "- Persistent loneliness, rooted since adolescence",
+    "- Repressed anger toward a dependent, infantilized mother",
+    "- Underlying depressive state, with little relief from antidepressants",
+    "- Financial and professional stress linked to rising costs and real estate work"
+  ],
+  "emotions": [
+    "Extreme fatigue",
+    "Loneliness",
+    "Repressed anger",
+    "Chronic stress",
+    "Silent self-deprecation",
+    "Resignation"
+  ],
+  "limiting_beliefs": [
+    "- \"I have to handle everything alone.\"",
+    "- \"I have no one to rely on.\"",
+    "- \"If I let go, everything will collapse.\"",
+    "- \"I'm tired, but I have to hold on.\"",
+    "- \"No help will come.\""
+  ],
+  "therapeutic_goals": [
+    "- Improve sleep quality and reduce nighttime anxiety",
+    "- Rebuild emotional boundaries with the mother",
+    "- Normalize the need for support and rest without guilt",
+    "- Reduce the sense of isolation and moral exhaustion",
+    "- Anchor a safe internal space for emotional recovery"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Guided body scan to relieve physical and mental exhaustion",
+      "- 4-7-8 breathing technique before sleep",
+      "- Visualization of an 'imaginary support circle' to soothe loneliness"
+    ],
+    "intermediate": [
+      "- Evening routine: writing, warm lighting, gentle music",
+      "- 'Mental unloading' journal to release worries before sleep",
+      "- Symbolic separation exercise: ritualize emotional detachment from the mother's role"
+    ],
+    "long_term": [
+      "- Hypnosis theme: Soothing Loneliness and Inner Recovery",
+      "- Releasing adolescent loneliness and guilt",
+      "- Reframing relationship with the mother",
+      "- Anchoring emotional rest and inner safety"
+    ]
+  },
+  "motivational_closure": "You were never truly alone because you've always been there for yourself. Today, it's not strength that will save you, but the space you allow yourself to breathe. You have the right to pause, the right not to carry all this weight alone anymore.",
+  "tags": [
+    "SleepDisorder",
+    "ChronicFatigue",
+    "MaternalOverload",
+    "EmotionalLoneliness",
+    "InnerSafety",
+    "SelfCompassion"
+  ]
+}

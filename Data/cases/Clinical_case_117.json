@@ -1,0 +1,44 @@
+{
+  "case_id": "Clinical_case_117",
+  "age": "25",
+  "gender_identity": "Man",
+  "summary": "(RAG Format)\nThe patient, a 25-year-old man, presents with profound feelings of emptiness and loss of purpose following the death of his mother and grandmother, who were the primary sources of validation and emotional support in his life. He reports a persistent struggle to feel recognized and valued, both in personal and social contexts. Despite receiving occasional positive feedback, he remains unable to internalize these affirmations and continues to experience a deep sense of insignificance and lack of direction. Additionally, he describes moments of emotional flooding when recalling his mother, particularly around the time of her illness and his attempts to share his life with her before her passing.",
+  "main_issues": [
+    "- Loss of primary sources of validation and emotional support (mother and grandmother)",
+    "- Inability to internalize positive affirmations and recognition from others",
+    "- Emotional exhaustion from unprocessed grief and unresolved attachment",
+    "- Persistent feelings of insignificance and self-doubt",
+    "- Difficulty navigating emotional experiences related to his mother's illness and passing"
+  ],
+  "emotions": [
+    "Grief",
+    "Guilt",
+    "Emptiness",
+    "Self-doubt",
+    "Emotional fatigue"
+  ],
+  "limiting_beliefs": [
+    "- 'If I am not recognized, I do not matter'",
+    "- 'If I let go of the grief, I am betraying their memory'",
+    "- 'My value is only determined by what others see in me'"
+  ],
+  "therapeutic_goals": [
+    "- Reframe self-worth to be independent of external validation",
+    "- Facilitate the emotional release of unresolved grief related to mother and grandmother",
+    "- Develop grounding techniques to manage emotional flooding during memory recall",
+    "- Encourage self-compassion and the recognition of personal achievements"
+  ],
+  "solutions": {
+    "immediate": [],
+    "intermediate": [],
+    "long_term": []
+  },
+  "motivational_closure": "You are not defined by the loss you have endured or the recognition you may or may not receive. Your worth is inherent, just as you are, without the need for external validation. You are seen, you are valued, and you are enough - simply by being.",
+  "tags": [
+    "GriefRelease",
+    "SelfWorth",
+    "EmotionalRecovery",
+    "LettingGo",
+    "InternalValidation"
+  ]
+}

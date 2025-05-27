@@ -1,0 +1,64 @@
+{
+  "case_id": "Clinical_case_109",
+  "age": "39",
+  "gender_identity": "Woman",
+  "summary": "(RAG Format)\nThe patient presents with significant emotional distress related to ongoing psychological abuse and manipulation from her father, who also serves as her general practitioner. She struggles with establishing boundaries, as her father uses his position of power to exert control over her while simultaneously undermining her self-esteem. The patient feels trapped between maintaining a basic connection for financial and emotional support and distancing herself to protect her emotional well-being. She expresses a desire to regain her sense of self, reclaim her assertiveness, and reduce the impact of her father's manipulative behavior on her emotional health.",
+  "main_issues": [
+    "- Psychological manipulation and emotional abuse by the father",
+    "- Confusion due to dual role of father as both parent and medical provider",
+    "- Emotional dependency exacerbated by financial dependence",
+    "- Fear of losing financial support if boundaries are asserted",
+    "- Internal conflict between seeking paternal approval and self-protection"
+  ],
+  "emotions": [
+    "Confusion",
+    "Fear",
+    "Guilt",
+    "Anger",
+    "Resentment"
+  ],
+  "limiting_beliefs": [
+    "- If I set boundaries, I will lose my father's financial support.",
+    "- I am responsible for maintaining a connection with my father, even if it hurts me.",
+    "- I will never receive the love or respect I want from him, but I must keep trying.",
+    "- If I distance myself, I am a bad daughter."
+  ],
+  "therapeutic_goals": [
+    "- Establish healthy boundaries to protect emotional well-being",
+    "- Reframe limiting beliefs around financial dependency and paternal validation",
+    "- Develop assertiveness skills to manage emotionally manipulative interactions",
+    "- Reinforce self-worth independent of paternal approval",
+    "- Identify and separate the roles of father and medical provider to minimize conflict"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Grounding exercises to mitigate emotional distress during interactions with father",
+      "- Affirmations: 'I am not responsible for his emotional state.'",
+      "- Identify and document specific instances of manipulation to increase self-awareness",
+      "- Establish a temporary contact boundary (e.g., reduce calls to once every two weeks)"
+    ],
+    "intermediate": [
+      "- Assertiveness training to communicate boundaries clearly and respectfully",
+      "- Narrative journaling to process conflicting emotions and clarify desired boundaries",
+      "- Self-compassion exercises to counteract self-blame and feelings of guilt",
+      "- Hypnosis session: Releasing the need for paternal approval and reclaiming self-worth"
+    ],
+    "long_term": [
+      "- Therapy to explore the impact of paternal manipulation on self-concept",
+      "- Regular follow-ups to assess progress in boundary setting and assertiveness",
+      "- Integration of relaxation techniques to manage stress and emotional overwhelm",
+      "- Hypnosis session: Disconnecting from parental expectations and establishing self-validation"
+    ]
+  },
+  "motivational_closure": "You are not responsible for his actions or his emotional responses. You have the right to protect your emotional well-being, even if it means creating distance. Reclaiming your voice and setting boundaries is a powerful act of self-love and self-respect.",
+  "tags": [
+    "BoundarySetting",
+    "EmotionalIndependence",
+    "SelfWorth",
+    "ReleasingGuilt",
+    "AssertivenessTraining",
+    "Empowerment",
+    "SelfProtection",
+    "EmotionalRecovery"
+  ]
+}

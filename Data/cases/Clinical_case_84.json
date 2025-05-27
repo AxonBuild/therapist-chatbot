@@ -1,0 +1,58 @@
+{
+  "case_id": "Clinical_case_84",
+  "age": "38",
+  "gender_identity": "Woman (Jalousie)",
+  "summary": "(RAG Format)\nThe patient is a 38-year-old woman presenting with heightened feelings of jealousy and insecurity, primarily triggered by a perceived threat related to her husband's interactions with a female colleague. She reports a deep sense of guilt for experiencing these feelings, recognizing them as disproportionate to the situation. Additionally, the patient identifies a significant emotional response linked to body image issues, stemming from past difficulties with weight management due to inflammatory health conditions. The internal conflict between feeling grateful for her stable relationship and harboring irrational jealousy has created emotional strain.",
+  "main_issues": [
+    "- Jealousy triggered by perceived threats related to her husband's professional interactions",
+    "- Body image dissatisfaction and self-esteem issues related to inflammatory conditions",
+    "- Guilt and self-judgment for feeling jealous despite a stable marital relationship",
+    "- Internal conflict between gratitude and insecurity",
+    "- Difficulty accepting personal vulnerabilities and emotional needs"
+  ],
+  "emotions": [
+    "Jealousy",
+    "Insecurity",
+    "Guilt",
+    "Self-doubt",
+    "Emotional conflict"
+  ],
+  "limiting_beliefs": [
+    "- 'If I feel jealous, it means I am insecure and unworthy.'",
+    "- 'My husband will lose interest if I don't meet societal standards of beauty.'",
+    "- 'Expressing my emotional needs makes me weak.'",
+    "- 'I must always appear strong and unaffected.'"
+  ],
+  "therapeutic_goals": [
+    "- Normalize the emotional experience of jealousy without self-judgment",
+    "- Develop body positivity and self-acceptance practices",
+    "- Encourage open communication about insecurities with her husband",
+    "- Challenge the belief that expressing vulnerability equates to weakness",
+    "- Reinforce the idea that self-worth is not dependent on external validation"
+  ],
+  "solutions": {
+    "immediate": [
+      "- Breathing exercises to reduce emotional reactivity",
+      "- Journaling to explore feelings of jealousy and their underlying causes",
+      "- Hypnosis session recommendation: Emotional Reset and Self-Worth Reinforcement"
+    ],
+    "intermediate": [
+      "- Body image therapy to address dissatisfaction and foster acceptance",
+      "- Communication exercises to share feelings with her husband in a non-confrontational way",
+      "- Guided visualization to enhance self-confidence"
+    ],
+    "long_term": [
+      "- Develop routines that promote physical and emotional well-being",
+      "- Explore deeper triggers linked to past experiences of loss or comparison",
+      "- Continue affirming self-worth independent of relationship dynamics"
+    ]
+  },
+  "motivational_closure": "You are allowed to experience vulnerability without judgment. Your feelings are valid, and working through them shows strength, not weakness. Building confidence starts with accepting yourself as you are.",
+  "tags": [
+    "JealousyProcessing",
+    "SelfWorth",
+    "BodyImage",
+    "EmotionalStability",
+    "RelationshipCommunication"
+  ]
+}
