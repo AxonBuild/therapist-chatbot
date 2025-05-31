@@ -47,15 +47,22 @@ def search_keyword_matches(symptoms: List[str], exclude_cases: List[str]) -> Dic
     print("Searching for keyword matches...")
     print(f"Symptoms: {symptoms}")
     
-    exclude_cases_filter = {
-        "must_not": [
+    # Build filter conditions
+    must_conditions = [
+        models.FieldCondition(
+            key="content_type",
+            match=models.MatchValue(value="keyword")
+        )
+    ]
+    must_not_conditions = []
+    if exclude_cases:
+        must_not_conditions.append(
             models.FieldCondition(
                 key="case_id",
                 match=models.MatchAny(values=exclude_cases)
             )
-        ]
-    } if exclude_cases else {}
-    
+        )
+
     # Create batch search requests
     search_requests = []
     for symptom in symptoms:
@@ -64,13 +71,8 @@ def search_keyword_matches(symptoms: List[str], exclude_cases: List[str]) -> Dic
             search_requests.append(models.SearchRequest(
                 vector=symptom_vector,
                 filter=models.Filter(
-                    must=[
-                        models.FieldCondition(
-                            key="content_type",
-                            match=models.MatchValue(value="keyword")
-                        )
-                    ],
-                    **exclude_cases_filter
+                    must=must_conditions,
+                    must_not=must_not_conditions if must_not_conditions else None
                 ),
                 limit=5,
                 score_threshold=KEYWORD_THRESHOLD,
@@ -109,15 +111,22 @@ def search_limiting_belief_matches(user_message: str, session, exclude_cases: Li
     """Search for limiting belief matches in clinical cases."""
     belief_matches = {}
     
-    exclude_cases_filter = {
-        "must_not": [
+    # Build filter conditions
+    must_conditions = [
+        models.FieldCondition(
+            key="content_type",
+            match=models.MatchValue(value="limiting_belief")
+        )
+    ]
+    must_not_conditions = []
+    if exclude_cases:
+        must_not_conditions.append(
             models.FieldCondition(
                 key="case_id",
                 match=models.MatchAny(values=exclude_cases)
             )
-        ]
-    } if exclude_cases else {}
-    
+        )
+
     # Get message embedding
     try:
         message_vector = embed_text(user_message)
@@ -126,13 +135,8 @@ def search_limiting_belief_matches(user_message: str, session, exclude_cases: Li
             collection_name=COLLECTION_NAME,
             query_vector=message_vector,
             query_filter=models.Filter(
-                must=[
-                    models.FieldCondition(
-                        key="content_type",
-                        match=models.MatchValue(value="limiting_belief")
-                    )
-                ],
-                **exclude_cases_filter
+                must=must_conditions,
+                must_not=must_not_conditions if must_not_conditions else None
             ),
             limit=3,
             score_threshold=LIMITING_BELIEF_THRESHOLD
