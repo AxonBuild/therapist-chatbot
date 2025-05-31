@@ -59,7 +59,7 @@ def search_keyword_matches(symptoms: List[str], exclude_cases: List[str]) -> Dic
         must_not_conditions.append(
             models.FieldCondition(
                 key="case_id",
-                match=models.MatchAny(values=exclude_cases)
+                match=models.MatchAny(any=exclude_cases)
             )
         )
 
@@ -123,7 +123,7 @@ def search_limiting_belief_matches(user_message: str, session, exclude_cases: Li
         must_not_conditions.append(
             models.FieldCondition(
                 key="case_id",
-                match=models.MatchAny(values=exclude_cases)
+                match=models.MatchAny(any=exclude_cases)
             )
         )
 
