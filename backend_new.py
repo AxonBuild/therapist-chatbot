@@ -164,12 +164,18 @@ class ChatSession:
     def update_solution_delivery(self, case_id: str, solution_status: Dict[str, bool]):
         """Update which solutions have been delivered for a case"""
         # Update status
+        print(f"\nUpdating solution delivery for case {case_id}: {solution_status}")
+        print(f"Current delivery status: {self.delivered_solutions.get(case_id, {})}")
+        
         for solution_type, delivered in solution_status.items():
-            if self.delivered_solutions[case_id][solution_type]:
+            if self.delivered_solutions[case_id][solution_type] == True:
                 print(f"Solution type '{solution_type}' for case {case_id} already delivered. Skipping update to: {delivered}")
                 continue
             if delivered:
                 self.delivered_solutions[case_id][solution_type] = True
+        
+        print(f"Updated delivery status: {self.delivered_solutions[case_id]}")
+        print("Checking if all solutions delivered for case:", all(self.delivered_solutions[case_id].values()))
         
         if all(self.delivered_solutions[case_id].values()):
             print(f"Case {case_id} delivery completed!")

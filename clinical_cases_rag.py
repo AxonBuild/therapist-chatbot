@@ -424,6 +424,9 @@ def analyze_solution_delivery(response_text: str, case_ids: Set[str], llm_client
             print(f"Warning: LLM returned unexpected type: {type(delivery_analysis)}")
             return {}
         
+        print("Final Delivery Analysis:")
+        print(json.dumps(delivery_analysis, indent=2))
+        
         # Validate the structure of returned dictionary
         validated_analysis = {}
         for case_id in case_ids:
