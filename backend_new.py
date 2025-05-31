@@ -4,7 +4,7 @@ import re
 import time # For searching files
 from openai import OpenAI # Use OpenAI library structure for OpenRouter
 from dotenv import load_dotenv
-from typing import List, Set, Dict, Any, Tuple
+from typing import Iterable, List, Set, Dict, Any, Tuple
 from clinical_cases_rag import fetch_clinical_cases, analyze_solution_delivery
 from script_loader import ScriptLoader
 
@@ -99,11 +99,6 @@ class ChatSession:
     def __init__(self, session_id: str):
         self.session_id: str = session_id
         self.conversation_history: list[dict] = []
-        self.identified_conditions: dict[str, dict[str, bool]] = {}
-        self.suggested_follow_ups: list[str] = []
-        self.script_message_count: int = 0
-        self.offering_script: dict | None = None
-        self.delivered_scripts: set[tuple[str, str]] = set()
         
         #Track which guidance note sections have been delivered
         #self.delivered_guidance: dict[str, dict[str, bool]] = {}
@@ -112,11 +107,11 @@ class ChatSession:
         self.matched_limiting_beliefs: Dict[str, Dict[str, Any]] = {}  # All matched beliefs over time
         self.message_belief_history: List[Dict[str, Any]] = []  # Track which message had which beliefs
         self.delivered_solutions: dict[str, dict] = {}  # Maps case_id to solution delivery status
-        self.previously_matched_cases: set[str] = set()  # Track which cases were previously matched
+        self.current_cases: set[str] = set() # Track the currently chosen cases
+        self.completed_cases: set[str] = set()  # Track which cases have been completed
 
     def add_message(self, role: str, content: str):
         self.conversation_history.append({"role": role, "content": content})
-        self.script_message_count += 1
 
     def format_history_for_prompt(self) -> str:
         # Only include user messages
@@ -148,10 +143,6 @@ class ChatSession:
                     self.matched_limiting_beliefs[belief]["last_detected"] = message_index
                 
                 current_message_beliefs.append(belief)
-                
-                # Add to previously matched cases
-                if "case_id" in info:
-                    self.previously_matched_cases.add(info["case_id"])
             
             # Track which beliefs appeared in this message
             self.message_belief_history.append({
@@ -172,17 +163,34 @@ class ChatSession:
     
     def update_solution_delivery(self, case_id: str, solution_status: Dict[str, bool]):
         """Update which solutions have been delivered for a case"""
-        if case_id not in self.delivered_solutions:
-            self.delivered_solutions[case_id] = {
+        # Update status
+        print(f"\nUpdating solution delivery for case {case_id}: {solution_status}")
+        print(f"Current delivery status: {self.delivered_solutions.get(case_id, {})}")
+        
+        for solution_type, delivered in solution_status.items():
+            if self.delivered_solutions[case_id][solution_type] == True:
+                print(f"Solution type '{solution_type}' for case {case_id} already delivered. Skipping update to: {delivered}")
+                continue
+            if delivered:
+                self.delivered_solutions[case_id][solution_type] = True
+        
+        print(f"Updated delivery status: {self.delivered_solutions[case_id]}")
+        print("Checking if all solutions delivered for case:", all(self.delivered_solutions[case_id].values()))
+        
+        if all(self.delivered_solutions[case_id].values()):
+            print(f"Case {case_id} delivery completed!")
+            self.completed_cases.add(case_id)
+            self.current_cases.remove(case_id)
+    
+    def add_current_cases(self, case_ids: Iterable[str]):
+        for case in case_ids:
+            self.current_cases.add(case)
+            self.delivered_solutions[case] = {
                 "immediate": False,
                 "intermediate": False,
                 "long_term": False
             }
-        
-        # Update status
-        for solution_type, delivered in solution_status.items():
-            if delivered:
-                self.delivered_solutions[case_id][solution_type] = True
+
 # --- Main Chatbot Logic ---
 
 class TherapeuticChatbot:
@@ -221,29 +229,31 @@ class TherapeuticChatbot:
         has_guidance = True if clinical_guidance else False
         
         prompt = f"""
-            You are a supportive, empathetic therapist. Your goal is to respond to the user in a warm, validating, and thoughtful way.
-            
-            {"Here are clinical patterns and therapeutic approaches that may help with this conversation:" if has_guidance else ""}
-            {clinical_guidance}
+You are a supportive, empathetic therapist. Your goal is to respond to the user in a warm, validating, and thoughtful way.
+
+{"Here are clinical patterns and therapeutic approaches that may help with this conversation:" if has_guidance else ""}
+{clinical_guidance}
+
+
             """
         
         if json_output:
             prompt += """
-            Important: Return your response in JSON format with these keys:
-            {
-                "Response": "Your therapeutic response here, addressing the user's concerns warmly and empathetically",
-                "Activity_offered": true/false (Set to true when appropriate to offer a guided exercise otherwise false)
-            }
-            
-            For the "Activity_offered" field:
-            - Set to TRUE ONLY when all of these conditions are met:
-              1. The conversation has established good rapport
-              2. You have a clear understanding of the user's specific issue
-              3. A structured activity would be therapeutic at this moment
-              4. You've already provided some initial validation and support
-            - Otherwise, set to FALSE
-            
-            DO NOT offer an activity in the first few exchanges. Focus on understanding and validating the user first.
+Important: Return your response in JSON format with these keys:
+{
+    "Response": "Your response to the user",
+    "Activity_offered": true/false (Set to true when appropriate to offer a guided exercise otherwise false)
+}
+
+For the "Activity_offered" field:
+- Set to TRUE ONLY when all of these conditions are met:
+    1. The conversation has established good rapport
+    2. You have a clear understanding of the user's specific issue
+    3. A structured activity would be therapeutic at this moment
+    4. You've already provided some initial validation and support
+- Otherwise, set to FALSE
+
+DO NOT offer an activity in the first few exchanges. Focus on understanding and validating the user first.
             """
         
         return prompt
@@ -288,22 +298,22 @@ class TherapeuticChatbot:
         llm = LLMClient(api_key=OPENROUTER_API_KEY, model_id=model or "openai/gpt-4o-mini")
         
         profile_prompt = f"""
-        Based on this conversation, analyze the user's profile and emotional state.
-        
-        Conversation:
-        {conversation}
-        
-        Determine:
-        1. The user's likely age group (child/teen/adult/senior)
-        2. Their emotional intensity level (mild/moderate/intense)
-        3. Top 3 specific therapeutic concerns (like "grief release", "self-worth", "body awareness", etc.)
-        
-        Return as JSON:
-        {{
-            "age_group": "adult|teen|child|senior",
-            "emotional_intensity": "mild|moderate|intense",
-            "specific_concerns": ["concern1", "concern2", "concern3"]
-        }}
+Based on this conversation, analyze the user's profile and emotional state.
+
+Conversation:
+{conversation}
+
+Determine:
+1. The user's likely age group (child/teen/adult/senior)
+2. Their emotional intensity level (mild/moderate/intense)
+3. Top 3 specific therapeutic concerns (like "grief release", "self-worth", "body awareness", etc.)
+
+Return as JSON:
+{{
+    "age_group": "adult|teen|child|senior",
+    "emotional_intensity": "mild|moderate|intense",
+    "specific_concerns": ["concern1", "concern2", "concern3"]
+}}
         """
         
         try:
@@ -325,6 +335,7 @@ class TherapeuticChatbot:
         """Processes a user message and returns the assistant's response."""
         # Initialize LLM client and model
         model = model or "openai/gpt-4o-mini"
+        print("Using model:", model)
         llm = LLMClient(api_key=OPENROUTER_API_KEY, model_id=model)
         
         # Get/create session and update history
@@ -335,17 +346,21 @@ class TherapeuticChatbot:
         history_str = session.format_history_for_prompt()
         
         # Extract symptoms from the conversation
-        keyword_prompt = self._build_keyword_identifier_prompt(history_str)
-        keyword_response = llm.send_prompt(keyword_prompt, temperature=0.7, extract_json=True)
-        symptoms = keyword_response.get("symptoms", [])
+        if len(session.current_cases) < 3:
+            keyword_prompt = self._build_keyword_identifier_prompt(history_str)
+            keyword_response = llm.send_prompt(keyword_prompt, temperature=0.7, extract_json=True)
+            symptoms = keyword_response.get("symptoms", [])
+        else:
+            symptoms = []
         
         # Fetch clinical cases based on symptoms and latest message
-        clinical_guidance, matched_cases = fetch_clinical_cases(
+        clinical_guidance = fetch_clinical_cases(
             symptoms=symptoms, 
             user_message=user_message,
             session=session
         )
-        print(f"Matched clinical cases: {matched_cases}")
+        
+        print(f"Matched clinical cases: {session.current_cases}")
         print(f"Clinical guidance: {clinical_guidance}")
         
         # Build system prompt with clinical guidance
@@ -380,8 +395,8 @@ class TherapeuticChatbot:
                 activity_offered = False
         
         # Analyze which solutions were delivered
-        if matched_cases:
-            delivery_analysis = analyze_solution_delivery(response_text, matched_cases, llm)
+        if len(session.current_cases) > 0:
+            delivery_analysis = analyze_solution_delivery(response_text, session.current_cases, llm)
             
             # Update session with solution delivery status
             for case_id, status in delivery_analysis.items():
