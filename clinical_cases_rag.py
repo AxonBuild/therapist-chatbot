@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
-
+import concurrent.futures
 # Load environment variables
 load_dotenv()
 
@@ -210,9 +210,9 @@ def get_next_solutions(case_id: str, session) -> Dict[str, List[str]]:
     
     return solutions
 
-def fetch_clinical_cases(symptoms: List[str], user_message: str, session) -> str:
+def fetch_clinical_cases(symptoms: List[str], user_message: str, session) -> Tuple[str, Set[str]]:
     """
-    Fetch clinical cases based on symptoms and user message with simple historical belief tracking.
+    Fetch clinical cases based on symptoms and user message with parallel search execution.
     
     Args:
         symptoms: List of identified symptoms/keywords
@@ -220,30 +220,46 @@ def fetch_clinical_cases(symptoms: List[str], user_message: str, session) -> str
         session: The current chat session for tracking delivery status
         
     Returns:
-        guidance text for system prompt
+        Tuple of (guidance text for system prompt, set of matched case IDs)
     """
     
     matched_cases = []
     all_beliefs = getattr(session, "matched_limiting_beliefs", {})
     
-    # Step 1: Search for keyword matches
+    # Step 1: Execute searches in parallel if we need new cases
     if len(session.current_cases) < 3:
-        # we can have at most 3 cases loaded at a time
         cases_needed = 3 - len(session.current_cases)
         exclude_cases = list(session.completed_cases | session.current_cases)
         
-        keyword_matches = search_keyword_matches(symptoms, exclude_cases)
+        # Execute keyword and limiting belief searches in parallel
+        keyword_matches = {}
+        current_belief_matches = {}
         
-        # Step 2: Search for limiting belief matches in current message
-        current_belief_matches = search_limiting_belief_matches(user_message, session, exclude_cases)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+            # Submit both search tasks
+            keyword_future = executor.submit(search_keyword_matches, symptoms, exclude_cases)
+            belief_future = executor.submit(search_limiting_belief_matches, user_message, session, exclude_cases)
+            
+            try:
+                # Get results as they complete
+                keyword_matches = keyword_future.result(timeout=10)  # 10 second timeout
+                current_belief_matches = belief_future.result(timeout=10)
+            except concurrent.futures.TimeoutError:
+                print("Warning: Search timeout - using partial results")
+                # Try to get any completed results
+                if keyword_future.done():
+                    keyword_matches = keyword_future.result()
+                if belief_future.done():
+                    current_belief_matches = belief_future.result()
+        
         print("Current limiting belief matches:", current_belief_matches)
-        # Step 3: Update session with current beliefs
+        
+        # Step 2: Update session with current beliefs
         message_index = len(session.conversation_history) // 2
         if hasattr(session, "update_limiting_belief_matches"):
             session.update_limiting_belief_matches(current_belief_matches, message_index)
         
-        
-        # Step 5: Simple combined scoring
+        # Step 3: Simple combined scoring
         case_scores = keyword_matches.copy()
         
         # Add scores from all limiting beliefs (current gets 2x, historical gets 1x)
@@ -261,7 +277,7 @@ def fetch_clinical_cases(symptoms: List[str], user_message: str, session) -> str
         
         print("Case scores:\n", case_scores)
         
-        # Step 6: Select top cases
+        # Step 4: Select top cases
         for case_id, score in sorted(case_scores.items(), key=lambda x: x[1], reverse=True):
             if score >= 1.4 and len(matched_cases) < cases_needed:
                 matched_cases.append(case_id)
@@ -270,9 +286,9 @@ def fetch_clinical_cases(symptoms: List[str], user_message: str, session) -> str
     
     session.add_current_cases(matched_cases)
     if len(session.current_cases) == 0:
-        return ""
+        return "", set()
     
-    # Step 7: Build context
+    # Step 5: Build context
     context = ""
     
     for case_id in session.current_cases:
@@ -308,19 +324,19 @@ def fetch_clinical_cases(symptoms: List[str], user_message: str, session) -> str
         status_long_term = status_mapping[delivery_status["long_term"]]
 
         # Add appropriate solutions
-        if next_solutions["immediate"] and len(next_solutions["immediate"]) > 0:
+        if next_solutions.get("immediate") and len(next_solutions["immediate"]) > 0:
             context += "Immediate solutions to consider:\n"
             for solution in next_solutions["immediate"]:
                 if solution.strip() and solution != "**":
                     context += f"- {solution}\n"
             context += f"Content Delivery Status: {status_immediate}\n\n"
-        if next_solutions["intermediate"] and len(next_solutions["intermediate"]) > 0:
+        if next_solutions.get("intermediate") and len(next_solutions["intermediate"]) > 0:
             context += "Intermediate solutions to consider:\n"
             for solution in next_solutions["intermediate"]:
                 if solution.strip() and solution != "**":
                     context += f"- {solution}\n"
             context += f"Content Delivery Status: {status_intermediate}\n\n"
-        if next_solutions["long_term"] and len(next_solutions["long_term"]) > 0:
+        if next_solutions.get("long_term") and len(next_solutions["long_term"]) > 0:
             context += "Long-term solutions to consider:\n"
             for solution in next_solutions["long_term"]:
                 if solution.strip() and solution != "**":
@@ -333,7 +349,9 @@ def fetch_clinical_cases(symptoms: List[str], user_message: str, session) -> str
             
         context += "\n"
     
-    return context
+    # Return both context and the set of current cases
+    return context, session.current_cases.copy()
+
 
 def analyze_solution_delivery(response_text: str, case_ids: Set[str], llm_client) -> Dict[str, Dict[str, bool]]:
     """
@@ -350,9 +368,12 @@ def analyze_solution_delivery(response_text: str, case_ids: Set[str], llm_client
     if not case_ids:
         return {}
     
+    # Convert set to list to avoid potential threading issues
+    case_list = list(case_ids)
+    
     # Build solutions context for analysis
     solutions_context = ""
-    for case_id in case_ids:
+    for case_id in case_list:
         case_data = load_case_file(case_id)
         if not case_data or "solutions" not in case_data:
             continue
@@ -429,7 +450,7 @@ def analyze_solution_delivery(response_text: str, case_ids: Set[str], llm_client
         
         # Validate the structure of returned dictionary
         validated_analysis = {}
-        for case_id in case_ids:
+        for case_id in case_list:
             if case_id in delivery_analysis:
                 case_data = delivery_analysis[case_id]
                 if isinstance(case_data, dict):
@@ -451,7 +472,6 @@ def analyze_solution_delivery(response_text: str, case_ids: Set[str], llm_client
     except Exception as e:
         print(f"Error analyzing solution delivery: {e}")
         return {}
-
 if __name__ == "__main__":
     # Example usage
     symptoms = ["anxiety", "panic attacks"]

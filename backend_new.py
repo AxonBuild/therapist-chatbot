@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from typing import Iterable, List, Set, Dict, Any, Tuple
 from clinical_cases_rag import fetch_clinical_cases, analyze_solution_delivery
 from script_loader import ScriptLoader
-
+import threading
 load_dotenv()
 # --- Configuration ---
 
@@ -204,7 +204,27 @@ class TherapeuticChatbot:
             print(f"INFO: Creating new session: {session_id}")
             self.sessions[session_id] = ChatSession(session_id)
         return self.sessions[session_id]
-
+    def _analyze_solutions_async(self, response_text: str, matched_cases: Set[str], llm: 'LLMClient', session):
+            """Analyze solution delivery in a separate thread to avoid blocking the main response."""
+            try:
+                if matched_cases:
+                    print("Starting async solution delivery analysis...")
+                    delivery_analysis = analyze_solution_delivery(response_text, matched_cases, llm)
+                    
+                    # Ensure delivery_analysis is a dictionary
+                    if isinstance(delivery_analysis, dict):
+                        # Update session with solution delivery status
+                        for case_id, status in delivery_analysis.items():
+                            if isinstance(status, dict):
+                                session.update_solution_delivery(case_id, status)
+                            else:
+                                print(f"Warning: Invalid status format for case {case_id}: {status}")
+                    else:
+                        print(f"Warning: delivery_analysis is not a dict: {type(delivery_analysis)}")
+                        
+                    print("Completed async solution delivery analysis")
+            except Exception as e:
+                print(f"Error in async solution delivery analysis: {e}")
     def _build_keyword_identifier_prompt(self, user_messages_list: str) -> str:
         prompt = f"""
             # Task
@@ -224,18 +244,22 @@ class TherapeuticChatbot:
         """
         return prompt
     
-    def _build_system_prompt(self, clinical_guidance: str, json_output: bool = True) -> str:
+   
+    def _build_system_prompt(self, clinical_guidance: str, json_output: bool = True, custom_template: dict = None) -> str:
         """Build system prompt with clinical case guidance and JSON output instructions."""
         has_guidance = True if clinical_guidance else False
         
-        prompt = f"""
-You are a supportive, empathetic therapist. Your goal is to respond to the user in a warm, validating, and thoughtful way.
+        # Use custom template if provided, otherwise use default
+        if custom_template:
+            prompt = self._build_custom_prompt(clinical_guidance, custom_template)
+        else:
+            # Default prompt (existing logic)
+            prompt = f"""You are a supportive, empathetic therapist. Your goal is to respond to the user in a warm, validating, and thoughtful way.
 
 {"Here are clinical patterns and therapeutic approaches that may help with this conversation:" if has_guidance else ""}
 {clinical_guidance}
 
-
-            """
+"""
         
         if json_output:
             prompt += """
@@ -257,7 +281,45 @@ DO NOT offer an activity in the first few exchanges. Focus on understanding and 
             """
         
         return prompt
-        
+    
+    def _build_custom_prompt(self, clinical_guidance: str, custom_template: dict) -> str:
+        """Build prompt using custom template values."""
+        try:
+            # Load template file
+            template_path = os.path.join("templates", "system_prompt_template.txt")
+            with open(template_path, 'r', encoding='utf-8') as f:
+                template = f.read()
+            
+            # Replace placeholders
+            therapist_style = custom_template.get("therapist_style", "supportive, empathetic")
+            response_tone = custom_template.get("response_tone", "warm, validating, and thoughtful")
+            
+            # Build clinical guidance section
+            has_guidance = True if clinical_guidance else False
+            clinical_section = ""
+            if has_guidance:
+                clinical_section = f"Here are clinical patterns and therapeutic approaches that may help with this conversation:\n{clinical_guidance}\n"
+            
+            # Replace placeholders in template
+            prompt = template.format(
+                therapist_style=therapist_style,
+                response_tone=response_tone,
+                clinical_guidance_placeholder=clinical_section
+            )
+            
+            return prompt
+            
+        except Exception as e:
+            print(f"Error loading custom template: {e}")
+            # Fallback to default
+            return f"""You are a supportive, empathetic therapist. Your goal is to respond to the user in a warm, validating, and thoughtful way.
+
+{"Here are clinical patterns and therapeutic approaches that may help with this conversation:" if clinical_guidance else ""}
+{clinical_guidance}
+
+"""
+
+
     def _get_appropriate_script(self, symptoms: List[str], session: ChatSession, model=None) -> dict:
         """Select appropriate script based on symptoms and user profile."""
         # First extract user profile from conversation
@@ -330,8 +392,112 @@ Return as JSON:
             "specific_concerns": []
         }
 
+    # @compute_time
+    # def process_message(self, user_message: str, session_id: str = "default", model=None, custom_template: dict = None) -> dict | str:
+    #     """Processes a user message and returns the assistant's response."""
+    #     # Initialize LLM client and model
+    #     model = model or "openai/gpt-4o-mini"
+    #     print("Using model:", model)
+    #     llm = LLMClient(api_key=OPENROUTER_API_KEY, model_id=model)
+        
+    #     # Get/create session and update history
+    #     session = self._get_or_create_session(session_id)
+    #     session.add_message("user", user_message)
+
+    #     # Extract conversation history for keyword identification
+    #     history_str = session.format_history_for_prompt()
+        
+    #     # Extract symptoms from the conversation
+    #     if len(session.current_cases) < 3:
+    #         keyword_prompt = self._build_keyword_identifier_prompt(history_str)
+    #         keyword_response = llm.send_prompt(keyword_prompt, temperature=0.7, extract_json=True)
+    #         symptoms = keyword_response.get("symptoms", [])
+    #     else:
+    #         symptoms = []
+        
+    #     # Fetch clinical cases based on symptoms and latest message
+    #     clinical_guidance = fetch_clinical_cases(
+    #         symptoms=symptoms, 
+    #         user_message=user_message,
+    #         session=session
+    #     )
+        
+    #     print(f"Matched clinical cases: {session.current_cases}")
+    #     print(f"Clinical guidance: {clinical_guidance}")
+        
+    #     # Build system prompt with clinical guidance
+    #     system_prompt = self._build_system_prompt(
+    #         clinical_guidance=clinical_guidance, 
+    #         json_output=True,
+    #         custom_template=custom_template
+    #     )        
+    #     print(f"System prompt: {system_prompt}")
+    #     # Construct messages for LLM
+    #     messages = [
+    #         {"role": "system", "content": system_prompt},
+    #         *session.conversation_history
+    #     ]
+        
+    #     # Get response from LLM
+    #     ai_response = llm.send_prompt(prompt=None, messages=messages, temperature=0.8, extract_json=True)
+    #     print(f"AI Response: {ai_response}")
+        
+    #     # Handle potential failure
+    #     if not ai_response:
+    #         print("ERROR: Failed to generate response from LLM. Using fallback.")
+    #         response_text = "I understand. It sounds like a difficult situation. Could you tell me a little more about that?"
+    #         activity_offered = False
+    #     else:
+    #         # Extract data from JSON response
+    #         try:
+    #             if isinstance(ai_response, str):
+    #                 ai_response = json.loads(ai_response)
+                    
+    #             response_text = ai_response.get("Response", "")
+    #             activity_offered = ai_response.get("Activity_offered", False)
+    #         except Exception as e:
+    #             print(f"Error parsing LLM response as JSON: {e}")
+    #             response_text = ai_response if isinstance(ai_response, str) else "I understand. Could you tell me more?"
+    #             activity_offered = False
+        
+    #     # Analyze which solutions were delivered
+    #     if len(session.current_cases) > 0:
+    #         delivery_analysis = analyze_solution_delivery(response_text, session.current_cases, llm)
+            
+    #         # Update session with solution delivery status
+    #         for case_id, status in delivery_analysis.items():
+    #             session.update_solution_delivery(case_id, status)
+        
+    #     # Add assistant response to session history
+    #     session.add_message("assistant", response_text)
+        
+    #     # Check message count for activity offering
+    #     message_count = len(session.conversation_history) // 2  # Count exchanges, not individual messages
+    #     if activity_offered and message_count <= 2:
+    #         print(f"Script offering suppressed - too early in conversation (message count: {message_count})")
+    #         activity_offered = False
+        
+    #     # Handle script/activity if offered
+    #     if activity_offered:
+    #         # Get script based on symptoms and user profile
+    #         script_result = self._get_appropriate_script(symptoms, session, model)
+            
+    #         # Check if script has a good enough score
+    #         if script_result and script_result.get("match_score", 0) >= 10:  # Minimum threshold
+    #             return {
+    #                 "response": response_text,
+    #                 "script_id": script_result.get("script_id"),
+    #                 "script_content": script_result.get("script_content"),
+    #                 "script_offered": True,
+    #                 "metadata": script_result.get("metadata", {})
+    #             }
+    #         else:
+    #             print(f"Script rejected - match score too low: {script_result.get('match_score', 0) if script_result else 0}")
+                
+    #     # Return normal response if no script offered or match score too low
+    #     return response_text
     @compute_time
-    def process_message(self, user_message: str, session_id: str = "default", model=None) -> dict | str:
+    def process_message(self, user_message: str, session_id: str = "default", model=None, custom_template: dict = None) -> dict | str:
         """Processes a user message and returns the assistant's response."""
         # Initialize LLM client and model
         model = model or "openai/gpt-4o-mini"
@@ -354,7 +520,7 @@ Return as JSON:
             symptoms = []
         
         # Fetch clinical cases based on symptoms and latest message
-        clinical_guidance = fetch_clinical_cases(
+        clinical_guidance, matched_cases = fetch_clinical_cases(
             symptoms=symptoms, 
             user_message=user_message,
             session=session
@@ -394,16 +560,18 @@ Return as JSON:
                 response_text = ai_response if isinstance(ai_response, str) else "I understand. Could you tell me more?"
                 activity_offered = False
         
-        # Analyze which solutions were delivered
-        if len(session.current_cases) > 0:
-            delivery_analysis = analyze_solution_delivery(response_text, session.current_cases, llm)
-            
-            # Update session with solution delivery status
-            for case_id, status in delivery_analysis.items():
-                session.update_solution_delivery(case_id, status)
-        
         # Add assistant response to session history
         session.add_message("assistant", response_text)
+        
+        # Start solution delivery analysis in background thread (non-blocking)
+        if matched_cases:
+            analysis_thread = threading.Thread(
+                target=self._analyze_solutions_async,
+                args=(response_text, matched_cases.copy(), llm, session),
+                daemon=True  # Thread will die when main program exits
+            )
+            analysis_thread.start()
+            print("Started solution delivery analysis in background thread")
         
         # Check message count for activity offering
         message_count = len(session.conversation_history) // 2  # Count exchanges, not individual messages

@@ -335,7 +335,58 @@ def clear_chat_history():
 # Settings in sidebar
 with st.sidebar:
     st.title("Settings")
+    # Template customization section
+    st.subheader("Prompt Customization")
+    use_custom_template = st.checkbox("Use Custom Prompt Template")
     
+    custom_template = None
+    if use_custom_template:
+        st.write("**Customize Therapeutic Approach:**")
+        
+        therapist_style = st.selectbox(
+            "Therapist Style:",
+            [
+                "supportive, empathetic",
+                "cognitive-behavioral focused",
+                "solution-focused",
+                "psychodynamic",
+                "humanistic and person-centered"
+            ]
+        )
+        
+        response_tone = st.selectbox(
+            "Response Tone:",
+            [
+                "warm, validating, and thoughtful",
+                "direct and solution-oriented",
+                "gentle and exploratory",
+                "structured and goal-focused",
+                "reflective and insight-oriented"
+            ]
+        )
+        
+        custom_template = {
+            "therapist_style": therapist_style,
+            "response_tone": response_tone
+        }
+        
+        # Show template preview
+        if st.expander("Preview Template"):
+            try:
+                template_path = os.path.join("templates", "system_prompt_template.txt")
+                with open(template_path, 'r', encoding='utf-8') as f:
+                    template = f.read()
+                
+                preview = template.format(
+                    therapist_style=therapist_style,
+                    response_tone=response_tone,
+                    clinical_guidance_placeholder="[Clinical guidance will be inserted here]"
+                )
+                st.code(preview)
+            except:
+                st.error("Template file not found")
+    
+
     # Debug mode toggle
     if os.getenv("ENV") != "production":
         debug_toggle = st.toggle("Debug Mode", value=st.session_state.debug_mode)
@@ -438,7 +489,8 @@ if user_input := st.chat_input("Share what's on your mind..."):
             response = st.session_state.chatbot.process_message(
                 user_input, 
                 session_id=session_id,
-                model=st.session_state.selected_model
+                model=st.session_state.selected_model,
+                custom_template=custom_template
             )
 
             # Handle structured response (new format with script)
