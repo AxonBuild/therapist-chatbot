@@ -20,8 +20,8 @@ load_dotenv()
 openai_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 model_options = [
-    "openai/gpt-4.1-mini",
     "openai/gpt-4o",
+    "openai/gpt-4.1-mini",
     "openai/gpt-4o-mini",
     "deepseek/deepseek-chat-v3-0324",
     "google/gemini-2.5-flash-preview",

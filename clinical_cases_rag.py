@@ -13,8 +13,8 @@ load_dotenv()
 COLLECTION_NAME = "ClinicalCases"
 EMBEDDING_MODEL = "text-embedding-3-small"
 VECTOR_SIZE = 1536
-KEYWORD_THRESHOLD = 0.5
-LIMITING_BELIEF_THRESHOLD = 0.7
+KEYWORD_THRESHOLD = 0.6
+LIMITING_BELIEF_THRESHOLD = 0.5
 CASE_DIR = os.path.join("Data", "cases")
 
 # Configuration
@@ -41,32 +41,53 @@ def embed_text(text: str) -> List[float]:
         print(f"Error generating embedding: {e}")
         raise
 
-def search_keyword_matches(symptoms: List[str]) -> Dict[str, float]:
+def search_keyword_matches(symptoms: List[str], exclude_cases: List[str]) -> Dict[str, float]:
     """Search for keyword matches (tags and emotions) in clinical cases."""
     case_match_scores = {}
     print("Searching for keyword matches...")
     print(f"Symptoms: {symptoms}")
-    # For each symptom, search for matching keywords
+    
+    exclude_cases_filter = {
+        "must_not": [
+            models.FieldCondition(
+                key="case_id",
+                match=models.MatchAny(values=exclude_cases)
+            )
+        ]
+    } if exclude_cases else {}
+    
+    # Create batch search requests
+    search_requests = []
     for symptom in symptoms:
         try:
             symptom_vector = embed_text(symptom)
-            
-            results = qdrant_client.search(
-                collection_name=COLLECTION_NAME,
-                query_vector=symptom_vector,
-                query_filter=models.Filter(
+            search_requests.append(models.SearchRequest(
+                vector=symptom_vector,
+                filter=models.Filter(
                     must=[
                         models.FieldCondition(
                             key="content_type",
                             match=models.MatchValue(value="keyword")
                         )
-                    ]
+                    ],
+                    **exclude_cases_filter
                 ),
                 limit=5,
-                score_threshold=KEYWORD_THRESHOLD
-            )
-            
-            # Process results
+                score_threshold=KEYWORD_THRESHOLD,
+                with_payload=True
+            ))
+        except Exception as e:
+            print(f"Error creating search request for '{symptom}': {e}")
+    
+    # Execute batch search
+    try:
+        batch_results = qdrant_client.search_batch(
+            collection_name=COLLECTION_NAME,
+            requests=search_requests
+        )
+        
+        # Process results
+        for results in batch_results:
             for result in results:
                 case_id = result.payload.get("case_id")
                 score = result.score
@@ -79,14 +100,23 @@ def search_keyword_matches(symptoms: List[str]) -> Dict[str, float]:
                     case_match_scores[case_id] = 0
                 case_match_scores[case_id] += score
                 
-        except Exception as e:
-            print(f"Error searching for keyword matches for '{symptom}': {e}")
+    except Exception as e:
+        print(f"Error in batch search for keyword matches: {e}")
     
     return case_match_scores
 
-def search_limiting_belief_matches(user_message: str, session) -> Dict[str, Dict[str, Any]]:
+def search_limiting_belief_matches(user_message: str, session, exclude_cases: List[str]) -> Dict[str, Dict[str, Any]]:
     """Search for limiting belief matches in clinical cases."""
     belief_matches = {}
+    
+    exclude_cases_filter = {
+        "must_not": [
+            models.FieldCondition(
+                key="case_id",
+                match=models.MatchAny(values=exclude_cases)
+            )
+        ]
+    } if exclude_cases else {}
     
     # Get message embedding
     try:
@@ -101,7 +131,8 @@ def search_limiting_belief_matches(user_message: str, session) -> Dict[str, Dict
                         key="content_type",
                         match=models.MatchValue(value="limiting_belief")
                     )
-                ]
+                ],
+                **exclude_cases_filter
             ),
             limit=3,
             score_threshold=LIMITING_BELIEF_THRESHOLD
@@ -175,7 +206,7 @@ def get_next_solutions(case_id: str, session) -> Dict[str, List[str]]:
     
     return solutions
 
-def fetch_clinical_cases(symptoms: List[str], user_message: str, session) -> Tuple[str, Set[str]]:
+def fetch_clinical_cases(symptoms: List[str], user_message: str, session) -> str:
     """
     Fetch clinical cases based on symptoms and user message with simple historical belief tracking.
     
@@ -185,60 +216,68 @@ def fetch_clinical_cases(symptoms: List[str], user_message: str, session) -> Tup
         session: The current chat session for tracking delivery status
         
     Returns:
-        Tuple of (guidance text for system prompt, set of matched case IDs)
+        guidance text for system prompt
     """
-    # Step 1: Search for keyword matches
-    keyword_matches = search_keyword_matches(symptoms)
     
-    # Step 2: Search for limiting belief matches in current message
-    current_belief_matches = search_limiting_belief_matches(user_message, session)
-    print("Current limiting belief matches:", current_belief_matches)
-    # Step 3: Update session with current beliefs
-    message_index = len(session.conversation_history) // 2
-    if hasattr(session, "update_limiting_belief_matches"):
-        session.update_limiting_belief_matches(current_belief_matches, message_index)
-    
-    # Step 4: Get all historical beliefs for scoring
+    matched_cases = []
     all_beliefs = getattr(session, "matched_limiting_beliefs", {})
     
-    # Step 5: Simple combined scoring
-    case_scores = keyword_matches.copy()
-    
-    # Add scores from all limiting beliefs (current gets 2x, historical gets 1x)
-    for belief, info in all_beliefs.items():
-        case_id = info["case_id"]
-        score = info["score"]
+    # Step 1: Search for keyword matches
+    if len(session.current_cases) < 3:
+        # we can have at most 3 cases loaded at a time
+        cases_needed = 3 - len(session.current_cases)
+        exclude_cases = list(session.completed_cases | session.current_cases)
         
-        # Simple weighting: current beliefs = 2x, historical = 1x
-        weight = 2.0 if belief in current_belief_matches else 1.0
-        weighted_score = score * weight
+        keyword_matches = search_keyword_matches(symptoms, exclude_cases)
         
-        if case_id not in case_scores:
-            case_scores[case_id] = 0
-        case_scores[case_id] += weighted_score
+        # Step 2: Search for limiting belief matches in current message
+        current_belief_matches = search_limiting_belief_matches(user_message, session, exclude_cases)
+        print("Current limiting belief matches:", current_belief_matches)
+        # Step 3: Update session with current beliefs
+        message_index = len(session.conversation_history) // 2
+        if hasattr(session, "update_limiting_belief_matches"):
+            session.update_limiting_belief_matches(current_belief_matches, message_index)
+        
+        
+        # Step 5: Simple combined scoring
+        case_scores = keyword_matches.copy()
+        
+        # Add scores from all limiting beliefs (current gets 2x, historical gets 1x)
+        for belief, info in all_beliefs.items():
+            case_id = info["case_id"]
+            score = info["score"]
+            
+            # Simple weighting: current beliefs = 2x, historical = 1x
+            weight = 2.0 if belief in current_belief_matches else 1.0
+            weighted_score = score * weight
+            
+            if case_id not in case_scores:
+                case_scores[case_id] = 0
+            case_scores[case_id] += weighted_score
+        
+        print("Case scores:\n", case_scores)
+        
+        # Step 6: Select top cases
+        for case_id, score in sorted(case_scores.items(), key=lambda x: x[1], reverse=True):
+            if score >= 1.4 and len(matched_cases) < cases_needed:
+                matched_cases.append(case_id)
+    else:
+        print("Already have 3 cases loaded. Skipping case search.")
     
-    # Step 6: Select top cases
-    matched_cases = []
-    for case_id, score in sorted(case_scores.items(), key=lambda x: x[1], reverse=True):
-        if score >= 1.0 and len(matched_cases) < 3:
-            matched_cases.append(case_id)
-    
-    if not matched_cases:
-        return "", set()
+    session.add_current_cases(matched_cases)
+    if len(session.current_cases) == 0:
+        return ""
     
     # Step 7: Build context
     context = ""
-    matched_case_ids = set()
     
-    for case_id in matched_cases:
+    for case_id in session.current_cases:
         case_data = load_case_file(case_id)
         if not case_data:
             continue
-            
-        matched_case_ids.add(case_id)
         
         # Get solutions for this case
-        next_solutions = get_next_solutions(case_id, session)
+        next_solutions = case_data.get("solutions", {})
         
         # Get all beliefs that match this case
         case_beliefs = [belief for belief, info in all_beliefs.items() if info["case_id"] == case_id]
@@ -252,22 +291,37 @@ def fetch_clinical_cases(symptoms: List[str], user_message: str, session) -> Tup
                 context += f"- \"{belief}\"\n"
             context += "\n"
         
+        delivery_status = session.delivered_solutions[case_id]
+        status_mapping = {
+            True: "Delivered",
+            False: "Pending"
+        }
+        
+        print(f"Delivery status for {case_id}: {delivery_status}")
+        
+        status_immediate = status_mapping[delivery_status["immediate"]]
+        status_intermediate = "Locked" if not delivery_status["immediate"] else status_mapping[delivery_status["intermediate"]]
+        status_long_term = "Locked" if not delivery_status["intermediate"] else status_mapping[delivery_status["long_term"]]
+        
         # Add appropriate solutions
-        if next_solutions["immediate"]:
+        if next_solutions["immediate"] and len(next_solutions["immediate"]) > 0:
             context += "Immediate solutions to consider:\n"
             for solution in next_solutions["immediate"]:
                 if solution.strip() and solution != "**":
                     context += f"- {solution}\n"
-        elif next_solutions["intermediate"]:
+            context += f"Content Delivery Status: {status_immediate}\n\n"
+        if next_solutions["intermediate"] and len(next_solutions["intermediate"]) > 0:
             context += "Intermediate solutions to consider:\n"
             for solution in next_solutions["intermediate"]:
                 if solution.strip() and solution != "**":
                     context += f"- {solution}\n"
-        elif next_solutions["long_term"]:
+            context += f"Content Delivery Status: {status_intermediate}\n\n"
+        if next_solutions["long_term"] and len(next_solutions["long_term"]) > 0:
             context += "Long-term solutions to consider:\n"
             for solution in next_solutions["long_term"]:
                 if solution.strip() and solution != "**":
                     context += f"- {solution}\n"
+            context += f"Content Delivery Status: {status_long_term}\n\n"
         
         # Add therapeutic insight
         if case_data.get("motivational_closure"):
@@ -275,7 +329,7 @@ def fetch_clinical_cases(symptoms: List[str], user_message: str, session) -> Tup
             
         context += "\n"
     
-    return context, matched_case_ids
+    return context
 
 def analyze_solution_delivery(response_text: str, case_ids: Set[str], llm_client) -> Dict[str, Dict[str, bool]]:
     """
