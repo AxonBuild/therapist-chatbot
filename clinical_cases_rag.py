@@ -304,9 +304,9 @@ def fetch_clinical_cases(symptoms: List[str], user_message: str, session) -> str
         print(f"Delivery status for {case_id}: {delivery_status}")
         
         status_immediate = status_mapping[delivery_status["immediate"]]
-        status_intermediate = "Locked" if not delivery_status["immediate"] else status_mapping[delivery_status["intermediate"]]
-        status_long_term = "Locked" if not delivery_status["intermediate"] else status_mapping[delivery_status["long_term"]]
-        
+        status_intermediate = status_mapping[delivery_status["intermediate"]]
+        status_long_term = status_mapping[delivery_status["long_term"]]
+
         # Add appropriate solutions
         if next_solutions["immediate"] and len(next_solutions["immediate"]) > 0:
             context += "Immediate solutions to consider:\n"

@@ -229,8 +229,6 @@ You are a supportive, empathetic therapist. Your goal is to respond to the user 
 {clinical_guidance}
 
 
-- You may only use the information that is not marked as 'Locked'.
-- You should use the information gradually, in steps.
             """
         
         if json_output:
