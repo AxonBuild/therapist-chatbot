@@ -279,20 +279,22 @@ For the "Activity_offered" field:
 
 DO NOT offer an activity in the first few exchanges. Focus on understanding and validating the user first.
             """
-        
+
+        print("\n-- System Prompt Start --\n", prompt, "\n-- System Prompt End --\n")
+
         return prompt
     
     def _build_custom_prompt(self, clinical_guidance: str, custom_template: dict) -> str:
         """Build prompt using custom template values."""
         try:
-            # Load template file
-            template_path = os.path.join("templates", "system_prompt_template.txt")
-            with open(template_path, 'r', encoding='utf-8') as f:
-                template = f.read()
-            
-            # Replace placeholders
-            therapist_style = custom_template.get("therapist_style", "supportive, empathetic")
-            response_tone = custom_template.get("response_tone", "warm, validating, and thoughtful")
+            # Check if user provided custom template text
+            if "template_text" in custom_template and custom_template["template_text"]:
+                template = custom_template["template_text"]
+            else:
+                # Load default template file as fallback
+                template_path = os.path.join("templates", "system_prompt_template.txt")
+                with open(template_path, 'r', encoding='utf-8') as f:
+                    template = f.read()
             
             # Build clinical guidance section
             has_guidance = True if clinical_guidance else False
@@ -300,12 +302,8 @@ DO NOT offer an activity in the first few exchanges. Focus on understanding and 
             if has_guidance:
                 clinical_section = f"Here are clinical patterns and therapeutic approaches that may help with this conversation:\n{clinical_guidance}\n"
             
-            # Replace placeholders in template
-            prompt = template.format(
-                therapist_style=therapist_style,
-                response_tone=response_tone,
-                clinical_guidance_placeholder=clinical_section
-            )
+            # Replace the clinical guidance placeholder
+            prompt = template.replace("{clinical_guidance_placeholder}", clinical_section)
             
             return prompt
             
@@ -426,8 +424,8 @@ Return as JSON:
         print(f"Clinical guidance: {clinical_guidance}")
         
         # Build system prompt with clinical guidance
-        system_prompt = self._build_system_prompt(clinical_guidance=clinical_guidance, json_output=True)
-        
+        system_prompt = self._build_system_prompt(clinical_guidance=clinical_guidance, custom_template=custom_template, json_output=True)
+
         # Construct messages for LLM
         messages = [
             {"role": "system", "content": system_prompt},

@@ -341,50 +341,33 @@ with st.sidebar:
     
     custom_template = None
     if use_custom_template:
-        st.write("**Customize Therapeutic Approach:**")
+        st.write("**Edit System Prompt:**")
         
-        therapist_style = st.selectbox(
-            "Therapist Style:",
-            [
-                "supportive, empathetic",
-                "cognitive-behavioral focused",
-                "solution-focused",
-                "psychodynamic",
-                "humanistic and person-centered"
-            ]
+        # Initialize default template if not in session state
+        if "custom_template_text" not in st.session_state:
+            st.session_state.custom_template_text = "You are a supportive, empathetic therapist. Your goal is to respond to the user in a warm, validating, and thoughtful way.\n\n{clinical_guidance_placeholder}"
+        
+        # Single editable text area for the complete template with key parameter
+        template_text = st.text_area(
+            "System Prompt Template:",
+            value=st.session_state.custom_template_text,
+            height=200,
+            key="template_text_area",
+            help="Edit the complete system prompt. Use {clinical_guidance_placeholder} where you want clinical guidance to be inserted."
         )
         
-        response_tone = st.selectbox(
-            "Response Tone:",
-            [
-                "warm, validating, and thoughtful",
-                "direct and solution-oriented",
-                "gentle and exploratory",
-                "structured and goal-focused",
-                "reflective and insight-oriented"
-            ]
-        )
+        # Only update session state if the value actually changed
+        if template_text != st.session_state.custom_template_text:
+            st.session_state.custom_template_text = template_text
         
         custom_template = {
-            "therapist_style": therapist_style,
-            "response_tone": response_tone
+            "template_text": st.session_state.custom_template_text
         }
         
-        # Show template preview
-        if st.expander("Preview Template"):
-            try:
-                template_path = os.path.join("templates", "system_prompt_template.txt")
-                with open(template_path, 'r', encoding='utf-8') as f:
-                    template = f.read()
-                
-                preview = template.format(
-                    therapist_style=therapist_style,
-                    response_tone=response_tone,
-                    clinical_guidance_placeholder="[Clinical guidance will be inserted here]"
-                )
-                st.code(preview)
-            except:
-                st.error("Template file not found")
+        # Reset to defaults button
+        if st.button("Reset to Default Template"):
+            st.session_state.custom_template_text = "You are a supportive, empathetic therapist. Your goal is to respond to the user in a warm, validating, and thoughtful way.\n\n{clinical_guidance_placeholder}"
+            st.rerun()
     
 
     # Debug mode toggle
