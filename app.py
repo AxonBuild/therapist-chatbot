@@ -438,9 +438,14 @@ for msg in st.session_state.messages:
             # Display script metadata if available
             if msg.get("metadata"):
                 meta = msg["metadata"]
+                # Extract values with proper fallbacks
+                level = meta.get('Level', meta.get('level', 'N/A'))
+                target = meta.get('Target Population', meta.get('target_population', 'N/A'))
+                duration = meta.get('Estimated Duration (min)', meta.get('estimated_duration', 'N/A'))
+                
                 st.markdown(f"""<div class="script-metadata">
-                    <div>Level: {meta.get('level', 'N/A')} | Target: {meta.get('target_population', 'N/A')}</div>
-                    <div>Duration: ~{meta.get('estimated_duration', 'N/A')} min</div>
+                    <div>Level: {level} | Target: {target}</div>
+                    <div>Duration: ~{duration} min</div>
                 </div>""", unsafe_allow_html=True)
         else:
             st.markdown(msg["content"])
