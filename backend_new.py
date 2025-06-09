@@ -109,6 +109,9 @@ class ChatSession:
         self.delivered_solutions: dict[str, dict] = {}  # Maps case_id to solution delivery status
         self.current_cases: set[str] = set() # Track the currently chosen cases
         self.completed_cases: set[str] = set()  # Track which cases have been completed
+        
+        # Script session management
+        self.offered_scripts: set[str] = set()  # Track script IDs that have been offered
 
     def add_message(self, role: str, content: str):
         self.conversation_history.append({"role": role, "content": content})
@@ -190,6 +193,15 @@ class ChatSession:
                 "intermediate": False,
                 "long_term": False
             }
+    
+    def add_offered_script(self, script_id: str):
+        """Track that a script has been offered to prevent re-offering"""
+        self.offered_scripts.add(script_id)
+        print(f"Script {script_id} added to offered scripts. Total offered: {len(self.offered_scripts)}")
+    
+    def get_offered_scripts(self) -> set[str]:
+        """Get the set of scripts that have already been offered"""
+        return self.offered_scripts.copy()
 
 # --- Main Chatbot Logic ---
 
@@ -323,17 +335,20 @@ DO NOT offer an activity in the first few exchanges. Focus on understanding and 
         # First extract user profile from conversation
         user_profile = self._extract_user_profile(session, model=model)
         
-        # Then find matching script
-        script_result = self._find_matching_script(symptoms, user_profile)
+        # Get already offered scripts to exclude them
+        offered_scripts = session.get_offered_scripts()
+        
+        # Then find matching script, excluding already offered ones
+        script_result = self._find_matching_script(symptoms, user_profile, exclude_scripts=offered_scripts)
         
         return script_result
     
-    def _find_matching_script(self, symptoms: List[str], user_profile: dict) -> dict:
+    def _find_matching_script(self, symptoms: List[str], user_profile: dict, exclude_scripts: set[str] = None) -> dict:
         """Find matching script based on symptoms and user profile."""
         script_loader = ScriptLoader()
         
-        # Find the best matching script
-        matching_script, match_score = script_loader.find_matching_script(symptoms, user_profile)
+        # Find the best matching script, excluding already offered ones
+        matching_script, match_score = script_loader.find_matching_script(symptoms, user_profile, exclude_scripts=exclude_scripts)
         
         if not matching_script:
             print("No matching script found")
@@ -480,9 +495,15 @@ Return as JSON:
             
             # Check if script has a good enough score
             if script_result and script_result.get("match_score", 0) >= 10:  # Minimum threshold
+                script_id = script_result.get("script_id")
+                
+                # Track that this script has been offered
+                if script_id:
+                    session.add_offered_script(script_id)
+                
                 return {
                     "response": response_text,
-                    "script_id": script_result.get("script_id"),
+                    "script_id": script_id,
                     "script_content": script_result.get("script_content"),
                     "script_offered": True,
                     "metadata": script_result.get("metadata", {})

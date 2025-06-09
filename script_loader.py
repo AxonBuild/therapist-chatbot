@@ -25,13 +25,14 @@ class ScriptLoader:
             print(f"Error loading scripts: {e}")
             return pd.DataFrame()
     
-    def find_matching_script(self, symptoms: List[str], user_profile: Dict[str, str]) -> Tuple[Optional[Dict[str, Any]], int]:
+    def find_matching_script(self, symptoms: List[str], user_profile: Dict[str, str], exclude_scripts: set[str] = None) -> Tuple[Optional[Dict[str, Any]], int]:
         """
         Find the best matching script based on symptoms and user profile
         
         Args:
             symptoms: List of identified symptoms/keywords
             user_profile: Dictionary with 'age_group' and 'emotional_intensity'
+            exclude_scripts: Set of script IDs/filenames to exclude from selection
             
         Returns:
             Tuple of (script dictionary or None, match score)
@@ -90,6 +91,16 @@ class ScriptLoader:
         # Population match (high priority)
         if target_population:
             scored_df.loc[scored_df['Target Population'] == target_population, 'match_score'] += 5
+        
+        # Filter out already offered scripts
+        if exclude_scripts:
+            print(f"Excluding {len(exclude_scripts)} already offered scripts: {exclude_scripts}")
+            # Filter by both Filename and Script ID columns if they exist
+            if 'Filename' in scored_df.columns:
+                scored_df = scored_df[~scored_df['Filename'].isin(exclude_scripts)]
+            if 'Script ID' in scored_df.columns:
+                scored_df = scored_df[~scored_df['Script ID'].isin(exclude_scripts)]
+            print(f"Remaining scripts after filtering: {len(scored_df)}")
         
         # Sort by score and get the best match
         scored_df = scored_df.sort_values('match_score', ascending=False)
