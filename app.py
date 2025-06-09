@@ -109,6 +109,23 @@ def debug_audio_files(base_dir="."):
     
     return audio_files
 
+def get_git_commit_id(length=7):
+    try:
+        import subprocess
+        result = subprocess.run(
+            ["git", "rev-parse", "--short", f"HEAD"],
+            capture_output=True,
+            text=True,
+            cwd=os.path.dirname(os.path.abspath(__file__))
+        )
+        if result.returncode == 0:
+            return result.stdout.strip()[:length]
+        else:
+            return "unknown"
+    except Exception as e:
+        print(f"Error getting git commit ID: {e}")
+        return "unknown"
+
 # Function to convert text to speech using OpenAI
 def text_to_speech(text, voice="alloy"):
     """Convert text to speech using OpenAI's TTS API."""
@@ -579,9 +596,12 @@ if user_input := st.chat_input("Share what's on your mind..."):
             st.error(traceback.format_exc())
 
 # Disclaimer
-st.markdown("""
+commit_id = get_git_commit_id()
+st.markdown(f"""
 <div class="disclaimer">
     EkoMindAI provides support based on therapeutic methods, but is not a replacement for professional mental health care. 
     If you're experiencing a crisis or need immediate help, please contact a mental health professional.
+    <br><br>
+    <small>App Version: {commit_id}</small>
 </div>
 """, unsafe_allow_html=True)
